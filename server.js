@@ -248,7 +248,7 @@ app.get('/public/treatments', async (req, res) => {
 app.get('/health', (req,res)=> res.json({ok:true}));
 
 // start
-const MONGO = process.env.MONGO || 'mongodb://127.0.0.1:27017/healthcare_local';
+const MONGO = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/healthcare_local';
 mongoose.connect(MONGO, { useNewUrlParser:true, useUnifiedTopology:true })
   .then(()=> {
     console.log('mongodb connected');
