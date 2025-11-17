@@ -32,11 +32,29 @@ const TreatmentSchema = new mongoose.Schema({
   category: String,
   description: String,
   costRange: String,
+
   treatmentNameAr: String,
   categoryAr: String,
   descriptionAr: String,
+
   hospitals: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Hospital' }],
-  doctors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Doctor' }]
+  doctors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Doctor' }],
+
+  // 🆕 NEW FIELDS
+  treatmentDetails: {
+    en: { type: String, default: "" },
+    ar: { type: String, default: "" }
+  },
+
+  costTable: [
+    {
+      name: String,
+      description: String,
+      costFrom: Number,
+      costTo: Number,
+      currency: { type: String, default: "USD" }
+    }
+  ]
 });
 
 const DoctorSchema = new mongoose.Schema({
@@ -290,6 +308,39 @@ app.get('/public/hospitals/:hospitalId/doctors', async (req, res) => {
       .populate('treatments');
 
     res.json(doctors);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/public/treatments/:slug', async (req, res) => {
+  try {
+    const treatment = await Treatment.findOne({ slug: req.params.slug });
+
+    if (!treatment) {
+      return res.status(404).json({ error: "Treatment not found" });
+    }
+
+    res.json({
+      slug: treatment.slug,
+
+      // Basic Info
+      treatmentName: treatment.treatmentName,
+      treatmentNameAr: treatment.treatmentNameAr,
+
+      category: treatment.category,
+      categoryAr: treatment.categoryAr,
+
+      description: treatment.description,
+      descriptionAr: treatment.descriptionAr,
+
+      // Optional Long Text
+      treatmentDetails: treatment.treatmentDetails,
+
+      // Table Data
+      costTable: treatment.costTable || []
+    });
+
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
