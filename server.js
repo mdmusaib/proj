@@ -84,6 +84,8 @@ const Doctor = mongoose.model('Doctor', DoctorSchema);
 async function seedIfEmpty() {
   const hCount = await Hospital.countDocuments();
   if (hCount === 0) {
+
+    // 1️⃣ Create hospital
     const medanta = await Hospital.create({
       slug: 'medanta-the-medicity-gurgaon',
       name: 'Medanta- The Medicity, Gurgaon',
@@ -98,19 +100,36 @@ async function seedIfEmpty() {
       longitude: 77.0266
     });
 
+    // 2️⃣ Create treatment FIRST (doctor created later)
     const angiography = await Treatment.create({
-      slug: 'Cardiology',
+      slug: 'angiography',   // ⭐ proper slug
       treatmentName: 'Angiography',
       category: 'Cardiology',
       description: 'Diagnostic imaging for heart arteries',
       costRange: '$300 – $600',
+
       treatmentNameAr: 'تصوير الأوعية الدموية',
       categoryAr: 'أمراض القلب',
       descriptionAr: 'تصوير تشخيصي لشرايين القلب',
+
       hospitals: [medanta._id],
-      doctors: [dr.id]
+
+      // no doctors yet → fill later
+      doctors: [],
+
+      // Example cost table
+      costTable: [
+        {
+          name: "Angiography Test",
+          description: "Standard coronary angiography",
+          costFrom: 300,
+          costTo: 600,
+          currency: "USD"
+        }
+      ]
     });
 
+    // 3️⃣ Create doctor
     const dr = await Doctor.create({
       slug: 'dr-anil-bhan',
       name: 'Dr. Anil Bhan',
@@ -128,14 +147,17 @@ async function seedIfEmpty() {
       treatments: [angiography._id]
     });
 
+    // 4️⃣ Update treatment with doctor ID
     angiography.doctors = [dr._id];
     await angiography.save();
 
+    // 5️⃣ Update hospital with doctor + treatment
     medanta.doctors = [dr._id];
     medanta.treatments = [angiography._id];
     await medanta.save();
   }
 }
+
 
 // --- Admin APIs ---
 // Hospitals
