@@ -28,7 +28,8 @@ const HospitalSchema = new mongoose.Schema({
 });
 
 const TreatmentSchema = new mongoose.Schema({
-  slug: { type: String, required: true, unique: true },   // 🔥 ADD THIS
+  slug: { type: String, unique: true },
+   // 🔥 ADD THIS
 
   treatmentName: String,
   category: String,
