@@ -257,3 +257,40 @@ mongoose.connect(MONGO, { useNewUrlParser:true, useUnifiedTopology:true })
   }).catch(err=> {
     console.error('mongo connect failed', err);
   });
+
+  app.get('/public/hospitals/:slug', async (req, res) => {
+  try {
+    const hospital = await Hospital.findOne({ slug: req.params.slug });
+
+    if (!hospital) return res.status(404).json({ error: "Hospital not found" });
+
+    res.json(hospital);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/public/doctors/:slug', async (req, res) => {
+  try {
+    const doctor = await Doctor.findOne({ slug: req.params.slug })
+      .populate('hospital')
+      .populate('treatments');
+
+    if (!doctor) return res.status(404).json({ error: "Doctor not found" });
+
+    res.json(doctor);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/public/hospitals/:hospitalId/doctors', async (req, res) => {
+  try {
+    const doctors = await Doctor.find({ hospital: req.params.hospitalId })
+      .populate('treatments');
+
+    res.json(doctors);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
