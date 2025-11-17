@@ -65,6 +65,22 @@ TreatmentSchema.pre("save", function (next) {
   }
   next();
 });
+db.treatments.updateOne(
+  { slug: "cardiology" },
+  {
+    $set: {
+      costTable: [
+        { label: "Initial Consultation", value: "₹1,000 – ₹2,000" },
+        { label: "Cardiology Specialist Visit", value: "₹2,000 – ₹4,000" },
+        { label: "ECG Test", value: "₹500 – ₹1,500" },
+        { label: "Angiography", value: "₹15,000 – ₹30,000" },
+        { label: "Angioplasty", value: "₹1,20,000 – ₹2,50,000" },
+        { label: "Heart Bypass Surgery (CABG)", value: "₹2,50,000 – ₹4,50,000" }
+      ]
+    }
+  }
+)
+
 
 
 const DoctorSchema = new mongoose.Schema({
