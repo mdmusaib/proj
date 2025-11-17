@@ -65,7 +65,7 @@ TreatmentSchema.pre("save", function (next) {
   }
   next();
 });
-db.treatments.updateOne(
+TreatmentSchema.updateOne(
   { slug: "cardiology" },
   {
     $set: {
