@@ -28,6 +28,8 @@ const HospitalSchema = new mongoose.Schema({
 });
 
 const TreatmentSchema = new mongoose.Schema({
+  slug: { type: String, required: true, unique: true },   // 🔥 ADD THIS
+
   treatmentName: String,
   category: String,
   description: String,
@@ -40,7 +42,6 @@ const TreatmentSchema = new mongoose.Schema({
   hospitals: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Hospital' }],
   doctors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Doctor' }],
 
-  // 🆕 NEW FIELDS
   treatmentDetails: {
     en: { type: String, default: "" },
     ar: { type: String, default: "" }
@@ -56,6 +57,7 @@ const TreatmentSchema = new mongoose.Schema({
     }
   ]
 });
+
 
 const DoctorSchema = new mongoose.Schema({
   name: String,
@@ -97,6 +99,7 @@ async function seedIfEmpty() {
     });
 
     const angiography = await Treatment.create({
+      slug: 'Cardiology',
       treatmentName: 'Angiography',
       category: 'Cardiology',
       description: 'Diagnostic imaging for heart arteries',
@@ -104,7 +107,8 @@ async function seedIfEmpty() {
       treatmentNameAr: 'تصوير الأوعية الدموية',
       categoryAr: 'أمراض القلب',
       descriptionAr: 'تصوير تشخيصي لشرايين القلب',
-      hospitals: [medanta._id]
+      hospitals: [medanta._id],
+      doctors: [dr.id]
     });
 
     const dr = await Doctor.create({
