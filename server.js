@@ -339,35 +339,46 @@ app.get('/public/hospitals/:hospitalId/doctors', async (req, res) => {
   }
 });
 
-app.get('/public/treatments/:slug', async (req, res) => {
+app.get('/public/treatments/:categorySlug', async (req, res) => {
   try {
-    const treatment = await Treatment.findOne({ slug: req.params.slug });
+    const categorySlug = req.params.categorySlug.toLowerCase().trim();
 
-    if (!treatment) {
-      return res.status(404).json({ error: "Treatment not found" });
+    // Convert slug -> category name (Cardiology, Oncology, etc.)
+    const categoryName = categorySlug.replace(/-/g, ' '); // If needed
+
+    // Fetch treatments under this category
+    const treatments = await Treatment.find({
+      category: new RegExp(`^${categoryName}$`, "i")
+    });
+
+    if (!treatments || treatments.length === 0) {
+      return res.status(404).json({ error: "No treatments found for this category" });
     }
 
+    // Format each treatment
+    const formatted = treatments.map(t => ({
+      treatmentName: t.treatmentName,
+      treatmentNameAr: t.treatmentNameAr,
+
+      category: t.category,
+      categoryAr: t.categoryAr,
+
+      description: t.description,
+      descriptionAr: t.descriptionAr,
+
+      treatmentDetails: t.treatmentDetails,
+
+      costTable: t.costTable || []
+    }));
+
     res.json({
-      slug: treatment.slug,
-
-      // Basic Info
-      treatmentName: treatment.treatmentName,
-      treatmentNameAr: treatment.treatmentNameAr,
-
-      category: treatment.category,
-      categoryAr: treatment.categoryAr,
-
-      description: treatment.description,
-      descriptionAr: treatment.descriptionAr,
-
-      // Optional Long Text
-      treatmentDetails: treatment.treatmentDetails,
-
-      // Table Data
-      costTable: treatment.costTable || []
+      category: categoryName,
+      slug: categorySlug,
+      treatments: formatted
     });
 
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
+
