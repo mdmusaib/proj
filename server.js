@@ -59,6 +59,13 @@ const TreatmentSchema = new mongoose.Schema({
   ]
 });
 
+TreatmentSchema.pre("save", function (next) {
+  if (this.treatmentName && !this.slug) {
+    this.slug = this.treatmentName.toLowerCase().trim().replace(/\s+/g, "-");
+  }
+  next();
+});
+
 
 const DoctorSchema = new mongoose.Schema({
   name: String,
@@ -382,4 +389,16 @@ app.get('/public/treatments/:categorySlug', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+app.get("/admin/fix-slugs", async (req, res) => {
+  const treatments = await Treatment.find();
+
+  for (const t of treatments) {
+    t.slug = t.treatmentName.toLowerCase().trim().replace(/\s+/g, "-");
+    await t.save();
+  }
+
+  res.send("Slugs added");
+});
+
 
