@@ -23,6 +23,8 @@ const HospitalSchema = new mongoose.Schema({
   specialties: [String],
   description: String,
   accreditations: [String],
+  treatments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Treatment' }],
+  doctors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Doctor' }],
   latitude: Number,
   longitude: Number,
 });
@@ -465,3 +467,28 @@ app.put('/admin/treatments/:id', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// 🔥 Top 3 Doctors
+app.get('/public/top-doctors', async (req, res) => {
+  try {
+    const topDoctors = await Doctor.find({ isTopDoctor: true })
+      .populate('hospital')
+      .populate('treatments')
+      .limit(3);
+
+    res.json(topDoctors);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+// // 🔥 Top 3 Hospitals 
+// app.get('/public/top-hospitals', async (req, res) => {
+//   try {
+//     const topHospitals = await Hospital.find()
+//       .limit(3);
+
+//     res.json(topHospitals);
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   }
+// });
