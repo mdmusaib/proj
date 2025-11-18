@@ -196,17 +196,17 @@ const hospitals = [
   }
 ];
 
-(async () => {
-  try {
-    await HospitalSchema.deleteMany();
-    await HospitalSchema.insertMany(hospitals);
-    console.log("Hospital seed complete!");
-  } catch (err) {
-    console.error(err);
-  } finally {
-    // mongoose.connection.close();
-  }
-})();
+// (async () => {
+//   try {
+//     await HospitalSchema.deleteMany();
+//     await HospitalSchema.insertMany(hospitals);
+//     console.log("Hospital seed complete!");
+//   } catch (err) {
+//     console.error(err);
+//   } finally {
+//     // mongoose.connection.close();
+//   }
+// })();
 
 
 
@@ -289,19 +289,8 @@ async function seedIfEmpty() {
   if (hCount === 0) {
 
     // 1️⃣ Create hospital
-    const medanta = await Hospital.create({
-      slug: 'medanta-the-medicity-gurgaon',
-      name: 'Medanta- The Medicity, Gurgaon',
-      image: '',
-      location: 'Gurgaon, India',
-      rating: 4.8,
-      beds: 1250,
-      specialties: ['Cardiology','Oncology','Neurology','Orthopedics','Gastroenterology'],
-      description: 'Medanta - The Medicity is among India’s largest and most renowned multi-super specialty healthcare centres.',
-      accreditations: ['JCI','NABH'],
-      latitude: 28.4595,
-      longitude: 77.0266
-    });
+     await HospitalSchema.deleteMany();
+    await HospitalSchema.insertMany(hospitals);
 
     // 2️⃣ Create treatment FIRST (doctor created later)
     const angiography = await Treatment.create({
