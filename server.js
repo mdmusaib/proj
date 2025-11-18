@@ -404,3 +404,64 @@ app.get("/admin/fix-slugs", async (req, res) => {
 });
 
 
+app.post('/admin/treatments', async (req, res) => {
+  try {
+    let data = req.body;
+
+    // Ensure hospitals & doctors are arrays
+    if (data.hospitals && typeof data.hospitals === "string") {
+      data.hospitals = data.hospitals.split(",").map(id => id.trim());
+    }
+    if (data.doctors && typeof data.doctors === "string") {
+      data.doctors = data.doctors.split(",").map(id => id.trim());
+    }
+
+    // --- 🔥 COST TABLE FIX ---
+    if (data.costTable) {
+      if (typeof data.costTable === "string") {
+        data.costTable = JSON.parse(data.costTable);
+      }
+
+      data.costTable = data.costTable.map(item => ({
+        name: item.name,
+        description: item.description,
+        costFrom: Number(item.costFrom) || 0,
+        costTo: Number(item.costTo) || 0,
+        currency: item.currency || "USD"
+      }));
+    }
+
+    const t = await Treatment.create(data);
+    res.json(t);
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put('/admin/treatments/:id', async (req, res) => {
+  try {
+    let data = req.body;
+
+    if (data.costTable) {
+      if (typeof data.costTable === "string") {
+        data.costTable = JSON.parse(data.costTable);
+      }
+
+      data.costTable = data.costTable.map(item => ({
+        name: item.name,
+        description: item.description,
+        costFrom: Number(item.costFrom) || 0,
+        costTo: Number(item.costTo) || 0,
+        currency: item.currency || "USD"
+      }));
+    }
+
+    const t = await Treatment.findByIdAndUpdate(req.params.id, data, { new: true });
+    res.json(t);
+
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
