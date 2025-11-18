@@ -12,6 +12,14 @@ app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// 🔥 NEW: AdminUser Schema for basic authentication
+const AdminUserSchema = new mongoose.Schema({
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String, default: 'admin' }
+});
+
+
 // --- Mongoose models ---
 const HospitalSchema = new mongoose.Schema({
   name: String,
@@ -88,12 +96,22 @@ const DoctorSchema = new mongoose.Schema({
   treatments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Treatment' }]
 });
 
+const AdminUser = mongoose.model('AdminUser', AdminUserSchema); 
 const Hospital = mongoose.model('Hospital', HospitalSchema);
 const Treatment = mongoose.model('Treatment', TreatmentSchema);
 const Doctor = mongoose.model('Doctor', DoctorSchema);
 
 // --- Helper: seed minimal mock data if empty ---
 async function seedIfEmpty() {
+    // 🔥 NEW: Seed Admin User
+    const adminCount = await AdminUser.countDocuments();
+    if (adminCount === 0) {
+        await AdminUser.create({
+            username: 'admin',
+            password: 'password123' // NOTE: Use bcrypt in a real app!
+        });
+        console.log('Default admin user created: admin/password123');
+    }
   const hCount = await Hospital.countDocuments();
   if (hCount === 0) {
 
@@ -492,3 +510,25 @@ app.get('/public/top-doctors', async (req, res) => {
 //     res.status(500).json({ error: err.message });
 //   }
 // });
+
+// --- 🔥 NEW: Admin Login Endpoint ---
+app.post('/admin/login', async (req, res) => {
+    const { username, password } = req.body;
+    
+    // Find user
+    const user = await AdminUser.findOne({ username });
+
+    if (!user) {
+        return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    // Check password (In production, use bcrypt.compare)
+    if (user.password !== password) {
+        return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    // Success: Return a simple token (in a real app, this would be a JWT)
+    // We will use a simple, consistent token here for frontend validation
+    const token = 'MOCK_ADMIN_TOKEN_12345'; 
+    res.json({ success: true, token, user: { username: user.username, role: user.role } });
+});
