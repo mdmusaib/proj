@@ -36,6 +36,179 @@ const HospitalSchema = new mongoose.Schema({
   latitude: Number,
   longitude: Number,
 });
+const mongoose = require("mongoose");
+const Hospital = require("./models/Hospital"); // change path if needed
+
+mongoose.connect("mongodb://127.0.0.1:27017/yourdbname")
+  .then(() => console.log("DB Connected"))
+  .catch(err => console.error(err));
+
+const hospitals = [
+  {
+    "name": "Medanta - The Medicity, Gurgaon",
+    "slug": "medanta-the-medicity-gurgaon",
+    "image": "",
+    "location": "Gurgaon , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Specialty"],
+    "description": "Founded in 2009 by globally acclaimed cardiothoracic surgeon Dr. Naresh Trehan, Medanta – The Medicity is one of India’s largest and most respected multi-specialty medical institutes, offering a holistic range of treatments across more than 30 specialties.\n\n43-acre campus\n30+ medical specialities\n900+ doctors\n1250+ beds\n45 operation theatres\n270+ ICU beds\nJCI and NABH accreditation\nNABL accreditation",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Fortis Memorial Research Institute, Gurgaon",
+    "slug": "fortis-memorial-research-institute-gurgaon",
+    "image": "",
+    "location": "Gurgaon , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Fortis Memorial Research Institute (FMRI), Gurgaon, is a multi-super-specialty, quaternary care hospital known for clinical excellence and cutting-edge technology.\n\nFounded in 2001\n1000+ doctors\n50 medical specialities\nA hub for advanced cancer, cardiac and neuro care\nEstablished in 2001\nJCI and NABH accreditation\nNABL accreditation",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Artemis Hospital, Gurgaon",
+    "slug": "artemis-hospital-gurgaon",
+    "image": "",
+    "location": "Gurgaon , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Artemis Hospital is a JCI and NABH accredited hospital known for advanced multispecialty care including orthopaedics, oncology, cardiology, neurology, and transplants.\n\nFounded in 2007\n400+ beds\n11+ centres of excellence\nJCI and NABH accredited",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Max Super Speciality Hospital, Saket",
+    "slug": "max-super-speciality-hospital-saket",
+    "image": "",
+    "location": "New Delhi , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Max Super Speciality Hospital, Saket, is one of India’s leading healthcare facilities, offering advanced treatments across multiple disciplines.\n\nFounded in 2006\n500+ beds\n35+ specialities\nJCI and NABH accredited",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "BLK-Max Super Speciality Hospital, Delhi",
+    "slug": "blk-max-super-speciality-hospital-delhi",
+    "image": "",
+    "location": "Delhi , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "BLK-Max Super Speciality Hospital is one of the largest tertiary care hospitals with a strong reputation in oncology, cardiac sciences, and organ transplants.\n\nFounded in 1959\n650+ beds\n17 state-of-the-art modular operation theatres\nJCI and NABH accredited",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Indraprastha Apollo Hospital, Delhi",
+    "slug": "indraprastha-apollo-hospital-delhi",
+    "image": "",
+    "location": "Delhi , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Indraprastha Apollo Hospital is a premier multi-specialty tertiary care center offering internationally benchmarked medical services.\n\nFounded in 1996\n700+ beds\n52 specialities\nThe first hospital in India to receive JCI accreditation",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Jaypee Hospital, Noida",
+    "slug": "jaypee-hospital-noida",
+    "image": "",
+    "location": "Noida , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Jaypee Hospital is a modern multi-specialty facility offering comprehensive healthcare with advanced technologies.\n\nFounded in 2014\n1200-bed flagship hospital of Jaypee Group\nMulti-super-speciality care",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Sir Ganga Ram Hospital, Delhi",
+    "slug": "sir-ganga-ram-hospital-delhi",
+    "image": "",
+    "location": "Delhi , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Sir Ganga Ram Hospital is a prestigious multi-specialty hospital renowned for comprehensive medical and surgical care.\n\nFounded in 1951\n675+ beds\nTop-ranked medical institute",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Aakash Healthcare Super Speciality Hospital, Delhi",
+    "slug": "aakash-healthcare-super-speciality-hospital-delhi",
+    "image": "",
+    "location": "Delhi , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Aakash Healthcare is known for orthopaedic care along with comprehensive multi-specialty medical and surgical services.\n\nFounded in 2011\n230+ beds\nKnown for robotic surgeries",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Narayana Superspeciality Hospital, Gurgaon",
+    "slug": "narayana-superspeciality-hospital-gurgaon",
+    "image": "",
+    "location": "Gurgaon , India",
+    "rating": null,
+    "beds": null,
+    "specialties": ["Multi Speciality"],
+    "description": "Narayana Superspeciality Hospital is a NABH-accredited multi-specialty center offering advanced healthcare services.\n\nFounded in 2010\n200+ beds\nPart of Narayana Health network",
+    "accreditations": [],
+    "treatments": [],
+    "doctors": [],
+    "latitude": null,
+    "longitude": null
+  }
+];
+
+(async () => {
+  try {
+    await HospitalSchema.deleteMany();
+    await HospitalSchema.insertMany(hospitals);
+    console.log("Hospital seed complete!");
+  } catch (err) {
+    console.error(err);
+  } finally {
+    // mongoose.connection.close();
+  }
+})();
+
+
 
 const TreatmentSchema = new mongoose.Schema({
   slug: { type: String, unique: true },
