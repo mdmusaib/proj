@@ -36,7 +36,7 @@ const HospitalSchema = new mongoose.Schema({
   latitude: Number,
   longitude: Number,
 });
-const Hospital = require("./models/Hospital"); // change path if needed
+
 
 mongoose.connect("mongodb://127.0.0.1:27017/yourdbname")
   .then(() => console.log("DB Connected"))
