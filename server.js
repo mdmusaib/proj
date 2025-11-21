@@ -285,8 +285,8 @@ async function seedIfEmpty() {
   if (hCount === 0) {
 
     // 1️⃣ Create hospital
-     await HospitalSchema.deleteMany();
-    await HospitalSchema.insertMany(hospitals);
+     await Hospital.deleteMany();
+    await Hospital.insertMany(hospitals);
 
     // 2️⃣ Create treatment FIRST (doctor created later)
     const angiography = await Treatment.create({
