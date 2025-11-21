@@ -38,20 +38,310 @@ const HospitalSchema = new mongoose.Schema({
 });
 
 
+const hospitals = [
+  
+  {
+    slug: "dr-subrat-akhoury",
+    name: "Dr. Subrat Akhoury",
+    specialty: "Cardiology",
+    position: "Chairman Cath Lab & Interventional Cardiologist",
+    experience: "20+ years",
+    expertise: "Cardiac catheterization, Interventional Cardiology",
+    qualifications: "MD, DM Cardiology",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Expertise in interventional cardiology, extensive experience in angioplasty and cardiac catheterization."
+  },
+  {
+    slug: "dr-rishi-gupta",
+    name: "Dr. Rishi Gupta",
+    specialty: "Cardiology",
+    position: "Senior Cardiologist",
+    experience: "32 years",
+    expertise: "General Cardiology, Non-invasive cardiac procedures",
+    qualifications: "MD, DM Cardiology",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "32 years of experience in cardiology including non-invasive cardiology techniques."
+  },
+  {
+    slug: "dr-prateek-chaudhary",
+    name: "Dr. Prateek Chaudhary",
+    specialty: "Cardiology",
+    position: "Interventional Cardiologist",
+    experience: "8+ years",
+    expertise: "Interventional Cardiology",
+    qualifications: "MBBS, MD, DM, EP Fellowship",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Known for advanced cardiac care and interventions."
+  },
+  {
+    slug: "dr-l-k-jha",
+    name: "Dr. L.K. Jha",
+    specialty: "Cardiology",
+    position: "Senior Cardiologist",
+    experience: "14+ years",
+    expertise: "Cardiac catheterization, Angioplasty, Electrophysiology",
+    qualifications: "Medicine training at KGMU, Lucknow",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Performed 10,000+ coronary angiograms and 1,000+ angioplasties."
+  },
+  {
+    slug: "dr-anita-kant-cosmetic",
+    name: "Dr. Anita Kant",
+    specialty: "Cosmetic Surgery",
+    position: "Consultant Gynecologist with Cosmetic Surgery expertise",
+    experience: "12 years",
+    expertise: "Gynecology and cosmetic procedures",
+    qualifications: "MBBS, MS, DGO",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Specialized in gynecology with additional expertise in cosmetic procedures."
+  },
+  {
+    slug: "dr-anita-kant-gynecology",
+    name: "Dr. Anita Kant",
+    specialty: "Gynecology",
+    position: "Gynecologist/Obstetrician",
+    experience: "12 years",
+    expertise: "Obstetrics, Gynecology, Cosmetic Gynecology",
+    qualifications: "MBBS, MS, DGO",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Experienced in obstetrics and gynecology with a focus on cosmetic gynecology."
+  },
+  {
+    slug: "dr-gunjan-bhola",
+    name: "Dr. Gunjan Bhola",
+    specialty: "Gynecology",
+    position: "Senior Consultant Gynecologist",
+    experience: "25 years",
+    expertise: "High-risk pregnancies, infertility treatment",
+    qualifications: "MBBS, MS, DNB",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Expert in managing high-risk pregnancies and infertility."
+  },
+  {
+    slug: "dr-namrata-seth",
+    name: "Dr. Namrata Seth",
+    specialty: "Gynecology",
+    position: "Gynecologist/Obstetrician",
+    experience: "15 years",
+    expertise: "General gynecology, infertility, laparoscopic surgeries",
+    qualifications: "MBBS, MS, DNB",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Experienced gynecologist with laparoscopic surgery expertise."
+  },
+  {
+    slug: "dr-pooja-thukral",
+    name: "Dr. Pooja Thukral",
+    specialty: "Gynecology",
+    position: "Gynecologist",
+    experience: "10+ years",
+    expertise: "Gynecological surgeries, infertility treatment",
+    qualifications: "MBBS, MS",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Experienced in gynecological surgeries and infertility treatments."
+  },
+  {
+    slug: "dr-bhavna-banga",
+    name: "Dr. Bhavna Banga",
+    specialty: "IVF & Infertility",
+    position: "Consultant and IVF Specialist",
+    experience: "12 years",
+    expertise: "IVF, infertility treatments",
+    qualifications: "MBBS, DGO",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Experienced IVF specialist with hands-on experience in assisted reproductive technologies."
+  },
+  {
+    slug: "dr-mukesh-pandey",
+    name: "Dr. Mukesh Pandey",
+    specialty: "Neurosurgery",
+    position: "Director & HOD - Neurosurgery",
+    experience: "16+ years",
+    expertise: "Neurosurgical procedures, brain and spine surgeries",
+    qualifications: "MBBS, MS (General Surgery), MCh (Neurosurgery)",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Performs complex neurosurgical procedures including aneurysms and brain tumors."
+  },
+  {
+    slug: "dr-kunal-bahrani",
+    name: "Dr. Kunal Bahrani",
+    specialty: "Neurosurgery",
+    position: "Consultant Neurosurgeon",
+    experience: "10+ years",
+    expertise: "Brain tumor surgery, spinal surgeries",
+    qualifications: "MBBS, MS, MCh Neurosurgery",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Experienced in minimally invasive neurosurgical techniques."
+  },
+  {
+    slug: "dr-reetesh-sharma",
+    name: "Dr. Reetesh Sharma",
+    specialty: "Neurosurgery",
+    position: "Consultant Neurosurgeon",
+    experience: "12 years",
+    expertise: "Spine surgery, neurotrauma",
+    qualifications: "MBBS, MS, MCh Neurosurgery",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Specializes in spinal surgeries and neurotrauma management."
+  },
+  {
+    slug: "dr-anil-kumar",
+    name: "Dr. Anil Kumar",
+    specialty: "Neurosurgery",
+    position: "Senior Consultant Neurosurgeon",
+    experience: "18+ years",
+    expertise: "Brain and spinal tumor surgeries",
+    qualifications: "MBBS, MS, MCh Neurosurgery",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Experienced in complex brain and spinal tumor surgeries."
+  },
+  {
+    slug: "dr-prashant-mehta",
+    name: "Dr. Prashant Mehta",
+    specialty: "Oncology",
+    position: "Medical Oncologist",
+    experience: "12+ years",
+    expertise: "Medical oncology, hematology, bone marrow transplant",
+    qualifications: "MD, DM Oncology",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Expert in precision oncology and hematological malignancies."
+  },
+  {
+    slug: "dr-praveen-bansal",
+    name: "Dr. Praveen Bansal",
+    specialty: "Oncology",
+    position: "Director - Oncology Services",
+    experience: "23+ years",
+    expertise: "Medical oncology, hematological tumors",
+    qualifications: "MD, DM Oncology",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Specializes in pediatric and adult hematological malignancies."
+  },
+  {
+    slug: "dr-manish-julaha",
+    name: "Dr. Manish Julaha",
+    specialty: "Oncology",
+    position: "Head & Neck Onco Surgeon",
+    experience: "14 years",
+    expertise: "Head and neck oncology surgery",
+    qualifications: "MS, MCh Oncology",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Experienced in head and neck cancer surgeries."
+  },
+  {
+    slug: "dr-neetu-singhal",
+    name: "Dr. Neetu Singhal",
+    specialty: "Oncology",
+    position: "Radiation Oncologist",
+    experience: "20 years",
+    expertise: "Radiation oncology",
+    qualifications: "MD Radiotherapy",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Expert in radiation therapy for various cancers."
+  },
+  {
+    slug: "dr-mrinal-sharma",
+    name: "Dr. Mrinal Sharma",
+    specialty: "Orthopedics",
+    position: "Orthopaedic and Joint Replacement Surgeon",
+    experience: "17+ years",
+    expertise: "Bone and joint replacement, computer navigated arthroplasty",
+    qualifications: "MS Orthopedics",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Expert in robotic assisted hip and knee replacements."
+  },
+  {
+    slug: "dr-ashutosh-srivastava",
+    name: "Dr. Ashutosh Srivastava",
+    specialty: "Orthopedics",
+    position: "Orthopedician",
+    experience: "15 years",
+    expertise: "Orthopedics, Trauma surgery",
+    qualifications: "MS Orthopedics",
+    experienceLevel: "Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Handles complex fracture and trauma cases."
+  },
+  {
+    slug: "dr-rajiv-thukral",
+    name: "Dr. Rajiv Thukral",
+    specialty: "Orthopedics",
+    position: "Senior Orthopaedic Surgeon",
+    experience: "23+ years",
+    expertise: "Arthroplasty, sports injury surgery",
+    qualifications: "MS Orthopedics, DNB",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Specialist in joint replacement and sports injuries."
+  },
+  {
+    slug: "dr-neeraj-gupta",
+    name: "Dr. Neeraj Gupta",
+    specialty: "Spine Surgery",
+    position: "Consultant Spine Surgeon",
+    experience: "25+ years",
+    expertise: "Spine surgery, spinal deformities, minimally invasive spine surgery",
+    qualifications: "MBBS, Diploma in Orthopedics, DNB, FNB Spine Surgery",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Specialist in minimally invasive and robotic spine surgeries with extensive international training."
+  },
+  {
+    slug: "dr-rakesh-kumar",
+    name: "Dr. Rakesh Kumar",
+    specialty: "Spine Surgery",
+    position: "Senior Consultant Spine Surgeon",
+    experience: "20+ years",
+    expertise: "Spinal tumor surgery, deformity correction",
+    qualifications: "MS Orthopedics, MCh Spine Surgery",
+    experienceLevel: "Senior Consultant",
+    place: "Asian Institute of Medical Sciences, Faridabad",
+    photo: "",
+    about: "Skilled in spinal tumor surgeries and complex deformity corrections."
+  }
 
 
-
-// (async () => {
-//   try {
-//     await HospitalSchema.deleteMany();
-//     await HospitalSchema.insertMany(hospitals);
-//     console.log("Hospital seed complete!");
-//   } catch (err) {
-//     console.error(err);
-//   } finally {
-//     // mongoose.connection.close();
-//   }
-// })();
+];
 
 
 
@@ -119,81 +409,7 @@ const Hospital = mongoose.model('Hospital', HospitalSchema);
 const Treatment = mongoose.model('Treatment', TreatmentSchema);
 const Doctor = mongoose.model('Doctor', DoctorSchema);
 
-// // --- Helper: seed minimal mock data if empty ---
-// async function seedIfEmpty() {
-//     // 🔥 NEW: Seed Admin User
-//     const adminCount = await AdminUser.countDocuments();
-//     if (adminCount === 0) {
-//         await AdminUser.create({
-//             username: 'admin',
-//             password: 'password123' // NOTE: Use bcrypt in a real app!
-//         });
-//         console.log('Default admin user created: admin/password123');
-//     }
-//   const hCount = await Hospital.countDocuments();
-//   if (hCount === 0) {
 
-//     // 1️⃣ Create hospital
-//      await Hospital.deleteMany();
-//     await Hospital.insertMany(hospitals);
-
-//     // 2️⃣ Create treatment FIRST (doctor created later)
-//     const angiography = await Treatment.create({
-//       slug: 'angiography',   // ⭐ proper slug
-//       treatmentName: 'Angiography',
-//       category: 'Cardiology',
-//       description: 'Diagnostic imaging for heart arteries',
-//       costRange: '$300 – $600',
-
-//       treatmentNameAr: 'تصوير الأوعية الدموية',
-//       categoryAr: 'أمراض القلب',
-//       descriptionAr: 'تصوير تشخيصي لشرايين القلب',
-
-//       hospitals: [medanta._id],
-
-//       // no doctors yet → fill later
-//       doctors: [],
-
-//       // Example cost table
-//       costTable: [
-//         {
-//           name: "Angiography Test",
-//           description: "Standard coronary angiography",
-//           costFrom: 300,
-//           costTo: 600,
-//           currency: "USD"
-//         }
-//       ]
-//     });
-
-//     // 3️⃣ Create doctor
-//     const dr = await Doctor.create({
-//       slug: 'dr-anil-bhan',
-//       name: 'Dr. Anil Bhan',
-//       specialty: 'Cardiology',
-//       hospital: medanta._id,
-//       experience: '43+ years',
-//       image: '',
-//       isTopDoctor: true,
-//       position: 'Chairman',
-//       degree: 'MBBS, MS, MCh(CTVS)',
-//       about: 'Dr. Bhan is an outstanding cardiovascular surgeon...',
-//       medicalProblems: ['Aortic Aneurysm','Pediatric Cardiac Conditions'],
-//       procedures: ['Aortic Aneurysm Surgery','Pediatric Cardiac Surgery'],
-//       faqs: [{ question: "What is Dr. Bhan's area of expertise?", answer: 'Aortic surgery' }],
-//       treatments: [angiography._id]
-//     });
-
-//     // 4️⃣ Update treatment with doctor ID
-//     angiography.doctors = [dr._id];
-//     await angiography.save();
-
-//     // 5️⃣ Update hospital with doctor + treatment
-//     medanta.doctors = [dr._id];
-//     medanta.treatments = [angiography._id];
-//     await medanta.save();
-//   }
-// }
 
 
 // --- Admin APIs ---
