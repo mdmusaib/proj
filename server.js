@@ -38,9 +38,6 @@ const HospitalSchema = new mongoose.Schema({
 });
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/yourdbname")
-  .then(() => console.log("DB Connected"))
-  .catch(err => console.error(err));
 
 const hospitals = [
   {
