@@ -245,7 +245,6 @@ const MONGO = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/healthcare_loc
 mongoose.connect(MONGO, { useNewUrlParser:true, useUnifiedTopology:true })
   .then(()=> {
     console.log('mongodb connected');
-    seedIfEmpty().then(()=> console.log('seed complete'));
     app.listen(process.env.PORT || 5000, ()=> console.log('server started on 5000'));
   }).catch(err=> {
     console.error('mongo connect failed', err);
