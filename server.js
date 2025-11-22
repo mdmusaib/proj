@@ -12,6 +12,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+
+const nodemailer = require("nodemailer");
+
+
 // 🔥 NEW: AdminUser Schema for basic authentication
 const AdminUserSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
@@ -442,3 +446,48 @@ app.post('/admin/login', async (req, res) => {
     const token = 'MOCK_ADMIN_TOKEN_12345'; 
     res.json({ success: true, token, user: { username: user.username, role: user.role } });
 });
+
+
+// -----------------------
+// CONTACT FORM API
+// -----------------------
+app.post("/api/contact", async (req, res) => {
+  try {
+    const { name, email, phone, message, treatment } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    // Configure transporter
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "musaibkm@gmail.com",
+        pass: "Infy@632509"
+      },
+    });
+
+    const mailOptions = {
+      from: email,
+      to: "musaibkm@gmail.com",
+      subject: "New Contact Form Submission",
+      html: `
+        <h2>New Contact / Quote Request</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
+        <p><strong>Treatment:</strong> ${treatment || "N/A"}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    res.json({ success: true, message: "Email sent successfully" });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to send email", details: err.message });
+  }
+});
+
