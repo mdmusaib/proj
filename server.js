@@ -117,7 +117,8 @@ const Doctor = mongoose.model('Doctor', DoctorSchema);
 app.post('/admin/hospitals', upload.single('image'), async (req, res) => {
   try {
     const data = req.body;
-    if (req.file) data.image = '/uploads/' + req.file.filename;
+    // if (req.file) data.image = '/uploads/' + req.file.filename;
+    data.image= data.image;
     // ensure arrays
     if (data.specialties && typeof data.specialties === 'string') data.specialties = data.specialties.split(',').map(s => s.trim());
     const h = await Hospital.create(data);
@@ -184,7 +185,8 @@ app.delete('/admin/treatments/:id', async (req, res) => {
 app.post('/admin/doctors', upload.single('image'), async (req, res) => {
   try {
     const data = req.body;
-    if (req.file) data.image = '/uploads/' + req.file.filename;
+    // if (req.file) data.image = '/uploads/' + req.file.filename;
+    data.image= data.image;
     if (data.treatments && typeof data.treatments === 'string') data.treatments = data.treatments.split(',').map(s=>s.trim());
     const d = await Doctor.create(data);
     res.json(d);
