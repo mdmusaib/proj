@@ -53,6 +53,31 @@ const TreatmentCategory = mongoose.model(
   TreatmentCategorySchema
 );
 
+
+const DoctorSchema = new mongoose.Schema({
+  slug: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
+  specialty: { type: String, required: true },
+  hospital: { type: String, required: true },
+  experience: { type: String },
+  image: { type: String },
+  isTopDoctor: { type: Boolean, default: false },
+  position: { type: String },
+  degree: { type: String },
+  about: { type: String },
+
+  medicalProblems: [{ type: String }],
+
+  procedures: [{ type: String }],
+
+  faqs: [
+    {
+      question: { type: String },
+      answer: { type: String }
+    }
+  ]
+});
+const Doctor = mongoose.model("doctors", DoctorSchema);
 // ----------------------
 //  HOSPITAL MODEL
 // ----------------------
@@ -71,7 +96,7 @@ const HospitalSchema = new mongoose.Schema({
 });
 
 const Hospital = mongoose.model(
-  "hospital",
+  "hospitals",
   HospitalSchema
 );
 // ----------------------
@@ -81,6 +106,16 @@ app.get('/api/hospitals', async (req, res) => {
   try {
     const hospitals = await Hospital.find();
     res.json(hospitals);
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// GET all doctors
+app.get('/api/doctors', async (req, res) => {
+  try {
+    const doctors = await Doctor.find();
+    res.json(doctors);
   } catch (err) {
     res.status(500).json({ error: "Server error" });
   }
