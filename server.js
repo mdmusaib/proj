@@ -102,14 +102,36 @@ const Hospital = mongoose.model(
 // ----------------------
 //  GET HOSPITALS
 // ----------------------
+// FILTER hospitals by name
 app.get('/api/hospitals', async (req, res) => {
   try {
+    const { name } = req.query;
+
+    // If ?name exists → filter
+    if (name) {
+      const hospital = await Hospital.findOne({
+        normalizedName: name
+          .toLowerCase()
+          .replace(/[^a-z0-9 ]/g, "")
+          .trim()
+      });
+
+      if (!hospital) {
+        return res.status(404).json({ error: "Hospital not found" });
+      }
+
+      return res.json(hospital);
+    }
+
+    // Else return all hospitals
     const hospitals = await Hospital.find();
     res.json(hospitals);
+
   } catch (err) {
     res.status(500).json({ error: "Server error" });
   }
 });
+
 
 // GET all doctors
 app.get('/api/doctors', async (req, res) => {
