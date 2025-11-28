@@ -122,273 +122,204 @@ app.get('/api/doctors', async (req, res) => {
 });
 
 app.get('/admin/seed-doctor', async (req, res) => {
-  const doctors = [
+ const doctors = [
   {
-    "name": "Dr. Purshotam Lal",
-    "speciality": "Cardiology & CTVS",
-    "designation": "Chairman - Metro Group of Hospitals & Director Interventional Cardiology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": [
-      "Introduced the largest number of procedures for the first time in India such as rotational angioplasty, diamond drilling, heart hole closure, stenting etc.",
-      "Played major role in development of Monodisc Device and performed world's first ASD closure case in Sept 1992.",
-      "Performed world's first aortic valve replacement with Core Valve without surgery on July 12, 2004.",
-      "Developed Left Atrio Femoral Bypass (Partial Artificial Heart) technique.",
-      "Developed echo-guided Mitral Valvuloplasty technique in 1995.",
-      "Introduced INOUE Balloon in India.",
-      "Developed METRO CORONARY SCREENING (11,000+ cases).",
-      "Performed 20+ VSD closures post heart attack.",
-      "Performs the largest number of angioplasties/stenting as a single operator in India."
-    ],
-    "qualification": ["MD", "AB (USA)", "FRCP (C)", "FACM", "FICC", "FACC", "FSCAI (USA)"],
-    "achievements": [
-      "Jawaharlal Nehru International Excellence Award 1990",
-      "Rajiv Gandhi Excellence Award 1991",
-      "Dr. V V Shah Oration Gold Medal 1992",
-      "Life time achievement award by DMA 2002",
-      "Padma Bhushan 2003",
-      "Dr B C Roy National Award 2004",
-      "Padma Vibhushan 2009",
-      "Listed multiple times in Limca Book of Records",
-      "World’s Greatest Leader title in 2015"
-    ],
-    "opd_timings": "Monday – Saturday : 9 AM to 5 PM"
+    slug: "dr-purshotam-lal",
+    name: "Dr. Purshotam Lal",
+    specialty: "Cardiology & CTVS",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "Introduced multiple first-in-India cardiac procedures",
+    image: "",
+    isTopDoctor: true,
+    position: "Chairman - Metro Group of Hospitals",
+    degree: "MD, AB (USA), FRCP (C), FACM, FICC, FACC, FSCAI (USA)",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Neeraj Jain",
-    "speciality": "Interventional Cardiology",
-    "designation": "Medical Director & Director - Interventional Cardiology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "about": "Best cardiologist in Faridabad with 23+ years experience, treated 50,000+ heart patients, performed 15,000+ procedures.",
-    "experience": [
-      "Key role in establishing Metro Heart Institute",
-      "20 years serving heart patients",
-      "Former Cardiologist – Malhotra Heart Institute"
-    ],
-    "qualification": [
-      "MBBS – GRMC, Gwalior",
-      "MD Medicine – Govt. Medical College, Jabalpur",
-      "DM Cardiology – LPS Institute of Cardiology, Kanpur",
-      "FACC"
-    ],
-    "expertise": [
-      "Angioplasty & stenting",
-      "Pacemakers",
-      "ASD, VSD, PDA closure",
-      "ICD, BIVI, CRI implants",
-      "Radiofrequency ablation",
-      "Rotablation"
-    ],
-    "achievements": [
-      "Treated 50,000+ patients",
-      "10,000+ angioplasties",
-      "15,000+ cardiac procedures",
-      "1,000+ international patients treated"
-    ],
-    "opd_timings": "Monday – Saturday : 12 PM to 2 PM"
+    slug: "dr-neeraj-jain",
+    name: "Dr. Neeraj Jain",
+    specialty: "Interventional Cardiology",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "23+ years, 50,000+ treated patients",
+    image: "",
+    isTopDoctor: false,
+    position: "Medical Director",
+    degree: "MBBS, MD, DM, FACC",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Praveen Kumar Bansal",
-    "speciality": "Medical Oncology",
-    "designation": "Director - Oncology Services",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "about": "25+ years experience treating hematological and solid tumors in pediatric & adult patients.",
-    "experience": [
-      "Director – Medical Oncology at Asian Institute of Medical Sciences",
-      "Sr. Consultant – Dharamshilla Cancer Hospital",
-      "Sr. Consultant – Medanta Hospital"
-    ],
-    "qualification": ["MBBS", "MD (Gold Medalist)", "DM (Medical Oncology)"],
-    "expertise": [
-      "Hematological malignancies",
-      "Bone marrow transplant",
-      "Paediatric & adult oncology",
-      "Immunotherapy",
-      "Solid tumors"
-    ],
-    "membership": ["ASH", "ASCO", "ESMO", "IASLC"],
-    "opd_timings": "Monday – Saturday : 9 AM to 5 PM"
+    slug: "dr-praveen-kumar-bansal",
+    name: "Dr. Praveen Kumar Bansal",
+    specialty: "Medical Oncology",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "25+ years experience",
+    image: "",
+    isTopDoctor: false,
+    position: "Director - Oncology Services",
+    degree: "MBBS, MD, DM",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Sumant Gupta",
-    "speciality": "Medical Oncology, Hematology, BMT",
-    "designation": "Director - Metro Cancer Institute",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "about": "Performed first bone marrow transplant in Faridabad; 20+ research publications.",
-    "experience": [
-      "HOD – Sarvodaya Cancer Institute",
-      "Associate Consultant – Batra Hospital",
-      "Senior Registrar – AIIMS Delhi"
-    ],
-    "qualification": [
-      "DM (Medical Oncology) – Cancer Institute, Adyar",
-      "MD (Internal Medicine)",
-      "MBBS – RGUHS"
-    ],
-    "achievements": ["TYSA Young Scholar Award 2015", "Winner – TYACON Quiz 2013"],
-    "opd_timings": "Monday – Saturday : 10 AM to 5 PM"
+    slug: "dr-sumant-gupta",
+    name: "Dr. Sumant Gupta",
+    specialty: "Medical Oncology, Hematology, BMT",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "Performed first BMT in Faridabad",
+    image: "",
+    isTopDoctor: false,
+    position: "Director - Metro Cancer Institute",
+    degree: "DM, MD, MBBS",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Vikash Kumar",
-    "speciality": "Radiation Oncology",
-    "designation": "Director & Head - Radiation Oncology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": [
-      "Associate Director – Asian Institute of Medical Sciences",
-      "Senior Consultant – BLK Cyberknife Centre",
-      "Executive Consultant – Jaypee Hospital"
-    ],
-    "qualification": [
-      "MD (Radiotherapy) – BHU",
-      "MBBS – Sri Krishna Medical College"
-    ],
-    "achievements": [
-      "AROI Fellowship 2008",
-      "NAMS CME Fellowship 2009",
-      "Fellowship in Precision Radiotherapy 2011"
-    ],
-    "opd_timings": "Monday – Saturday : 9 AM to 5 PM"
+    slug: "dr-vikash-kumar",
+    name: "Dr. Vikash Kumar",
+    specialty: "Radiation Oncology",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "Former Associate Director at AIMS",
+    image: "",
+    isTopDoctor: false,
+    position: "Director & Head - Radiation Oncology",
+    degree: "MD, MBBS",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Ritesh Mongha",
-    "speciality": "Urology, Renal Transplant & Robotic Surgery",
-    "designation": "Director & Sr. Consultant",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "about": "19+ years; 10,000+ endourological procedures, 2,000+ RIRS, 200+ uro-oncology surgeries.",
-    "qualification": [
-      "MCh (Urology)",
-      "MS (Surgery)",
-      "DNB (General Surgery)",
-      "MBBS"
-    ],
-    "experience": [
-      "Apollo Hospital Delhi",
-      "Fortis Hospital",
-      "SSKM Hospital Kolkata"
-    ],
-    "achievements": [
-      "700+ renal transplants",
-      "20,000+ endourological procedures",
-      "1000+ uro-oncology surgeries"
-    ],
-    "opd_timings": "Monday – Saturday : 11 AM to 5 PM"
+    slug: "dr-ritesh-mongha",
+    name: "Dr. Ritesh Mongha",
+    specialty: "Urology, Renal Transplant & Robotic Surgery",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "19+ years, 10,000+ surgeries",
+    image: "",
+    isTopDoctor: false,
+    position: "Director & Sr. Consultant",
+    degree: "MCh, MS, DNB, MBBS",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Shailendra Lalwani",
-    "speciality": "Liver Transplant, HPB & GI Surgery",
-    "designation": "Director & HOD",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "about": "25+ years; 2500+ liver transplants; 15,000+ HPB & GI surgeries.",
-    "qualification": [
-      "MBBS – SMS Medical College",
-      "MS – JLN Medical College",
-      "DNB (Surgical Gastroenterology)",
-      "Training – King's College Hospital, London"
-    ],
-    "opd_timings": "Monday – Saturday : 10 AM to 5 PM"
+    slug: "dr-shailendra-lalwani",
+    name: "Dr. Shailendra Lalwani",
+    specialty: "Liver Transplant, HPB & GI Surgery",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "2500+ liver transplants",
+    image: "",
+    isTopDoctor: false,
+    position: "Director & HOD",
+    degree: "MBBS, MS, DNB",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Lalit Sehgal",
-    "speciality": "Liver Transplant Anaesthesia & Critical Care",
-    "designation": "Director & HOD",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "qualification": [
-      "MBBS – SN Medical College",
-      "MD (Anesthesiology) – AIIMS Delhi",
-      "DNB (Anesthesiology)"
-    ],
-    "achievements": [
-      "Established liver transplant programs in multiple major hospitals",
-      "ISA Appreciation Award 2022"
-    ]
+    slug: "dr-lalit-sehgal",
+    name: "Dr. Lalit Sehgal",
+    specialty: "Liver Transplant Anaesthesia & Critical Care",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "",
+    image: "",
+    isTopDoctor: false,
+    position: "Director & HOD",
+    degree: "MBBS, MD, DNB",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Vishal Khurana",
-    "speciality": "Gastroenterology & Hepatobiliary Sciences",
-    "designation": "Director",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": [
-      "Consultant – FMRI Gurgaon",
-      "Consultant – Sarvodaya Hospital"
-    ],
-    "qualification": [
-      "DM – IPGMER, Kolkata",
-      "MD – BHU Varanasi",
-      "MBBS – BHU"
-    ],
-    "expertise": [
-      "Upper GI endoscopy",
-      "ERCP",
-      "EUS",
-      "Colonoscopy",
-      "Fibroscan"
-    ],
-    "opd_timings": "Monday – Saturday : 11 AM to 4 PM"
+    slug: "dr-vishal-khurana",
+    name: "Dr. Vishal Khurana",
+    specialty: "Gastroenterology & Hepatobiliary Sciences",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "",
+    image: "",
+    isTopDoctor: false,
+    position: "Director",
+    degree: "DM, MD, MBBS",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Himanshu Arora",
-    "speciality": "Neurosurgery & Spine Surgery",
-    "designation": "Director - Neuro Surgery & Spine",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "qualification": [
-      "MBBS – KMC Mangalore",
-      "DNB (General Surgery)",
-      "DNB (Neurosurgery)",
-      "Fellowship – Spine Surgery, London"
-    ],
-    "expertise": [
-      "Brain & Spine Tumors",
-      "Minimally invasive spine surgery",
-      "Endoscopic spine surgery",
-      "Neurotrauma",
-      "Stereotactic neurosurgery"
-    ],
-    "opd_timings": "Monday – Saturday : 11 AM to 2 PM"
+    slug: "dr-himanshu-arora",
+    name: "Dr. Himanshu Arora",
+    specialty: "Neurosurgery & Spine Surgery",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "",
+    image: "",
+    isTopDoctor: false,
+    position: "Director",
+    degree: "MBBS, DNB",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Arun Kumar C. Singh",
-    "speciality": "Endocrinology & Diabetology",
-    "designation": "Director",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "qualification": [
-      "MBBS – Grant Medical College",
-      "MD – MAMC Delhi",
-      "DM – AIIMS Delhi"
-    ],
-    "opd_timings": "Monday – Saturday : 9:30 AM to 1:30 PM"
+    slug: "dr-arun-kumar-singh",
+    name: "Dr. Arun Kumar C. Singh",
+    specialty: "Endocrinology & Diabetology",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "",
+    image: "",
+    isTopDoctor: false,
+    position: "Director",
+    degree: "MBBS, MD, DM",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Midur Kumar Sharma",
-    "speciality": "Laparoscopic, Bariatric & Metabolic Surgery",
-    "designation": "Associate Director",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "qualification": [
-      "MCLS",
-      "MS (General Surgery)",
-      "MBBS"
-    ],
-    "opd_timings": "Monday – Saturday : 11 AM to 2 PM"
+    slug: "dr-midur-kumar-sharma",
+    name: "Dr. Midur Kumar Sharma",
+    specialty: "Laparoscopic, Bariatric & Metabolic Surgery",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "",
+    image: "",
+    isTopDoctor: false,
+    position: "Associate Director",
+    degree: "MCLS, MS, MBBS",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   },
-
   {
-    "name": "Dr. Ashok Kr. Dhar",
-    "speciality": "Orthopaedics & Joint Replacement",
-    "designation": "Director",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "about": "30,000+ surgeries; specialises in hip, knee, shoulder replacement.",
-    "opd_timings": "Monday – Saturday"
+    slug: "dr-ashok-dhar",
+    name: "Dr. Ashok Kr. Dhar",
+    specialty: "Orthopaedics & Joint Replacement",
+    hospital: "Metro Heart Institute with Multispeciality",
+    experience: "",
+    image: "",
+    isTopDoctor: false,
+    position: "Director",
+    degree: "",
+    about: "",
+    medicalProblems: [],
+    procedures: [],
+    faqs: []
   }
 ];
+
 
   try {
     await Doctor.deleteMany({});
