@@ -459,7 +459,8 @@ app.get('/admin/seed-treatments', async (req, res) => {
 
 app.post("/api/send-mail", async (req, res) => {
   try {
-    const { name, email, phone, message, treatment } = req.body;
+    const { name, email, phone, message, treatment, country, language } = req.body;
+
 
     if (!name || !email || !message) {
       return res.status(400).json({ error: "Missing required fields" });
@@ -488,13 +489,17 @@ app.post("/api/send-mail", async (req, res) => {
       to: "musaibkm@gmail.com",
       subject: "New Contact Form Submission",
       html: `
-        <h2>New Contact / Quote Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
-        <p><strong>Treatment:</strong> ${treatment || "N/A"}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+  <h2>New Contact / Quote Request</h2>
+  <p><strong>Name:</strong> ${name}</p>
+  <p><strong>Email:</strong> ${email}</p>
+  <p><strong>Phone:</strong> ${phone || "N/A"}</p>
+  <p><strong>Country:</strong> ${country || "N/A"}</p>
+  <p><strong>Treatment:</strong> ${treatment || "N/A"}</p>
+  <p><strong>Preferred Language:</strong> ${language || "N/A"}</p>
+  <p><strong>Message:</strong></p>
+  <p>${message}</p>
+`
+
       `,
     };
 
