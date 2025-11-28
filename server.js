@@ -30,12 +30,21 @@ mongoose
 // ----------------------
 const TreatmentCategorySchema = new mongoose.Schema({
   slug: { type: String, required: true, unique: true },
-  icon: { type: String }, // store icon name (React icons mapped on frontend)
+  icon: { type: String }, 
   title: String,
   titleAr: String,
-  treatments: [String],
+
+  // CHANGE HERE 👇
+  treatments: [
+    {
+      name: { type: String, required: true },
+      cost: { type: String, required: true }
+    }
+  ],
+
   treatmentsAr: [String]
 });
+
 
 const TreatmentCategory = mongoose.model(
   "TreatmentCategory",
