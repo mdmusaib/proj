@@ -1,495 +1,245 @@
+// ----------------------
+//  IMPORTS
+// ----------------------
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
 
-const upload = multer({ dest: 'uploads/' });
-
+// ----------------------
+//  INITIALIZE APP
+// ----------------------
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-
-const nodemailer = require("nodemailer");
-
-
-// 🔥 NEW: AdminUser Schema for basic authentication
-const AdminUserSchema = new mongoose.Schema({
-    username: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    role: { type: String, default: 'admin' }
-});
-
-
-// --- Mongoose models ---
-const HospitalSchema = new mongoose.Schema({
-  name: String,
-  slug: String,
-  image: String,
-  location: String,
-  rating: Number,
-  beds: Number,
-  isTopHospital: Boolean,
-  specialties: [String],
-  description: String,
-  accreditations: [String],
-  treatments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Treatment' }],
-  doctors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Doctor' }],
-  latitude: Number,
-  longitude: Number,
-});
-
-
-
-
-const TreatmentSchema = new mongoose.Schema({
-  slug: { type: String, unique: true },
-   // 🔥 ADD THIS
-
-  treatmentName: String,
-  category: String,
-  description: String,
-  costRange: String,
-
-  treatmentNameAr: String,
-  categoryAr: String,
-  descriptionAr: String,
-
-  hospitals: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Hospital' }],
-  doctors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Doctor' }],
-
-  treatmentDetails: {
-    en: { type: String, default: "" },
-    ar: { type: String, default: "" }
-  },
-
-  costTable: [
-    {
-      name: String,
-      description: String,
-      costFrom: Number,
-      costTo: Number,
-      currency: { type: String, default: "USD" }
-    }
-  ]
-});
-
-TreatmentSchema.pre("save", function (next) {
-  if (this.treatmentName && !this.slug) {
-    this.slug = this.treatmentName.toLowerCase().trim().replace(/\s+/g, "-");
-  }
-  next();
-});
-
-
-
-
-const DoctorSchema = new mongoose.Schema({
-  name: String,
-  slug: String,
-  specialty: String,
-  experience: String,
-  image: String,
-  isTopDoctor: Boolean,
-  position: String,
-  degree: String,
-  about: String,
-  medicalProblems: [String],
-  procedures: [String],
-  faqs: [{ question: String, answer: String }],
-  hospital: { type: mongoose.Schema.Types.ObjectId, ref: 'Hospital' },
-  treatments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Treatment' }]
-});
-
-const AdminUser = mongoose.model('AdminUser', AdminUserSchema); 
-const Hospital = mongoose.model('Hospital', HospitalSchema);
-const Treatment = mongoose.model('Treatment', TreatmentSchema);
-const Doctor = mongoose.model('Doctor', DoctorSchema);
-
-
-
-
-// --- Admin APIs ---
-// Hospitals
-app.post('/admin/hospitals', upload.single('image'), async (req, res) => {
-  try {
-    const data = req.body;
-    // if (req.file) data.image = '/uploads/' + req.file.filename;
-    data.image= data.image;
-    // ensure arrays
-    if (data.specialties && typeof data.specialties === 'string') data.specialties = data.specialties.split(',').map(s => s.trim());
-    const h = await Hospital.create(data);
-    res.json(h);
-  } catch (err) { res.status(500).json({ error: err.message }); }
-});
-
-app.get('/admin/hospitals', async (req, res) => {
-  const list = await Hospital.find();
-  res.json(list);
-});
-
-app.get('/admin/hospitals/:id', async (req, res) => {
-  const item = await Hospital.findById(req.params.id);
-  res.json(item);
-});
-
-app.put('/admin/hospitals/:id', upload.single('image'), async (req, res) => {
-  try {
-    const data = req.body;
-    if (req.file) data.image = '/uploads/' + req.file.filename;
-    if (data.specialties && typeof data.specialties === 'string') data.specialties = data.specialties.split(',').map(s => s.trim());
-    const h = await Hospital.findByIdAndUpdate(req.params.id, data, { new: true });
-    res.json(h);
-  } catch (err) { res.status(500).json({ error: err.message }); }
-});
-
-app.delete('/admin/hospitals/:id', async (req, res) => {
-  await Hospital.findByIdAndDelete(req.params.id);
-  res.json({ success: true });
-});
-
-// Treatments (no images)
-app.post('/admin/treatments', async (req, res) => {
-  try {
-    const t = await Treatment.create(req.body);
-    res.json(t);
-  } catch (err) { res.status(500).json({ error: err.message }); }
-});
-
-app.get('/admin/treatments', async (req, res) => {
-  const list = await Treatment.find().populate('hospitals').populate('doctors');
-  res.json(list);
-});
-
-app.get('/admin/treatments/:id', async (req, res) => {
-  const item = await Treatment.findById(req.params.id).populate('hospitals').populate('doctors');
-  res.json(item);
-});
-
-app.put('/admin/treatments/:id', async (req, res) => {
-  try {
-    const t = await Treatment.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(t);
-  } catch (err) { res.status(500).json({ error: err.message }); }
-});
-
-app.delete('/admin/treatments/:id', async (req, res) => {
-  await Treatment.findByIdAndDelete(req.params.id);
-  res.json({ success: true });
-});
-
-// Doctors (image supported)
-app.post('/admin/doctors', upload.single('image'), async (req, res) => {
-  try {
-    const data = req.body;
-    // if (req.file) data.image = '/uploads/' + req.file.filename;
-    data.image= data.image;
-    if (data.treatments && typeof data.treatments === 'string') data.treatments = data.treatments.split(',').map(s=>s.trim());
-    const d = await Doctor.create(data);
-    res.json(d);
-  } catch (err) { res.status(500).json({ error: err.message }); }
-});
-
-app.get('/admin/doctors', async (req, res) => {
-  const list = await Doctor.find().populate('hospital').populate('treatments');
-  res.json(list);
-});
-
-app.get('/admin/doctors/:id', async (req, res) => {
-  const item = await Doctor.findById(req.params.id).populate('hospital').populate('treatments');
-  res.json(item);
-});
-
-app.put('/admin/doctors/:id', upload.single('image'), async (req, res) => {
-  try {
-    const data = req.body;
-    if (req.file) data.image = '/uploads/' + req.file.filename;
-    if (data.treatments && typeof data.treatments === 'string') data.treatments = data.treatments.split(',').map(s=>s.trim());
-    const d = await Doctor.findByIdAndUpdate(req.params.id, data, { new: true });
-    res.json(d);
-  } catch (err) { res.status(500).json({ error: err.message }); }
-});
-
-app.delete('/admin/doctors/:id', async (req, res) => {
-  await Doctor.findByIdAndDelete(req.params.id);
-  res.json({ success: true });
-});
-
-// Public listing routes (formatted like your mock)
-app.get('/public/treatments', async (req, res) => {
-  const treatments = await Treatment.find().populate('doctors').populate('hospitals');
-  const formatted = treatments.map(t => ({
-    treatmentName: t.treatmentName,
-    category: t.category,
-    description: t.description,
-    costRange: t.costRange,
-    treatmentNameAr: t.treatmentNameAr,
-    categoryAr: t.categoryAr,
-    descriptionAr: t.descriptionAr,
-    hospitals: t.hospitals.map(h => ({
-      slug: h.slug, name: h.name, image: h.image, location: h.location, rating: h.rating,
-      beds: h.beds, specialties: h.specialties, description: h.description, accreditations: h.accreditations,
-      latitude: h.latitude, longitude: h.longitude
-    })),
-    doctors: t.doctors.map(d => ({
-      slug: d.slug, name: d.name, specialty: d.specialty, hospital: d.hospital?.name,
-      experience: d.experience, image: d.image, isTopDoctor: d.isTopDoctor, position: d.position,
-      degree: d.degree, about: d.about, medicalProblems: d.medicalProblems, procedures: d.procedures, faqs: d.faqs
-    }))
-  }));
-  res.json(formatted);
-});
-
-// simple healthcheck
-app.get('/health', (req,res)=> res.json({ok:true}));
-
-// start
+// ----------------------
+//  MONGODB CONNECTION
+// ----------------------
 const MONGO = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/healthcare_local';
-mongoose.connect(MONGO, { useNewUrlParser:true, useUnifiedTopology:true })
-  .then(()=> {
-    console.log('mongodb connected');
-    app.listen(process.env.PORT || 5000, ()=> console.log('server started on 5000'));
-  }).catch(err=> {
-    console.error('mongo connect failed', err);
-  });
 
-  app.get('/public/hospitals/:slug', async (req, res) => {
+mongoose
+  .connect(MONGO, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log("DB Error:", err));
+
+// ----------------------
+//  MONGOOSE MODEL
+// ----------------------
+const TreatmentCategorySchema = new mongoose.Schema({
+  slug: { type: String, required: true, unique: true },
+  icon: { type: String }, // store icon name (React icons mapped on frontend)
+  title: String,
+  titleAr: String,
+  treatments: [String],
+  treatmentsAr: [String]
+});
+
+const TreatmentCategory = mongoose.model(
+  "TreatmentCategory",
+  TreatmentCategorySchema
+);
+
+// ----------------------
+//  GET API
+// ----------------------
+app.get('/api/treatments', async (req, res) => {
   try {
-    const hospital = await Hospital.findOne({ slug: req.params.slug });
-
-    if (!hospital) return res.status(404).json({ error: "Hospital not found" });
-
-    res.json(hospital);
+    const categories = await TreatmentCategory.find();
+    res.json(categories);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "Server error" });
   }
 });
 
-app.get('/public/doctors/:slug', async (req, res) => {
+// ----------------------
+//  SEEDER API (RUN ONCE)
+// ----------------------
+app.post('/admin/seed-treatments', async (req, res) => {
+  const treatmentCategories = [
+  {
+    slug: "general-internal-medicine",
+    title: "General & Internal Medicine",
+    treatments: [
+      "Outpatient Consultation / Routine Check-up",
+      "Preventive / Lifestyle Medicine Package",
+      "Infectious Disease Treatment"
+    ]
+  },
+  {
+    slug: "organ-based-systemic-specialties",
+    title: "Organ-Based & Systemic Specialties",
+    treatments: [
+      "Cardiology",
+      "Angiography",
+      "Angioplasty / Stent",
+      "CABG (Bypass Surgery)",
+      "Valve Replacement",
+      "Pacemaker Implant",
+      "Cardiothoracic / Thoracic Surgery",
+      "Pulmonology / Respiratory",
+      "Gastroenterology / Hepatology",
+      "Nephrology / Urology",
+      "Neurology / Neurosurgery",
+      "Endocrinology",
+      "Rheumatology",
+      "Vascular Surgery"
+    ]
+  },
+  {
+    slug: "musculoskeletal-structural-care",
+    title: "Musculoskeletal & Structural Care",
+    treatments: [
+      "Total Knee Replacement (single)",
+      "Bilateral Knee Replacement",
+      "Hip Replacement",
+      "Spine Surgery (structural)",
+      "Arthroscopy (joint keyhole)",
+      "Sports Injury Treatment",
+      "Physiotherapy / Rehab Session"
+    ]
+  },
+  {
+    slug: "skin-senses-appearance",
+    title: "Skin, Senses & Appearance",
+    treatments: [
+      "Dermatology / Laser Procedures",
+      "Plastic / Reconstructive Surgery",
+      "Cosmetic / Aesthetic Surgery",
+      "Cataract Surgery",
+      "LASIK (both eyes)",
+      "ENT (Ear, Nose, Throat) Procedures",
+      "Cochlear Implant",
+      "Dental Implants (per tooth)"
+    ]
+  },
+  {
+    slug: "womens-health-maternity",
+    title: "Women’s Health & Maternity",
+    treatments: [
+      "Normal (Vaginal) Delivery",
+      "Cesarean Section (C-Section)",
+      "IVF (per cycle)",
+      "ICSI (advanced IVF)",
+      "Hysterectomy",
+      "Myomectomy / Fibroid Removal"
+    ]
+  },
+  {
+    slug: "child-health-pediatrics",
+    title: "Child Health & Pediatrics",
+    treatments: [
+      "Pediatric Consultation / Tests",
+      "Neonatal ICU (NICU) – per day",
+      "Pediatric Surgery",
+      "Pediatric Cardiac Surgery (Congenital Heart Disease)",
+      "Cleft Lip / Palate Repair"
+    ]
+  },
+  {
+    slug: "cancer-blood-disorders",
+    title: "Cancer & Blood Disorders",
+    treatments: [
+      "Chemotherapy (per cycle)",
+      "Radiation Therapy",
+      "Major Cancer Surgery",
+      "Immunotherapy (per cycle)",
+      "Bone Marrow Transplant",
+      "Palliative Care"
+    ]
+  },
+  {
+    slug: "organ-transplant-advanced-surgery",
+    title: "Organ Transplant & Advanced Surgery",
+    treatments: [
+      "Kidney Transplant",
+      "Liver Transplant",
+      "Heart Transplant",
+      "Multi-Organ Transplant"
+    ]
+  },
+  {
+    slug: "emergency-critical-care",
+    title: "Emergency & Critical Care",
+    treatments: [
+      "ICU (Intensive Care) – per day",
+      "Trauma / Accident Care (initial / package)",
+      "Pain Management / Anesthesia Packages"
+    ]
+  },
+  {
+    slug: "mental-health-behavioral-sciences",
+    title: "Mental Health & Behavioral Sciences",
+    treatments: [
+      "Psychiatry / Counseling Session",
+      "Addiction Rehab (per month)"
+    ]
+  },
+  {
+    slug: "diagnostics-allied-services",
+    title: "Diagnostics & Allied Services",
+    treatments: [
+      "MRI Scan",
+      "CT Scan",
+      "PET-CT Scan",
+      "Full Body / Executive Check-up",
+      "Genetic Testing / Analysis"
+    ]
+  },
+  {
+    slug: "immunology-specialized-medicine",
+    title: "Immunology & Specialized Medicine",
+    treatments: [
+      "Allergy / Immunology Treatment",
+      "Sleep Medicine (Sleep Apnea Therapy)",
+      "Chronic Pain Management",
+      "Rehabilitation Medicine"
+    ]
+  },
+  {
+    slug: "cosmetic-plastic-reconstructive",
+    title: "Cosmetic, Plastic & Reconstructive Surgery",
+    treatments: [
+      "Rhinoplasty",
+      "Liposuction",
+      "Tummy Tuck",
+      "Breast Augmentation",
+      "Hair Transplant (2,000–3,000 grafts)"
+    ]
+  },
+  {
+    slug: "preventive-health-checkups",
+    title: "Preventive Health & Check-ups",
+    treatments: [
+      "Executive / Full Body Check-up",
+      "Preventive Medicine Program (annual)"
+    ]
+  },
+  {
+    slug: "allied-therapeutic-supportive-care",
+    title: "Allied Therapeutic & Supportive Care",
+    treatments: [
+      "Physiotherapy Session",
+      "Occupational Therapy / Rehab",
+      "Nutritional Counselling / Dietetics Package",
+      "Home Healthcare / Nursing Services"
+    ]
+  }
+];
+
   try {
-    const doctor = await Doctor.findOne({ slug: req.params.slug })
-      .populate('hospital')
-      .populate('treatments');
-
-    if (!doctor) return res.status(404).json({ error: "Doctor not found" });
-
-    res.json(doctor);
+    await TreatmentCategory.deleteMany({});
+    await TreatmentCategory.insertMany(treatmentCategories);
+    res.json({ message: "Treatment categories seeded successfully!" });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "Seeder error" });
   }
 });
 
-app.get('/public/hospitals/:hospitalId/doctors', async (req, res) => {
-  try {
-    const doctors = await Doctor.find({ hospital: req.params.hospitalId })
-      .populate('treatments');
-
-    res.json(doctors);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-app.get('/public/treatments/:categorySlug', async (req, res) => {
-  try {
-    const categorySlug = req.params.categorySlug.toLowerCase().trim();
-    const categoryName = categorySlug.replace(/-/g, ' ');
-
-    // Fetch single treatment category
-    const treatment = await Treatment.findOne({
-      category: new RegExp(`^${categoryName}$`, "i")
-    });
-
-    if (!treatment) {
-      return res.status(404).json({ error: "No treatment found for this category" });
-    }
-
-    res.json({
-      treatmentName: treatment.treatmentName,
-      treatmentNameAr: treatment.treatmentNameAr,
-
-      category: treatment.category,
-      categoryAr: treatment.categoryAr,
-
-      description: treatment.description,
-      descriptionAr: treatment.descriptionAr,
-
-      treatmentDetails: treatment.treatmentDetails,
-
-      costTable: treatment.costTable || []
-    });
-
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-
-app.get("/admin/fix-slugs", async (req, res) => {
-  const treatments = await Treatment.find();
-
-  for (const t of treatments) {
-    t.slug = t.treatmentName.toLowerCase().trim().replace(/\s+/g, "-");
-    await t.save();
-  }
-
-  res.send("Slugs added");
-});
-
-
-app.post('/admin/treatments', async (req, res) => {
-  try {
-    let data = req.body;
-
-    // Ensure hospitals & doctors are arrays
-    if (data.hospitals && typeof data.hospitals === "string") {
-      data.hospitals = data.hospitals.split(",").map(id => id.trim());
-    }
-    if (data.doctors && typeof data.doctors === "string") {
-      data.doctors = data.doctors.split(",").map(id => id.trim());
-    }
-
-    // --- 🔥 COST TABLE FIX ---
-    if (data.costTable) {
-      if (typeof data.costTable === "string") {
-        data.costTable = JSON.parse(data.costTable);
-      }
-
-      data.costTable = data.costTable.map(item => ({
-        name: item.name,
-        description: item.description,
-        costFrom: Number(item.costFrom) || 0,
-        costTo: Number(item.costTo) || 0,
-        currency: item.currency || "USD"
-      }));
-    }
-
-    const t = await Treatment.create(data);
-    res.json(t);
-
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ error: err.message });
-  }
-});
-
-app.put('/admin/treatments/:id', async (req, res) => {
-  try {
-    let data = req.body;
-
-    if (data.costTable) {
-      if (typeof data.costTable === "string") {
-        data.costTable = JSON.parse(data.costTable);
-      }
-
-      data.costTable = data.costTable.map(item => ({
-        name: item.name,
-        description: item.description,
-        costFrom: Number(item.costFrom) || 0,
-        costTo: Number(item.costTo) || 0,
-        currency: item.currency || "USD"
-      }));
-    }
-
-    const t = await Treatment.findByIdAndUpdate(req.params.id, data, { new: true });
-    res.json(t);
-
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// 🔥 Top 3 Doctors
-app.get('/public/top-doctors', async (req, res) => {
-  try {
-    const topDoctors = await Doctor.find({ isTopDoctor: true })
-      .populate('hospital')
-      .populate('treatments')
-      .limit(3);
-
-    res.json(topDoctors);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-// // 🔥 Top 3 Hospitals 
-app.get('/public/top-hospitals', async (req, res) => {
-  try {
-    const topHospitals = await Hospital.find({isTopHospital: true})
-      .limit(3);
-
-    res.json(topHospitals);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// --- 🔥 NEW: Admin Login Endpoint ---
-app.post('/admin/login', async (req, res) => {
-    const { username, password } = req.body;
-    
-    // Find user
-    const user = await AdminUser.findOne({ username });
-
-    if (!user) {
-        return res.status(401).json({ message: "Invalid credentials" });
-    }
-
-    // Check password (In production, use bcrypt.compare)
-    if (user.password !== password) {
-        return res.status(401).json({ message: "Invalid credentials" });
-    }
-
-    // Success: Return a simple token (in a real app, this would be a JWT)
-    // We will use a simple, consistent token here for frontend validation
-    const token = 'MOCK_ADMIN_TOKEN_12345'; 
-    res.json({ success: true, token, user: { username: user.username, role: user.role } });
-});
-
-
-// -----------------------
-// CONTACT FORM API
-// -----------------------
-app.post("/api/contact", async (req, res) => {
-  try {
-    const { name, email, phone, message, treatment } = req.body;
-
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: "Missing required fields" });
-    }
-
-    // Configure transporter
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "musaibkm@gmail.com",
-        pass: "Infy@632509"
-      },
-    });
-
-    const mailOptions = {
-      from: email,
-      to: "musaibkm@gmail.com",
-      subject: "New Contact Form Submission",
-      html: `
-        <h2>New Contact / Quote Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
-        <p><strong>Treatment:</strong> ${treatment || "N/A"}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    res.json({ success: true, message: "Email sent successfully" });
-  } catch (err) {
-    res.status(500).json({ error: "Failed to send email", details: err.message });
-  }
-});
-
+// ----------------------
+//  START SERVER
+// ----------------------
+const PORT = 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
