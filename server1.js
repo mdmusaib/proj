@@ -453,7 +453,7 @@ app.post('/admin/login', async (req, res) => {
 // -----------------------
 // CONTACT FORM API
 // -----------------------
-app.post("/api/contact", async (req, res) => {
+app.post("/api/send-mail", async (req, res) => {
   try {
     const { name, email, phone, message, treatment } = req.body;
 
