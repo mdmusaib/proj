@@ -4,6 +4,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const nodemailer = require("nodemailer");
 
 // ----------------------
 //  INITIALIZE APP
@@ -46,6 +47,18 @@ const TreatmentCategorySchema = new mongoose.Schema({
 });
 
 
+const ContactSchema = new mongoose.Schema(
+  {
+    name: String,
+    email: String,
+    phone: String,
+    country: String,
+    language: String,
+    treatment: String,
+    message: String,
+  },
+  { timestamps: true }
+);
 
 
 const TreatmentCategory = mongoose.model(
@@ -78,6 +91,9 @@ const DoctorSchema = new mongoose.Schema({
   ]
 });
 const Doctor = mongoose.model("doctors", DoctorSchema);
+
+const Contact = mongoose.model("contacts", ContactSchema);
+
 // ----------------------
 //  HOSPITAL MODEL
 // ----------------------
@@ -448,7 +464,16 @@ app.post("/api/send-mail", async (req, res) => {
     if (!name || !email || !message) {
       return res.status(400).json({ error: "Missing required fields" });
     }
-
+// 1️⃣ Save to MongoDB
+    const savedContact = await Contact.create({
+      name,
+      email,
+      phone,
+      country,
+      language,
+      treatment,
+      message,
+    });
     // Configure transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
