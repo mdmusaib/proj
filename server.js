@@ -91,7 +91,211 @@ app.get('/api/hospitals', async (req, res) => {
 //  SEED TREATMENTS (RUN ONCE)
 // ----------------------
 app.get('/admin/seed-hospital', async (req, res) => {
-  const hospitalData = [ /* your long list (unchanged) */ ];
+  const hospitalData = [
+  {
+    "slug": "medanta-the-medicity-gurgaon",
+    "name": "Medanta - The Medicity",
+    "image": "/uploads/medanta.jpg",
+    "location": "Gurgaon",
+    "rating": 4.8,
+    "beds": 1391,
+    "specialties": [
+      "Cardiology",
+      "Cardiothoracic Surgery",
+      "Liver Transplant",
+      "Orthopedics",
+      "Nephrology",
+      "Gastroenterology",
+      "Pulmonology",
+      "Oncology",
+      "Bone Marrow Transplant",
+      "Emergency Medicine"
+    ],
+    "accreditations": ["JCI", "NABH", "NABL"],
+    "description": "Medanta – The Medicity, founded by Dr. Naresh Trehan, is one of India's largest super-speciality hospitals with global recognition for transplants, cardiac sciences, and advanced surgical care.",
+    "latitude": 28.4595,
+    "longitude": 77.0266
+  },
+  {
+    "slug": "fortis-memorial-research-institute-gurgaon",
+    "name": "Fortis Memorial Research Institute (FMRI)",
+    "image": "/uploads/fmri.jpg",
+    "location": "Gurgaon",
+    "rating": 4.9,
+    "beds": 310,
+    "specialties": [
+      "Neurosurgery",
+      "Cancer Treatment",
+      "Bone Marrow Transplant",
+      "Cardiology",
+      "Orthopedics",
+      "Gastroenterology",
+      "Critical Care"
+    ],
+    "accreditations": ["JCI", "NABH", "NABL", "CEA"],
+    "description": "FMRI is a world-class quaternary care hospital known for its advanced neuro, oncology, BMT, and surgical excellence. Ranked among the world’s smartest hospitals.",
+    "latitude": 28.5041,
+    "longitude": 77.0917
+  },
+  {
+    "slug": "artemis-hospital-gurgaon",
+    "name": "Artemis Hospital",
+    "image": "/uploads/artemis.jpg",
+    "location": "Gurgaon",
+    "rating": 4.6,
+    "beds": 600,
+    "specialties": [
+      "Bone Marrow Transplant",
+      "Oncology",
+      "Neurology",
+      "Orthopedics",
+      "Cardiology",
+      "Emergency Care"
+    ],
+    "accreditations": ["JCI", "NABH"],
+    "description": "Artemis Hospital is Gurgaon’s first JCI and NABH accredited hospital, known for transplant care, advanced neurology, and comprehensive international patient services.",
+    "latitude": 28.4513,
+    "longitude": 77.0722
+  },
+  {
+    "slug": "max-super-speciality-hospital-saket",
+    "name": "Max Super Speciality Hospital, Saket",
+    "image": "/uploads/max-saket.jpg",
+    "location": "New Delhi",
+    "rating": 4.7,
+    "beds": 104,
+    "specialties": [
+      "Cardiology",
+      "Oncology",
+      "Bariatric Surgery",
+      "IVF",
+      "Neurosurgery",
+      "Orthopedics"
+    ],
+    "accreditations": ["NABH", "NABL", "AACI"],
+    "description": "Max Saket is a leading multi-speciality hospital offering advanced care in oncology, cardiac sciences, IVF, bariatric surgery, and neurosurgery.",
+    "latitude": 28.5273,
+    "longitude": 77.2192
+  },
+  {
+    "slug": "max-super-speciality-hospital-patparganj",
+    "name": "Max Super Speciality Hospital, Patparganj",
+    "image": "/uploads/max-patparganj.jpg",
+    "location": "New Delhi",
+    "rating": 4.6,
+    "beds": 400,
+    "specialties": [
+      "Neurology",
+      "Cancer Care",
+      "Cardiology",
+      "Orthopedics",
+      "Emergency Medicine"
+    ],
+    "accreditations": ["NABH", "NABL", "AACI"],
+    "description": "Max Patparganj is an advanced tertiary care facility known for neurology, stroke care, cancer treatment, and Asia’s first intraoperative Brain Suite.",
+    "latitude": 28.6426,
+    "longitude": 77.3151
+  },
+  {
+    "slug": "amrita-hospital-faridabad",
+    "name": "Amrita Hospital, Faridabad",
+    "image": "/uploads/amrita.jpg",
+    "location": "Faridabad",
+    "rating": 4.9,
+    "beds": 1600,
+    "specialties": [
+      "Cardiac Sciences",
+      "Neurosciences",
+      "Radiation Oncology",
+      "Gastro Sciences",
+      "Transplants",
+      "Mother & Child Care"
+    ],
+    "accreditations": ["NABH", "JCI (Applied)"],
+    "description": "Amrita Hospital Faridabad is one of India’s largest hospitals with advanced cancer care, transplants, neurosciences, and 81+ OTs.",
+    "latitude": 28.3670,
+    "longitude": 77.3170
+  },
+  {
+    "slug": "metro-hospital-faridabad",
+    "name": "Metro Hospital, Faridabad",
+    "image": "/uploads/metro.jpg",
+    "location": "Faridabad",
+    "rating": 4.2,
+    "beds": 307,
+    "specialties": [
+      "Cardiology",
+      "Cardiac Surgery",
+      "Orthopedics",
+      "Nephrology",
+      "Oncology"
+    ],
+    "accreditations": ["NABH", "NABL"],
+    "description": "Metro Hospital Faridabad is a major center for cardiac excellence with two full-scale units providing advanced care in diagnostics and superspecialties.",
+    "latitude": 28.4089,
+    "longitude": 77.3160
+  },
+  {
+    "slug": "paras-health-gurgaon",
+    "name": "Paras Health, Gurgaon",
+    "image": "/uploads/paras.jpg",
+    "location": "Gurgaon",
+    "rating": 4.5,
+    "beds": 300,
+    "specialties": [
+      "Neurosurgery",
+      "Neurology",
+      "Cardiology",
+      "Orthopedics",
+      "Cancer Care"
+    ],
+    "accreditations": ["NABH", "NABL"],
+    "description": "Paras Hospital Gurgaon is known for neurology, neurosurgery, oncology, and cardiac sciences. First in Haryana to achieve NABH & NABL accreditations.",
+    "latitude": 28.4514,
+    "longitude": 77.0340
+  },
+  {
+    "slug": "asian-hospital-faridabad",
+    "name": "Asian Hospital, Faridabad",
+    "image": "/uploads/asian.jpg",
+    "location": "Faridabad",
+    "rating": 4.7,
+    "beds": 425,
+    "specialties": [
+      "Cancer Care",
+      "Bone Marrow Transplant",
+      "Cardiology",
+      "Neurology",
+      "Orthopedics",
+      "Urology",
+      "Mother & Child Care"
+    ],
+    "accreditations": ["NABH", "NABL", "AACI"],
+    "description": "Asian Institute of Medical Sciences is a multi-speciality super hospital known for 14 Centres of Excellence including cancer care, cardiac sciences, neurology, BMT and mother-child care.",
+    "latitude": 28.4085,
+    "longitude": 77.3170
+  },
+  {
+    "slug": "manipal-hospital-faridabad",
+    "name": "Manipal Hospital, Faridabad",
+    "image": "/uploads/manipal.jpg",
+    "location": "Faridabad",
+    "rating": 4.8,
+    "beds": 380,
+    "specialties": [
+      "Gastroenterology",
+      "Cardiology",
+      "Critical Care",
+      "Orthopedics",
+      "Oncology"
+    ],
+    "accreditations": ["NABH", "NABL"],
+    "description": "Manipal Hospital Faridabad offers world-class tertiary care with leading expertise in cardiac care, oncology, gastroenterology, and emergency medicine.",
+    "latitude": 28.3675,
+    "longitude": 77.3240
+  }
+]
+;
 
   try {
     await Hospital.deleteMany({});
