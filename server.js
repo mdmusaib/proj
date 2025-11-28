@@ -46,10 +46,61 @@ const TreatmentCategorySchema = new mongoose.Schema({
 });
 
 
+
+
 const TreatmentCategory = mongoose.model(
   "TreatmentCategory",
   TreatmentCategorySchema
 );
+
+// ----------------------
+//  HOSPITAL MODEL
+// ----------------------
+const HospitalSchema = new mongoose.Schema({
+  slug: { type: String, required: true, unique: true },
+  name: String,
+  image: String,
+  location: String,
+  rating: Number,
+  beds: Number,
+  specialties: [String],
+  description: String,
+  accreditations: [String],
+  latitude: Number,
+  longitude: Number,
+});
+
+const Hospital = mongoose.model(
+  "hospital",
+  HospitalSchema
+);
+// ----------------------
+//  GET HOSPITALS
+// ----------------------
+app.get('/api/hospitals', async (req, res) => {
+  try {
+    const hospitals = await Hospital.find();
+    res.json(hospitals);
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+
+// ----------------------
+//  SEED TREATMENTS (RUN ONCE)
+// ----------------------
+app.get('/admin/seed-hospital', async (req, res) => {
+  const hospitalData = [ /* your long list (unchanged) */ ];
+
+  try {
+    await Hospital.deleteMany({});
+    await Hospital.insertMany(hospitalData);
+    res.json({ message: "hospital data  seeded successfully!" });
+  } catch (err) {
+    res.status(500).json({ error: "Seeder error" });
+  }
+});
 
 // ----------------------
 //  GET API
