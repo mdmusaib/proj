@@ -57,7 +57,7 @@ app.get('/api/treatments', async (req, res) => {
 // ----------------------
 //  SEEDER API (RUN ONCE)
 // ----------------------
-app.post('/admin/seed-treatments', async (req, res) => {
+app.get('/admin/seed-treatments', async (req, res) => {
   const treatmentCategories = [
   {
     slug: "general-internal-medicine",
