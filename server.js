@@ -988,7 +988,7 @@ app.get('/admin/seed-doctor', async (req, res) => {
     "isTopDoctor": false,
     "position": "Director - Interventional Radiology",
     "degree": "FVIR, MD, MBBS",
-    "about": "Experienced interventional radiologist specializing in ablative therapies for liver cancer (RFA, MWA), trans-arterial therapies (TACE, TARE), and advanced image-guided interventions.",
+    "about": "Experienced interventional radiologist pecializing in ablative therapies for liver cancer (RFA, MWA), trans-arterial therapies (TACE, TARE), and advanced image-guided interventions.",
     "medicalProblems": [
       "Primary and secondary liver cancers",
       "Image-guided tumor management",
