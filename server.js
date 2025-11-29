@@ -79,17 +79,28 @@ const DoctorSchema = new mongoose.Schema({
   degree: { type: String },
   about: { type: String },
 
-  medicalProblems: [{ type: String }],
+  medicalProblems: [
+    {
+      title: String,
+      description: String
+    }
+  ],
 
-  procedures: [{ type: String }],
+  procedures: [
+    {
+      title: String,
+      description: String
+    }
+  ],
 
   faqs: [
     {
-      question: { type: String },
-      answer: { type: String }
+      question: String,
+      answer: String
     }
   ]
 });
+
 const Doctor = mongoose.model("doctors", DoctorSchema);
 
 const Contact = mongoose.model("contacts", ContactSchema);
