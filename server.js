@@ -1,10 +1,10 @@
 // ----------------------
 //  IMPORTS
 // ----------------------
-import nodemailer from "nodemailer";
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const nodemailer = require("nodemailer");
 
 
 // ----------------------
@@ -717,7 +717,7 @@ app.post("/api/send-mail", async (req, res) => {
       service: "gmail",
       auth: {
         user: "musaibkm@gmail.com",
-        pass: "trdy frzd xxqk wulb",
+        pass: "trdy frzd xxqk wulb", // Use app password
       },
     });
 
