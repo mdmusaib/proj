@@ -148,9 +148,7 @@ app.get('/api/hospitals', async (req, res) => {
     // If ?name exists → filter
     if (name) {
       const hospital = await Hospital.findOne({
-        name: name
-          .replace(/[^a-z0-9 ]/g, "")
-          .trim()
+        name: name.trim()
       });
 
       if (!hospital) {
