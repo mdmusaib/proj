@@ -195,7 +195,8 @@ app.get('/api/doctors/:slug', async (req, res) => {
 
 
 app.get("/admin/seed-doctor", async (req, res) => {
-  const doctors =[{
+  const doctors =[[
+{
   "slug": "dr-n-k-pandey",
   "name": "Dr. N. K. Pandey",
   "specialty": "Robotic, Laparoscopic & Advanced Surgery",
@@ -221,7 +222,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Has he held international positions?", "answer": "Yes, he has served in multiple global surgical bodies including the American College of Surgeons." },
     { "question": "Does he perform thoracic surgeries?", "answer": "Yes, he is an expert in thoracic and abdominal minimally invasive surgeries." }
   ]
-}
+},
 {
   "slug": "dr-anita-kant",
   "name": "Dr. Anita Kant",
@@ -248,7 +249,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she perform robotic surgeries?", "answer": "Yes, she leads robotic gynecologic surgery at AIMS." },
     { "question": "Is she a DNB-certified teacher?", "answer": "Yes, she has been a DNB teacher and guide since 2005." }
   ]
-}
+},
 {
   "slug": "dr-arvind-gupta",
   "name": "Dr. (Brig) Arvind Gupta",
@@ -275,7 +276,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Has he served in the Armed Forces?", "answer": "Yes, he served for 26 years in high-ranking medical leadership roles." },
     { "question": "Does he provide immunization?", "answer": "Yes, he offers comprehensive vaccination services." }
   ]
-}
+},
 {
   "slug": "dr-puneet-gupta",
   "name": "Dr. Puneet Gupta",
@@ -302,7 +303,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat advanced cancers?", "answer": "Yes, he specializes in complex and late-stage cancers." },
     { "question": "Does he practice immunotherapy?", "answer": "Yes, he is an expert in chemo-targeted immunotherapy." }
   ]
-}
+},
 {
   "slug": "dr-durgatosh-pandey",
   "name": "Dr. Durgatosh Pandey",
@@ -329,7 +330,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he specialize in thoracic cancers?", "answer": "Yes, he is known for thoracic and HPB oncology surgeries." },
     { "question": "Does he have international training?", "answer": "Yes, including hepatobiliary surgery from Singapore and thoracic surgery from Johns Hopkins." }
   ]
-}
+},
 {
   "slug": "dr-pranjit-bhowmik",
   "name": "Dr. Pranjit Bhowmik",
@@ -356,7 +357,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "What conditions does he treat?", "answer": "He treats chronic diseases, infections, and lifestyle disorders." },
     { "question": "Is he available for online consultations?", "answer": "Yes, video consultations are available daily." }
   ]
-}
+},
 {
   "slug": "dr-ramesh-chandna",
   "name": "Dr. Ramesh Chandna",
@@ -383,7 +384,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he certified in quality auditing?", "answer": "Yes, he is trained in ISO 9000, 14000, 18000, NABH, and ISO 31000." },
     { "question": "Does he lead lab services at AIMS?", "answer": "Yes, he heads safety, quality, labs, and the blood bank." }
   ]
-}
+},
 {
   "slug": "dr-subrat-akhoury",
   "name": "Dr. Subrat Akhoury",
@@ -410,7 +411,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he FSCAI certified?", "answer": "Yes, he is a Fellow of the Society for Cardiovascular Angiography & Interventions (USA)." },
     { "question": "Does he treat complex cardiac cases?", "answer": "Yes, he handles complex and high-risk cardiac interventions." }
   ]
-}
+},
 {
   "slug": "dr-ved-prakash",
   "name": "Dr. Ved Prakash",
@@ -437,7 +438,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he have international training?", "answer": "Yes, including advanced laparoscopic and colorectal surgeries." },
     { "question": "Does he treat hernias?", "answer": "Yes, he manages all types of hernia and abdominal surgical issues." }
   ]
-}
+},
 {
   "slug": "dr-amit-chaudhary",
   "name": "Dr. Amit Chaudhary",
@@ -464,7 +465,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he trained internationally?", "answer": "Yes, including training in the UK at Royal Liverpool Children’s Hospital." },
     { "question": "Does he perform TAVI?", "answer": "Yes, he is an expert in TAVI and endovascular cardiac procedures." }
   ]
-}
+},
 {
   "slug": "dr-amit-miglani",
   "name": "Dr. Amit Miglani",
@@ -491,7 +492,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat liver diseases?", "answer": "Yes, he specializes in hepatology and complex hepatobiliary cases." },
     { "question": "Is he an interventional endoscopy expert?", "answer": "Yes, he is highly skilled in advanced therapeutic endoscopy and EUS." }
   ]
-}
+},
 {
   "slug": "dr-ajit-pratap-singh",
   "name": "Dr. Ajit Pratap Singh",
@@ -518,7 +519,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he perform FNAC?", "answer": "Yes, he performs ultrasound-guided FNAC procedures." },
     { "question": "Is he a gold medalist?", "answer": "Yes, he completed MBBS with a gold medal." }
   ]
-}
+},
 {
   "slug": "dr-ajit-thakur",
   "name": "Dr. Ajit Thakur",
@@ -545,7 +546,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he manage life-threatening conditions?", "answer": "Yes, he specializes in complex and critically ill patients." },
     { "question": "Is he involved in teaching?", "answer": "Yes, he is a designated teacher for ISCCM and NBE programs." }
   ]
-}
+},
 {
   "slug": "dr-deepak-kumar-mishra",
   "name": "Dr. Deepak Kumar Mishra",
@@ -572,7 +573,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Has he trained internationally?", "answer": "Yes, he trained in the UK and holds MRCSEd and MCh Ortho." },
     { "question": "Does he perform arthroscopy?", "answer": "Yes, he is experienced in all types of sports and ligament injury arthroscopies." }
   ]
-}
+},
 {
   "slug": "dr-divesh-arora",
   "name": "Dr. Divesh Arora",
@@ -599,7 +600,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he trained in regional anesthesia?", "answer": "Yes, he holds an IDRA and is an expert in ultrasound-guided regional anesthesia." },
     { "question": "Is he a NABH assessor?", "answer": "Yes, he is a certified NABH assessor." }
   ]
-}
+},
 {
   "slug": "dr-manav-manchanda",
   "name": "Dr. Manav Manchanda",
@@ -626,7 +627,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he handle ICU respiratory cases?", "answer": "Yes, he leads critical care and manages severe respiratory failures." },
     { "question": "Is he trained in critical care medicine?", "answer": "Yes, he holds DNB and IDCC in Critical Care." }
   ]
-}
+},
 {
   "slug": "dr-lalit-mohan-parashar",
   "name": "Dr. Lalit Mohan Parashar",
@@ -653,7 +654,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he specialized in sinus surgery?", "answer": "Yes, he is an expert in endoscopic sinus surgery (FESS)." },
     { "question": "Has he received awards?", "answer": "Yes, he has received multiple national awards including the DMA President’s Appreciation Award." }
   ]
-}
+},
 {
   "slug": "dr-mukesh-pandey",
   "name": "Dr. Mukesh Pandey",
@@ -680,7 +681,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Has he performed aneurysm surgeries?", "answer": "Yes, he has extensive experience in aneurysm and hemorrhage surgeries." },
     { "question": "Is he award-winning?", "answer": "Yes, he has received multiple awards including a Gold Medal and the 'Best Neurosurgeon in India' award." }
   ]
-}
+},
 {
   "slug": "dr-pankaj-kumar-hans",
   "name": "Dr. Pankaj Kumar Hans",
@@ -707,7 +708,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he conduct robotic surgeries?", "answer": "Yes, he is experienced in robotic and advanced laparoscopic procedures." },
     { "question": "Is he certified for Allurion gastric balloon?", "answer": "Yes, he is Faridabad’s only certified Allurion Balloon physician." }
   ]
-}
+},
 {
   "slug": "dr-p-s-ahuja",
   "name": "Dr. P. S. Ahuja",
@@ -734,7 +735,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he offer lifestyle modification guidance?", "answer": "Yes, he focuses heavily on lifestyle improvement and disease prevention." },
     { "question": "Does he lead corporate health programs?", "answer": "Yes, he directs corporate wellness and preventive health initiatives." }
   ]
-}
+},
 {
   "slug": "dr-rajiv-kumar-sethia",
   "name": "Dr. Rajiv Kumar Sethia",
@@ -761,7 +762,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat kidney stones?", "answer": "Yes, he is an expert in laser treatment and endourology for stones." },
     { "question": "Is he trained in robotic surgery?", "answer": "Yes, he specializes in robotic and minimally invasive urology." }
   ]
-}
+},
 {
   "slug": "dr-sangram-keshari-sahoo",
   "name": "Dr. Sangram Keshari Sahoo",
@@ -788,7 +789,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat GI and HPB cancers?", "answer": "Yes, he is highly experienced in gastrointestinal and hepatobiliary cancer surgeries." },
     { "question": "Is he involved in research?", "answer": "Yes, he has numerous publications and award-winning scientific presentations." }
   ]
-}
+},
 {
   "slug": "dr-smriti-pandey",
   "name": "Dr. Smriti Pandey",
@@ -815,7 +816,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she perform cosmetic dental procedures?", "answer": "Yes, she is experienced in cosmetic, aesthetic, and smile correction treatments." },
     { "question": "Does she provide implant services?", "answer": "Yes, she offers advanced dental implant procedures." }
   ]
-}
+},
 {
   "slug": "dr-sagar-gupta",
   "name": "Dr. Sagar Gupta",
@@ -842,7 +843,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he perform kidney transplants?", "answer": "Yes, he specializes in kidney and pancreas transplantation." },
     { "question": "Is he American Board certified?", "answer": "Yes, he is ABIM-certified in Internal Medicine and Nephrology." }
   ]
-}
+},
 {
   "slug": "dr-uma-rani",
   "name": "Dr. Uma Rani",
@@ -869,7 +870,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she manage blood bank services?", "answer": "Yes, she has extensive experience in blood bank operations and quality control." },
     { "question": "Does she have experience in corporate labs?", "answer": "Yes, she has worked with SRL and Apollo Clinic laboratories." }
   ]
-}
+},
 {
   "slug": "dr-amit-bangia",
   "name": "Dr. Amit Bangia",
@@ -896,7 +897,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he perform cosmetic dermatology?", "answer": "Yes, he specializes in lasers, fillers, Botox, and aesthetic treatments." },
     { "question": "Does he treat chronic skin diseases?", "answer": "Yes, he manages psoriasis, eczema, acne, vitiligo, and other chronic conditions." }
   ]
-}
+},
 {
   "slug": "dr-anshumali-misra",
   "name": "Dr. Anshumali Misra",
@@ -923,7 +924,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat diabetic foot conditions?", "answer": "Yes, he specializes in wound management and diabetic foot reconstruction." },
     { "question": "Has he received awards?", "answer": "Yes, including the Best Paper Award at NABICON and the Urgo Case Award in 2021." }
   ]
-}
+},
 {
   "slug": "dr-banwari-lal",
   "name": "Dr. Banwari Lal",
@@ -950,7 +951,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat diabetes and hypertension?", "answer": "Yes, he specializes in chronic lifestyle and metabolic disorders." },
     { "question": "Does he provide video consultations?", "answer": "Yes, he offers both in-person and online consultations." }
   ]
-}
+},
 {
   "slug": "dr-gaganpal-singh",
   "name": "Dr. Gaganpal Singh",
@@ -977,7 +978,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he trained in TEE?", "answer": "Yes, he specializes in perioperative transesophageal echocardiography." },
     { "question": "Does he handle ECMO cases?", "answer": "Yes, he is experienced in ECMO and advanced cardiac support." }
   ]
-}
+},
 {
   "slug": "dr-lk-jha",
   "name": "Dr. L. K. Jha",
@@ -1004,7 +1005,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat peripheral artery disease?", "answer": "Yes, he performs carotid, renal, and peripheral angioplasties." },
     { "question": "Is he internationally certified?", "answer": "Yes, he is a Fellow of SCAI, ACC, and ESC, with multiple global certifications." }
   ]
-}
+},
 {
   "slug": "dr-minakshi-manchanda",
   "name": "Dr. Minakshi Manchanda",
@@ -1031,7 +1032,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she offer therapy and counseling?", "answer": "Yes, she provides counseling along with medication management." },
     { "question": "How long has she been practicing?", "answer": "She has more than 16 years of experience in psychiatry." }
   ]
-}
+},
 {
   "slug": "dr-neha-kapoor",
   "name": "Dr. Neha Kapoor",
@@ -1058,7 +1059,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is she trained at AIIMS?", "answer": "Yes, she completed her DM Neurology from AIIMS, New Delhi." },
     { "question": "Does she treat dementia?", "answer": "Yes, dementia and memory disorders are part of her expertise." }
   ]
-}
+},
 {
   "slug": "dr-pramod-arora",
   "name": "Dr. Pramod K. Arora",
@@ -1085,7 +1086,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is radionuclide therapy available?", "answer": "Yes, he performs therapeutic nuclear medicine procedures." },
     { "question": "Does he treat thyroid disorders?", "answer": "Yes, he offers nuclear thyroid scans and iodine therapy." }
   ]
-}
+},
 {
   "slug": "dr-shilpa-gupta",
   "name": "Dr. Shilpa Gupta",
@@ -1112,7 +1113,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she manage blood reports?", "answer": "Yes, hematology diagnosis is one of her core specialties." },
     { "question": "How many years has she worked?", "answer": "She has over 18 years of diagnostic experience." }
   ]
-}
+},
 {
   "slug": "dr-sunil-kumar-choudhary",
   "name": "Dr. Sunil Kumar Choudhary",
@@ -1139,7 +1140,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he internationally trained?", "answer": "Yes, he has trained extensively in the UK in both knee and shoulder surgery." },
     { "question": "Does he perform robotic or navigation surgeries?", "answer": "Yes, he is experienced in navigation and kinematic knee replacement." }
   ]
-}
+},
 {
   "slug": "dr-sunil-rana",
   "name": "Dr. Sunil Rana",
@@ -1166,7 +1167,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat thyroid disorders?", "answer": "Yes, he has additional training in endocrinology." },
     { "question": "Does he handle chronic diseases?", "answer": "Yes, including hypertension, COPD, asthma, and more." }
   ]
-}
+},
 {
   "slug": "dr-sumit-chakravarty",
   "name": "Dr. Sumit Chakravarty",
@@ -1193,7 +1194,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Has he trained internationally?", "answer": "Yes, he completed 2 years of neonatal training in Australia." },
     { "question": "Does he provide neonatal ECHO?", "answer": "Yes, he performs neonatal cardiac evaluations." }
   ]
-}
+},
 {
   "slug": "dr-suneel-ahuja",
   "name": "Dr. Suneel Ahuja",
@@ -1220,7 +1221,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he experienced in ENT surgery?", "answer": "Yes, he has over three decades of ENT surgical experience." },
     { "question": "Is he available for video consultations?", "answer": "Yes, on Mon, Wed & Fri between 12–2 PM." }
   ]
-}
+},
 {
   "slug": "dr-vijay-sharma",
   "name": "Dr. Vijay Sharma",
@@ -1247,7 +1248,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Was he trained in the UK?", "answer": "Yes, he completed 5 years of consultant training and 18 years as a UK Consultant." },
     { "question": "Does he treat epilepsy in children?", "answer": "Yes, pediatric epilepsy management is one of his core specialties." }
   ]
-}
+},
 {
   "slug": "dr-amit-pandey-pt",
   "name": "Dr. Amit Pandey (PT)",
@@ -1274,7 +1275,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he offer post-surgery rehab?", "answer": "Yes, he handles rehabilitation after knee, hip, and shoulder surgeries." },
     { "question": "Has he worked with celebrities?", "answer": "Yes, he has treated Bollywood personalities and national leaders." }
   ]
-}
+},
 {
   "slug": "dr-brajesh-kumar-mishra",
   "name": "Dr. Brajesh Kumar Mishra",
@@ -1301,7 +1302,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he experienced in trauma care?", "answer": "Yes, he has over 22 years of experience in managing major trauma cases." },
     { "question": "What is his area of expertise?", "answer": "Emergency medicine, trauma management, BLS, ACLS, and critical care." }
   ]
-}
+},
 {
   "slug": "dt-komal-malik",
   "name": "Dt. Komal Malik",
@@ -1328,7 +1329,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is she a certified diabetes educator?", "answer": "Yes, she is certified from SitaRam Bhartiya Hospital, Delhi." },
     { "question": "Does she handle clinical diet cases?", "answer": "Yes, she manages diets for kidney, liver, heart, and GI disorders." }
   ]
-}
+},
 {
   "slug": "dr-ruchi-singh",
   "name": "Dr. Ruchi Singh",
@@ -1355,7 +1356,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she perform brachytherapy?", "answer": "Yes, she has extensive expertise in gynecologic and cervical cancer brachytherapy." },
     { "question": "Is she experienced in advanced technologies like SBRT?", "answer": "Yes, she routinely performs SBRT, SRS, IMRT, IGRT, and image-guided treatments." }
   ]
-}
+},
 {
   "slug": "dr-amrita-razdan-kaul",
   "name": "Dr. Amrita Razdan Kaul",
@@ -1382,7 +1383,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she perform laparoscopic surgeries?", "answer": "Yes, she performs minimally invasive gynecologic procedures." },
     { "question": "Is she experienced?", "answer": "She has over 14 years of clinical experience across top hospitals." }
   ]
-}
+},
 {
   "slug": "dr-bhuvana-vijayakanthi",
   "name": "Dr. Bhuvana Vijayakanthi",
@@ -1409,7 +1410,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is she an AHA-certified instructor?", "answer": "Yes, she is a certified BLS and ACLS instructor." },
     { "question": "Where did she train?", "answer": "She trained at prestigious institutes including AIIMS New Delhi and Maimonides Medical Center, New York." }
   ]
-}
+},
 {
   "slug": "dr-gagan-sharma",
   "name": "Dr. Gagan Sharma",
@@ -1436,7 +1437,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he experienced in Cardiac CT?", "answer": "Yes, he has extensive expertise in CT Angiography and Cardiac CT." },
     { "question": "Where has he worked earlier?", "answer": "He has served at SGPGIMS Lucknow, major Bangalore hospitals, and leading hospitals in Faridabad." }
   ]
-}
+},
 {
   "slug": "dr-hamid-raihan",
   "name": "Dr. Hamid Raihan",
@@ -1463,7 +1464,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Is he experienced with complex dental cases?", "answer": "Yes, he is known for managing medically compromised patients and complex dental conditions." },
     { "question": "Has he authored any dental books?", "answer": "Yes, he has authored and co-authored books used by dental students and professionals." }
   ]
-}
+},
 {
   "slug": "dr-meghana-phadke-sultania",
   "name": "Dr. Meghana Phadke Sultania",
@@ -1490,7 +1491,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she offer vaccination services?", "answer": "Yes, she provides complete vaccination for all age groups." },
     { "question": "Is she experienced?", "answer": "Yes, she has more than 13 years of pediatric and neonatal experience." }
   ]
-}
+},
 {
   "slug": "dr-aakib-hamid-charag",
   "name": "Dr. Aakib Hamid Charag",
@@ -1517,7 +1518,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he treat kidney stones with laser?", "answer": "Yes, he performs laser-based minimally invasive stone removal." },
     { "question": "Has he published research?", "answer": "Yes, he has multiple international scientific publications." }
   ]
-}
+},
 {
   "slug": "dr-arushi-agarwal",
   "name": "Dr. Arushi Agarwal",
@@ -1544,7 +1545,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she treat thalassemia?", "answer": "Yes, she provides long-term management for thalassemia and hemoglobinopathies." },
     { "question": "Is she award-winning?", "answer": "Yes, she has received multiple awards including Best Resident and Best Oncology Oral Presentation." }
   ]
-}
+},
 {
   "slug": "dr-aishwarya-sinha",
   "name": "Dr. Aishwarya Sinha",
@@ -1571,7 +1572,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she handle high-risk pregnancies?", "answer": "Yes, she provides expert care for complicated pregnancies." },
     { "question": "Is she a gold medalist?", "answer": "Yes, she received a Gold Medal in MS (Obs/Gynae)." }
   ]
-}
+},
 {
   "slug": "dr-pallavi-purwar",
   "name": "Dr. Pallavi Purwar",
@@ -1598,7 +1599,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she perform VATS?", "answer": "Yes, she is experienced in minimally invasive thoracic surgeries." },
     { "question": "Has she won awards?", "answer": "Yes, she has received multiple national awards for research and clinical work." }
   ]
-}
+},
 {
   "slug": "dr-siddhi-goel",
   "name": "Dr. Siddhi Goel",
@@ -1625,7 +1626,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she perform LASIK?", "answer": "Yes, she performs advanced LASIK and ICL procedures." },
     { "question": "Does she treat corneal disorders?", "answer": "Yes, she specializes in cornea and external eye diseases." }
   ]
-}
+},
 {
   "slug": "dr-saurabh-gupta",
   "name": "Dr. Saurabh Gupta",
@@ -1652,7 +1653,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does he use ultrasound guidance?", "answer": "Yes, he performs USG-guided and fluoroscopic pain treatments." },
     { "question": "Has he won awards?", "answer": "Yes, he received the Indian Health Award in 2016." }
   ]
-}
+},
 {
   "slug": "dr-upasana-khanna",
   "name": "Dr. Upasana Khanna",
@@ -1679,7 +1680,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she perform cataract surgeries?", "answer": "Yes, she specializes in advanced cataract surgery." },
     { "question": "Does she handle oculoplasty cases?", "answer": "Yes, she has extensive experience in orbital and eyelid surgeries." }
   ]
-}
+},
 {
   "slug": "ms-sonia-rai-vaid",
   "name": "Ms. Sonia Rai Vaid",
@@ -1706,7 +1707,8 @@ app.get("/admin/seed-doctor", async (req, res) => {
     { "question": "Does she offer prenatal classes?", "answer": "Yes, she conducts childbirth education and prenatal yoga sessions." },
     { "question": "Is she certified?", "answer": "Yes, she holds multiple certifications including ACLP, Birth Doula, and CBE." }
   ]
-}];
+}
+]];
   try {
     for (const doc of doctors) {
       await Doctor.updateOne(
