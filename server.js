@@ -1727,6 +1727,30 @@ app.get("/admin/seed-doctor", async (req, res) => {
   }
 });
 
+// DELETE doctors by hospital name
+app.delete("/api/delete-manipal-doctors", async (req, res) => {
+  try {
+    const hospitalsToDelete = [
+      "Manipal Hospitals – Gurugram",
+      "Manipal Comprehensive Cancer Centre – North-West Cluster"
+    ];
+
+    const result = await Doctor.deleteMany({
+      hospital: { $in: hospitalsToDelete }
+    });
+
+    return res.json({
+      message: "Doctors removed successfully",
+      deletedCount: result.deletedCount
+    });
+
+  } catch (error) {
+    console.error("Delete error:", error);
+    return res.status(500).json({ error: "Failed to delete doctors" });
+  }
+});
+
+
 // ----------------------
 //  SEED TREATMENTS (RUN ONCE)
 // ----------------------
