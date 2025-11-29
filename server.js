@@ -185,1891 +185,2094 @@ app.get('/api/doctors/:slug', async (req, res) => {
 app.get("/admin/seed-doctor", async (req, res) => {
   const doctors =[
 {
-  "slug": "dr-meenakshi-jain",
-  "name": "Dr. Meenakshi Jain",
-  "specialty": "Internal Medicine",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "26+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Principal Director & HOD – Internal Medicine",
-  "degree": "MD (Medicine) | MBBS (Maulana Azad Medical College) | PG Diploma in Diabetes (UK) | Master Class in Diabetes (Royal College of Physicians UK)",
-  "about": "Dr. Meenakshi Jain is a senior internal medicine specialist with over 26 years of clinical experience. She has led the Internal Medicine departments at Max Hospitals and specializes in diabetes, hypertension, geriatric care, metabolic disorders and preventive healthcare.",
-  "medicalProblems": [
-    { "title": "Diabetes Management", "description": "Comprehensive care for Type 1, Type 2 and gestational diabetes." },
-    { "title": "Hypertension & Heart Disease", "description": "Management of high blood pressure and cardiac risk factors." },
-    { "title": "Thyroid & Metabolic Disorders", "description": "Diagnosis and treatment of metabolic and hormonal imbalances." },
-    { "title": "Geriatric Health Issues", "description": "Holistic care for elderly patients with chronic conditions." }
-  ],
-  "procedures": [
-    { "title": "Diabetes Care Programmes", "description": "Customized treatment for adult and adolescent diabetes." },
-    { "title": "Preventive Health Screening", "description": "Comprehensive medical checkups and lifestyle management." },
-    { "title": "Cardio-Metabolic Management", "description": "Integrated treatment of heart and metabolic diseases." },
-    { "title": "Chronic Disease Management", "description": "Long-term care for lifestyle and systemic diseases." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Meenakshi Jain treat diabetes?", "answer": "Yes, she specializes in diabetes care for adults and pregnant women." },
-    { "question": "Does she handle hypertension?", "answer": "Yes, she has deep experience in treating hypertension and related complications." },
-    { "question": "Does she provide preventive health care?", "answer": "Yes, she focuses on holistic preventive and lifestyle-based healthcare." }
-  ]
-},
-{
-  "slug": "dr-kanika-gupta",
-  "name": "Dr. Kanika Gupta",
-  "specialty": "Surgical Oncology – Gynae & Robotic Surgery",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj | Max Hospital – Vaishali",
-  "experience": "39+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Principal Director – Surgical Oncology (Gynae & Robotic Surgery)",
-  "degree": "MBBS | MS (Obstetrics & Gynaecology) | Fellowship in Gynae Cancer Surgery (Prof. Neville Hacker) | Pelvic Endoscopy Training (Germany) | Gynae Cancer Training (MD Anderson, USA)",
-  "about": "Dr. Kanika Gupta is one of India’s most senior and respected gynae cancer surgeons with nearly four decades of experience. She specializes in complex robotic and laparoscopic surgeries for gynecologic cancers and has performed numerous live surgeries at national and international workshops.",
-  "medicalProblems": [
-    { "title": "Ovarian Cancer", "description": "Diagnosis and surgical management of ovarian tumors." },
-    { "title": "Cervical & Uterine Cancer", "description": "Advanced surgical treatment of cervical and endometrial cancers." },
-    { "title": "Vulvar & Vaginal Cancers", "description": "Treatment of lower genital tract malignancies." },
-    { "title": "Pre-Cancerous Gynaecological Conditions", "description": "Management of high-risk and pre-cancer lesions." }
-  ],
-  "procedures": [
-    { "title": "Robotic Gynae Cancer Surgery", "description": "Precision robotic procedures for complex gynae malignancies." },
-    { "title": "Laparoscopic Gynae Oncology Surgery", "description": "Minimal access surgery for cancers of the uterus, cervix and ovary." },
-    { "title": "Cytoreductive Surgery & HIPEC", "description": "Advanced cancer debulking for ovarian and uterine cancers." },
-    { "title": "Preventive Gynae Cancer Surgery", "description": "Risk-reducing and prophylactic procedures." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Kanika Gupta specialize in robotic gynae cancer surgery?", "answer": "Yes, she is a leading expert in robotic and laparoscopic oncologic surgery." },
-    { "question": "Does she treat ovarian and uterine cancer?", "answer": "Yes, she performs advanced surgical procedures for these cancers." },
-    { "question": "Does she handle recurrent or complex gynae cancers?", "answer": "Yes, she has extensive experience in complicated and recurrent cancer surgeries." }
-  ]
-},
-{
-  "slug": "dr-manoj-johar",
-  "name": "Dr. Manoj Johar",
-  "specialty": "Aesthetic & Reconstructive Surgery",
-  "hospital": "Max Hospital – Vaishali | Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "24+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Principal Director – Aesthetic & Reconstructive Surgery",
-  "degree": "MCh (Plastic Surgery) | MS (General Surgery) | Fellow – Uppsala University Sweden | Fellow of International College of Surgeons | Laser Training – Harvard (USA), UK & Israel",
-  "about": "Dr. Manoj K. Johar is a renowned Plastic, Aesthetic and Reconstructive Surgeon with over three decades of experience in cosmetic surgery, laser aesthetics, reconstructive surgeries and anti-ageing medicine. He is internationally trained and known for patient-focused treatment planning and precision-driven results.",
-  "medicalProblems": [
-    { "title": "Cosmetic Concerns", "description": "Aesthetic issues related to face, body and anti-ageing." },
-    { "title": "Reconstructive Defects", "description": "Post-trauma, burn and congenital deformity corrections." },
-    { "title": "Skin & Laser Issues", "description": "Laser treatments for scars, pigmentation, ageing and hair." },
-    { "title": "Microsurgical Requirements", "description": "Complex reconstruction using microsurgery techniques." }
-  ],
-  "procedures": [
-    { "title": "Cosmetic & Laser Aesthetic Surgery", "description": "Face, body and skin-enhancing cosmetic procedures." },
-    { "title": "Reconstructive & Microsurgery", "description": "Rebuilding tissues after trauma, burns or disease." },
-    { "title": "Anti-Ageing Treatments", "description": "Regenerative and aesthetic medicine for youth enhancement." },
-    { "title": "Laser-Based Procedures", "description": "Advanced laser work for scars, pigmentation and rejuvenation." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Johar perform cosmetic surgery?", "answer": "Yes, he specializes in cosmetic and laser aesthetic surgery." },
-    { "question": "Does he handle reconstructive cases?", "answer": "Yes, he is experienced in trauma, burn and congenital reconstructive surgery." },
-    { "question": "Is he internationally trained in lasers?", "answer": "Yes, he has undergone extensive laser training in the USA, UK and Israel." }
-  ]
-},
-{
-  "slug": "dr-vivek-mangla",
-  "name": "Dr. Vivek Mangla",
-  "specialty": "GI & HPB Surgical Oncology",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Vaishali | Max Hospital – Patparganj",
-  "experience": "20+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Principal Director – GI & HPB Surgical Oncology",
-  "degree": "MCh (GI Surgery – AIIMS) | MS (Surgery – MAMC) | MBBS (MAMC) | FALS (HPB) | FACRSI | FAIS",
-  "about": "Dr. Vivek Mangla is a leading GI and Hepatopancreatobiliary surgical oncologist with extensive expertise in gastrointestinal cancers, pancreatic surgery, liver surgery and advanced laparoscopic/robotic oncologic procedures. He has served at Ganga Ram Hospital, ILBS and AIIMS.",
-  "medicalProblems": [
-    { "title": "Gastrointestinal Cancers", "description": "Stomach, intestine and colorectal cancers." },
-    { "title": "Pancreatic Tumors", "description": "Management of benign and malignant pancreatic diseases." },
-    { "title": "Liver & Biliary Disorders", "description": "Cancers and complex HPB diseases." },
-    { "title": "Esophagus & Upper GI Diseases", "description": "Tumors and surgical GI conditions." }
-  ],
-  "procedures": [
-    { "title": "GI Cancer Surgery", "description": "Surgical management of stomach, colorectal and small bowel cancers." },
-    { "title": "HPB Surgery", "description": "Advanced liver, pancreas and bile duct surgeries." },
-    { "title": "Robotic & Laparoscopic Oncology", "description": "Minimally invasive GI cancer procedures." },
-    { "title": "Colorectal Surgery", "description": "Specialized surgery for rectal and colon tumors." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Mangla perform pancreatic cancer surgery?", "answer": "Yes, he specializes in complex pancreatic and HPB surgeries." },
-    { "question": "Does he offer minimally invasive cancer surgery?", "answer": "Yes, he performs laparoscopic and robotic GI oncologic procedures." },
-    { "question": "Does he treat GI cancers?", "answer": "Yes, he manages all gastrointestinal cancers including liver and colorectal." }
-  ]
-},
-{
-  "slug": "dr-vivek-kumar",
-  "name": "Dr. Vivek Kumar",
-  "specialty": "Neurology",
-  "hospital": "Max Hospital – Vaishali | Max Hospital – Patparganj",
-  "experience": "28+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Principal Director & Head – Neurology",
-  "degree": "DM (Neurology – SGPGI Lucknow) | MD (Medicine – GSVM Kanpur) | MBBS (MLB Medical College Jhansi)",
-  "about": "Dr. Vivek Kumar is a highly respected neurologist known for his pioneering contribution to stroke care and his role in developing Max Healthcare's Neurology Department. He has decades of clinical experience in treating complex neurological disorders.",
-  "medicalProblems": [
-    { "title": "Stroke", "description": "Emergency and long-term treatment of ischemic and hemorrhagic strokes." },
-    { "title": "Epilepsy", "description": "Diagnosis and treatment of seizure disorders." },
-    { "title": "Parkinson's Disease", "description": "Management of movement and degenerative neurological disorders." },
-    { "title": "Headache & Migraine", "description": "Treatment for chronic headache syndromes." }
-  ],
-  "procedures": [
-    { "title": "Stroke Management", "description": "Acute, preventive and rehabilitative stroke care." },
-    { "title": "Epilepsy Treatment", "description": "Medical management and long-term follow-up of epilepsy." },
-    { "title": "Movement Disorder Management", "description": "Advanced therapies for Parkinson’s disease." },
-    { "title": "Neurological Evaluation", "description": "Comprehensive assessment of neurological symptoms." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Vivek Kumar treat stroke?", "answer": "Yes, he leads advanced stroke care services and specializes in stroke management." },
-    { "question": "Does he manage epilepsy?", "answer": "Yes, he has extensive experience in treating seizure disorders." },
-    { "question": "Does he treat Parkinson’s disease?", "answer": "Yes, he provides comprehensive care for degenerative movement disorders." }
-  ]
-},
-{
-  "slug": "dr-kumud-rai",
-  "name": "Dr. Kumud Rai",
-  "specialty": "Vascular Surgery",
-  "hospital": "Max Hospital – Saket Smart | Max Hospital – Gurugram | Max Hospital – Saket East",
-  "experience": "41+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Principal Director – Vascular Surgery",
-  "degree": "MBBS (AFMC Pune) | MS (Surgery – Pune University) | Vascular Surgery Training – Erasmus University Hospital, Rotterdam",
-  "about": "Dr. (Col.) Kumud Rai is one of India’s most experienced vascular and endovascular surgeons. With over 25 years in vascular surgery, he has led major departments in the Armed Forces and Max Healthcare. He is a former President of the Vascular Society of India and has trained numerous vascular surgeons.",
-  "medicalProblems": [
-    { "title": "Aortic Aneurysms", "description": "Management of thoracic and abdominal aneurysms." },
-    { "title": "Varicose Veins", "description": "Laser and RFA treatment for swollen and painful veins." },
-    { "title": "Peripheral Artery Disease", "description": "Treatment of blocked or narrowed limb arteries." },
-    { "title": "Dialysis Access Issues", "description": "AV fistula, grafts and vascular access problems." }
-  ],
-  "procedures": [
-    { "title": "Endovascular Aneurysm Repair (EVAR)", "description": "Minimally invasive repair of aortic aneurysms." },
-    { "title": "Peripheral Bypass & Stenting", "description": "Open and endovascular procedures for limb-saving circulation." },
-    { "title": "Laser & RFA for Varicose Veins", "description": "Minimally invasive varicose vein treatment." },
-    { "title": "Carotid Endarterectomy", "description": "Surgery for carotid artery stenosis and stroke prevention." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Kumud Rai treat varicose veins?", "answer": "Yes, he specializes in laser and RFA treatment for varicose veins." },
-    { "question": "Does he perform endovascular aneurysm repair?", "answer": "Yes, he is highly experienced in EVAR and open aneurysm surgeries." },
-    { "question": "Does he manage vascular access for dialysis?", "answer": "Yes, he routinely performs AV fistula and graft procedures." }
-  ]
-},
-{
-  "slug": "dr-vaibhav-mishra",
-  "name": "Dr. Vaibhav Mishra",
-  "specialty": "Cardiac Surgery (CTVS)",
-  "hospital": "Max Hospital – Patparganj",
+  "slug": "dr-soumya-khanna",
+  "name": "Dr. Soumya Khanna",
+  "specialty": "Aesthetic & Reconstructive Breast Surgery",
+  "hospital": "Max Hospital – Saket West | Panchsheel Park | Saket East",
   "experience": "11+ years",
   "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Director – CTVS",
-  "degree": "MCh (Cardiothoracic Surgery) | MS (Surgery) | MBBS",
-  "about": "Dr. Vaibhav Mishra is an accomplished cardiothoracic and vascular surgeon with extensive international experience across New Zealand and Australia. He has led CTVS departments and specializes in advanced cardiac procedures including minimally invasive cardiac surgery, valve repair, aortic surgery and beating-heart bypass.",
+  "isTopDoctor": true,
+  "position": "Principal Consultant – Clinical Lead, Breast Plastic Surgery & Lymphedema",
+  "degree": "MBBS | MS (General Surgery) | MCh (Plastic Surgery, CMC Vellore) | DNB (Plastic Surgery)",
+  "about": "Dr. Soumya Khanna is a leading breast reconstruction and aesthetic plastic surgeon with expertise in breast reduction, lymphedema surgery, facial aesthetics, trauma reconstruction and advanced laser procedures. She is internationally trained and works as a senior plastic surgeon at Max Healthcare.",
   "medicalProblems": [
-    { "title": "Coronary Artery Disease", "description": "Blockages in heart arteries requiring bypass surgery." },
-    { "title": "Heart Valve Disorders", "description": "Conditions affecting mitral, aortic and other heart valves." },
-    { "title": "Aortic Aneurysms", "description": "Aneurysms and aortic root conditions requiring surgical repair." },
-    { "title": "Congenital & Structural Heart Issues", "description": "Complex heart defects and structural abnormalities." }
+    { "title": "Breast Deformities", "description": "Congenital or post-cancer breast reconstruction." },
+    { "title": "Macromastia (Large Breasts)", "description": "Breast reduction for pain and discomfort." },
+    { "title": "Lymphedema", "description": "Surgical and conservative management." },
+    { "title": "Facial Aesthetic Concerns", "description": "Cosmetic corrections and rejuvenation." }
   ],
   "procedures": [
-    { "title": "Beating Heart Bypass Surgery", "description": "Total arterial bypass without stopping the heart." },
-    { "title": "Minimally Invasive Cardiac Surgery", "description": "Small-incision heart surgeries with faster recovery." },
-    { "title": "Aortic Root & Arch Surgery", "description": "Repair and reconstruction of the aortic root/arch." },
-    { "title": "Valve Repair & Replacement", "description": "Mitral and aortic valve reconstruction or replacement." }
+    { "title": "Breast Reconstruction Surgery", "description": "Aesthetic and reconstructive procedures post-cancer or congenital deformities." },
+    { "title": "Breast Reduction & Augmentation", "description": "Shaping, size correction and symmetry procedures." },
+    { "title": "Lymphedema Surgery", "description": "Advanced management of limb swelling." },
+    { "title": "Facial Cosmetic Surgery", "description": "Rejuvenation and aesthetic enhancement." }
   ],
   "faqs": [
-    { "question": "Does Dr. Vaibhav specialize in bypass surgery?", "answer": "Yes, he is known for beating heart and total arterial bypass surgeries." },
-    { "question": "Does he perform minimally invasive cardiac surgery?", "answer": "Yes, he is trained internationally in advanced minimally invasive cardiac procedures." },
-    { "question": "Has he worked abroad?", "answer": "Yes, he has worked and trained in New Zealand and Australia." }
+    { "question": "Does Dr. Soumya specialize in breast reconstruction?", "answer": "Yes, she is a leading breast reconstruction and lymphedema surgeon." },
+    { "question": "Does she perform facial cosmetic surgeries?", "answer": "Yes, she offers a range of facial aesthetic and rejuvenation procedures." },
+    { "question": "Is she associated with Max Healthcare?", "answer": "Yes, she is a Principal Consultant at Max Healthcare." }
   ]
 },
 {
-  "slug": "dr-l-tomar",
-  "name": "Dr. L. Tomar",
-  "specialty": "Orthopaedics & Joint Replacement",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "33+ years",
+  "slug": "dr-sunil-choudhary",
+  "name": "Dr. Sunil Choudhary",
+  "specialty": "Aesthetic & Reconstructive Plastic Surgery",
+  "hospital": "Max Hospital – Saket West",
+  "experience": "30+ years",
   "image": "",
   "isTopDoctor": true,
-  "position": "Principal Director & Unit Head – Orthopaedics & Joint Replacement",
-  "degree": "MCh (Ortho – University of Dundee) | MS (Ortho) | Fellow ICS (USA) | Fellowship AO Davos (Switzerland)",
-  "about": "Dr. L. Tomar is a senior orthopaedic and joint replacement surgeon with over 30 years of experience and more than 10,000 joint replacement surgeries. He is internationally trained in the UK, Australia, Germany and the USA and is known for his expertise in complex joint replacements and revision surgeries.",
+  "position": "Chairman & Chief – Max Institute of Reconstructive, Aesthetic, Cleft & Craniofacial Surgery (MIRACLES)",
+  "degree": "MBBS | MS (General Surgery) | Fellow EBOPRAS | OTDS Accreditation (UK) | Fellowships in UK & New Zealand",
+  "about": "Dr. Sunil Choudhary is one of India's most respected plastic surgeons with expertise in aesthetic, reconstructive, craniofacial and microsurgery. With international experience in the UK and New Zealand, he has transformed thousands of lives through advanced plastic surgery techniques.",
   "medicalProblems": [
-    { "title": "Knee Arthritis", "description": "Pain, stiffness and degeneration of knee joints." },
-    { "title": "Hip Arthritis", "description": "Mobility loss and severe hip degeneration." },
-    { "title": "Sports & Ligament Injuries", "description": "ACL tears, meniscus injuries and joint instability." },
-    { "title": "Spine Disorders", "description": "Disc prolapse, canal stenosis and spine fractures." }
+    { "title": "Facial Deformities", "description": "Cosmetic and reconstructive correction." },
+    { "title": "Breast Deformities", "description": "Aesthetic and reconstructive breast surgery." },
+    { "title": "Cleft & Craniofacial Disorders", "description": "Congenital and trauma-related issues." },
+    { "title": "Body Contouring Needs", "description": "Post-weight loss and aesthetic reshaping." }
   ],
   "procedures": [
-    { "title": "Total Knee Replacement", "description": "Primary, complex and revision TKR procedures." },
-    { "title": "Total Hip Replacement", "description": "Advanced hip replacement including revision surgeries." },
-    { "title": "Arthroscopy", "description": "ACL reconstruction and meniscus surgeries." },
-    { "title": "Spine Surgery", "description": "Surgery for disc issues, stenosis and trauma." }
+    { "title": "Craniofacial Surgery", "description": "Advanced reconstruction for congenital and acquired deformities." },
+    { "title": "Aesthetic Breast Surgery", "description": "Augmentation, lift and reconstruction." },
+    { "title": "Microsurgery", "description": "Complex reconstructive procedures." },
+    { "title": "Body Contouring", "description": "Liposuction, tummy tuck and reshaping." }
   ],
   "faqs": [
-    { "question": "Does Dr. Tomar perform revision knee replacement?", "answer": "Yes, he is an expert in complex and revision joint replacement surgeries." },
-    { "question": "Does he handle arthroscopy procedures?", "answer": "Yes, he specializes in ACL reconstruction and meniscus surgeries." },
-    { "question": "Is he internationally trained?", "answer": "Yes, he trained in the UK, USA, Germany, Switzerland and Australia." }
+    { "question": "Is Dr. Choudhary internationally trained?", "answer": "Yes, he trained extensively in the UK and New Zealand." },
+    { "question": "Does he perform craniofacial surgery?", "answer": "Yes, he is one of the pioneers in craniofacial reconstruction." },
+    { "question": "Is he a top plastic surgeon in India?", "answer": "Yes, he is consistently recognized among the best in the country." }
   ]
 },
 {
-  "slug": "dr-naresh-agarwal",
-  "name": "Dr. Naresh Agarwal",
-  "specialty": "Gastroenterology, Hepatology & Endoscopy",
-  "hospital": "Max Hospital – Shalimar Bagh | Max Hospital – Patparganj",
-  "experience": "13+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Director – Gastroenterology",
-  "degree": "DM (Gastroenterology – Delhi University) | MD (Medicine) | MBBS",
-  "about": "Dr. Naresh Agarwal is an experienced gastroenterologist and hepatologist with extensive work across leading institutions like SGPGI Lucknow, GB Pant Hospital and Yashoda Hospitals. He specializes in digestive, liver and pancreatic diseases and has published widely in national and international journals.",
-  "medicalProblems": [
-    { "title": "Liver Diseases", "description": "Fatty liver, hepatitis, cirrhosis and liver failure." },
-    { "title": "Gastrointestinal Disorders", "description": "Acidity, IBS, IBD, abdominal pain and diarrheal diseases." },
-    { "title": "Pancreatic Disorders", "description": "Pancreatitis and cystic pancreatic diseases." },
-    { "title": "Celiac Disease", "description": "Diagnosis and long-term management of gluten intolerance." }
-  ],
-  "procedures": [
-    { "title": "Upper GI Endoscopy", "description": "Diagnostic and therapeutic endoscopic procedures." },
-    { "title": "Colonoscopy", "description": "Screening and evaluation of colon disorders." },
-    { "title": "ERCP", "description": "Biliary and pancreatic duct procedures." },
-    { "title": "Liver Disease Management", "description": "Treatment of acute and chronic liver conditions." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Naresh Agarwal treat liver diseases?", "answer": "Yes, he specializes in hepatology and manages fatty liver, hepatitis and cirrhosis." },
-    { "question": "Is he experienced in endoscopy?", "answer": "Yes, he performs a wide range of diagnostic and therapeutic endoscopies." },
-    { "question": "Has he published research?", "answer": "Yes, he has over 21 publications in reputed journals." }
-  ]
-},
-{
-  "slug": "dr-dilip-bhalla",
-  "name": "Dr. Dilip Bhalla",
-  "specialty": "Nephrology & Kidney Transplant",
-  "hospital": "Max Hospital – Vaishali | Max Hospital – Patparganj",
-  "experience": "34+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Senior Director – Nephrology",
-  "degree": "DM (Nephrology – PGI Chandigarh) | DNB (Nephrology) | MD (Medicine) | MBBS",
-  "about": "Dr. Dilip Bhalla is a senior nephrologist with more than 34 years of experience in nephrology, kidney transplant care and critical renal management. He heads the nephrology unit at Max Patparganj and leads its DNB nephrology training programme.",
-  "medicalProblems": [
-    { "title": "Kidney Failure", "description": "Management of acute and chronic renal failure." },
-    { "title": "Dialysis Needs", "description": "Haemodialysis, peritoneal dialysis and dialysis access issues." },
-    { "title": "Kidney Transplant Care", "description": "High-risk and cadaveric transplant management." },
-    { "title": "Critical Care Nephrology", "description": "Renal support in ICU and complex infections." }
-  ],
-  "procedures": [
-    { "title": "Kidney Transplantation", "description": "Pre and post-transplant evaluation and management." },
-    { "title": "Dialysis", "description": "Haemodialysis, CAPD and dialysis catheter management." },
-    { "title": "Renal ICU Care", "description": "Specialized nephrology support in critical care." },
-    { "title": "Renal Biopsy", "description": "Diagnosis of kidney diseases through biopsy procedures." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Bhalla handle kidney transplants?", "answer": "Yes, he specializes in high-risk and cadaveric kidney transplant care." },
-    { "question": "Does he manage dialysis patients?", "answer": "Yes, he oversees dialysis and long-term renal failure management." },
-    { "question": "Does he treat critical kidney issues?", "answer": "Yes, he is an expert in critical care nephrology." }
-  ]
-},
-{
-  "slug": "dr-vivek-bindal",
-  "name": "Dr. Vivek Bindal",
-  "specialty": "Minimal Access, Bariatric & Robotic Surgery",
-  "hospital": "Max Hospital – Patparganj | Max Hospital – Vaishali",
-  "experience": "16+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Senior Director & Head – Minimal Access, Bariatric & Robotic Surgery",
-  "degree": "FACS | Indo-US Fellowship (Robotic & Bariatric Surgery – Duke University) | Indo-US Fellowship (Robotic GI Surgery – University of Illinois Chicago) | MRCS (Glasgow) | FNB (Minimal Access Surgery) | DNB (General Surgery) | MS (General Surgery) | MBBS",
-  "about": "Dr. Vivek Bindal is one of India’s leading robotic, bariatric and minimal access surgeons with global training and extensive academic contributions. He has performed landmark robotic surgeries, trained clinicians internationally and established the Indian chapter of the Clinical Robotic Surgery Association.",
-  "medicalProblems": [
-    { "title": "Obesity & Metabolic Disorders", "description": "Conditions requiring bariatric and metabolic surgery." },
-    { "title": "Gastrointestinal Disorders", "description": "Complex GI issues requiring laparoscopic or robotic intervention." },
-    { "title": "Hernias", "description": "Simple and complex abdominal wall and inguinal hernias." },
-    { "title": "Gallbladder & Biliary Disorders", "description": "Cholelithiasis, gallbladder infections and bile duct disease." }
-  ],
-  "procedures": [
-    { "title": "Robotic Bariatric Surgery", "description": "Sleeve gastrectomy, gastric bypass and metabolic surgeries." },
-    { "title": "Robotic & Laparoscopic Hernia Surgery", "description": "Advanced abdominal wall and inguinal hernia repairs." },
-    { "title": "GI Robotic Surgery", "description": "Robotic procedures for stomach, intestine and hepatobiliary diseases." },
-    { "title": "Advanced Laparoscopy", "description": "Minimal access procedures for GI and metabolic disorders." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Bindal perform bariatric surgery?", "answer": "Yes, he is one of India’s leading bariatric and metabolic surgeons." },
-    { "question": "Does he specialize in robotic surgery?", "answer": "Yes, he has international fellowships in robotic surgery and has trained surgeons worldwide." },
-    { "question": "Does he treat hernias?", "answer": "Yes, he performs complex robotic and laparoscopic hernia surgeries." }
-  ]
-},
-{
-  "slug": "dr-ashish-gautam",
-  "name": "Dr. Ashish Gautam",
-  "specialty": "General, Laparoscopic & Robotic Surgery",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "20+ years",
+  "slug": "dr-amina-mobashir",
+  "name": "Dr. Amina Mobashir",
+  "specialty": "Pulmonology & Allergy",
+  "hospital": "Max Hospital – Saket West | Saket Smart",
+  "experience": "10+ years",
   "image": "",
   "isTopDoctor": false,
-  "position": "Senior Director – General, Laparoscopic & Robotic Surgery",
-  "degree": "FACS | FALS | FIAGES | MS (General Surgery) | MBBS",
-  "about": "Dr. Ashish Gautam is a highly experienced surgeon specializing in robotic, gastrointestinal, bariatric and advanced laparoscopic surgeries. With over two decades of experience, he has led surgical departments and performed thousands of complex GI and minimally invasive procedures.",
+  "position": "Senior Consultant – Pulmonology & Critical Care",
+  "degree": "MBBS | DNB (Respiratory Medicine) | IDCCM | EDRM (ERS)",
+  "about": "Dr. Amina Mobashir is an accomplished pulmonologist with expertise in respiratory diseases, allergy management and critical care. She has worked with leading hospitals and has received multiple academic awards in the field of respiratory medicine.",
   "medicalProblems": [
-    { "title": "Gallbladder Diseases", "description": "Gallstones, bile duct infections and cholecystitis." },
-    { "title": "Hernias", "description": "Ventral, inguinal, umbilical and recurrent hernias." },
-    { "title": "Digestive System Disorders", "description": "Stomach, intestine and colorectal conditions requiring surgery." },
-    { "title": "Obesity-Related Disorders", "description": "Conditions requiring metabolic or bariatric interventions." }
+    { "title": "Asthma & Allergies", "description": "Diagnosis and long-term management." },
+    { "title": "COPD", "description": "Breathlessness and chronic respiratory symptoms." },
+    { "title": "Lung Infections", "description": "Pneumonia, TB and respiratory infections." },
+    { "title": "Sleep Disorders", "description": "Sleep apnea and breathing-related issues." }
   ],
   "procedures": [
-    { "title": "Robotic GI Surgery", "description": "Robotic surgeries for gastrointestinal conditions." },
-    { "title": "Advanced Laparoscopic Surgery", "description": "Minimal invasive treatment for GI and abdominal diseases." },
-    { "title": "Bariatric Surgery", "description": "Weight loss surgeries including sleeve gastrectomy." },
-    { "title": "Laser Varicose Vein Surgery", "description": "Laser treatments for varicose veins." }
+    { "title": "Pulmonary Function Testing", "description": "Assessment of lung capacity and airway disease." },
+    { "title": "Bronchoscopy", "description": "Advanced airway diagnostics." },
+    { "title": "Allergy Testing", "description": "Skin tests and immunotherapy guidance." },
+    { "title": "Critical Care Procedures", "description": "Ventilation and ICU respiratory support." }
   ],
   "faqs": [
-    { "question": "Does Dr. Gautam perform robotic surgery?", "answer": "Yes, he is extensively trained in robotic-assisted GI and bariatric surgeries." },
-    { "question": "Does he handle complex hernia surgeries?", "answer": "Yes, he specializes in minimally invasive and robotic hernia repairs." },
-    { "question": "Does he perform bariatric surgery?", "answer": "Yes, he performs metabolic and bariatric surgical procedures." }
+    { "question": "Does Dr. Amina treat asthma?", "answer": "Yes, she specializes in asthma and allergy management." },
+    { "question": "Is she trained in critical care?", "answer": "Yes, she holds IDCCM certification in intensive care." },
+    { "question": "Which hospitals is she associated with?", "answer": "She practices at Max Saket West and Max Saket Smart." }
   ]
 },
 {
-  "slug": "dr-vikas-goswami",
-  "name": "Dr. Vikas Goswami",
-  "specialty": "Medical Oncology",
-  "hospital": "Max Hospital – Vaishali | Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "22+ years",
+  "slug": "dr-sujoy-bhattacharjee",
+  "name": "Dr. Sujoy Bhattacharjee",
+  "specialty": "Robotic Joint Replacement & Orthopaedics",
+  "hospital": "Max Hospital – Panchsheel Park | Saket East",
+  "experience": "25+ years",
   "image": "",
   "isTopDoctor": true,
-  "position": "Senior Director – Medical Oncology (Head & Neck, GI, Urology, Musculoskeletal, Breast & Gynecology)",
-  "degree": "DNB (Medical Oncology) | MD (Internal Medicine) | MBBS",
-  "about": "Dr. Vikas Goswami is a senior medical oncologist with over two decades of experience treating solid tumors and hematological cancers. He specializes in gastrointestinal, breast, lung, uro-oncology and head & neck cancers with expertise in precision oncology, immunotherapy and targeted therapy.",
+  "position": "Chairman – Robotic Joint Replacement",
+  "degree": "MBBS | MS (Orthopaedics) | MCh (Orthopaedics) | Fellowships (France, UK, USA, Australia, Germany)",
+  "about": "Dr. Sujoy Bhattacharjee is a globally recognized robotic joint replacement expert with more than 25,000 joint surgeries and multiple world records. He specializes in cruciate-retaining robotic knee replacement, hip surgery, AI-assisted joint surgery and revision arthroplasty.",
   "medicalProblems": [
-    { "title": "Breast Cancer", "description": "Comprehensive medical management of breast malignancies." },
-    { "title": "Lung Cancer", "description": "Targeted and immunotherapy for lung tumors." },
-    { "title": "Gastrointestinal Cancers", "description": "Stomach, colon, liver and pancreatic cancers." },
-    { "title": "Hematological Cancers", "description": "Leukemia, lymphoma and myeloma treatment." }
+    { "title": "Severe Knee Arthritis", "description": "Advanced robotic knee replacement solutions." },
+    { "title": "Hip Joint Disorders", "description": "Total hip replacement and revision surgeries." },
+    { "title": "Sports Injuries", "description": "Arthroscopy and ligament reconstruction." },
+    { "title": "Spinal Trauma & Degeneration", "description": "Evaluation and surgical management." }
   ],
   "procedures": [
-    { "title": "Chemotherapy", "description": "Advanced and personalized medical cancer treatment." },
-    { "title": "Targeted Therapy", "description": "Precision cancer therapy based on molecular profiling." },
-    { "title": "Immunotherapy", "description": "Immune-based cancer treatments for advanced malignancies." },
-    { "title": "Precision Oncology", "description": "Genetic and biomarker-based cancer treatment." }
+    { "title": "Robotic Knee Replacement", "description": "World’s first CR knee replacement with active robot." },
+    { "title": "Robotic Partial Knee Replacement", "description": "Precise tissue-preserving surgery." },
+    { "title": "Total Hip Replacement", "description": "Advanced implant-based reconstruction." },
+    { "title": "AI/AR Guided Joint Surgery", "description": "Modern navigation and precision surgeries." }
   ],
   "faqs": [
-    { "question": "Does Dr. Goswami treat gastrointestinal cancers?", "answer": "Yes, he has extensive experience in GI and hepatobiliary cancers." },
-    { "question": "Does he specialize in immunotherapy?", "answer": "Yes, he offers advanced immunotherapy for multiple cancer types." },
-    { "question": "Does he treat breast cancer?", "answer": "Yes, breast cancer is one of his primary specialties." }
+    { "question": "Is Dr. Sujoy a robotic surgery specialist?", "answer": "Yes, he is a global leader in robotic joint replacement." },
+    { "question": "How many surgeries has he performed?", "answer": "He has performed over 25,000 joint surgeries." },
+    { "question": "Does he perform revision surgeries?", "answer": "Yes, he is an expert in complex revision hip and knee surgeries." }
   ]
 },
 {
-  "slug": "dr-p-kar",
-  "name": "Dr. P. Kar",
-  "specialty": "Gastroenterology, Hepatology & Endoscopy",
-  "hospital": "Max Hospital – Patparganj | Max Hospital – Vaishali",
-  "experience": "44+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Senior Director – Gastroenterology",
-  "degree": "PhD (Biosciences) | DM (Gastroenterology – AIIMS) | MD (Medicine) | MBBS",
-  "about": "Dr. P. Kar is one of India’s most senior gastroenterologists with over four decades of experience. He has taught at AIIMS and MAMC, contributed extensively to research in liver and digestive diseases, and published widely in national and international journals.",
-  "medicalProblems": [
-    { "title": "Liver Diseases", "description": "Hepatitis, cirrhosis, liver failure and autoimmune liver diseases." },
-    { "title": "Digestive Disorders", "description": "Acidity, IBS, IBD and functional GI problems." },
-    { "title": "Pancreatic Conditions", "description": "Acute and chronic pancreatitis." },
-    { "title": "Gastrointestinal Bleeding", "description": "Evaluation and treatment of upper and lower GI bleeds." }
-  ],
-  "procedures": [
-    { "title": "Endoscopy", "description": "Upper GI endoscopy for diagnosis and treatment." },
-    { "title": "Colonoscopy", "description": "Evaluation and treatment of colon diseases." },
-    { "title": "Liver Disease Management", "description": "Medical and endoscopic management of liver conditions." },
-    { "title": "Pancreatic Evaluation", "description": "Management of acute and chronic pancreatitis." }
-  ],
-  "faqs": [
-    { "question": "Is Dr. Kar experienced in liver diseases?", "answer": "Yes, he is a liver disease expert with decades of clinical and research experience." },
-    { "question": "Does he perform endoscopy?", "answer": "Yes, he conducts diagnostic and therapeutic endoscopic procedures." },
-    { "question": "Has he published research?", "answer": "Yes, his work is widely published and cited in global medical journals." }
-  ]
-},
-{
-  "slug": "dr-manoj-k-tayal",
-  "name": "Dr. Manoj K. Tayal",
-  "specialty": "Radiation Oncology",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj",
+  "slug": "dr-sumit-mrig",
+  "name": "Dr. Sumit Mrig",
+  "specialty": "ENT & Cochlear Implants",
+  "hospital": "Max Hospital – Dwarka | Saket Smart | Saket East",
   "experience": "18+ years",
   "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Director – Radiation Oncology",
-  "degree": "MD (Radiotherapy) | MBBS",
-  "about": "Dr. Manoj K. Tayal is an experienced radiation oncologist specializing in advanced radiation therapies including IMRT, IGRT, VMAT, SBRT and brachytherapy. He has led radiation oncology departments at Medanta Hospital and has significant experience in treating complex cancers with high-precision radiation.",
+  "isTopDoctor": true,
+  "position": "Director & Unit Head – ENT",
+  "degree": "MBBS | MS (ENT) | DNB (ENT)",
+  "about": "Dr. Sumit Mrig is one of India’s leading ENT surgeons and among the youngest cochlear implant specialists in Asia. With 700+ implants and patients from 8 countries, he is known for complex otology, skull base surgery, snoring solutions, vertigo management and cochlear implant training.",
   "medicalProblems": [
-    { "title": "Head & Neck Cancers", "description": "Advanced radiation treatment for ENT cancers." },
-    { "title": "Breast Cancer", "description": "Comprehensive radiation therapy for breast malignancies." },
-    { "title": "Gynecological Cancers", "description": "Radiation management of cervical and uterine cancers." },
-    { "title": "Thoracic & Lung Cancers", "description": "Precision radiation for lung and mediastinal tumors." }
+    { "title": "Hearing Loss", "description": "Cochlear, BAHA, Bonebridge solutions." },
+    { "title": "Snoring & Sleep Apnea", "description": "Surgical and non-surgical management." },
+    { "title": "Vertigo & Balance Disorders", "description": "Comprehensive diagnosis and therapy." },
+    { "title": "Salivary Gland Stones", "description": "Sialendoscopy and minimally invasive removal." }
   ],
   "procedures": [
-    { "title": "IMRT", "description": "Intensity-modulated radiation therapy for targeted treatment." },
-    { "title": "IGRT", "description": "Image-guided precision radiation therapy." },
-    { "title": "SBRT & SRS", "description": "High-dose stereotactic treatments for tumors." },
-    { "title": "Brachytherapy", "description": "Internal radiation therapy for gynecologic and other cancers." }
+    { "title": "Cochlear Implant Surgery", "description": "700+ implants across pediatric and adult patients." },
+    { "title": "Skull Base Surgery", "description": "Complex anterior and lateral skull base operations." },
+    { "title": "Advanced Otology Procedures", "description": "Reconstruction and hearing restoration." },
+    { "title": "Snoring & Sleep Apnea Surgery", "description": "Airway correction procedures." }
   ],
   "faqs": [
-    { "question": "Does Dr. Tayal perform IMRT and IGRT?", "answer": "Yes, he specializes in advanced radiation techniques including IMRT, IGRT, VMAT and SBRT." },
-    { "question": "Does he treat head & neck cancers?", "answer": "Yes, he is highly experienced in radiation therapy for head and neck malignancies." },
-    { "question": "Does he offer brachytherapy?", "answer": "Yes, he performs brachytherapy for gynecological and other cancers." }
+    { "question": "Is Dr. Mrig experienced in cochlear implants?", "answer": "Yes, he has performed over 700 cochlear implant surgeries." },
+    { "question": "Does he treat vertigo?", "answer": "Yes, vertigo treatment is one of his key areas of expertise." },
+    { "question": "Does he practice at multiple Max hospitals?", "answer": "Yes, he practices at Dwarka, Saket Smart and Saket East." }
   ]
 },
 {
-  "slug": "dr-sameer-khatri",
-  "name": "Dr. Sameer Khatri",
-  "specialty": "Medical Oncology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "20+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Director – Medical Oncology",
-  "degree": "DNB (Medical Oncology) | MD (Internal Medicine) | MBBS",
-  "about": "Dr. Sameer Khatri is a senior medical oncologist with extensive experience in treating solid tumors, hematological malignancies and delivering advanced therapies including immunotherapy, targeted therapy and precision oncology. He has led oncology departments and conducted multiple clinical trials.",
-  "medicalProblems": [
-    { "title": "Breast Cancer", "description": "Advanced medical treatment for breast malignancies." },
-    { "title": "Lung Cancer", "description": "Immunotherapy and targeted therapy for lung tumors." },
-    { "title": "Gastrointestinal Cancers", "description": "Management of stomach, colon, pancreatic and liver cancers." },
-    { "title": "Haematological Cancers", "description": "Treatment of leukemia, lymphoma and myeloma." }
-  ],
-  "procedures": [
-    { "title": "Chemotherapy", "description": "Systemic treatment for solid and blood cancers." },
-    { "title": "Targeted Therapy", "description": "Molecular-targeted cancer treatment." },
-    { "title": "Immunotherapy", "description": "Immune-based cancer treatment solutions." },
-    { "title": "Precision Oncology", "description": "Cancer treatment based on genetic markers." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Khatri specialize in immunotherapy?", "answer": "Yes, he has extensive experience in immunotherapy for advanced cancers." },
-    { "question": "Does he treat gastrointestinal cancers?", "answer": "Yes, he specializes in GI and hepatobiliary cancers." },
-    { "question": "Is he involved in clinical trials?", "answer": "Yes, he has served as Principal Investigator in multiple oncology trials." }
-  ]
-},
-{
-  "slug": "dr-shyam-kukreja",
-  "name": "Dr. Shyam Kukreja",
-  "specialty": "Paediatrics (PED)",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "45+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Director & Head of Department – Paediatrics",
-  "degree": "MBBS | MD (Paediatrics)",
-  "about": "Dr. Shyam Kukreja is a senior paediatrician with over 45 years of clinical experience. He has served in leading hospitals across Delhi and is known for his expertise in complete child healthcare, growth, development and paediatric medicine.",
-  "medicalProblems": [
-    { "title": "Newborn & Infant Care", "description": "Vaccinations, development monitoring and neonatal issues." },
-    { "title": "Childhood Infections", "description": "Fever, viral infections, respiratory and stomach illnesses." },
-    { "title": "Growth & Development Issues", "description": "Nutritional deficiencies, delayed milestones and growth monitoring." },
-    { "title": "Paediatric Chronic Diseases", "description": "Asthma, allergies and long-term paediatric conditions." }
-  ],
-  "procedures": [
-    { "title": "Vaccination & Immunization", "description": "Complete vaccination programmes for children." },
-    { "title": "Paediatric Evaluation", "description": "Growth charts, developmental assessments and health checks." },
-    { "title": "Management of Infections", "description": "Treatment of common and complex paediatric infections." },
-    { "title": "Child Nutrition Counselling", "description": "Diet, immunity and growth optimisation programmes." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Kukreja treat newborns?", "answer": "Yes, he specializes in newborn and infant care." },
-    { "question": "Does he provide vaccinations?", "answer": "Yes, he manages complete paediatric vaccination schedules." },
-    { "question": "Does he treat paediatric infections?", "answer": "Yes, he has extensive experience in managing childhood infections." }
-  ]
-},
-{
-  "slug": "dr-deepak-lahoti",
-  "name": "Dr. Deepak Lahoti",
-  "specialty": "Gastroenterology, Hepatology & Endoscopy",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "40+ years",
+  "slug": "dr-vandana-soni",
+  "name": "Dr. Vandana Soni",
+  "specialty": "Laparoscopic, Robotic & Bariatric Surgery",
+  "hospital": "Max Hospital – Gurugram | Saket East",
+  "experience": "30+ years",
   "image": "",
   "isTopDoctor": true,
-  "position": "Senior Director – Gastroenterology",
-  "degree": "DM (Gastroenterology – GB Pant Hospital) | MD (Medicine – RML Hospital) | MBBS (MAMC)",
-  "about": "Dr. Deepak Lahoti is one of India's most respected gastroenterologists with over four decades of experience. He has served as Associate Professor at GB Pant Hospital and Senior Gastroenterologist at multiple premier institutions in Delhi. He is known for expertise in advanced GI endoscopy, liver diseases and complex digestive disorders.",
+  "position": "Senior Director – Max Institute of Laparoscopic, Robotic & Bariatric Surgery",
+  "degree": "MBBS | MS (General Surgery)",
+  "about": "Dr. Vandana Soni is a pioneer in laparoscopic and bariatric surgery with over three decades of experience. She has been associated with Sir Ganga Ram Hospital and Max Healthcare, performing advanced minimal access, obesity, hernia, GERD, thyroid, and scarless neck surgeries.",
   "medicalProblems": [
-    { "title": "Liver Diseases", "description": "Hepatitis, fatty liver, cirrhosis and alcohol-related liver issues." },
-    { "title": "Digestive Disorders", "description": "Acidity, gastritis, IBS, IBD and abdominal pain." },
-    { "title": "Pancreatic Disorders", "description": "Pancreatitis and pancreatic insufficiency." },
-    { "title": "Esophagus & Stomach Disorders", "description": "Ulcers, GERD and swallowing difficulties." }
+    { "title": "Obesity", "description": "Surgical and metabolic weight-loss solutions." },
+    { "title": "Hernia (All Types)", "description": "Advanced laparoscopic and endoscopic repair." },
+    { "title": "Gallbladder Disorders", "description": "Laparoscopic cholecystectomy and management." },
+    { "title": "Anorectal Problems", "description": "Piles, fissure and fistula management." }
   ],
   "procedures": [
-    { "title": "Endoscopy", "description": "Upper GI endoscopy for diagnosis and treatment." },
-    { "title": "Colonoscopy", "description": "Evaluation of colon diseases and polyps." },
-    { "title": "ERCP", "description": "Endoscopic procedure for bile duct and pancreatic duct diseases." },
-    { "title": "Liver Disease Management", "description": "Comprehensive management of acute and chronic liver disease." }
+    { "title": "Bariatric Surgery", "description": "Laparoscopic obesity management procedures." },
+    { "title": "Scarless Neck Surgery", "description": "Endoscopic thyroid and parathyroid procedures." },
+    { "title": "Hernia Repair", "description": "Laparoscopic and endoscopic hernia solutions." },
+    { "title": "Gallbladder Surgery", "description": "Minimal access cholecystectomy." }
   ],
   "faqs": [
-    { "question": "Does Dr. Lahoti specialize in liver diseases?", "answer": "Yes, he is an expert in hepatology and advanced GI disorders." },
-    { "question": "Does he perform endoscopy and colonoscopy?", "answer": "Yes, he is highly experienced in therapeutic GI endoscopy." },
-    { "question": "Is he a member of national societies?", "answer": "Yes, including ISG, INASL, SGEI and DAI." }
+    { "question": "Does Dr. Soni perform bariatric surgery?", "answer": "Yes, she is a senior expert in obesity and metabolic surgery." },
+    { "question": "Does she perform scarless neck surgery?", "answer": "Yes, she specializes in endoscopic thyroid and parathyroid surgery." },
+    { "question": "How long has she been practicing?", "answer": "She has over 30 years of surgical experience." }
   ]
 },
 {
-  "slug": "dr-nitin-leekha",
-  "name": "Dr. Nitin Leekha",
-  "specialty": "Surgical Oncology",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
+  "slug": "dr-pradeep-chowbey",
+  "name": "Dr. Pradeep Chowbey",
+  "specialty": "Laparoscopic, Endoscopic & Bariatric Surgery",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "49+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Group Chairman – Max Institute of Laparoscopic, Endoscopic, Bariatric & Gastrointestinal Surgery",
+  "degree": "MBBS | MS | FRCS (London) | FACS | FMAS | FALS | FICS | FAIS | FIMSA | MNAMS",
+  "about": "Dr. Pradeep Chowbey is one of the world’s most renowned laparoscopic surgeons with over 98,000 surgeries completed and 20,000+ surgeons trained globally. He pioneered endoscopic hernia repair, VAAFT for fistula, and advanced metabolic & bariatric surgery.",
+  "medicalProblems": [
+    { "title": "Gallbladder Disorders", "description": "Advanced minimal access surgical solutions." },
+    { "title": "Hernias (All Types)", "description": "Expert hernia repair using TEP/TAPP." },
+    { "title": "Obesity & Metabolic Syndrome", "description": "Surgical weight-loss solutions." },
+    { "title": "Anorectal Conditions", "description": "Advanced techniques like VAAFT & MAFT." }
+  ],
+  "procedures": [
+    { "title": "Endoscopic Hernia Repair", "description": "Globally recognized TEP/TAPP techniques." },
+    { "title": "Bariatric Surgery", "description": "Metabolic and weight-loss procedures." },
+    { "title": "VAAFT / MAFT", "description": "Minimally invasive fistula treatment." },
+    { "title": "Advanced GI Surgery", "description": "Hepato-biliary & pancreatic procedures." }
+  ],
+  "faqs": [
+    { "question": "Is Dr. Chowbey internationally recognized?", "answer": "Yes, he is a global pioneer in laparoscopic and bariatric surgery." },
+    { "question": "Does he perform advanced fistula surgery?", "answer": "Yes, he introduced VAAFT/MAFT in India." },
+    { "question": "How many surgeries has he performed?", "answer": "He has completed nearly 98,300 surgeries." }
+  ]
+},
+{
+  "slug": "dr-rayaz-ahmed",
+  "name": "Dr. Rayaz Ahmed",
+  "specialty": "Haematology & Bone Marrow Transplant",
+  "hospital": "Max Hospital – Saket Smart | Saket East",
   "experience": "15+ years",
   "image": "",
   "isTopDoctor": true,
-  "position": "Senior Director – Surgical Oncology",
-  "degree": "MCh (Surgical Oncology – RCC Thiruvananthapuram) | MS (General Surgery – MAMC) | MBBS (UCMS) | FACS | FMAS | Fellow – ESSO",
-  "about": "Dr. Nitin Leekha is a highly skilled surgical oncologist with international training across India, Europe and Asia. He specializes in advanced cancer surgeries including GI, breast, thoracic, gynecologic and urologic cancers, along with robotic and minimally invasive cancer procedures.",
+  "position": "Principal Director – Haematology & Bone Marrow Transplant",
+  "degree": "MBBS | MD (Pathology) | DM (Hematology, CMC Vellore)",
+  "about": "Dr. Rayaz Ahmed is one of India’s leading hematologists with over 1000 bone marrow transplants completed. He manages leukemia, lymphoma, myeloma, aplastic anemia, thalassemia, sickle cell anemia and rare blood disorders.",
   "medicalProblems": [
-    { "title": "Breast Cancer", "description": "Surgical management of early and advanced breast cancer." },
-    { "title": "Head & Neck Cancers", "description": "Thyroid, oral cavity and throat cancer surgery." },
-    { "title": "Gastrointestinal Cancers", "description": "Stomach, colon, rectal and liver cancers." },
-    { "title": "Thoracic Cancers", "description": "Lung and mediastinal tumor surgeries." }
+    { "title": "Leukemia", "description": "AML, ALL, CML, CLL diagnosis and treatment." },
+    { "title": "Lymphoma", "description": "Hodgkin and Non-Hodgkin lymphomas." },
+    { "title": "Aplastic Anemia", "description": "Stem cell–based treatment options." },
+    { "title": "Thalassemia & Sickle Cell", "description": "Advanced transplant-based therapies." }
   ],
   "procedures": [
-    { "title": "Robotic Cancer Surgery", "description": "Advanced robotic procedures for complex cancers." },
-    { "title": "Minimally Invasive Cancer Surgery", "description": "Laparoscopic and VATS oncology procedures." },
-    { "title": "HIPEC & Peritoneal Surgery", "description": "Specialized procedures for advanced abdominal cancers." },
-    { "title": "Onco-Reconstructive Surgery", "description": "Functional and cosmetic reconstruction post-cancer surgery." }
+    { "title": "Autologous BMT", "description": "Self-stem cell transplantation." },
+    { "title": "Allogeneic BMT", "description": "MSD, MUD and Haplo transplants." },
+    { "title": "Chemotherapy Protocols", "description": "Advanced hematologic cancer treatment." },
+    { "title": "Molecular Testing", "description": "Genetic evaluation for blood disorders." }
   ],
   "faqs": [
-    { "question": "Does Dr. Leekha perform robotic cancer surgery?", "answer": "Yes, he specializes in robotic and minimally invasive oncology procedures." },
-    { "question": "Does he treat GI cancers?", "answer": "Yes, including stomach, colon and rectal cancers." },
-    { "question": "Does he manage complex thoracic and head & neck cancers?", "answer": "Yes, he has extensive national and international training in these areas." }
+    { "question": "Has Dr. Rayaz performed BMTs?", "answer": "Yes, he has performed over 1000 transplants." },
+    { "question": "Does he treat thalassemia?", "answer": "Yes, thalassemia and sickle cell anemia are key areas of his expertise." },
+    { "question": "Is he trained at CMC Vellore?", "answer": "Yes, he completed his DM in Hematology at CMC Vellore." }
   ]
 },
 {
-  "slug": "dr-p-k-mishra",
-  "name": "Dr. (Prof.) P. K. Mishra",
-  "specialty": "Surgical Gastroenterology",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Vaishali | Max Hospital – Patparganj",
+  "slug": "dr-harit-chaturvedi",
+  "name": "Dr. Harit Chaturvedi",
+  "specialty": "Surgical Oncology",
+  "hospital": "Max Hospital – Saket Smart | Shalimar Bagh | Vaishali | Patparganj | Saket East",
   "experience": "35+ years",
   "image": "",
   "isTopDoctor": true,
-  "position": "Senior Director – Surgical Gastroenterology",
-  "degree": "PhD (GI Surgery – AIIMS) | MS (LHMC & RML) | PG Diploma (Anaesthesia – MAMC) | MBBS (MAMC)",
-  "about": "Dr. (Prof.) P. K. Mishra is a veteran surgical gastroenterologist with over 35 years of experience. He has served as Director Professor at GIPMER (GB Pant Hospital) and has extensive experience in GI surgery, GI oncology and hepatopancreatobiliary procedures. He has over 100+ national lectures and numerous publications.",
+  "position": "Chairman – Max Institute of Cancer Care",
+  "degree": "MBBS | MS (General Surgery) | MCh (Surgical Oncology)",
+  "about": "Dr. Harit Chaturvedi is one of India's most respected cancer surgeons and the chairperson of Max Institute of Cancer Care. With decades of experience, he specializes in breast cancer, thoracic oncology, head & neck cancers and robotic oncological surgery.",
   "medicalProblems": [
-    { "title": "GI Cancers", "description": "Esophageal, stomach, pancreatic, liver and colorectal cancers." },
-    { "title": "Hepatobiliary Disorders", "description": "Gallbladder, bile duct and liver diseases." },
-    { "title": "Intestinal Disorders", "description": "Small and large bowel diseases requiring surgery." },
-    { "title": "Advanced GI Conditions", "description": "Complex abdominal and peritoneal diseases." }
+    { "title": "Breast Cancer", "description": "Comprehensive surgical and reconstructive management." },
+    { "title": "Head & Neck Tumors", "description": "Thyroid, oral, and throat cancers." },
+    { "title": "Thoracic Cancers", "description": "Lung and mediastinal tumor management." },
+    { "title": "Gastrointestinal Cancers", "description": "Colon, stomach and hepatobiliary cancers." }
   ],
   "procedures": [
-    { "title": "GI Oncologic Surgery", "description": "Cancer surgeries of the entire gastrointestinal tract." },
-    { "title": "Hepato-Pancreato-Biliary Surgery", "description": "Liver, pancreas and bile duct surgeries." },
-    { "title": "Advanced Laparoscopic GI Surgery", "description": "Minimal access procedures for GI diseases." },
-    { "title": "Complex Abdominal Surgery", "description": "Treatment of advanced GI and abdominal disorders." }
+    { "title": "Cancer Surgery", "description": "Advanced oncologic resections." },
+    { "title": "Robotic Cancer Surgery", "description": "Precision-based minimally invasive tumor removal." },
+    { "title": "Head & Neck Surgery", "description": "Microvascular and reconstructive procedures." },
+    { "title": "Thoracic Surgery", "description": "Lung & chest oncology procedures." }
   ],
   "faqs": [
-    { "question": "Does Dr. Mishra treat GI cancers?", "answer": "Yes, he is a senior expert in surgical oncology for GI cancers." },
-    { "question": "Does he perform HPB surgery?", "answer": "Yes, he is highly experienced in liver, pancreas and bile duct surgeries." },
-    { "question": "Has he published research?", "answer": "Yes, he has written textbooks and over 60+ medical publications." }
+    { "question": "Is Dr. Harit a surgical oncologist?", "answer": "Yes, he is one of India’s leading surgical oncologists." },
+    { "question": "Does he perform robotic cancer surgery?", "answer": "Yes, he is an expert in robotic oncology procedures." },
+    { "question": "Is he associated with Max Cancer Care?", "answer": "Yes, he is the Chairman of Max Institute of Cancer Care." }
   ]
 },
 {
-  "slug": "dr-praveen-kumar-pandey",
-  "name": "Dr. Praveen Kumar Pandey",
-  "specialty": "Pulmonology",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "24+ years",
+  "slug": "dr-shefali-sardana",
+  "name": "Dr. Shefali Sardana",
+  "specialty": "Medical Oncology",
+  "hospital": "Max Hospital – Saket Smart | Saket East",
+  "experience": "17+ years",
   "image": "",
   "isTopDoctor": false,
-  "position": "Senior Director – Pulmonology",
-  "degree": "MD (Respiratory Diseases – JNMC AMU) | MBBS (JNMC AMU)",
-  "about": "Dr. Praveen Kumar Pandey is a senior pulmonologist with over 24 years of experience. He specializes in respiratory critical care, interventional pulmonology, sleep disorders and advanced lung disease. He has led pulmonary departments and conducted multiple clinical trials.",
+  "position": "Associate Director – Medical Oncology",
+  "degree": "MBBS | MD (Medicine) | DNB (Medical Oncology)",
+  "about": "Dr. Shefali Sardana is a dedicated medical oncologist specializing in breast, gastrointestinal, gynecologic, thoracic and urologic cancers. She has rich experience across Max Hospitals and Apollo Hospital and is actively involved in clinical research and oncology leadership.",
   "medicalProblems": [
-    { "title": "Asthma & Allergy", "description": "Diagnosis and long-term management of respiratory allergies." },
-    { "title": "COPD & Smoking Disorders", "description": "Chronic respiratory obstruction caused by smoking or pollutants." },
-    { "title": "Respiratory Infections", "description": "Pneumonia, TB, bronchitis and viral lung infections." },
-    { "title": "Sleep Disorders", "description": "Sleep apnea and respiratory-related sleep issues." }
+    { "title": "Breast Cancer", "description": "Systemic therapy and long-term management." },
+    { "title": "GI & Hepatobiliary Cancers", "description": "Chemotherapy and immunotherapy." },
+    { "title": "Gynecologic Cancers", "description": "Ovarian, cervical and endometrial cancers." },
+    { "title": "Thoracic Cancers", "description": "Lung and mediastinal tumors." }
   ],
   "procedures": [
-    { "title": "Bronchoscopy", "description": "Diagnostic and therapeutic airway procedures." },
-    { "title": "Interventional Pulmonology", "description": "Advanced lung interventions including stenting and biopsies." },
-    { "title": "Sleep Study & Sleep Medicine", "description": "Evaluation and treatment of sleep apnea." },
-    { "title": "Critical Care Management", "description": "Lung support in ICU and severe respiratory diseases." }
+    { "title": "Chemotherapy", "description": "Advanced systemic cancer treatments." },
+    { "title": "Immunotherapy", "description": "Immune-directed cancer therapy." },
+    { "title": "Targeted Therapy", "description": "Gene and mutation-guided cancer medication." },
+    { "title": "Hormonal Therapy", "description": "Breast and gynecologic cancer management." }
   ],
   "faqs": [
-    { "question": "Does Dr. Pandey treat asthma and COPD?", "answer": "Yes, he specializes in chronic respiratory diseases." },
-    { "question": "Does he perform bronchoscopy?", "answer": "Yes, he is trained in advanced interventional pulmonology." },
-    { "question": "Does he treat sleep apnea?", "answer": "Yes, he has specialized training in sleep medicine." }
+    { "question": "Does Dr. Shefali treat breast cancer?", "answer": "Yes, breast oncology is one of her primary specialities." },
+    { "question": "Does she provide immunotherapy?", "answer": "Yes, she offers the latest immunotherapy treatments." },
+    { "question": "Is she associated with Max Saket?", "answer": "Yes, she works at Max Smart and Max Saket East." }
   ]
 },
 {
-  "slug": "dr-surveen-ghumman-sindhu",
-  "name": "Dr. Surveen Ghumman Sindhu",
-  "specialty": "Infertility & IVF",
-  "hospital": "Max Medcentre – Lajpat Nagar | BLK Max Hospital | Max Hospital – Saket Smart | Max Hospital – Panchsheel Park | Max Hospital – Gurugram | Max Hospital – Patparganj",
-  "experience": "34+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Senior Director & HOD – IVF, Low Egg Reserve, Egg Preservation & Male Infertility",
-  "degree": "MD (Obstetrics & Gynaecology) | MBBS | FICOG | FMAS | FICMCH",
-  "about": "Dr. Surveen Ghumman Sindhu is one of India’s most accomplished IVF and infertility specialists with over 32 years of experience. She has served as faculty in top medical colleges and headed departments at leading IVF centres. She is renowned for managing complex infertility, recurrent IVF failures, male infertility and fertility preservation.",
-  "medicalProblems": [
-    { "title": "Female Infertility", "description": "Low egg reserve, hormonal imbalance and ovulation issues." },
-    { "title": "Male Infertility", "description": "Azoospermia, low sperm count and motility issues." },
-    { "title": "Recurrent IVF Failure", "description": "Advanced evaluation and corrective treatment." },
-    { "title": "Recurrent Pregnancy Loss", "description": "Repeated miscarriages and implantation failures." }
-  ],
-  "procedures": [
-    { "title": "IVF & ICSI", "description": "Advanced fertility treatment for male and female infertility." },
-    { "title": "Egg Freezing", "description": "Fertility preservation for medical or personal reasons." },
-    { "title": "Donor & Surrogacy Programs", "description": "Expert management of donor cycles and surrogacy." },
-    { "title": "Embryology & IVF Lab Quality Control", "description": "Advanced lab practices ensuring high success rates." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Surveen treat low egg reserve?", "answer": "Yes, she specializes in treating women with low ovarian reserve." },
-    { "question": "Does she offer egg freezing?", "answer": "Yes, she is an expert in fertility preservation and egg freezing." },
-    { "question": "Does she handle recurrent IVF failures?", "answer": "Yes, she is well-known for managing complex IVF failure cases." }
-  ]
-},
-{
-  "slug": "dr-neeraj-goyal",
-  "name": "Dr. Neeraj Goyal",
-  "specialty": "General Surgery, Laparoscopic / Minimal Access Surgery, Robotic Surgery",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "25+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Director – Laparoscopic, Laser, Robotic & General Surgery",
-  "degree": "FAIS | FIAGES | MS (General Surgery) | MBBS",
-  "about": "Dr. Neeraj Goyal is an experienced general and laparoscopic surgeon with expertise in robotic surgery, laser proctology and advanced minimally invasive procedures. He has held leadership roles in multiple institutions and is known for his innovative work with laser treatments and hernia repair.",
-  "medicalProblems": [
-    { "title": "Piles & Fistula", "description": "Laser proctology treatments for hemorrhoids and fistulas." },
-    { "title": "Gallbladder Disorders", "description": "Gallstones and gallbladder inflammation." },
-    { "title": "Hernias", "description": "Ventral, inguinal and recurrent hernia conditions." },
-    { "title": "General Surgical Conditions", "description": "Appendicitis, abdominal pain, soft tissue swellings." }
-  ],
-  "procedures": [
-    { "title": "Laser Piles Surgery", "description": "Minimally invasive laser treatment for hemorrhoids." },
-    { "title": "Laparoscopic Hernia Repair", "description": "Mesh-based and fully resorbable mesh hernia surgeries." },
-    { "title": "Robotic Surgery", "description": "Advanced robotic minimally invasive procedures." },
-    { "title": "Laparoscopic Gallbladder Removal", "description": "Safe and scar-minimal cholecystectomy." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Neeraj Goyal perform laser surgery for piles?", "answer": "Yes, he is highly experienced in laser proctology." },
-    { "question": "Does he offer robotic surgery?", "answer": "Yes, he performs robotic and advanced laparoscopic surgeries." },
-    { "question": "Does he treat hernias?", "answer": "Yes, including complex and recurrent hernias using modern mesh technology." }
-  ]
-},
-{
-  "slug": "dr-shailesh-chandra-sahay",
-  "name": "Dr. Shailesh Chandra Sahay",
-  "specialty": "Urology, Kidney Transplant, Robotic Surgery",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "16+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Director – Urology",
-  "degree": "MCh (Urology – AIIMS) | MS (General Surgery – MAMC) | MBBS",
-  "about": "Dr. Shailesh Chandra Sahay is a leading urologist with expertise in laparoscopic and robotic surgeries for uro-oncology, prostate disease, renal stones and complex urological disorders. He has performed over 7500 urological procedures and is known for advanced minimally invasive treatments.",
-  "medicalProblems": [
-    { "title": "Kidney Stones", "description": "Management of stones using laser and endoscopic techniques." },
-    { "title": "Prostate Disorders", "description": "BPH and prostate enlargement treatments." },
-    { "title": "Kidney & Bladder Cancer", "description": "Surgical and minimally invasive cancer management." },
-    { "title": "Uro-Gynecological Disorders", "description": "Vesicovaginal fistula and pelvic floor conditions." }
-  ],
-  "procedures": [
-    { "title": "PCNL & RIRS", "description": "Laser-based kidney stone removal." },
-    { "title": "TURP & HoLEP", "description": "Advanced prostate surgeries." },
-    { "title": "Robotic Uro-Onco Surgery", "description": "Robotic kidney, prostate and bladder cancer surgeries." },
-    { "title": "Laparoscopic Pyeloplasty", "description": "Minimally invasive reconstruction of ureteropelvic junction obstruction." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Sahay treat kidney stones?", "answer": "Yes, he is an expert in laser and endoscopic stone surgery." },
-    { "question": "Does he perform robotic surgeries?", "answer": "Yes, especially for prostate, kidney and bladder cancers." },
-    { "question": "Does he treat prostate enlargement?", "answer": "Yes, with advanced Holmium Laser Enucleation (HoLEP)." }
-  ]
-},
-{
-  "slug": "dr-satyendra-katewa",
-  "name": "Dr. Satyendra Katewa",
-  "specialty": "Paediatric Oncology, Hemato-Oncology, Bone Marrow Transplant",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj",
-  "experience": "20+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Director – Hemato-Oncology & Bone Marrow Transplant",
-  "degree": "DNB (Paediatrics) | Fellowship (Paediatric Hemato-Oncology & BMT – Toronto & SGRH) | MBBS",
-  "about": "Dr. Satyendra Katewa is a highly specialized paediatric hemato-oncologist and bone marrow transplant expert with global training in Canada and India. He has led BMT and paediatric oncology departments across multiple major hospitals and is known for handling complex leukemia, lymphoma and bone marrow transplant cases.",
-  "medicalProblems": [
-    { "title": "Leukemia (ALL & AML)", "description": "Advanced treatment protocols for blood cancers in children." },
-    { "title": "Lymphoma", "description": "Hodgkin and Non-Hodgkin lymphoma management." },
-    { "title": "Bone Marrow Failure", "description": "Aplastic anemia, myelodysplasia and immune disorders." },
-    { "title": "Pediatric Tumors", "description": "Solid tumors including neuroblastoma and sarcoma." }
-  ],
-  "procedures": [
-    { "title": "Bone Marrow Transplant", "description": "Autologous, allogeneic and haploidentical BMT." },
-    { "title": "Cellular Therapy", "description": "Advanced immunotherapy including T-cell treatments." },
-    { "title": "High-Risk Cancer Protocols", "description": "Treatment for complex pediatric cancers." },
-    { "title": "Transfusion & Supportive Care", "description": "Advanced pediatric hematology care." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Katewa perform bone marrow transplants?", "answer": "Yes, including haploidentical and mismatched BMT." },
-    { "question": "Does he treat leukemia and lymphoma?", "answer": "Yes, he specializes in paediatric hemato-oncology." },
-    { "question": "Is he internationally trained?", "answer": "Yes, with fellowship training from SickKids Hospital, Toronto." }
-  ]
-},
-{
-  "slug": "dr-tripti-saxena",
-  "name": "Dr. Tripti Saxena",
-  "specialty": "Radiation Oncology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "15+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Director – Radiation Oncology",
-  "degree": "MD (Radiation Oncology) | MBBS | MBA (Hospital Administration)",
-  "about": "Dr. Tripti Saxena is a senior radiation oncologist with expertise in advanced radiation therapies including SRS, SBRT, IMRT, IGRT, TBI and TSET. She has worked at premier cancer hospitals and has extensive clinical experience in treating complex cancers using precision technology.",
-  "medicalProblems": [
-    { "title": "Breast Cancer", "description": "Advanced targeted radiation for breast malignancies." },
-    { "title": "Brain Tumors", "description": "Stereotactic radiosurgery and precision radiation therapy." },
-    { "title": "Lung & Thoracic Cancers", "description": "Gated radiation for moving lung tumors." },
-    { "title": "Head & Neck Cancers", "description": "IMRT/IGRT-based treatment for complex tumor sites." }
-  ],
-  "procedures": [
-    { "title": "SRS & SBRT", "description": "High-precision radiation for brain and body tumors." },
-    { "title": "IMRT & IGRT", "description": "Advanced radiation with minimal side effects." },
-    { "title": "Brachytherapy", "description": "Internal radiation therapy for specific cancers." },
-    { "title": "Total Body & Total Skin Radiation", "description": "TBI and TSET for specialized cancers." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Tripti perform SRS/SBRT?", "answer": "Yes, she specializes in high-precision stereotactic radiation therapy." },
-    { "question": "Does she treat breast cancer?", "answer": "Yes, especially left-breast cancer with DIBH technique." },
-    { "question": "Does she treat brain and lung tumors?", "answer": "Yes, using advanced radiosurgery and gated radiation technology." }
-  ]
-},
-{
-  "slug": "dr-amit-kumar-srivastava",
-  "name": "Dr. Amit Kumar Srivastava",
-  "specialty": "Orthopaedics & Joint Replacement, Arthroscopy & Sports Injury",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "20+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Director – Joint Replacement, Arthroscopy & Sports Injury",
-  "degree": "MS (Orthopaedics) | MBBS | Fellowship in Arthroplasty | Fellowship in Arthroscopy & Sports Injury | AO Advanced Trauma Fellowship (Austria) | DipSICOT (Sweden)",
-  "about": "Dr. Amit Kumar Srivastava is an experienced orthopaedic and joint replacement surgeon with a strong background in arthroscopy, sports injury management and revision joint surgeries. He has received multiple international fellowships and is recognized for his advanced surgical skills.",
-  "medicalProblems": [
-    { "title": "Knee Arthritis", "description": "Severe knee pain and degeneration." },
-    { "title": "Hip Joint Disorders", "description": "Arthritis, fractures and mobility issues." },
-    { "title": "Sports Injuries", "description": "Ligament tears, meniscus injuries and soft tissue trauma." },
-    { "title": "Cartilage Damage", "description": "Cartilage defects and wear-and-tear conditions." }
-  ],
-  "procedures": [
-    { "title": "Knee/Hip/Shoulder Arthroplasty", "description": "Joint replacement procedures for degenerative joints." },
-    { "title": "Arthroscopic Surgery", "description": "Minimally invasive procedures for sports injuries." },
-    { "title": "Revision Joint Replacement", "description": "Corrective surgeries for failed implants." },
-    { "title": "Cartilage Preservation Surgery", "description": "Advanced cartilage repair and regeneration." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Srivastava perform arthroscopic surgeries?", "answer": "Yes, he specializes in arthroscopy and sports injury management." },
-    { "question": "Does he handle joint replacement revision cases?", "answer": "Yes, he performs complex revision arthroplasty procedures." },
-    { "question": "Is he internationally trained?", "answer": "Yes, with fellowships completed in Austria, Sweden and India." }
-  ]
-},
-{
-  "slug": "dr-priyanka-aggarwal",
-  "name": "Dr. Priyanka Aggarwal",
-  "specialty": "Pulmonology",
-  "hospital": "Max Hospital – Patparganj | Max Hospital – Noida Sec 19",
-  "experience": "25+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Associate Director – Pulmonology",
-  "degree": "MBBS (MAMC) | MD (Respiratory Medicine) | European Diploma in Respiratory Medicine",
-  "about": "Dr. Priyanka Aggarwal is a highly trained pulmonologist with more than 18 years of focused experience. She has received specialized training in respiratory allergies in Vienna and is known for her expertise in asthma, allergies, sleep medicine and interventional pulmonology.",
-  "medicalProblems": [
-    { "title": "Respiratory Allergies", "description": "Chronic cough, allergic rhinitis and airway inflammation." },
-    { "title": "Asthma", "description": "Evaluation and long-term asthma management." },
-    { "title": "Sleep Disorders", "description": "Sleep apnea and nocturnal breathing issues." },
-    { "title": "Lung Diseases", "description": "Respiratory infections, COPD and chronic lung conditions." }
-  ],
-  "procedures": [
-    { "title": "Bronchoscopy", "description": "Diagnostic airway endoscopy." },
-    { "title": "EBUS (Endobronchial Ultrasound)", "description": "Ultrasound-guided TBNA for accurate lung diagnosis." },
-    { "title": "Allergy Testing", "description": "Identification of respiratory allergies." },
-    { "title": "Sleep Study", "description": "Diagnosis and treatment of sleep apnea." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Priyanka treat respiratory allergies?", "answer": "Yes, she has specialized training in respiratory allergy management." },
-    { "question": "Does she perform bronchoscopy?", "answer": "Yes, including EBUS-guided procedures." },
-    { "question": "Does she evaluate sleep disorders?", "answer": "Yes, she specializes in sleep medicine and sleep apnea diagnosis." }
-  ]
-},
-{
-  "slug": "dr-parinita-kalita",
-  "name": "Dr. Parinita Kalita",
-  "specialty": "Obstetrics & Gynaecology, Robotic Surgery, Gynaecologic Laparoscopy",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "30+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Associate Director – Obstetrics & Gynaecology",
-  "degree": "DNB (Obstetrics & Gynaecology) | MD (Gynaecology) | MBBS",
-  "about": "Dr. Parinita Kalita is a senior gynaecologist with over 22 years of experience in deliveries, high-risk pregnancies and advanced gynaecological surgeries. She is known for her expertise in minimally invasive and robotic gynaecology.",
-  "medicalProblems": [
-    { "title": "High-Risk Pregnancy", "description": "Pregnancy complications requiring expert monitoring." },
-    { "title": "Infertility", "description": "Evaluation and treatment of infertility issues." },
-    { "title": "Uterine Disorders", "description": "Fibroids, heavy bleeding and adenomyosis." },
-    { "title": "Ovarian Cysts", "description": "Diagnosis and laparoscopic removal of cysts." }
-  ],
-  "procedures": [
-    { "title": "Normal & Cesarean Delivery", "description": "Safe maternal care for childbirth." },
-    { "title": "Laparoscopic Surgery", "description": "Keyhole surgery for gynaecological conditions." },
-    { "title": "Robotic Gynaecology Surgery", "description": "Advanced precision-assisted gynaecological procedures." },
-    { "title": "Hysterectomy", "description": "Surgical removal of the uterus using minimally invasive techniques." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Parinita treat high-risk pregnancies?", "answer": "Yes, she specializes in high-risk obstetric care." },
-    { "question": "Does she perform laparoscopic surgeries?", "answer": "Yes, including minimally invasive gynaecological procedures." },
-    { "question": "Does she manage infertility?", "answer": "Yes, she provides comprehensive infertility evaluation and treatment." }
-  ]
-},
-{
-  "slug": "dr-monisha-gupta",
-  "name": "Dr. Monisha Gupta",
-  "specialty": "Gynaecologic Oncology, Surgical Oncology, Robotic Surgery",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj",
-  "experience": "14+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Associate Director – Robotic & Laparoscopic Gynae-Oncology Surgery",
-  "degree": "Fellowship (Gynae Oncology – Tata Memorial Hospital) | MS (Gynaecology) | MBBS",
-  "about": "Dr. Monisha Gupta is a gynecologic oncologist trained at Tata Memorial Hospital. She specializes in robotic and laparoscopic cancer surgeries for cervical, ovarian, endometrial and vulvar cancers. She is known for performing highly advanced fertility-sparing and cytoreductive procedures.",
-  "medicalProblems": [
-    { "title": "Cervical Cancer", "description": "Diagnosis and surgical treatment of cervical malignancies." },
-    { "title": "Ovarian Cancer", "description": "Management including HIPEC and cytoreductive surgery." },
-    { "title": "Endometrial Cancer", "description": "Robotic-assisted surgical management." },
-    { "title": "Vulvar Disorders", "description": "Reconstructive and cancer surgeries." }
-  ],
-  "procedures": [
-    { "title": "Robotic Cancer Surgery", "description": "Precision robotic procedures for gynae cancers." },
-    { "title": "Laparoscopic Gynae Oncology Surgery", "description": "Minimally invasive cancer management." },
-    { "title": "Cytoreductive Surgery & HIPEC", "description": "Advanced treatment for ovarian cancers." },
-    { "title": "Fertility-Sparing Cancer Surgery", "description": "Cancer treatment preserving reproductive potential." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Monisha perform robotic cancer surgeries?", "answer": "Yes, she specializes in robotic and laparoscopic oncology." },
-    { "question": "Does she treat ovarian and cervical cancer?", "answer": "Yes, including advanced cases requiring HIPEC." },
-    { "question": "Does she perform fertility-sparing procedures?", "answer": "Yes, for selected ovarian and cervical cancers." }
-  ]
-},
-{
-  "slug": "dr-deepak-arora",
-  "name": "Dr. Deepak Arora",
-  "specialty": "Orthopaedics & Joint Replacement",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "15+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Principal Consultant – Orthopaedics & Joint Replacement",
-  "degree": "MS (Orthopaedics) | MBBS | Fellowship in Arthroplasty & Arthroscopy",
-  "about": "Dr. Deepak Arora is an orthopaedic surgeon with expertise in trauma, joint replacement surgeries and arthroscopy. He is trained at premier institutions including Sancheti Institute and has handled complex orthopaedic cases.",
-  "medicalProblems": [
-    { "title": "Joint Pain & Arthritis", "description": "Degenerative joint conditions of knee, hip and shoulder." },
-    { "title": "Trauma & Fractures", "description": "Advanced management of bone injuries." },
-    { "title": "Ligament Injuries", "description": "ACL, PCL and shoulder ligament injuries." },
-    { "title": "Sports Injuries", "description": "Soft tissue injuries and meniscus tears." }
-  ],
-  "procedures": [
-    { "title": "Joint Replacement Surgery", "description": "Knee, hip and shoulder replacement." },
-    { "title": "Arthroscopy", "description": "Keyhole surgery for ligament and meniscus issues." },
-    { "title": "Trauma Surgery", "description": "Management of fractures and dislocations." },
-    { "title": "Reconstruction Surgery", "description": "Corrective surgeries for joint deformities." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Arora perform knee replacement?", "answer": "Yes, he performs primary and revision knee arthroplasty." },
-    { "question": "Does he manage trauma cases?", "answer": "Yes, he specializes in fracture and trauma management." },
-    { "question": "Does he perform arthroscopy?", "answer": "Yes, including knee and shoulder arthroscopy." }
-  ]
-},
-{
-  "slug": "dr-gaurav-govil",
-  "name": "Dr. Gaurav Govil",
-  "specialty": "Orthopaedics & Joint Replacement",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj",
-  "experience": "23+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Principal Consultant – Orthopaedics & Joint Replacement",
-  "degree": "MS (Orthopaedics) | MBBS | AO Trauma Trained",
-  "about": "Dr. Gaurav Govil is a senior orthopaedic surgeon with extensive experience in knee and hip replacement, complex trauma, arthroscopy and spine procedures. He has contributed to major conferences and medical societies.",
-  "medicalProblems": [
-    { "title": "Advanced Knee & Hip Arthritis", "description": "Degenerative joint diseases requiring surgical care." },
-    { "title": "Complex Trauma", "description": "Severe fractures and accident-related injuries." },
-    { "title": "Spine Disorders", "description": "Degenerative spine issues needing surgical intervention." },
-    { "title": "Cartilage Damage", "description": "Sports and age-related cartilage problems." }
-  ],
-  "procedures": [
-    { "title": "Knee & Hip Replacement", "description": "Primary and revision arthroplasty procedures." },
-    { "title": "Complex Trauma Surgery", "description": "Pelvic and acetabular fracture repair." },
-    { "title": "Arthroscopic Surgery", "description": "Knee and shoulder arthroscopy." },
-    { "title": "Spine Fixation", "description": "Stabilization and corrective spine surgeries." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Govil perform joint replacement?", "answer": "Yes, he specializes in knee and hip replacement surgeries." },
-    { "question": "Does he treat complex trauma?", "answer": "Yes, especially pelvic-acetabular injuries." },
-    { "question": "Does he perform arthroscopy?", "answer": "Yes, for knee and shoulder joints." }
-  ]
-},
-{
-  "slug": "dr-prachi-jain",
-  "name": "Dr. Prachi Jain",
-  "specialty": "Paediatric Oncology, Hemato-Oncology, Medical Oncology",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Medcentre – Meerut | Max Hospital – Vaishali | Max Hospital – Patparganj",
-  "experience": "14+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Principal Consultant – Paediatric Hemato-Oncology & Medical Oncology",
-  "degree": "FNB (Paediatric Hemato-Oncology) | IAP Fellowship | MD (Paediatrics) | MBBS",
-  "about": "Dr. Prachi Jain is a pediatric hemato-oncologist with expertise in childhood cancers, blood disorders, bone marrow transplant and immunodeficiency diseases. She has received numerous gold medals for academic excellence.",
-  "medicalProblems": [
-    { "title": "Childhood Cancers", "description": "Leukemia, lymphoma and solid tumors." },
-    { "title": "Blood Disorders", "description": "Anemia, bleeding disorders and thalassemia." },
-    { "title": "Immunodeficiency Disorders", "description": "Primary immune disorders in children." },
-    { "title": "Pediatric Tumors", "description": "Brain tumors, sarcoma and neuroblastoma." }
-  ],
-  "procedures": [
-    { "title": "Chemotherapy for Children", "description": "Safe and monitored cancer treatment." },
-    { "title": "Bone Marrow Transplant", "description": "Advanced transplant procedures for pediatric cases." },
-    { "title": "Transfusion Therapy", "description": "Supportive care for blood disorders." },
-    { "title": "Pain & Palliative Care", "description": "Symptom relief for advanced illnesses." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Prachi treat leukemia in children?", "answer": "Yes, she specializes in childhood leukemia management." },
-    { "question": "Does she perform bone marrow transplants?", "answer": "Yes, for selected pediatric cases." },
-    { "question": "Does she treat immunodeficiency disorders?", "answer": "Yes, she has expertise in managing childhood immunologic disorders." }
-  ]
-},
-{
-  "slug": "dr-meena-nihalani",
-  "name": "Dr. Meena Nihalani",
-  "specialty": "ENT (Ear Nose Throat)",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "7+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Principal Consultant – ENT",
-  "degree": "MRCS (UK) | DO-HNS (UK) | MS (ENT) | MBBS",
-  "about": "Dr. Meena Nihalani is an ENT specialist trained in the UK with experience across Fortis Noida, Cardiff University Hospital and other reputed institutions. She specializes in sinus surgery, snoring management and advanced ENT care.",
-  "medicalProblems": [
-    { "title": "Sinusitis", "description": "Chronic sinus infections and blockage." },
-    { "title": "Snoring & Sleep Issues", "description": "Airway obstruction leading to snoring and sleep apnea." },
-    { "title": "Ear Disorders", "description": "Hearing loss, infections and balance issues." },
-    { "title": "Throat & Voice Problems", "description": "Hoarseness, tonsillitis and swallowing difficulties." }
-  ],
-  "procedures": [
-    { "title": "Endoscopic Sinus Surgery", "description": "Minimally invasive sinus treatment." },
-    { "title": "Snoring Surgery", "description": "Procedures to open airway obstruction." },
-    { "title": "Ear Microsurgery", "description": "Advanced surgical treatment for ear diseases." },
-    { "title": "Tonsil & Adenoid Surgery", "description": "Surgery for chronic throat infections." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Meena treat sinusitis?", "answer": "Yes, she specializes in advanced endoscopic sinus surgery." },
-    { "question": "Does she manage snoring problems?", "answer": "Yes, including surgical and non-surgical options." },
-    { "question": "Is she UK-trained?", "answer": "Yes, she holds MRCS and DO-HNS qualifications from the UK." }
-  ]
-},
-{
-  "slug": "dr-alok-narang",
-  "name": "Dr. Alok Narang",
-  "specialty": "Surgical Oncology, Gastrointestinal & Hepatobiliary Oncology",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj",
-  "experience": "16+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Principal Consultant – Surgical Oncology",
-  "degree": "MS (General Surgery) | MBBS | Surgical Oncology Training – RGCI",
-  "about": "Dr. Alok Narang is a surgical oncologist specializing in gastrointestinal and hepatobiliary cancers. He has extensive experience in cancer surgeries, including complex pancreatic, liver, stomach and colorectal tumor management.",
-  "medicalProblems": [
-    { "title": "GI Cancers", "description": "Stomach, colon, rectum and intestinal cancers." },
-    { "title": "Hepato-Pancreato-Biliary Cancers", "description": "Liver, pancreas and bile duct malignancies." },
-    { "title": "Esophageal Cancer", "description": "Tumors requiring advanced surgical care." },
-    { "title": "Abdominal Tumors", "description": "Complex malignancies of abdominal organs." }
-  ],
-  "procedures": [
-    { "title": "GI Onco-Surgery", "description": "Cancer surgeries of the stomach, colon and rectum." },
-    { "title": "HPB Surgery", "description": "Liver, pancreas and bile duct surgeries." },
-    { "title": "Minimally Invasive Cancer Surgery", "description": "Laparoscopic tumor removal." },
-    { "title": "Onco-Reconstructive Surgery", "description": "Reconstructive procedures after cancer surgery." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Narang treat pancreatic cancer?", "answer": "Yes, he is experienced in advanced pancreatic surgeries." },
-    { "question": "Does he perform laparoscopic cancer surgery?", "answer": "Yes, for GI and abdominal tumors." },
-    { "question": "Does he manage colorectal cancers?", "answer": "Yes, including complex rectal cancer surgeries." }
-  ]
-},
-{
-  "slug": "dr-anita-aggarwal",
-  "name": "Dr. Anita Aggarwal",
-  "specialty": "Obstetrics & Gynaecology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "24+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Obstetrics & Gynaecology",
-  "degree": "MD (Obstetrics & Gynaecology – Rohtak Medical College) | MBBS | Research Fellow (UCLA)",
-  "about": "Dr. Anita Aggarwal is a senior gynaecologist with over 25 years of experience. She has specialised training from UCLA, California and has served as unit head and senior consultant at leading hospitals. She focuses on high-risk pregnancies, infertility, reproductive endocrinology and adolescent gynaecology.",
-  "medicalProblems": [
-    { "title": "High-Risk Pregnancy", "description": "Expert care for complicated pregnancies." },
-    { "title": "Infertility", "description": "Diagnosis and treatment of fertility issues." },
-    { "title": "Hormonal Disorders", "description": "PCOS, irregular periods and endocrine imbalances." },
-    { "title": "Menopause Issues", "description": "Management of menopausal symptoms and women’s health." }
-  ],
-  "procedures": [
-    { "title": "Normal & Cesarean Delivery", "description": "Comprehensive obstetric care." },
-    { "title": "Hysterectomy", "description": "Surgical management of uterine problems." },
-    { "title": "Fertility Procedures", "description": "Advanced infertility treatments." },
-    { "title": "Laparoscopic Gynaecology", "description": "Minimally invasive gynaecological surgeries." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Anita treat high-risk pregnancies?", "answer": "Yes, she specializes in managing high-risk obstetric cases." },
-    { "question": "Does she treat infertility?", "answer": "Yes, including reproductive hormonal disorders." },
-    { "question": "Does she perform laparoscopic surgeries?", "answer": "Yes, she is trained in minimally invasive gynaecology." }
-  ]
-},
-{
-  "slug": "dr-niti-aggarwal",
-  "name": "Dr. Niti Aggarwal",
-  "specialty": "Endocrinology & Diabetes",
-  "hospital": "Max Hospital – Vaishali | Max Hospital – Patparganj",
-  "experience": "24+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Endocrinology & Diabetes",
-  "degree": "DNB (Endocrinology) | MD (Medicine) | MBBS",
-  "about": "Dr. Niti Aggarwal is a senior endocrinologist with over 13 years of focused experience in endocrinology & metabolism. Having trained at PGIMER Chandigarh and Apollo Hospital, she specializes in diabetes, pituitary disorders and metabolic bone diseases.",
-  "medicalProblems": [
-    { "title": "Diabetes", "description": "Comprehensive management of Type 1, Type 2 and gestational diabetes." },
-    { "title": "Thyroid Disorders", "description": "Hypothyroidism, hyperthyroidism and thyroid nodules." },
-    { "title": "Pituitary Disorders", "description": "Hormonal imbalance and pituitary gland dysfunction." },
-    { "title": "Bone Metabolism Disorders", "description": "Osteoporosis and metabolic bone diseases." }
-  ],
-  "procedures": [
-    { "title": "Diabetes Management Plans", "description": "Lifestyle, insulin and advanced medical therapy." },
-    { "title": "Endocrine Hormone Evaluation", "description": "Comprehensive hormonal investigations." },
-    { "title": "Thyroid Treatment", "description": "Medication and long-term management of thyroid diseases." },
-    { "title": "Bone Health Treatment", "description": "Osteoporosis treatment & metabolic bone disorder care." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Niti treat pituitary disorders?", "answer": "Yes, she specializes in pituitary hormone-related diseases." },
-    { "question": "Does she treat thyroid issues?", "answer": "Yes, including all thyroid hormonal disorders." },
-    { "question": "Does she provide diabetes management for all ages?", "answer": "Yes, she treats both Type 1 and Type 2 diabetes." }
-  ]
-},
-{
-  "slug": "dr-prabhjot-kaur",
-  "name": "Dr. Prabhjot Kaur",
-  "specialty": "Paediatrics",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "23+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Paediatrics",
-  "degree": "MD (Paediatrics) | MBBS | ECFMG Certified (USA)",
-  "about": "Dr. Prabhjot Kaur is an experienced paediatrician with expertise in paediatric endocrinology, paediatric genetics and general paediatric care. She has managed complex neonatal, cardiology and nephrology cases during her extensive clinical experience.",
-  "medicalProblems": [
-    { "title": "Paediatric Endocrine Disorders", "description": "Growth disorders, puberty issues and hormonal imbalance." },
-    { "title": "Neonatal Care", "description": "Care for newborn illnesses and complications." },
-    { "title": "Genetic Disorders", "description": "Evaluation and management of paediatric genetic syndromes." },
-    { "title": "General Paediatric Conditions", "description": "Fever, infections, allergies and routine child care." }
-  ],
-  "procedures": [
-    { "title": "Paediatric Diagnostics", "description": "Hormonal and genetic evaluation for children." },
-    { "title": "Neonatal Care Protocols", "description": "Specialised newborn care." },
-    { "title": "Vaccination Programs", "description": "Complete immunisation and counselling." },
-    { "title": "Chronic Disease Management", "description": "Long-term follow-up for paediatric conditions." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Prabhjot treat growth disorders?", "answer": "Yes, she specializes in paediatric endocrine issues." },
-    { "question": "Does she handle newborn complications?", "answer": "Yes, she has extensive neonatal experience." },
-    { "question": "Does she treat genetic disorders?", "answer": "Yes, including paediatric genetic abnormalities." }
-  ]
-},
-{
-  "slug": "dr-mala-bhattacharya",
-  "name": "Dr. Mala Bhattacharya",
-  "specialty": "ENT (Ear Nose Throat)",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "24+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – ENT",
-  "degree": "MBBS | MS (ENT)",
-  "about": "Dr. Mala Bhattacharya is an ENT specialist with over 20 years of experience in ENT and Head & Neck Surgery. She is skilled in sinus surgery, skull base procedures, cochlear implants and complex otological surgeries.",
-  "medicalProblems": [
-    { "title": "Sinus Disorders", "description": "Chronic sinusitis and nasal blockage." },
-    { "title": "Hearing Loss", "description": "Middle ear and inner ear disorders." },
-    { "title": "Throat & Voice Disorders", "description": "Hoarseness, swallowing issues and infections." },
-    { "title": "Head & Neck Diseases", "description": "Cysts, swellings and tumors of the head & neck region." }
-  ],
-  "procedures": [
-    { "title": "Endoscopic Sinus Surgery", "description": "Minimally invasive sinus treatment." },
-    { "title": "Skull Base Surgery", "description": "Advanced ENT surgeries for skull base diseases." },
-    { "title": "Cochlear Implants", "description": "Hearing restoration procedures." },
-    { "title": "Otological Surgeries", "description": "Surgery for chronic ear infections and hearing restoration." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Mala treat sinus problems?", "answer": "Yes, she specializes in endoscopic sinus surgery." },
-    { "question": "Does she perform cochlear implants?", "answer": "Yes, she performs advanced hearing implant surgeries." },
-    { "question": "Does she treat ear and throat infections?", "answer": "Yes, she provides comprehensive ENT care." }
-  ]
-},
-{
-  "slug": "dr-neetu-gagneja",
-  "name": "Dr. Neetu Gagneja",
-  "specialty": "Eye Care / Ophthalmology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "11+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Ophthalmology",
-  "degree": "MBBS | DNB (Ophthalmology)",
-  "about": "Dr. Neetu Gagneja is an ophthalmologist with expertise in cataract surgery, glaucoma, medical retina and dry eye management. She has trained at Aravind Eye Hospital, University of Michigan and multiple reputed institutions.",
-  "medicalProblems": [
-    { "title": "Cataract", "description": "Clouding of the eye lens affecting vision." },
-    { "title": "Glaucoma", "description": "Increased eye pressure leading to optic nerve damage." },
-    { "title": "Retinal Disorders", "description": "Diabetic retinopathy, macular degeneration and more." },
-    { "title": "Dry Eye Disease", "description": "Irritation, burning and reduced tear production." }
-  ],
-  "procedures": [
-    { "title": "Cataract Surgery (Phaco & SICS)", "description": "Advanced cataract removal procedures." },
-    { "title": "YAG Laser", "description": "Treatment for after-cataract and PCO." },
-    { "title": "Glaucoma Management", "description": "Medical and laser treatment." },
-    { "title": "Retina Diagnostics", "description": "OCT, retina evaluation and laser procedures." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Neetu perform cataract surgery?", "answer": "Yes, she specializes in advanced phaco and SICS cataract surgery." },
-    { "question": "Does she treat glaucoma?", "answer": "Yes, she manages glaucoma with medical and laser options." },
-    { "question": "Does she treat dry eyes?", "answer": "Yes, with comprehensive assessment and treatment plans." }
-  ]
-},
-{
-  "slug": "dr-manju-keshari",
-  "name": "Dr. Manju Keshari",
-  "specialty": "Dermatology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "21+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Dermatology",
-  "degree": "MD (Dermatology & Venereology) | MBBS",
-  "about": "Dr. Manju Keshari is an experienced dermatologist specializing in acne, hair disorders, aesthetic dermatology and laser procedures. She has worked at several reputed hospitals and brings over 20 years of clinical expertise.",
-  "medicalProblems": [
-    { "title": "Acne & Acne Scars", "description": "Pimples, inflammation and scar reduction." },
-    { "title": "Hair Loss & Dandruff", "description": "Alopecia and scalp disorders." },
-    { "title": "Eczema & Allergies", "description": "Skin irritation, dryness and allergic reactions." },
-    { "title": "Pigmentation Disorders", "description": "Melasma, uneven skin tone and hyperpigmentation." }
-  ],
-  "procedures": [
-    { "title": "Chemical Peels", "description": "Skin resurfacing and pigmentation treatment." },
-    { "title": "Laser Procedures", "description": "Scar reduction and hair removal lasers." },
-    { "title": "PRP Therapy", "description": "Hair regrowth using platelet-rich plasma." },
-    { "title": "Aesthetic Treatments", "description": "Skin rejuvenation, glow treatments and anti-ageing care." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Manju treat acne scars?", "answer": "Yes, she performs advanced scar reduction treatments." },
-    { "question": "Does she offer hair fall treatment?", "answer": "Yes, including PRP and dermatological therapies." },
-    { "question": "Does she perform aesthetic procedures?", "answer": "Yes, she offers a range of cosmetic dermatology treatments." }
-  ]
-},
-{
-  "slug": "dr-sharad-maheshwari",
-  "name": "Dr. Sharad Maheshwari",
-  "specialty": "ENT (Ear Nose Throat)",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "39+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Senior Consultant – ENT",
-  "degree": "MS (ENT) | MBBS | Fellow of International College of Surgeons",
-  "about": "Dr. Sharad Maheshwari is a senior ENT surgeon with over 30 years of experience in micro ear surgery, cochlear implants, skull base surgery and tracheal laser procedures. He is extensively trained internationally.",
-  "medicalProblems": [
-    { "title": "Chronic Ear Diseases", "description": "Hearing loss, infections and perforated eardrum." },
-    { "title": "Sinus & Nasal Disorders", "description": "Sinusitis, nasal polyps and congestion." },
-    { "title": "Throat Disorders", "description": "Voice issues, swallowing difficulty and infections." },
-    { "title": "Airway Disorders", "description": "Tracheal obstruction and breathing issues." }
-  ],
-  "procedures": [
-    { "title": "Micro Ear Surgery", "description": "Advanced procedures to restore hearing." },
-    { "title": "Cochlear Implant Surgery", "description": "Hearing implant procedures." },
-    { "title": "Endoscopic Sinus Surgery", "description": "Treatment of complex sinus conditions." },
-    { "title": "Laser Tracheal Surgery", "description": "Laser treatment for airway obstructions." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Sharad perform cochlear implants?", "answer": "Yes, he is highly experienced in cochlear implant surgeries." },
-    { "question": "Does he treat tracheal disorders?", "answer": "Yes, with expertise in laser tracheal surgery." },
-    { "question": "Does he perform micro ear surgery?", "answer": "Yes, he has decades of experience." }
-  ]
-},
-{
-  "slug": "dr-vikash-moond",
-  "name": "Dr. Vikash Moond",
-  "specialty": "Liver Transplant & HPB Surgery",
-  "hospital": "Max Hospital – Shalimar Bagh | Max Hospital – Patparganj",
-  "experience": "15+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Senior Consultant – Liver Transplant & HPB Surgery",
-  "degree": "MCh (GI Surgery & Liver Transplant – AIIMS) | MS (General Surgery – PGIMER) | MBBS",
-  "about": "Dr. Vikash Moond is a specialist in liver transplant, GI oncology and hepatobiliary surgery. Trained at AIIMS and Max Saket, he is experienced in living donor and cadaveric liver transplants, robotic GI surgery and complex HPB procedures.",
-  "medicalProblems": [
-    { "title": "Liver Failure", "description": "Acute and chronic liver disease requiring transplant." },
-    { "title": "Liver & Bile Duct Cancers", "description": "Advanced cancers of the liver, pancreas and biliary system." },
-    { "title": "Pancreatic Disorders", "description": "Tumors, pancreatitis and cystic conditions." },
-    { "title": "GI Tumors", "description": "Stomach, small intestine and colorectal malignancies." }
-  ],
-  "procedures": [
-    { "title": "Living Donor Liver Transplant", "description": "Advanced liver transplant surgery." },
-    { "title": "Cadaveric Liver Transplant", "description": "Transplant using donor liver grafts." },
-    { "title": "Robotic GI Surgery", "description": "Minimally invasive robotic procedures." },
-    { "title": "HPB Surgery", "description": "Liver, pancreas and bile duct surgeries." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Moond perform liver transplants?", "answer": "Yes, including living donor and cadaveric transplants." },
-    { "question": "Does he perform robotic GI surgeries?", "answer": "Yes, he specializes in robotic and laparoscopic GI oncology." },
-    { "question": "Does he treat pancreatic cancer?", "answer": "Yes, through advanced HPB surgical interventions." }
-  ]
-},
-{
-  "slug": "dr-nitish-rai",
-  "name": "Dr. Nitish Rai",
-  "specialty": "Interventional Cardiology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "12+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Interventional Cardiology",
-  "degree": "DM (Cardiology – AIIMS) | MD (PGIMS) | MBBS (UCMS)",
-  "about": "Dr. Nitish Rai is an interventional cardiologist trained at AIIMS with expertise in complex coronary interventions, imaging-guided angioplasty, pacemaker implantation and structural heart procedures.",
-  "medicalProblems": [
-    { "title": "Coronary Artery Disease", "description": "Blockages in heart arteries causing chest pain." },
-    { "title": "Heart Rhythm Disorders", "description": "Arrhythmias and conduction abnormalities." },
-    { "title": "Heart Failure", "description": "Weak heart function and cardiac insufficiency." },
-    { "title": "Hypertension & Cardiac Risk", "description": "High blood pressure and cardiovascular risks." }
-  ],
-  "procedures": [
-    { "title": "Coronary Angiography", "description": "Imaging the heart arteries." },
-    { "title": "Angioplasty & Stenting", "description": "Opening blocked arteries with stents." },
-    { "title": "Pacemaker & ICD Implantation", "description": "Implant procedures for rhythm disorders." },
-    { "title": "IVUS/OCT Guided PCI", "description": "Precision imaging-guided interventions." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Nitish perform angioplasties?", "answer": "Yes, including complex PCI with advanced techniques." },
-    { "question": "Does he implant pacemakers?", "answer": "Yes, including ICD and CRT-D devices." },
-    { "question": "Does he treat heart failure?", "answer": "Yes, with evidence-based cardiac therapy." }
-  ]
-},
-{
-  "slug": "dr-meenakshi-sharma",
-  "name": "Dr. Meenakshi Sharma",
-  "specialty": "Infertility & IVF, Obstetrics & Gynaecology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "23+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – IVF & Obstetrics",
-  "degree": "MD (Obs & Gynae – AIIMS) | MBBS (AIIMS)",
-  "about": "Dr. Meenakshi Sharma is an infertility and IVF specialist with more than 23 years of experience. She has worked at AIIMS and major Delhi hospitals and specializes in high-risk obstetrics, reproductive endocrinology, IVF failures and endoscopic gynaecology.",
-  "medicalProblems": [
-    { "title": "Female Infertility", "description": "Hormonal issues, PCOS and ovulation disorders." },
-    { "title": "High-Risk Pregnancy", "description": "Pregnancy complications requiring close monitoring." },
-    { "title": "Reproductive Endocrine Disorders", "description": "Hormonal imbalance affecting fertility." },
-    { "title": "PCOS", "description": "Polycystic ovary syndrome and metabolic issues." }
-  ],
-  "procedures": [
-    { "title": "IVF & IUI", "description": "Complete fertility treatment options." },
-    { "title": "Laparoscopic Gynaecology", "description": "Keyhole surgery for gynae conditions." },
-    { "title": "High-Risk Delivery", "description": "Maternal and fetal risk management." },
-    { "title": "Ovulation Induction", "description": "Treatment for anovulation and infertility." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Meenakshi treat infertility?", "answer": "Yes, including IVF, IUI and hormonal infertility." },
-    { "question": "Does she handle high-risk pregnancies?", "answer": "Yes, with extensive experience at AIIMS." },
-    { "question": "Does she perform laparoscopic surgeries?", "answer": "Yes, for infertility and gynecological issues." }
-  ]
-},
-{
-  "slug": "dr-gita-gangadharan-shrivastav",
-  "name": "Dr. Gita Gangadharan Shrivastav",
-  "specialty": "ENT (Ear Nose Throat)",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "32+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Senior Consultant – ENT",
-  "degree": "FRCS (ENT – UK) | MS (ENT – MAMC) | MBBS (MAMC)",
-  "about": "Dr. Gita Gangadharan Shrivastav is a highly experienced ENT surgeon with international training in the UK. She specializes in nasal disorders, endoscopic nasal surgery, ear surgeries, hearing restoration and voice-related treatments.",
-  "medicalProblems": [
-    { "title": "Nasal Disorders", "description": "Sinusitis, nasal obstruction and allergies." },
-    { "title": "Ear Problems", "description": "Hearing loss, ear infections and perforated eardrum." },
-    { "title": "Throat & Voice Disorders", "description": "Hoarseness, voice changes and swallowing issues." },
-    { "title": "Head & Neck Lesions", "description": "Tumors, cysts and neck swellings." }
-  ],
-  "procedures": [
-    { "title": "Nasal Endoscopic Surgery", "description": "Advanced minimally invasive nasal procedures." },
-    { "title": "Ear Surgery", "description": "Hearing restoration and middle ear surgery." },
-    { "title": "Head & Neck Surgery", "description": "Surgical management of head and neck diseases." },
-    { "title": "Voice & Throat Procedures", "description": "Voice correction and throat surgeries." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Gita perform endoscopic nasal surgery?", "answer": "Yes, she is highly experienced in nasal endoscopic procedures." },
-    { "question": "Does she treat hearing loss?", "answer": "Yes, through advanced ear surgeries and treatments." },
-    { "question": "Does she treat voice disorders?", "answer": "Yes, including hoarseness and vocal cord issues." }
-  ]
-},
-{
-  "slug": "dr-ashima-srivastava",
-  "name": "Dr. Ashima Srivastava",
-  "specialty": "Clinical Psychology, Mental Health & Behavioural Sciences",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "27+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Clinical Psychologist (Child & Adult), Developmental & Behavioural Therapist",
-  "degree": "PhD (Child Mental Health) | MPhil (Clinical Psychology)",
-  "about": "Dr. Ashima Srivastava is a renowned Clinical Psychologist with extensive expertise in child, adolescent and adult mental health. She is known for her developmental and behavioural therapy, neuropsychological assessment and new therapeutic techniques for autism spectrum disorders.",
-  "medicalProblems": [
-    { "title": "Child & Adolescent Psychology Issues", "description": "Behavioural, emotional and developmental concerns." },
-    { "title": "Developmental Disorders", "description": "Autism, ADHD and neuro-developmental challenges." },
-    { "title": "Adult Mental Health Issues", "description": "Stress, anxiety, depression and emotional difficulties." },
-    { "title": "Neuropsychological Disorders", "description": "Cognitive, memory and behavioural disorders." }
-  ],
-  "procedures": [
-    { "title": "Behaviour Therapy", "description": "Structured therapy for children and adults." },
-    { "title": "Neuropsychological Assessment", "description": "Evaluation of cognitive and behavioural functioning." },
-    { "title": "Autism Intervention (ADOS-2)", "description": "Certified diagnostic and behavioural programs." },
-    { "title": "Counselling & Psychotherapy", "description": "Individual mental health therapy sessions." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Ashima treat children with autism?", "answer": "Yes, she is certified in ADOS-2 and trained for autism management." },
-    { "question": "Does she offer therapy for adults?", "answer": "Yes, she treats stress, anxiety, depression and emotional issues." },
-    { "question": "Does she provide neuropsychological evaluations?", "answer": "Yes, for children, adolescents and adults." }
-  ]
-},
-{
-  "slug": "dr-anurag-tandon",
-  "name": "Dr. Anurag Tandon",
-  "specialty": "ENT (Ear Nose Throat)",
-  "hospital": "Max Hospital – Panchsheel Park | Max Hospital – Vaishali | Max Hospital – Noida Sec 19 | Max Hospital – Patparganj",
-  "experience": "25+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – ENT",
-  "degree": "MS (ENT) | DLO | MBBS",
-  "about": "Dr. Anurag Tandon is a senior ENT specialist with extensive experience across ENT, otolaryngology and head & neck care. He has held academic positions and specializes in treating a wide range of ear, nose and throat disorders.",
-  "medicalProblems": [
-    { "title": "Sinus Disorders", "description": "Chronic sinusitis, allergies and nasal blockage." },
-    { "title": "Ear Conditions", "description": "Hearing loss, infections and tinnitus." },
-    { "title": "Throat Problems", "description": "Tonsillitis, hoarseness and swallowing issues." },
-    { "title": "Head & Neck Issues", "description": "ENT-related tumors, swelling and infections." }
-  ],
-  "procedures": [
-    { "title": "Endoscopic Sinus Surgery", "description": "Minimally invasive sinus treatment." },
-    { "title": "Ear Microsurgery", "description": "Procedures to treat chronic ear conditions." },
-    { "title": "Tonsil & Adenoid Surgery", "description": "Surgery for chronic throat infections." },
-    { "title": "ENT Laser Procedures", "description": "Advanced laser treatment for ENT issues." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Anurag treat sinus problems?", "answer": "Yes, he specializes in sinus disorders and endoscopic procedures." },
-    { "question": "Does he treat ear-related issues?", "answer": "Yes, including infections and hearing problems." },
-    { "question": "Does he perform tonsil surgeries?", "answer": "Yes, he performs tonsil and adenoid surgeries." }
-  ]
-},
-{
-  "slug": "dr-chayan-vermani",
-  "name": "Dr. Chayan Vermani",
-  "specialty": "Interventional Cardiology",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj",
-  "experience": "10+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Senior Consultant – Interventional Cardiology",
-  "degree": "DM (Cardiology – AIIMS) | MD (MAMC) | MBBS (UCMS)",
-  "about": "Dr. Chayan Vermani is an interventional cardiologist trained at AIIMS, specializing in coronary interventions, complex angioplasties, cardiac imaging, pacemaker implantation and critical cardiac care.",
-  "medicalProblems": [
-    { "title": "Heart Blockages", "description": "Coronary artery disease and chest pain." },
-    { "title": "Arrhythmias", "description": "Heart rhythm abnormalities and palpitations." },
-    { "title": "Heart Failure", "description": "Weak heart function and fluid overload." },
-    { "title": "Hypertension & Cardiac Risks", "description": "High blood pressure and cardiac risk management." }
-  ],
-  "procedures": [
-    { "title": "Coronary Angiography", "description": "Diagnostic imaging of heart arteries." },
-    { "title": "Angioplasty & Stenting", "description": "Opening blocked arteries using stents." },
-    { "title": "Pacemaker & ICD Implantation", "description": "Treatment for rhythm disorders." },
-    { "title": "Imaging Guided PCI (IVUS/OCT)", "description": "Precision-guided coronary interventions." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Chayan perform angioplasty?", "answer": "Yes, he specializes in complex coronary interventions." },
-    { "question": "Does he implant pacemakers?", "answer": "Yes, including ICD and CRT-D devices." },
-    { "question": "Does he manage heart failure?", "answer": "Yes, with advanced cardiac care." }
-  ]
-},
-{
-  "slug": "dr-priya-agarwal",
-  "name": "Dr. Priya Agarwal",
-  "specialty": "Obstetrics & Gynaecology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "11+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Consultant – Obstetrics & Gynaecology",
-  "degree": "MS (Obstetrics & Gynaecology) | MBBS",
-  "about": "Dr. Priya Agarwal is a skilled gynaecologist with experience in women’s health, obstetrics and gynaecological oncology. She deals with a wide range of women’s health conditions and provides compassionate maternity and gynaecology care.",
-  "medicalProblems": [
-    { "title": "Pregnancy Care", "description": "Routine and high-risk pregnancy management." },
-    { "title": "Gynaecological Tumors", "description": "Evaluation and treatment of gynae-oncology cases." },
-    { "title": "Menstrual Disorders", "description": "Irregular periods, PCOS, heavy bleeding." },
-    { "title": "Infertility Issues", "description": "Hormonal and structural infertility problems." }
-  ],
-  "procedures": [
-    { "title": "Normal & Cesarean Delivery", "description": "Complete maternity care and delivery services." },
-    { "title": "Laparoscopic Gynaecology", "description": "Minimal access gynae procedures." },
-    { "title": "Cancer Screening", "description": "Pap smear, colposcopy and preventive care." },
-    { "title": "Infertility Treatment", "description": "Basic fertility treatments and evaluation." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Priya provide pregnancy care?", "answer": "Yes, including normal and cesarean deliveries." },
-    { "question": "Does she treat infertility?", "answer": "Yes, including hormonal and gynecological causes." },
-    { "question": "Does she perform laparoscopic surgery?", "answer": "Yes, for gynaecological conditions." }
-  ]
-},
-{
-  "slug": "dr-ankur-bhatia",
-  "name": "Dr. Ankur Bhatia",
-  "specialty": "Aesthetic & Reconstructive Surgery",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "12+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Consultant – Plastic, Aesthetic & Reconstructive Surgery",
-  "degree": "MCh (Plastic Surgery – CMC Ludhiana) | MS (General Surgery) | MBBS",
-  "about": "Dr. Ankur Bhatia is a plastic and reconstructive surgeon with specialization in hand and microsurgery. His expertise includes cancer reconstruction, replantation, gynecomastia surgery and aesthetic procedures.",
-  "medicalProblems": [
-    { "title": "Birth Defects & Trauma Injuries", "description": "Complex reconstructive requirements." },
-    { "title": "Hand Injuries", "description": "Tendon, nerve and digital injuries." },
-    { "title": "Aesthetic Concerns", "description": "Cosmetic corrections and body contouring." },
-    { "title": "Cancer Reconstruction", "description": "Restorative surgeries after tumor removal." }
-  ],
-  "procedures": [
-    { "title": "Microsurgery", "description": "Precision surgeries using advanced techniques." },
-    { "title": "Hand Surgery", "description": "Reconstruction for injury and deformities." },
-    { "title": "Replantation Surgery", "description": "Reattachment of amputated parts." },
-    { "title": "Gynecomastia Surgery", "description": "Male chest reduction." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Ankur perform microsurgery?", "answer": "Yes, he is trained in advanced hand & microsurgery." },
-    { "question": "Does he treat trauma injuries?", "answer": "Yes, including replantation and reconstructive procedures." },
-    { "question": "Does he offer cosmetic treatments?", "answer": "Yes, including aesthetic and reconstructive surgeries." }
-  ]
-},
-{
-  "slug": "dr-shailesh-gupta",
-  "name": "Dr. Shailesh Gupta",
-  "specialty": "Laparoscopic, Bariatric & Robotic Surgery",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "14+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Consultant – Minimal Access, Bariatric & Robotic Surgery",
-  "degree": "MS (General Surgery) | FMAS | FIAGES | Post Doctoral Fellowship (AWR & Robotic Surgery)",
-  "about": "Dr. Shailesh Gupta is a specialist in advanced laparoscopic, bariatric, robotic and abdominal wall reconstruction (AWR) surgery. He is experienced in complex hernia repairs, minimal access GI surgery and metabolic surgery.",
-  "medicalProblems": [
-    { "title": "Obesity", "description": "Weight-related conditions requiring bariatric intervention." },
-    { "title": "Hernias", "description": "Inguinal, ventral and incisional hernias." },
-    { "title": "Gallbladder Disorders", "description": "Gallstones and gallbladder inflammation." },
-    { "title": "GI Surgical Conditions", "description": "Tumors, reflux disease and intestinal issues." }
-  ],
-  "procedures": [
-    { "title": "Bariatric Surgery", "description": "Sleeve gastrectomy and gastric bypass." },
-    { "title": "Robotic Surgery", "description": "Minimally invasive robotic interventions." },
-    { "title": "Advanced Laparoscopic Surgery", "description": "Hernia repair, gallbladder & GI procedures." },
-    { "title": "AWR Surgery", "description": "Abdominal wall reconstruction surgeries." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Shailesh perform bariatric surgery?", "answer": "Yes, including sleeve gastrectomy and gastric bypass." },
-    { "question": "Does he perform robotic surgery?", "answer": "Yes, he is trained in advanced robotic procedures." },
-    { "question": "Does he treat hernias?", "answer": "Yes, including complex abdominal wall hernias." }
-  ]
-},
-{
-  "slug": "dr-abeer-hasan",
-  "name": "Dr. Abeer Hasan",
-  "specialty": "Dental Care",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "18+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Consultant – Dental Care",
-  "degree": "BDS",
-  "about": "Dr. Abeer Hasan is an experienced dentist specializing in general dentistry, cosmetic dental procedures, pain management and preventive dental care for all age groups.",
-  "medicalProblems": [
-    { "title": "Dental Caries", "description": "Cavities and tooth decay." },
-    { "title": "Gum Disease", "description": "Gingivitis and periodontal issues." },
-    { "title": "Tooth Fractures", "description": "Cracked or broken teeth." },
-    { "title": "Cosmetic Dental Issues", "description": "Smile correction and aesthetic concerns." }
-  ],
-  "procedures": [
-    { "title": "Root Canal Treatment", "description": "Saving infected teeth with endodontic therapy." },
-    { "title": "Crowns & Bridges", "description": "Restoration of damaged or missing teeth." },
-    { "title": "Cosmetic Dentistry", "description": "Teeth whitening, veneers and smile design." },
-    { "title": "Preventive Dentistry", "description": "Scaling, polishing and dental hygiene care." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Abeer perform root canals?", "answer": "Yes, she has expertise in endodontic procedures." },
-    { "question": "Does she treat gum diseases?", "answer": "Yes, including cleaning and periodontal care." },
-    { "question": "Does she offer cosmetic dentistry?", "answer": "Yes, including whitening and smile enhancement." }
-  ]
-},
-{
-  "slug": "dr-vaishakhi-rustagi",
-  "name": "Dr. Vaishakhi Rustagi",
-  "specialty": "Paediatric Endocrinology",
-  "hospital": "Max Hospital – Shalimar Bagh | Max Hospital – Patparganj",
-  "experience": "16+ years",
-  "image": "",
-  "isTopDoctor": false,
-  "position": "Consultant – Paediatric Endocrinology",
-  "degree": "Fellowship (Paediatric Endocrinology) | MD (Paediatrics)",
-  "about": "Dr. Vaishakhi Rustagi is a paediatric endocrinologist trained internationally at CHOP, USA. She specializes in growth disorders, diabetes in children, thyroid problems and hormonal issues in childhood.",
-  "medicalProblems": [
-    { "title": "Growth Disorders", "description": "Short height, failure to thrive and IUGR." },
-    { "title": "Thyroid Disorders", "description": "Congenital and acquired thyroid issues." },
-    { "title": "Type 1 Diabetes", "description": "Childhood diabetes management." },
-    { "title": "Puberty Disorders", "description": "Precocious or delayed puberty." }
-  ],
-  "procedures": [
-    { "title": "Hormonal Evaluation", "description": "Endocrine testing for children." },
-    { "title": "Growth Assessment", "description": "Monitoring growth patterns." },
-    { "title": "Insulin Therapy for Children", "description": "Comprehensive diabetic care." },
-    { "title": "Thyroid Management", "description": "Corrective treatment for thyroid dysfunction." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Vaishakhi treat short height issues?", "answer": "Yes, she specializes in growth disorders." },
-    { "question": "Does she treat Type 1 diabetes?", "answer": "Yes, she manages diabetes in children." },
-    { "question": "Does she treat puberty disorders?", "answer": "Yes, including early and delayed puberty." }
-  ]
-},
-{
-  "slug": "dr-mily-ray",
-  "name": "Dr. Mily Ray",
-  "specialty": "Paediatric Cardiology",
-  "hospital": "Max Hospital – Vaishali | Max Hospital – Patparganj",
+  "slug": "dr-nagender-sharma",
+  "name": "Dr. Nagender Sharma",
+  "specialty": "Medical Oncology",
+  "hospital": "Max Hospital – Gurugram | Saket Smart | Saket East",
   "experience": "8+ years",
   "image": "",
   "isTopDoctor": false,
-  "position": "Consultant – Paediatric Cardiology",
-  "degree": "FNB (Paediatric Cardiology) | MD (Paediatrics) | MBBS",
-  "about": "Dr. Mily Ray is a paediatric cardiologist trained in India and Australia. She specializes in fetal cardiology, congenital heart disorders, paediatric cardiac imaging and general paediatric cardiology.",
+  "position": "Director – Medical Oncology",
+  "degree": "MBBS | MD (Medicine) | DM (Medical Oncology, Cancer Institute Adyar) | DNB (Medical Oncology) | ESMO Certified",
+  "about": "Dr. Nagender Sharma is an experienced medical oncologist with expertise across thoracic, breast, GI, genitourinary, gynecologic and head & neck cancers. He has trained at India’s leading cancer institutions and participated as a Co-Principal Investigator in major international oncology trials.",
   "medicalProblems": [
-    { "title": "Congenital Heart Disease", "description": "Heart defects present at birth." },
-    { "title": "Arrhythmias in Children", "description": "Abnormal heart rhythms." },
-    { "title": "Pediatric Chest Pain", "description": "Evaluation of heart-related symptoms in children." },
-    { "title": "Fetal Heart Abnormalities", "description": "Prenatal cardiac complications." }
+    { "title": "Thoracic & Lung Cancer", "description": "Comprehensive chemotherapy and targeted therapy." },
+    { "title": "Breast Cancer", "description": "Advanced systemic and hormonal treatments." },
+    { "title": "Gastrointestinal Cancers", "description": "GI and hepatobiliary malignancy care." },
+    { "title": "Head & Neck Malignancy", "description": "Systemic therapy for complex cancers." }
   ],
   "procedures": [
-    { "title": "Fetal Echocardiography", "description": "Heart evaluation before birth." },
-    { "title": "Pediatric Echocardiography", "description": "Non-invasive imaging for heart diagnosis." },
-    { "title": "Cardiac Screening", "description": "Routine cardiac evaluation in children." },
-    { "title": "Holter Monitoring", "description": "24-hour rhythm monitoring." }
+    { "title": "Chemotherapy", "description": "Evidence-based systemic cancer treatments." },
+    { "title": "Immunotherapy", "description": "Checkpoint inhibitors and novel agents." },
+    { "title": "Targeted Therapy", "description": "Gene mutation–guided personalized therapy." },
+    { "title": "Hormonal Therapy", "description": "Breast and reproductive cancer management." }
   ],
   "faqs": [
-    { "question": "Does Dr. Mily treat congenital heart disease?", "answer": "Yes, she specializes in CHD and pediatric cardiology." },
-    { "question": "Does she perform fetal echocardiography?", "answer": "Yes, she is trained in fetal heart imaging." },
-    { "question": "Does she treat arrhythmias in children?", "answer": "Yes, she evaluates and manages pediatric arrhythmias." }
+    { "question": "Does Dr. Nagender Sharma treat lung and breast cancers?", "answer": "Yes, these are among his primary specialties." },
+    { "question": "Is he involved in international research studies?", "answer": "Yes, he is Co-Principal Investigator in TALAPRO-III trial." },
+    { "question": "Where does he practice?", "answer": "At Max Hospital Gurugram, Saket Smart, and Saket East." }
   ]
 },
 {
-  "slug": "dr-manpreet-sethi",
-  "name": "Dr. Manpreet Sethi",
-  "specialty": "Paediatric Endocrinology",
-  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Vaishali | Max Hospital – Patparganj",
-  "experience": "22+ years",
+  "slug": "dr-kanika-batra-modi",
+  "name": "Dr. Kanika Batra Modi",
+  "specialty": "Gynecologic Oncology & Robotic Surgery",
+  "hospital": "Max Hospital – Saket Smart | Saket East",
+  "experience": "12+ years",
   "image": "",
   "isTopDoctor": true,
-  "position": "Consultant – Paediatric Endocrinologist",
-  "degree": "GRIPMER Fellowship (Paediatric Endocrinology) | DNB (Paediatrics) | DCH | MBBS",
-  "about": "Dr. Manpreet Sethi is a senior paediatric endocrinologist with over 14 years of specialized experience. She treats childhood growth disorders, diabetes, obesity, puberty issues, PCOD, thyroid conditions and adolescent hormonal problems.",
+  "position": "Associate Director & Clinical Lead – Gynae Oncology",
+  "degree": "MBBS | DNB-MS | Fellowship in Gynecologic Oncology (RGCIRC) | ESGO Fellow | IGCS Fellow",
+  "about": "Dr. Kanika Batra Modi is a highly accomplished gynecologic oncologist and robotic surgeon with global training across Germany, Australia, and the USA. She specializes in advanced minimally invasive cancer surgery, including robotic, laparoscopic and HIPEC procedures.",
   "medicalProblems": [
-    { "title": "Childhood Growth Disorders", "description": "Short height, delayed growth and IUGR." },
-    { "title": "Type 1 Diabetes in Children", "description": "Insulin-dependent diabetes management." },
-    { "title": "Childhood Obesity", "description": "Obesity and metabolic disorders." },
-    { "title": "Puberty Disorders", "description": "Precocious, delayed puberty and hormonal imbalance." }
+    { "title": "Cervical Cancer", "description": "Advanced minimally invasive surgical management." },
+    { "title": "Ovarian Cancer", "description": "Cytoreductive surgery and HIPEC procedures." },
+    { "title": "Endometrial Cancer", "description": "Comprehensive diagnostic and surgical care." },
+    { "title": "Vulvar & Vaginal Cancers", "description": "Radical gynecologic oncology management." }
   ],
   "procedures": [
-    { "title": "Growth Assessment", "description": "Evaluation of height, weight and bone age." },
-    { "title": "Diabetes Management in Children", "description": "Insulin therapy and lifestyle guidance." },
-    { "title": "Hormonal Treatment", "description": "PCOD, thyroid and puberty-related care." },
-    { "title": "Endocrine Testing", "description": "Extensive hormone evaluation." }
+    { "title": "Robotic Cancer Surgery", "description": "Precision oncologic procedures using da Vinci robotic system." },
+    { "title": "Laparoscopic Gynae Oncology Surgery", "description": "Minimally invasive cancer surgery." },
+    { "title": "HIPEC", "description": "Hyperthermic intraperitoneal chemotherapy for ovarian cancer." },
+    { "title": "Complex Gynecological Surgery", "description": "Advanced pelvic cancer resections." }
   ],
   "faqs": [
-    { "question": "Does Dr. Manpreet treat short height issues?", "answer": "Yes, she specializes in childhood growth disorders." },
-    { "question": "Does she treat puberty disorders?", "answer": "Yes, including early and delayed puberty." },
-    { "question": "Does she treat hormonal issues in adolescent girls?", "answer": "Yes, including PCOD, irregular periods and hirsutism." }
+    { "question": "Does Dr. Kanika perform robotic gynecologic cancer surgery?", "answer": "Yes, she is an expert robotic surgeon and proctor." },
+    { "question": "Is she internationally trained?", "answer": "Yes, she has trained in Germany, Sydney, and Mayo Clinic (USA)." },
+    { "question": "Does she manage advanced ovarian cancer?", "answer": "Yes, including HIPEC and cytoreduction." }
   ]
 },
 {
-  "slug": "dr-anusuya-sharma",
-  "name": "Dr. Anusuya Sharma",
-  "specialty": "Dental Care",
-  "hospital": "Max Hospital – Patparganj",
+  "slug": "dr-aditi-chaturvedi",
+  "name": "Dr. Aditi Chaturvedi",
+  "specialty": "Breast Surgical Oncology",
+  "hospital": "Max Hospital – Dwarka | Saket Smart | Gurugram | Saket East",
+  "experience": "7+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Principal Consultant – Breast and Oncoplastic Surgery",
+  "degree": "MBBS | MS (General Surgery, AIIMS) | MCh (Surgical Oncology, Tata Memorial Hospital)",
+  "about": "Dr. Aditi Chaturvedi is a highly skilled breast and oncoplastic surgeon with extensive training at Tata Memorial Hospital and AIIMS. She specializes in breast cancer surgery, breast conservation, oncoplasty, and women’s cancer awareness.",
+  "medicalProblems": [
+    { "title": "Breast Cancer", "description": "Comprehensive breast oncology and surgical care." },
+    { "title": "Benign Breast Diseases", "description": "Evaluation and surgical management." },
+    { "title": "High-Risk Breast Conditions", "description": "Preventive and risk-reduction strategies." },
+    { "title": "Breast Reconstruction Needs", "description": "Oncoplastic and cosmetic breast procedures." }
+  ],
+  "procedures": [
+    { "title": "Breast Cancer Surgery", "description": "Oncoplastic, breast-conserving and radical surgery." },
+    { "title": "Sentinel Lymph Node Biopsy", "description": "Minimally invasive nodal assessment." },
+    { "title": "Oncoplastic Reconstruction", "description": "Aesthetic reconstruction post tumor removal." },
+    { "title": "Chemoport Insertion & Breast Procedures", "description": "Supportive surgical oncology procedures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Aditi specialize in breast cancer surgery?", "answer": "Yes, she is a specialist in breast surgical oncology and oncoplasty." },
+    { "question": "Has she trained internationally?", "answer": "Yes, including training at Memorial Sloan Kettering (USA)." },
+    { "question": "Does she offer breast reconstruction?", "answer": "Yes, she is trained in advanced oncoplastic techniques." }
+  ]
+},
+{
+  "slug": "dr-rohit-nayyar",
+  "name": "Dr. Rohit Nayyar",
+  "specialty": "Surgical Oncology",
+  "hospital": "Max Hospital – Saket East | Saket Smart | Gurugram",
+  "experience": "24+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Principal Director – Surgical Oncology",
+  "degree": "MBBS | MS (General Surgery) | MCh (Surgical Oncology) | Fellowships in USA, France & UK",
+  "about": "Dr. Rohit Nayyar is a senior surgical oncologist with expertise in head & neck, breast, thoracic, GI, and gynecologic cancers. With global training at leading institutions such as MSKCC (USA) and Institut Gustave Roussy (France), he brings decades of experience to complex cancer surgeries.",
+  "medicalProblems": [
+    { "title": "Head & Neck Cancer", "description": "Advanced surgical and reconstructive management." },
+    { "title": "Breast Cancer", "description": "Comprehensive surgical oncology care." },
+    { "title": "Thoracic & Esophageal Cancer", "description": "Complex chest oncology surgery." },
+    { "title": "Gastrointestinal & Pelvic Tumors", "description": "Advanced GI oncology management." }
+  ],
+  "procedures": [
+    { "title": "Head & Neck Cancer Surgery", "description": "Microvascular and reconstructive procedures." },
+    { "title": "Breast Cancer Surgery", "description": "Advanced oncoplastic and radical resections." },
+    { "title": "Thoracic & Esophageal Surgery", "description": "Minimally invasive and open cancer surgery." },
+    { "title": "GI Cancer Surgery", "description": "Colon, rectal, gastric and hepatobiliary tumor resection." }
+  ],
+  "faqs": [
+    { "question": "Is Dr. Rohit experienced in head & neck cancers?", "answer": "Yes, he is a leading specialist in head & neck oncology." },
+    { "question": "Has he trained internationally?", "answer": "Yes, in USA, UK, and France." },
+    { "question": "Does he treat GI cancers?", "answer": "Yes, GI and esophageal cancers are key areas of expertise." }
+  ]
+},
+{
+  "slug": "dr-balbir-singh",
+  "name": "Dr. Balbir Singh",
+  "specialty": "Interventional Cardiology & Electrophysiology",
+  "hospital": "Max Hospital – Patparganj | Saket East",
+  "experience": "34+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Group Chairman – Cardiac Sciences & Chief of Interventional Cardiology and Electrophysiology",
+  "degree": "MBBS | MD (Medicine) | DM (Cardiology) | Fellowship, American College of Cardiology",
+  "about": "Dr. Balbir Singh is one of India’s foremost cardiologists and a pioneer in electrophysiology and interventional cardiology. With leading positions across India’s top hospitals, he specializes in complex angioplasties, electrophysiology, pacing therapies and advanced cardiac interventions.",
+  "medicalProblems": [
+    { "title": "Coronary Artery Disease", "description": "Management of blockages and angina." },
+    { "title": "Heart Rhythm Disorders", "description": "Arrhythmias requiring EP studies and ablation." },
+    { "title": "Heart Failure", "description": "Management including device therapy." },
+    { "title": "Cardiac Conduction Disorders", "description": "Pacemakers, ICDs and CRT devices." }
+  ],
+  "procedures": [
+    { "title": "Angioplasty & Stenting", "description": "Treatment of coronary blockages." },
+    { "title": "Electrophysiology Studies & Ablation", "description": "Advanced arrhythmia treatment." },
+    { "title": "Pacemaker & ICD Implantation", "description": "Device therapy for rhythm disorders." },
+    { "title": "Structural Heart Interventions", "description": "Advanced catheter-based cardiac procedures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Balbir perform electrophysiology procedures?", "answer": "Yes, he is one of India's top electrophysiologists." },
+    { "question": "Has he received national honors?", "answer": "Yes, he was awarded the Padma Shri in 2007." },
+    { "question": "Is he experienced in complex angioplasties?", "answer": "Yes, he is widely known for complex interventional procedures." }
+  ]
+},
+{
+  "slug": "dr-roopa-salwan",
+  "name": "Dr. Roopa Salwan",
+  "specialty": "Interventional Cardiology",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "29+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Senior Director – Myocardial Infarction Program & Interventional Cardiology",
+  "degree": "MBBS | MD (Medicine) | DM (Cardiology) | Harvard Business School – Managing Healthcare Delivery",
+  "about": "Dr. Roopa Salwan is a senior interventional cardiologist and a national leader in STEMI care. She heads the Max MI Program, the only network in India achieving international standards in door-to-balloon time for primary PCI for 15+ years.",
+  "medicalProblems": [
+    { "title": "Acute Myocardial Infarction", "description": "Emergency management and primary PCI." },
+    { "title": "Coronary Artery Disease", "description": "Complex coronary interventions." },
+    { "title": "Structural Heart Disease", "description": "Management of valve and aortic disorders." },
+    { "title": "Peripheral Vascular Disease", "description": "Comprehensive vascular and thrombotic care." }
+  ],
+  "procedures": [
+    { "title": "Primary PCI", "description": "Emergency angioplasty for heart attack." },
+    { "title": "Complex Coronary Interventions", "description": "Rotablation, IVL, and graft interventions." },
+    { "title": "Endovascular Aneurysm Repair", "description": "Aortic and vascular stent-based procedures." },
+    { "title": "Structural Heart Interventions", "description": "TAVI and advanced valve procedures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Roopa specialize in heart attack treatment?", "answer": "Yes, she leads the Max MI program with top-tier outcomes." },
+    { "question": "Does she perform complex angioplasty?", "answer": "Yes, including graft, IVL, and multi-vessel interventions." },
+    { "question": "Is she awarded nationally?", "answer": "Yes, she has received multiple excellence awards in cardiology." }
+  ]
+},
+{
+  "slug": "dr-mitendra-singh-yadav",
+  "name": "Dr. Mitendra Singh Yadav",
+  "specialty": "Interventional Cardiology",
+  "hospital": "Max Hospital – Saket East | Panchsheel Park",
+  "experience": "15+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Associate Director – Interventional Cardiology",
+  "degree": "MBBS | MD (Medicine) | DNB (Cardiology) | Fellow – European Society of Cardiology",
+  "about": "Dr. Mitendra Singh Yadav is an interventional cardiologist with extensive experience in acute MI management, complex coronary interventions, radial procedures and structural heart interventions.",
+  "medicalProblems": [
+    { "title": "Acute Heart Attack", "description": "Primary PCI and emergency cardiac care." },
+    { "title": "Coronary Blockages", "description": "Complex angioplasty and stenting." },
+    { "title": "Valve Disorders", "description": "Structural heart procedure evaluation." },
+    { "title": "Renal & Peripheral Vascular Disease", "description": "Endovascular interventions." }
+  ],
+  "procedures": [
+    { "title": "Primary PCI", "description": "Emergency angioplasty for myocardial infarction." },
+    { "title": "Complex Coronary Interventions", "description": "IVUS, OCT, ROTA and FFR-guided procedures." },
+    { "title": "Radial Angioplasty", "description": "Minimally invasive arm-access procedures." },
+    { "title": "Structural Heart Interventions", "description": "Advanced valve and septal procedures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Mitendra treat acute MI?", "answer": "Yes, he specializes in primary PCI and emergency cardiac care." },
+    { "question": "Is he skilled in radial angioplasty?", "answer": "Yes, he has extensive experience in radial artery interventions." },
+    { "question": "Does he perform advanced imaging-guided angioplasty?", "answer": "Yes, using IVUS, OCT, FFR and rotablation." }
+  ]
+},
+{
+  "slug": "dr-rajneesh-malhotra",
+  "name": "Dr. Rajneesh Malhotra",
+  "specialty": "Cardiac Surgery (CTVS) & Robotic Surgery",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "33+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Chairman & Head – CTVS",
+  "degree": "MBBS | MS (General Surgery) | MCh (Cardiothoracic Surgery) | Fellowships in Sweden, USA",
+  "about": "Dr. Rajneesh Malhotra is a senior cardiac surgeon with nearly 3 decades of experience across India and abroad. He specializes in minimally invasive cardiac surgery, robotic cardiac surgery, valve repair, CABG, ECMO, LVAD and heart failure surgery.",
+  "medicalProblems": [
+    { "title": "Coronary Artery Disease", "description": "Surgical management including CABG." },
+    { "title": "Heart Valve Disorders", "description": "Mitral, aortic and tricuspid valve disease." },
+    { "title": "Heart Failure", "description": "Advanced surgical options including LVAD." },
+    { "title": "Congenital Heart Defects", "description": "Complex pediatric and adult repairs." }
+  ],
+  "procedures": [
+    { "title": "Minimally Invasive CABG", "description": "Small-incision bypass surgery." },
+    { "title": "Robotic Cardiac Surgery", "description": "da Vinci robotic-assisted heart procedures." },
+    { "title": "Valve Repair & Replacement", "description": "Aortic, mitral and tricuspid valve surgeries." },
+    { "title": "ECMO & LVAD Surgery", "description": "Advanced heart failure support." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Rajneesh perform robotic cardiac surgery?", "answer": "Yes, he is trained internationally in robotic heart surgery." },
+    { "question": "Does he handle complex valve cases?", "answer": "Yes, valve repair and replacement are his key specialties." },
+    { "question": "Does he perform minimally invasive CABG?", "answer": "Yes, including port-access and small-incision CABG." }
+  ]
+},
+{
+  "slug": "dr-sandeep-budhiraja",
+  "name": "Dr. Sandeep Budhiraja",
+  "specialty": "Internal Medicine",
+  "hospital": "Max Hospital – Panchsheel Park | Saket East",
+  "experience": "29+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Group Chairman – Internal Medicine & Group Medical Director",
+  "degree": "MBBS | MD (Medicine) | DNB | MRCP (UK)",
+  "about": "Dr. Sandeep Budhiraja is a senior internal medicine specialist and Group Medical Director at Max Healthcare. He has over 29 years of expertise in internal medicine, immunology, rheumatology, gastroenterology and systemic disease management.",
+  "medicalProblems": [
+    { "title": "Metabolic & Lifestyle Disorders", "description": "Diabetes, hypertension and thyroid diseases." },
+    { "title": "Rheumatologic Conditions", "description": "Arthritis, autoimmune and inflammatory disorders." },
+    { "title": "Infectious Diseases", "description": "Comprehensive medical and systemic care." },
+    { "title": "Gastrointestinal & Liver Disorders", "description": "GERD, hepatitis and digestive diseases." }
+  ],
+  "procedures": [
+    { "title": "Chronic Disease Management", "description": "Long-term care of medical conditions." },
+    { "title": "Advanced Diagnostics", "description": "Investigations for multi-system disorders." },
+    { "title": "Immunology-based Therapy", "description": "Management of autoimmune diseases." },
+    { "title": "Preventive Medicine", "description": "Holistic screening and lifestyle care." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Sandeep treat lifestyle diseases?", "answer": "Yes, lifestyle and chronic diseases are his core specialties." },
+    { "question": "Is he MRCP certified?", "answer": "Yes, he is a Member of the Royal College of Physicians (UK)." },
+    { "question": "Does he manage rheumatologic disorders?", "answer": "Yes, immunology and rheumatology are major focus areas." }
+  ]
+},
+{
+  "slug": "dr-dinesh-khullar",
+  "name": "Dr. Dinesh Khullar",
+  "specialty": "Nephrology & Kidney Transplant",
+  "hospital": "Max Hospital – Saket Smart | Saket West",
+  "experience": "32+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Group Chairman – Nephrology & Renal Transplant Medicine",
+  "degree": "MBBS | MD (Medicine) | DM (Nephrology, PGIMER Chandigarh)",
+  "about": "Dr. Dinesh Khullar is one of India’s top nephrologists with 32+ years of experience in renal transplant medicine, kidney diseases, dialysis therapies and critical nephrology care. He has led major transplant programs and has extensive academic contributions.",
+  "medicalProblems": [
+    { "title": "Chronic Kidney Disease (CKD)", "description": "Comprehensive CKD evaluation and management." },
+    { "title": "End-Stage Kidney Failure", "description": "Guidance for dialysis and transplant." },
+    { "title": "Diabetic Kidney Disease", "description": "Management of diabetic nephropathy." },
+    { "title": "Hypertension & Kidney Disorders", "description": "Advanced medical management." }
+  ],
+  "procedures": [
+    { "title": "Kidney Transplant (ABO-Incompatible)", "description": "High-risk and sensitized transplant solutions." },
+    { "title": "Peritoneal Dialysis", "description": "Home-based kidney replacement therapy." },
+    { "title": "Hemodialysis & Critical Care", "description": "Advanced ICU renal support." },
+    { "title": "Transplant Immunotherapy", "description": "Induction and post-transplant treatments." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Dinesh perform complex kidney transplants?", "answer": "Yes, including ABO-incompatible and high-risk transplants." },
+    { "question": "Does he treat diabetic kidney disease?", "answer": "Yes, he is an expert in diabetic nephropathy." },
+    { "question": "Is he experienced in dialysis therapies?", "answer": "Yes, including hemodialysis and peritoneal dialysis." }
+  ]
+},
+{
+  "slug": "prof-dr-subhash-gupta",
+  "name": "Prof (Dr.) Subhash Gupta",
+  "specialty": "Liver Transplant & Biliary Sciences",
+  "hospital": "Max Hospital – Saket East | Saket West | Vaishali",
+  "experience": "36+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Chairman – Centre for Liver & Biliary Sciences",
+  "degree": "MBBS | MS | Liver Transplant & HPB Surgery (AIIMS)",
+  "about": "Prof (Dr.) Subhash Gupta is one of the world’s leading liver transplant surgeons with over 3,000 successful liver transplants. As Chairman of the Centre for Liver & Biliary Sciences at Max, he has pioneered Living Donor Liver Transplant (LDLT) in India and built one of the largest liver transplant programs globally.",
+  "medicalProblems": [
+    { "title": "Liver Failure", "description": "Advanced evaluation and transplant management." },
+    { "title": "Cirrhosis & Chronic Liver Disease", "description": "Comprehensive hepatology and surgical care." },
+    { "title": "Liver & Biliary Tumors", "description": "Surgical management of complex hepatobiliary cancers." },
+    { "title": "Biliary Disorders", "description": "Reconstruction and advanced biliary surgery." }
+  ],
+  "procedures": [
+    { "title": "Living Donor Liver Transplant", "description": "World-renowned expertise in LDLT." },
+    { "title": "Deceased Donor Liver Transplant", "description": "Advanced transplant techniques and post-op care." },
+    { "title": "Biliary Reconstruction Surgery", "description": "Complex biliary tract surgical procedures." },
+    { "title": "Hepatobiliary Surgery", "description": "Liver tumor resection and bile duct surgery." }
+  ],
+  "faqs": [
+    { "question": "Is Dr. Subhash Gupta a specialist in liver transplant?", "answer": "Yes, he is one of the world’s leading experts in liver transplantation." },
+    { "question": "How many liver transplants has he performed?", "answer": "He has experience of over 3,000 liver transplants." },
+    { "question": "Does he handle complex biliary disorders?", "answer": "Yes, he specializes in advanced hepatobiliary and biliary reconstruction surgery." }
+  ]
+},
+{
+  "slug": "dr-joy-dev-mukherji",
+  "name": "Dr. (Col) Joy Dev Mukherji",
+  "specialty": "Neurology",
+  "hospital": "Max Hospital – Saket East | Saket West",
+  "experience": "30+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Chairman & Head – Neurology",
+  "degree": "MBBS (Gold Medal) | MD (Medicine) | DM (Neurology, PGI Chandigarh) | FRCP (Edinburgh)",
+  "about": "Dr. (Col.) Joy Dev Mukherji is a highly distinguished neurologist with over 30 years of experience. After serving 23 years in the Armed Forces Medical Services, he joined Max Healthcare as a senior neurologist and has expertise in stroke, movement disorders, multiple sclerosis, headaches, and critical care neurology.",
+  "medicalProblems": [
+    { "title": "Stroke Management", "description": "Acute and long-term neurological rehabilitation." },
+    { "title": "Multiple Sclerosis", "description": "Advanced diagnostics and MS treatment." },
+    { "title": "Movement Disorders", "description": "Parkinson’s disease and related conditions." },
+    { "title": "Chronic Headaches & Migraine", "description": "Comprehensive neurological evaluation." }
+  ],
+  "procedures": [
+    { "title": "Stroke Treatment Protocols", "description": "Thrombolysis and multidisciplinary management." },
+    { "title": "Neurodiagnostic Evaluation", "description": "EEG, nerve conduction studies, and imaging guidance." },
+    { "title": "MS Treatment Planning", "description": "Immunomodulatory and targeted therapy." },
+    { "title": "Neurological Critical Care", "description": "Management of severe neurological emergencies." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Mukherji treat stroke patients?", "answer": "Yes, stroke evaluation and management are his key specialties." },
+    { "question": "Has he served in the Armed Forces?", "answer": "Yes, he served 23 years and held senior clinical roles." },
+    { "question": "Does he specialize in Multiple Sclerosis?", "answer": "Yes, he received special MS training in Switzerland." }
+  ]
+},
+{
+  "slug": "dr-sanjay-sachdeva",
+  "name": "Dr. Sanjay Sachdeva",
+  "specialty": "ENT (Ear, Nose & Throat)",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "39+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Chairman – ENT",
+  "degree": "MBBS | DCH | MS (ENT)",
+  "about": "Dr. Sanjay Sachdeva is a senior ENT surgeon with nearly four decades of experience in clinical practice, teaching, cochlear implants, skull base surgery, and sleep apnea surgeries. He is widely recognized for his contribution to ENT training, research, and international publications.",
+  "medicalProblems": [
+    { "title": "Hearing Loss & Cochlear Issues", "description": "Comprehensive evaluation and implant solutions." },
+    { "title": "Snoring & Sleep Apnea (OSAS)", "description": "Surgical and non-surgical management." },
+    { "title": "Sinus & Nasal Disorders", "description": "Advanced evaluation and endoscopic care." },
+    { "title": "Skull Base Conditions", "description": "Complex ENT and cranial junction disorders." }
+  ],
+  "procedures": [
+    { "title": "Cochlear Implant Surgery", "description": "Hearing restoration for severe hearing loss." },
+    { "title": "Endoscopic Sinus Surgery", "description": "Minimally invasive nasal and sinus operations." },
+    { "title": "Skull Base Surgery", "description": "Advanced ENT-neurosurgical collaborative procedures." },
+    { "title": "Snoring & Sleep Apnea Surgery", "description": "Surgical correction of airway obstruction." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Sachdeva perform cochlear implant surgery?", "answer": "Yes, he is one of India's leading cochlear implant surgeons." },
+    { "question": "Is he experienced in skull base surgery?", "answer": "Yes, he specializes in complex skull base procedures." },
+    { "question": "Does he treat sleep apnea?", "answer": "Yes, he performs advanced airway and sleep apnea surgeries." }
+  ]
+},
+{
+  "slug": "prof-col-dr-bipin-walia",
+  "name": "Prof. (Col.) Dr. Bipin Walia",
+  "specialty": "Neurosurgery & Spine Surgery",
+  "hospital": "Max Hospital – Saket Smart | Saket West",
+  "experience": "28+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Chairman & Head – Neurosurgery & Neurospine",
+  "degree": "MBBS | MS (General Surgery, AFMC Pune) | MCh (Neurosurgery, AIIMS Delhi)",
+  "about": "Prof. (Col.) Dr. Bipin Walia is one of India’s leading neurosurgeons with deep expertise in spine surgery, disc replacement, image-guided neurosurgery, and brain tumor surgery. He has over 25 years of neurosurgical experience with global recognition in minimally invasive spine procedures.",
+  "medicalProblems": [
+    { "title": "Spinal Disc Disorders", "description": "Evaluation of disc herniation and degenerative spine disease." },
+    { "title": "Brain Tumors", "description": "Management of complex brain lesions." },
+    { "title": "Cranial Disorders", "description": "Endoscopic approaches for cranial problems." },
+    { "title": "Spinal Tumors", "description": "Minimally invasive spine tumor management." }
+  ],
+  "procedures": [
+    { "title": "Disc Replacement Surgery", "description": "Motion-preserving spine procedures." },
+    { "title": "Image-Guided Neurosurgery", "description": "Precision neurosurgical procedures." },
+    { "title": "Endoscopic Cranial Surgery", "description": "Minimally invasive cranial interventions." },
+    { "title": "Spinal Tumor Surgery", "description": "Advanced endoscopic and minimally invasive techniques." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Bipin perform disc replacement surgery?", "answer": "Yes, he has extensive experience in motion-preserving spine surgery." },
+    { "question": "Is he trained in minimally invasive neurosurgery?", "answer": "Yes, MIS spine and cranial surgeries are his key strengths." },
+    { "question": "Does he operate on brain tumors?", "answer": "Yes, he specializes in image-guided brain tumor surgery." }
+  ]
+},
+{
+  "slug": "dr-vivek-nangia",
+  "name": "Dr. Vivek Nangia",
+  "specialty": "Pulmonology",
+  "hospital": "Max Hospital – Saket West | Saket Smart",
+  "experience": "29+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Vice Chairman & Head – Pulmonology",
+  "degree": "MBBS | MD (TB & Respiratory Diseases) | M.Sc. (Infectious Diseases, LSHTM London)",
+  "about": "Dr. Vivek Nangia is an internationally acclaimed interventional pulmonologist with expertise in bronchoscopy, thoracoscopy, sleep medicine, infectious diseases, and critical care. He has trained at leading global institutes including Stanford University, Cleveland Clinic, and Royal Brompton Hospital.",
+  "medicalProblems": [
+    { "title": "Lung Infections & Pneumonia", "description": "Advanced respiratory infection management." },
+    { "title": "Asthma & COPD", "description": "Chronic airway disease evaluation and management." },
+    { "title": "Sleep Apnea & Sleep Disorders", "description": "Comprehensive sleep medicine solutions." },
+    { "title": "Lung Cancer Evaluation", "description": "Interventional pulmonology diagnostics." }
+  ],
+  "procedures": [
+    { "title": "Bronchoscopic Interventions", "description": "Advanced airway and lung procedures." },
+    { "title": "Medical Thoracoscopy", "description": "Minimally invasive pleural diagnosis and treatment." },
+    { "title": "Sleep Study & Polysomnography", "description": "Diagnosis of sleep disorders." },
+    { "title": "Interventional Pulmonology", "description": "Laser therapy, stenting and ablation for lung disease." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Nangia perform advanced bronchoscopy?", "answer": "Yes, he is a pioneer in interventional pulmonology." },
+    { "question": "Does he treat sleep apnea?", "answer": "Yes, he is trained in sleep medicine at Stanford." },
+    { "question": "Is he experienced in infectious lung diseases?", "answer": "Yes, he has global training in infectious diseases." }
+  ]
+},
+{
+  "slug": "dr-sameer-malhotra",
+  "name": "Dr. Sameer Malhotra",
+  "specialty": "Mental Health & Behavioural Sciences",
+  "hospital": "Max Hospital – Saket West | Saket East | Panchsheel Park",
+  "experience": "27+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Principal Director – Mental Health & Behavioural Sciences",
+  "degree": "MBBS | MD (Psychiatry) | CCST (UK)",
+  "about": "Dr. Sameer Malhotra is a leading psychiatrist with over 2 decades of training and clinical experience at India’s top institutions including PGIMER, NIMHANS, and AIIMS. He specializes in anxiety, depression, mood disorders, addiction medicine, geriatric psychiatry, and psychotherapy.",
+  "medicalProblems": [
+    { "title": "Anxiety & Mood Disorders", "description": "Evidence-based psychiatric evaluation and treatment." },
+    { "title": "Depression & Stress Disorders", "description": "Holistic mental health support and therapy." },
+    { "title": "Addiction Medicine", "description": "Alcohol, tobacco and drug de-addiction programs." },
+    { "title": "Memory & Geriatric Conditions", "description": "Diagnosis and management of dementia and age-related issues." }
+  ],
+  "procedures": [
+    { "title": "Psychotherapy & Counselling", "description": "Individual, marital and family therapy." },
+    { "title": "Pharmacotherapy", "description": "Medication management for psychiatric disorders." },
+    { "title": "De-addiction Treatment", "description": "Comprehensive alcohol and drug rehabilitation." },
+    { "title": "Cognitive & Behavioral Therapy", "description": "CBT, stress management and coping interventions." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Sameer treat anxiety and depression?", "answer": "Yes, these are among his core areas of expertise." },
+    { "question": "Does he offer counselling and psychotherapy?", "answer": "Yes, he provides multiple forms of therapy including CBT." },
+    { "question": "Does he handle addiction cases?", "answer": "Yes, he has deep expertise in addiction medicine." }
+  ]
+},
+{
+  "slug": "dr-anita-sethi",
+  "name": "Dr. Anita Sethi",
+  "specialty": "Ophthalmology – Cataract, Lasik & Oculoplasty",
+  "hospital": "Max Hospital – Saket West | Panchsheel Park",
+  "experience": "35+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Principal Director & HOD – Cataract, Lasik & Oculoplasty",
+  "degree": "MBBS | MD (Ophthalmology, AIIMS) | DNB | FRCS (Edinburgh)",
+  "about": "Dr. Anita Sethi is a senior ophthalmic surgeon with more than three decades of experience in cataract, refractive surgery, and oculoplasty. She has led ophthalmology departments at leading hospitals and is known for delivering comprehensive, advanced eye care.",
+  "medicalProblems": [
+    { "title": "Cataract", "description": "Complete evaluation and surgical correction." },
+    { "title": "Refractive Errors", "description": "Advanced LASIK and vision correction options." },
+    { "title": "Oculoplastic Conditions", "description": "Eyelid, orbit and tear duct disorders." },
+    { "title": "Retinal & Ocular Surface Disorders", "description": "Comprehensive medical and surgical management." }
+  ],
+  "procedures": [
+    { "title": "Cataract Surgery", "description": "Phacoemulsification and premium IOL implantation." },
+    { "title": "LASIK & Refractive Surgery", "description": "Laser vision correction." },
+    { "title": "Oculoplasty Surgery", "description": "Eyelid and orbital reconstructive procedures." },
+    { "title": "Corneal & Ocular Surface Procedures", "description": "Advanced anterior segment surgeries." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Anita perform LASIK?", "answer": "Yes, she specializes in laser vision correction." },
+    { "question": "Is she experienced in oculoplastic surgery?", "answer": "Yes, eyelid and orbital surgeries are her expertise." },
+    { "question": "Does she treat cataracts?", "answer": "Yes, she performs advanced cataract surgery with premium lenses." }
+  ]
+},
+{
+  "slug": "dr-anil-sharma",
+  "name": "Dr. Anil Sharma",
+  "specialty": "Laparoscopic, Robotic & Bariatric Surgery",
+  "hospital": "Max Hospital – Saket East",
   "experience": "37+ years",
   "image": "",
   "isTopDoctor": true,
-  "position": "Consultant – Dental Care",
-  "degree": "IBOMS | MDS | BDS",
-  "about": "Dr. Anusuya Sharma is a highly experienced dental surgeon with over 30 years of expertise in oral and maxillofacial care. She has served as Professor and HOD at Sharda University and has extensive experience in managing complex dental and facial pathologies.",
+  "position": "Senior Director – Laparoscopic, Robotic & Bariatric Surgery",
+  "degree": "MBBS | MS (General Surgery) | FRCS (Eng) | FRCS (Edin) | FICS",
+  "about": "Dr. Anil Sharma is a renowned laparoscopic and bariatric surgeon with over 37 years of surgical experience. He is a pioneer in minimal access surgery and has played a major role in establishing advanced hernia, bariatric, metabolic and scarless surgery programs in India.",
   "medicalProblems": [
-    { "title": "Dental Infections", "description": "Management of tooth infections and gum diseases." },
-    { "title": "Maxillofacial Trauma", "description": "Fractures and injuries of facial bones." },
-    { "title": "Oral Pathologies", "description": "Diagnosis and treatment of oral diseases." },
-    { "title": "Missing Teeth", "description": "Restoration using implants and prosthetics." }
+    { "title": "Hernia Disorders", "description": "Evaluation and surgical repair of abdominal wall hernias." },
+    { "title": "Gallbladder & Biliary Problems", "description": "Gallstones and advanced biliary disease." },
+    { "title": "Obesity & Metabolic Disorders", "description": "Bariatric surgical evaluation and treatment." },
+    { "title": "Gastrointestinal Conditions", "description": "Upper GI disorders requiring laparoscopic surgery." }
   ],
   "procedures": [
-    { "title": "Dental Implants", "description": "Replacement of missing teeth with implants." },
-    { "title": "Maxillofacial Surgery", "description": "Surgical management of jaw and facial bones." },
-    { "title": "Tooth Restoration", "description": "Crowns, fillings and cosmetic dental procedures." },
-    { "title": "Tooth Extraction", "description": "Removal of damaged or infected teeth." }
+    { "title": "Laparoscopic Hernia Repair", "description": "Advanced and minimally invasive techniques." },
+    { "title": "Bariatric & Metabolic Surgery", "description": "Weight-loss and diabetes surgery." },
+    { "title": "Single-Incision (Scarless) Surgery", "description": "Cosmetic minimally invasive procedures." },
+    { "title": "Laparoscopic Gallbladder Surgery", "description": "Minimally invasive cholecystectomy." }
   ],
   "faqs": [
-    { "question": "Does Dr. Anusuya perform dental implants?", "answer": "Yes, she is highly experienced in implant dentistry." },
-    { "question": "Does she treat facial trauma?", "answer": "Yes, she specializes in maxillofacial trauma management." },
-    { "question": "Does she treat oral diseases?", "answer": "Yes, she manages a wide range of oral and maxillofacial pathologies." }
+    { "question": "Does Dr. Sharma perform scarless surgery?", "answer": "Yes, he specializes in single-incision laparoscopic procedures." },
+    { "question": "Is he experienced in bariatric surgery?", "answer": "Yes, he is a leading bariatric and metabolic surgeon." },
+    { "question": "Does he treat gallbladder conditions?", "answer": "Yes, he performs advanced laparoscopic gallbladder surgery." }
   ]
 },
 {
-  "slug": "dr-vijay-lakshmi-thakur",
-  "name": "Dr. Vijay Lakshmi Thakur",
-  "specialty": "Dental Care, Maxillofacial Surgery & Implantology",
-  "hospital": "Max Hospital – Patparganj",
+  "slug": "dr-aparna-dhar",
+  "name": "Dr. Aparna Dhar",
+  "specialty": "Molecular Oncology & Cancer Genetics",
+  "hospital": "Nanavati Max Hospital | Max Hospital – Saket Smart | Gurugram | Saket East",
+  "experience": "16+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Senior Director – Hereditary, Precision Oncology & Genetic Counselling",
+  "degree": "MMSC (Medical Genetics, University of Glasgow) | Medical Genetics Fellowship, Mayo Clinic USA",
+  "about": "Dr. Aparna Dhar is a leading expert in molecular oncology, hereditary cancer genetics, and precision oncology. With global training at Mayo Clinic, Harvard-affiliated institutions, and the University of Glasgow, she has guided more than 10,000 families in hereditary cancer risk and precision treatment planning.",
+  "medicalProblems": [
+    { "title": "Hereditary Cancers", "description": "Risk evaluation for breast, ovarian, GI and lung cancers." },
+    { "title": "Genetic Mutations & Syndromes", "description": "BRCA, Lynch, and rare cancer syndromes." },
+    { "title": "Precision Oncology", "description": "Genomic-guided cancer treatment planning." },
+    { "title": "Onco-fertility & Genetic Counselling", "description": "Fertility and family planning support in cancer." }
+  ],
+  "procedures": [
+    { "title": "Genetic Testing & Interpretation", "description": "Comprehensive genomic analysis." },
+    { "title": "Precision Oncology Planning", "description": "Molecular-guided treatment decisions." },
+    { "title": "Hereditary Cancer Counselling", "description": "Personal and family risk assessment." },
+    { "title": "Telegenetics", "description": "Remote genetic counselling services." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Aparna treat hereditary cancers?", "answer": "Yes, she specializes in hereditary and familial cancers." },
+    { "question": "Does she offer genetic testing?", "answer": "Yes, she guides complete genetic evaluation and interpretation." },
+    { "question": "Is she internationally trained?", "answer": "Yes, at Mayo Clinic, Harvard-affiliated institutes, and University of Glasgow." }
+  ]
+},
+{
+  "slug": "dr-monica-mahajan",
+  "name": "Dr. Monica Mahajan",
+  "specialty": "Internal Medicine",
+  "hospital": "Max Medcentre – Lajpat Nagar | Max Hospital – Panchsheel Park | Saket East",
+  "experience": "27+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Senior Director – Internal Medicine",
+  "degree": "MBBS | DNB (Medicine) | MNAMS",
+  "about": "Dr. Monica Mahajan is a senior Internal Medicine specialist with over 27 years of experience. She is known for her expertise in preventive care, infectious diseases, adult vaccination, global travel medicine, and chronic medical conditions.",
+  "medicalProblems": [
+    { "title": "Infectious Diseases", "description": "Diagnosis and treatment of common and complex infections." },
+    { "title": "Lifestyle & Chronic Diseases", "description": "Hypertension, diabetes and thyroid disorders." },
+    { "title": "Travel Medicine", "description": "Vaccination and international travel health evaluation." },
+    { "title": "Immunological Conditions", "description": "Adult immunization and systemic disorders." }
+  ],
+  "procedures": [
+    { "title": "Preventive Health Screening", "description": "Comprehensive wellness evaluations." },
+    { "title": "Adult Immunization Programs", "description": "Vaccinations for travel and chronic conditions." },
+    { "title": "Chronic Disease Management", "description": "Long-term care for lifestyle disorders." },
+    { "title": "Infection Management Protocols", "description": "Clinical care for viral, bacterial and travel-related infections." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Monica specialize in travel medicine?", "answer": "Yes, she is a recognized expert in travel medicine and vaccination." },
+    { "question": "Does she treat chronic diseases?", "answer": "Yes, including diabetes, hypertension and thyroid disorders." },
+    { "question": "Is she involved in preventive healthcare?", "answer": "Yes, preventive care is one of her major areas of focus." }
+  ]
+},
+{
+  "slug": "dr-supriya-bali",
+  "name": "Dr. Supriya Bali",
+  "specialty": "Internal Medicine",
+  "hospital": "Max Medcentre – Lajpat Nagar | Max Hospital – Panchsheel Park | Max Hospital – Saket East",
+  "experience": "28+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director – Internal Medicine",
+  "degree": "MBBS | MD (Internal Medicine)",
+  "about": "Dr. Supriya Bali is a senior Internal Medicine specialist with over 28 years of clinical experience. She has extensive expertise in infectious diseases, diabetes, adult immunization and long-term medical care. She has trained at Stanford University in Emergency & Internal Medicine and has held senior roles at prominent Indian hospitals.",
+  "medicalProblems": [
+    { "title": "Infectious Diseases", "description": "Diagnosis and treatment of viral, bacterial and multi-system infections." },
+    { "title": "Diabetes Management", "description": "Comprehensive evaluation and long-term control of diabetes." },
+    { "title": "Adult Immunization", "description": "Vaccinations for travel, lifestyle and disease prevention." },
+    { "title": "Chronic Medical Conditions", "description": "Hypertension, thyroid disorders and metabolic diseases." }
+  ],
+  "procedures": [
+    { "title": "Adult Vaccination Programs", "description": "Comprehensive immunization for adults and travellers." },
+    { "title": "Chronic Disease Care", "description": "Long-term management plans for diabetes and hypertension." },
+    { "title": "Infection Screening & Treatment", "description": "Protocols for acute and complex infections." },
+    { "title": "Preventive Health Assessments", "description": "Full-body checkups and risk evaluation." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Supriya Bali treat diabetes?", "answer": "Yes, diabetes management is one of her primary specialties." },
+    { "question": "Does she offer adult vaccinations?", "answer": "Yes, including travel and routine immunization." },
+    { "question": "Has she trained internationally?", "answer": "Yes, she completed an observership at Stanford University, USA." }
+  ]
+},
+{
+  "slug": "dr-neeru-gera",
+  "name": "Dr. Neeru Gera",
+  "specialty": "Endocrinology & Diabetes",
+  "hospital": "Max Hospital – Shalimar Bagh | Max Hospital – Panchsheel Park | Max Hospital – Noida Sec 19 | Max Hospital – Saket East",
+  "experience": "34+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Director – Endocrinology",
+  "degree": "MBBS | MD (Medicine) | DM (Endocrinology)",
+  "about": "Dr. Neeru Gera is a senior endocrinologist with over 34 years of experience in managing complex hormonal disorders, diabetes, thyroid diseases, metabolic bone disorders and endocrine-related health issues. She is known for her clinical precision and long-standing expertise across several Max network hospitals.",
+  "medicalProblems": [
+    { "title": "Diabetes (Type 1 & Type 2)", "description": "Advanced management and long-term care of diabetes." },
+    { "title": "Thyroid Disorders", "description": "Evaluation and treatment of hypothyroidism, hyperthyroidism and thyroid nodules." },
+    { "title": "PCOD & Hormonal Imbalances", "description": "Comprehensive hormonal evaluation and treatment." },
+    { "title": "Metabolic Bone Diseases", "description": "Osteoporosis and calcium–vitamin D related disorders." }
+  ],
+  "procedures": [
+    { "title": "Diabetes Management Plans", "description": "Personalized treatment for blood sugar control." },
+    { "title": "Thyroid Function Diagnostic Workup", "description": "Clinical evaluation with advanced hormonal testing." },
+    { "title": "Hormonal Therapy", "description": "Treatment for endocrine deficiencies and imbalances." },
+    { "title": "Metabolic Disorder Evaluation", "description": "Assessment for bone health and vitamin deficiencies." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Neeru Gera treat thyroid disorders?", "answer": "Yes, she specializes in all types of thyroid conditions." },
+    { "question": "Is she experienced in diabetes management?", "answer": "Yes, she has over 34 years of expertise in diabetes care." },
+    { "question": "Does she treat PCOD and hormonal issues?", "answer": "Yes, she provides comprehensive endocrine evaluation and management." }
+  ]
+},
+{
+  "slug": "dr-khalid-j-farooqui",
+  "name": "Dr. Khalid J Farooqui",
+  "specialty": "Endocrinology & Diabetes",
+  "hospital": "Max Hospital – Saket Smart | Max Hospital – Gurugram | Max Hospital – Saket East",
+  "experience": "12+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director – Endocrinology & Diabetes",
+  "degree": "MBBS | MD (Internal Medicine) | DM (Endocrinology)",
+  "about": "Dr. Khalid J Farooqui is an experienced endocrinologist with over 12 years of expertise in diabetes, thyroid disorders, obesity care, metabolic diseases and hormonal imbalance management. He has trained extensively at Medanta Medicity and Sher-I-Kashmir Institute of Medical Sciences, and is known for his evidence-based approach.",
+  "medicalProblems": [
+    { "title": "Diabetes (Type 1, Type 2 & Gestational)", "description": "Advanced glucose management and long-term care." },
+    { "title": "Thyroid Disorders", "description": "Treatment for hypo/hyperthyroidism, thyroiditis and nodules." },
+    { "title": "Obesity & Metabolic Syndrome", "description": "Endocrine-based evaluation and weight management plans." },
+    { "title": "Pituitary & Adrenal Disorders", "description": "Diagnosis of hormonal deficiencies and excess syndromes." }
+  ],
+  "procedures": [
+    { "title": "Diabetes Control Programs", "description": "Structured treatment with medication, monitoring and lifestyle guidance." },
+    { "title": "Hormone Profile Evaluation", "description": "Advanced hormonal testing for endocrine disorders." },
+    { "title": "Thyroid Function Testing & Therapy", "description": "Comprehensive thyroid evaluation and treatment." },
+    { "title": "Obesity & Metabolic Management", "description": "Endocrine-guided weight and metabolic control therapies." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Khalid treat thyroid problems?", "answer": "Yes, he specializes in both common and complex thyroid conditions." },
+    { "question": "Does he manage Type 1 and Type 2 diabetes?", "answer": "Yes, he provides complete diabetes evaluation and treatment." },
+    { "question": "Is he trained in advanced endocrinology?", "answer": "Yes, he holds a DM in Endocrinology and has international memberships." }
+  ]
+},
+{
+  "slug": "dr-anupam-goel",
+  "name": "Dr. Anupam Goel",
+  "specialty": "Interventional Cardiology",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "22+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director – Interventional Cardiology",
+  "degree": "MBBS | MD (General Medicine) | DM (Cardiology)",
+  "about": "Dr. Anupam Goel is a senior Interventional Cardiologist with over 22 years of experience in coronary interventions, acute cardiac care and clinical cardiology. He is known for his expertise in angiography, angioplasty and primary PCI, including radial and femoral approaches. He has been associated with Max Super Speciality Hospital, Saket since 2005.",
+  "medicalProblems": [
+    { "title": "Coronary Artery Disease (CAD)", "description": "Evaluation and management of blockages in heart arteries." },
+    { "title": "Acute Coronary Syndrome", "description": "Emergency treatment for heart attacks and unstable angina." },
+    { "title": "Heart Rhythm Disorders", "description": "Management of arrhythmias and conduction abnormalities." },
+    { "title": "Hypertension & Lipid Disorders", "description": "Long-term cardiac risk factor control." }
+  ],
+  "procedures": [
+    { "title": "Coronary Angiography", "description": "Diagnostic evaluation of heart arteries through radial or femoral route." },
+    { "title": "Coronary Angioplasty (PCI)", "description": "Balloon angioplasty and stenting for blocked arteries." },
+    { "title": "Primary Angioplasty for Heart Attack", "description": "Emergency life-saving intervention during acute MI." },
+    { "title": "Cardiac Evaluation & Risk Profiling", "description": "Comprehensive cardiac screening and preventive checkups." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Anupam Goel perform angioplasty?", "answer": "Yes, he specializes in all forms of coronary angioplasty, including emergency PCI." },
+    { "question": "Is he experienced in radial angiography?", "answer": "Yes, he routinely performs radial and femoral angiography and angioplasty." },
+    { "question": "Does he treat women with heart disease?", "answer": "Yes, he runs the CAD in Women program focused on awareness and treatment." }
+  ]
+},
+{
+  "slug": "dr-ashish-jain",
+  "name": "Dr. Ashish Jain",
+  "specialty": "Pulmonology",
+  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Saket West | Max Hospital – Saket Smart | Max Hospital – Saket East",
+  "experience": "24+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director & Head – Respiratory Medicine",
+  "degree": "MBBS | MD (Respiratory Medicine)",
+  "about": "Dr. Ashish Jain is a senior Pulmonologist with more than 24 years of experience in respiratory medicine. He is an expert in interventional bronchoscopy, thoracoscopy, EBUS, and advanced lung disease management. He is known for treating complex asthma, COPD, lung cancer and respiratory failure cases.",
+  "medicalProblems": [
+    { "title": "Asthma", "description": "Evaluation and long-term management of chronic and allergic asthma." },
+    { "title": "COPD", "description": "Management of chronic obstructive pulmonary disease and emphysema." },
+    { "title": "Lung Cancer Evaluation", "description": "Diagnostic bronchoscopy and EBUS for lung tumors." },
+    { "title": "Respiratory Failure", "description": "Non-invasive ventilation and advanced respiratory support." }
+  ],
+  "procedures": [
+    { "title": "Interventional Bronchoscopy", "description": "Advanced airway procedures including biopsy and foreign body removal." },
+    { "title": "EBUS (Endobronchial Ultrasound)", "description": "Minimally invasive evaluation of lung lesions and lymph nodes." },
+    { "title": "Thoracoscopy", "description": "Diagnostic and therapeutic procedures for pleural diseases." },
+    { "title": "Pulmonary Function Testing", "description": "Comprehensive lung function assessment." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Ashish Jain treat asthma and COPD?", "answer": "Yes, he specializes in long-term management of asthma, COPD and chronic lung disease." },
+    { "question": "Is he trained in EBUS and advanced bronchoscopy?", "answer": "Yes, he is highly experienced in EBUS and interventional bronchoscopy." },
+    { "question": "Does he manage lung cancer cases?", "answer": "Yes, he performs diagnostic bronchoscopy and provides advanced lung cancer evaluation." }
+  ]
+},
+{
+  "slug": "dr-ajita-bagai-kakkar",
+  "name": "Dr. Ajita Bagai Kakkar",
+  "specialty": "Dermatology, Lasers & Aesthetic Medicine",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Panchsheel Park",
+  "experience": "25+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director – Dermatology, Lasers & Aesthetic Medicine",
+  "degree": "MBBS | MD (Dermatology) | DNB (Dermatology & Venereology)",
+  "about": "Dr. Ajita Bagai Kakkar is a senior dermatologist with over 25 years of experience in clinical dermatology, cosmetic dermatology, lasers and aesthetic medicine. She has extensive training from premier institutions including AIIMS, Manipal and international dermatology societies. She is known for her expertise in acne, pigmentation, aesthetic laser procedures and anti-aging treatments.",
+  "medicalProblems": [
+    { "title": "Acne & Acne Scars", "description": "Comprehensive treatment for acne, scarring and post-acne pigmentation." },
+    { "title": "Psoriasis", "description": "Long-term management and advanced therapies for psoriasis." },
+    { "title": "Pigmentation Disorders", "description": "Treatment of melasma, sun damage and uneven skin tone." },
+    { "title": "Hair Loss & Scalp Disorders", "description": "Evaluation of alopecia, scalp infections and PRP therapy." }
+  ],
+  "procedures": [
+    { "title": "Laser Treatments", "description": "Laser removal of pigmentation, scars, hair, moles and skin tags." },
+    { "title": "Aesthetic Procedures", "description": "Chemical peels, anti-aging treatments, Botox and mesotherapy." },
+    { "title": "PRP Therapy", "description": "Platelet-rich plasma therapy for skin rejuvenation and hair loss." },
+    { "title": "Dermatologic Surgery", "description": "Minor surgeries for cysts, lesions and cosmetic corrections." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Ajita treat acne and pigmentation?", "answer": "Yes, she is highly experienced in acne, pigmentation and aesthetic treatments." },
+    { "question": "Does she perform laser procedures?", "answer": "Yes, she specializes in advanced dermatology lasers for multiple skin concerns." },
+    { "question": "Does she offer anti-aging treatments?", "answer": "Yes, she provides fillers, Botox, PRP, mesotherapy and skin rejuvenation therapies." }
+  ]
+},
+{
+  "slug": "dr-mukesh-kumar",
+  "name": "Dr. Mukesh Kumar",
+  "specialty": "Neurology",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Panchsheel Park",
+  "experience": "15+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director & Head – Parkinson's Disease Unit",
+  "degree": "MBBS (Gold Medalist) | MD (Medicine) | DNB (Medicine) | DM (Neurology, AIIMS)",
+  "about": "Dr. Mukesh Kumar is a leading neurologist with expertise in Parkinson’s disease, movement disorders, Myasthenia Gravis, Deep Brain Stimulation (DBS), and neuro-immunological disorders. He has strong academic credentials including DM Neurology from AIIMS and has contributed to advanced clinical research in ALS, cerebral palsy and stroke.",
+  "medicalProblems": [
+    { "title": "Parkinson’s Disease", "description": "Comprehensive evaluation and management of motor and non-motor symptoms." },
+    { "title": "Myasthenia Gravis", "description": "Diagnosis and long-term treatment of neuromuscular weakness." },
+    { "title": "Movement Disorders", "description": "Management of dystonia, tremors, ataxia and gait abnormalities." },
+    { "title": "Neuromuscular Disorders", "description": "Evaluation of nerve and muscle diseases causing weakness or fatigue." }
+  ],
+  "procedures": [
+    { "title": "Deep Brain Stimulation (DBS) Programming", "description": "Advanced DBS adjustment and clinical follow-up for Parkinson’s patients." },
+    { "title": "Botulinum Toxin Therapy", "description": "Targeted treatment for dystonia, spasticity and movement disorders." },
+    { "title": "Electrophysiological Studies", "description": "Nerve conduction studies and EMG for neuromuscular diagnosis." },
+    { "title": "Comprehensive Neurological Evaluation", "description": "Full assessment for neurodegenerative and neuromuscular conditions." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Mukesh Kumar specialize in Parkinson’s disease?", "answer": "Yes, he leads the Parkinson’s Disease Unit and is highly experienced in DBS programming." },
+    { "question": "Does he treat movement disorders?", "answer": "Yes, including tremors, dystonia, gait issues and neuromuscular disorders." },
+    { "question": "Does he provide Botox therapy for neurological conditions?", "answer": "Yes, he offers Botulinum toxin therapy for dystonia and movement disorders." }
+  ]
+},
+{
+  "slug": "dr-raghav-mantri",
+  "name": "Dr. Raghav Mantri",
+  "specialty": "Aesthetic & Reconstructive Surgery",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Gurugram | Max Hospital – Saket East",
+  "experience": "23+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director & Clinical Lead – Liposuction & Body Contouring",
+  "degree": "MBBS | MS (General Surgery) | MCh (Plastic & Reconstructive Surgery)",
+  "about": "Dr. Raghav Mantri is a senior Aesthetic and Reconstructive Plastic Surgeon with over 23 years of experience. He specializes in body contouring, cosmetic surgery, reconstructive microsurgery and trauma reconstruction. He has trained at leading national and international centers and has expertise in advanced techniques of liposuction, breast surgery, migraine surgery and facial aesthetics.",
+  "medicalProblems": [
+    { "title": "Cosmetic Body Concerns", "description": "Issues related to excess fat, body contouring and lipodystrophy." },
+    { "title": "Breast Deformities", "description": "Breast asymmetry, reduction needs and reconstruction post-mastectomy." },
+    { "title": "Facial Aesthetic Concerns", "description": "Cosmetic facial irregularities and age-related changes." },
+    { "title": "Trauma & Reconstructive Needs", "description": "Post-injury reconstruction of face, limbs and soft tissues." }
+  ],
+  "procedures": [
+    { "title": "Liposuction & Body Contouring", "description": "Advanced sculpting techniques including thigh lift, abdominoplasty and liposuction." },
+    { "title": "Breast Reconstruction & Reduction", "description": "Reconstruction post-cancer, cosmetic reshaping and breast reduction surgery." },
+    { "title": "Cosmetic Facial Surgery", "description": "Procedures for facial enhancement, contouring and rejuvenation." },
+    { "title": "Reconstructive Microsurgery", "description": "Specialized surgery for trauma-related defects and structural restoration." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Raghav Mantri perform liposuction?", "answer": "Yes, he specializes in liposuction and advanced body contouring surgeries." },
+    { "question": "Does he perform breast reconstruction?", "answer": "Yes, he is an expert in breast reconstruction and reduction surgery." },
+    { "question": "Does he offer cosmetic facial procedures?", "answer": "Yes, including facial contouring, rejuvenation and aesthetic corrections." }
+  ]
+},
+{
+  "slug": "dr-shaiwal-khandelwal",
+  "name": "Dr. Shaiwal Khandelwal",
+  "specialty": "Thoracic Surgery",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Gurugram | Max Hospital – Saket East",
+  "experience": "21+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Director – Thoracic Surgery",
+  "degree": "MBBS (IMS-BHU) | MS (General Surgery, BHU) | Fellowships in Minimally Invasive Thoracic Surgery, VATS & Robotic Thoracic Surgery",
+  "about": "Dr. Shaiwal Khandelwal is a distinguished Thoracic Surgeon with over 21 years of experience. He specializes in Robotic Thoracic Surgery, VATS, Uniportal VATS, lung cancer surgery, mediastinal surgeries and complex thoracic reconstructions. Trained internationally at Seoul National University Hospital, Memorial Sloan Kettering (New York) and CCI Shanghai, he is recognized as an expert in advanced minimally invasive thoracic surgery.",
+  "medicalProblems": [
+    { "title": "Lung Cancer", "description": "Evaluation and minimally invasive surgical management of lung tumors." },
+    { "title": "Mediastinal Tumors", "description": "Diagnosis and surgical removal of thymoma, cysts and other mediastinal lesions." },
+    { "title": "Pleural Diseases", "description": "Treatment of recurrent effusions, infections and pleural tumors." },
+    { "title": "Thoracic Trauma & Structural Disorders", "description": "Management of chest injuries, rib fractures and airway abnormalities." }
+  ],
+  "procedures": [
+    { "title": "Robotic Thoracic Surgery", "description": "Precision-based robotic procedures for lung and mediastinal diseases." },
+    { "title": "VATS (Video-Assisted Thoracoscopic Surgery)", "description": "Minimally invasive surgery for lungs and chest cavity." },
+    { "title": "Uniportal VATS", "description": "Advanced single-incision thoracic surgery technique." },
+    { "title": "Thoracic Oncology Surgery", "description": "Comprehensive tumor resections for lung and chest cancers." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Shaiwal perform robotic thoracic surgery?", "answer": "Yes, he is highly trained in robotic and minimally invasive thoracic surgery." },
+    { "question": "Does he treat lung cancer surgically?", "answer": "Yes, he specializes in minimally invasive and advanced lung cancer surgeries." },
+    { "question": "Is he trained internationally?", "answer": "Yes, he has undergone specialized training in South Korea, USA and China." }
+  ]
+},
+{
+  "slug": "dr-jasmita-popli",
+  "name": "Dr. Jasmita Popli",
+  "specialty": "Ophthalmology (Cataract, LASIK & Glaucoma)",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Panchsheel Park",
+  "experience": "25+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director – Ophthalmology (Cataract, LASIK & Glaucoma Management)",
+  "degree": "MBBS | MS (Ophthalmology) | Fellowship in Phacoemulsification & Lasik Surgery",
+  "about": "Dr. Jasmita Popli is a senior Ophthalmologist with over 25 years of experience in Cataract Surgery, LASIK, Refractive Procedures, Glaucoma Management and Oculoplastic care. She has served as HOD at St. Stephen’s Hospital and has worked with leading eye hospitals including Centre for Sight, Vasan Eye Care and Max Healthcare. She specializes in premium cataract surgery, advanced refractive correction and glaucoma evaluation.",
+  "medicalProblems": [
+    { "title": "Cataracts", "description": "Diagnosis and surgical treatment of cataracts including premium IOL options." },
+    { "title": "Refractive Errors", "description": "Myopia, hyperopia and astigmatism requiring LASIK/PRK correction." },
+    { "title": "Glaucoma", "description": "Screening and long-term management of open- and closed-angle glaucoma." },
+    { "title": "Ocular Surface & Lid Disorders", "description": "Treatment of dry eye, chalazion, eyelid lesions and pterygium." }
+  ],
+  "procedures": [
+    { "title": "Phacoemulsification & MICS Cataract Surgery", "description": "Modern stitchless cataract surgery with advanced IOL implantation." },
+    { "title": "LASIK & PRK", "description": "Laser vision correction for refractive errors." },
+    { "title": "Glaucoma Laser & Medical Therapy", "description": "Laser iridectomy, capsulotomy and long-term glaucoma management." },
+    { "title": "Oculoplastic & Lid Surgeries", "description": "Chalazion removal, lid repair and pterygium surgery with grafting." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Jasmita Popli perform premium cataract surgery?", "answer": "Yes, she specializes in advanced cataract surgery including toric, trifocal and EDOF lenses." },
+    { "question": "Does she perform LASIK?", "answer": "Yes, she is extensively trained in LASIK and PRK refractive procedures." },
+    { "question": "Does she treat glaucoma patients?", "answer": "Yes, she offers screening, laser procedures and long-term medical management for glaucoma." }
+  ]
+},
+{
+  "slug": "dr-kamran-ali",
+  "name": "Dr. Kamran Ali",
+  "specialty": "Lung Transplant & Thoracic Surgery",
+  "hospital": "Max Hospital – Saket East | Max Hospital – Saket Smart | Max Hospital – Saket West",
+  "experience": "12+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Associate Director – Thoracic Surgery",
+  "degree": "MBBS | DNB (Surgery) | FACS | Fellowships in Thoracic Surgery & Lung Transplant",
+  "about": "Dr. Kamran Ali is a highly skilled Lung Transplant and Thoracic Surgeon with experience across top centers in India, South Korea, Austria, Japan and Taiwan. He has previously worked at Medanta, Sir Ganga Ram, Fortis and Yashoda Hospitals. Dr. Ali has international training in advanced thoracic surgery, lung transplant programs and minimally invasive VATS/robotic techniques.",
+  "medicalProblems": [
+    { "title": "Lung Failure & Transplant Needs", "description": "Assessment and management of advanced lung disease requiring transplant." },
+    { "title": "Lung Cancer & Tumors", "description": "Diagnosis and surgical management of thoracic malignancies." },
+    { "title": "Pleural Diseases", "description": "Treatment for recurrent pleural effusions, infections and pleural tumors." },
+    { "title": "Airway Disorders", "description": "Surgical treatment of airway stenosis and tracheal diseases." }
+  ],
+  "procedures": [
+    { "title": "Lung Transplant Surgery", "description": "Evaluation and surgical management of advanced lung disease." },
+    { "title": "VATS (Video-Assisted Thoracoscopic Surgery)", "description": "Minimally invasive thoracic surgery for lungs and mediastinum." },
+    { "title": "Robotic Thoracic Surgery", "description": "Precision-based robotic procedures for complex thoracic conditions." },
+    { "title": "Thoracic Oncology Surgery", "description": "Surgical removal of lung and mediastinal tumors." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Kamran Ali perform lung transplant surgeries?", "answer": "Yes, he is trained internationally and specializes in lung transplant surgery." },
+    { "question": "Does he perform VATS and robotic thoracic surgery?", "answer": "Yes, he is experienced in advanced VATS and robotic procedures." },
+    { "question": "Has he trained internationally?", "answer": "Yes, he has fellowships from South Korea, Austria, Japan and Taiwan." }
+  ]
+},
+{
+  "slug": "dr-samit-chaturvedi",
+  "name": "Dr. Samit Chaturvedi",
+  "specialty": "Urology, Kidney Transplant & Uro-Oncology",
+  "hospital": "Max Hospital – Noida Sec 19 | Max Hospital – Saket East",
+  "experience": "14+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Director – Urology, Kidney Transplant & Uro-Oncology",
+  "degree": "MBBS | MS (General Surgery) | MCh (Urology, SGPGI)",
+  "about": "Dr. Samit Chaturvedi is an experienced Urologist and Kidney Transplant surgeon with more than 14 years of expertise in uro-oncology, robotic urology, laser surgeries and renal transplant procedures. He has served in prestigious institutions including SGPGI Lucknow, BLK Hospital, Batra Hospital and PSRI, and specializes in minimally invasive and advanced reconstructive urological surgery.",
+  "medicalProblems": [
+    { "title": "Kidney Stones & Ureteric Stones", "description": "Diagnosis and laser-based treatment for urinary stones." },
+    { "title": "Prostate Enlargement & Prostate Cancer", "description": "Comprehensive evaluation and surgical management." },
+    { "title": "Kidney & Bladder Cancer", "description": "Advanced oncological management using minimally invasive techniques." },
+    { "title": "Male Urological Disorders", "description": "Management of urinary obstruction, infections and functional disorders." }
+  ],
+  "procedures": [
+    { "title": "Kidney Transplant Surgery", "description": "Evaluation and surgical management of renal transplant." },
+    { "title": "Robotic Urological Surgery", "description": "Minimally invasive robotic procedures for urological cancers and reconstruction." },
+    { "title": "Laser Stone Surgery (RIRS/PCNL/Holmium)", "description": "Advanced laser treatment for kidney, ureter and bladder stones." },
+    { "title": "Uro-Oncology Surgery", "description": "Surgical treatment for cancers of kidney, bladder, prostate and urinary tract." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Samit perform kidney transplant surgeries?", "answer": "Yes, he has extensive experience in both donor and recipient surgeries." },
+    { "question": "Does he specialize in laser stone removal?", "answer": "Yes, he is skilled in advanced RIRS, PCNL and Holmium laser procedures." },
+    { "question": "Does he treat prostate cancer?", "answer": "Yes, he provides complete evaluation and surgical treatment for prostate cancer." }
+  ]
+},
+{
+  "slug": "dr-jaya-kumar",
+  "name": "Dr. Jaya Kumar",
+  "specialty": "Pulmonology",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Panchsheel Park | Max Medcentre – Lajpat Nagar | Max Hospital – Saket Smart | Max Hospital – Saket East",
+  "experience": "26+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Associate Director – Pulmonology",
+  "degree": "MBBS | MD (Medicine)",
+  "about": "Dr. Jaya Kumar is an experienced Pulmonologist with over 26 years in Respiratory Medicine. She specializes in complex lung diseases, interstitial lung disease (ILD), sarcoidosis and chronic respiratory conditions. She is known for her clinical expertise and patient-centered approach across multiple Max Healthcare facilities.",
+  "medicalProblems": [
+    { "title": "Sarcoidosis", "description": "Comprehensive evaluation and long-term management of sarcoidosis." },
+    { "title": "Interstitial Lung Disease (ILD)", "description": "Diagnosis and treatment of fibrotic and inflammatory ILDs." },
+    { "title": "Chronic Respiratory Disorders", "description": "Management of asthma, COPD, chronic cough and airway issues." },
+    { "title": "Respiratory Infections", "description": "Treatment of pneumonia, bronchitis and post-infection lung complications." }
+  ],
+  "procedures": [
+    { "title": "Pulmonary Function Testing (PFT)", "description": "Complete assessment of lung capacity and airway function." },
+    { "title": "High-Resolution Chest Evaluation", "description": "Advanced imaging-based diagnosis of ILD and lung inflammation." },
+    { "title": "Chronic Respiratory Care", "description": "Management protocols for asthma, COPD and chronic breathlessness." },
+    { "title": "Sarcoidosis Management", "description": "Medical therapy and long-term monitoring of granulomatous lung disease." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Jaya Kumar treat ILD?", "answer": "Yes, ILD is one of her core areas of specialization." },
+    { "question": "Does she manage chronic lung diseases?", "answer": "Yes, she provides treatment for asthma, COPD and long-term airway disorders." },
+    { "question": "Is she experienced in sarcoidosis treatment?", "answer": "Yes, she has extensive experience managing sarcoidosis cases." }
+  ]
+},
+{
+  "slug": "dr-anurag-singh",
+  "name": "Dr. Anurag Singh",
+  "specialty": "Oral & Maxillofacial Surgery, Dental Implants",
+  "hospital": "Max Hospital – Panchsheel Park | Max Hospital – Saket East",
+  "experience": "24+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Associate Director – Oral & Maxillofacial Surgery and Implantology",
+  "degree": "BDS | MDS (Maxillofacial Surgery & Implantology)",
+  "about": "Dr. Anurag Singh is a highly experienced Oral & Maxillofacial Surgeon and Implantologist with over 24 years of expertise. He specializes in advanced dental implants, jaw reconstruction, TMJ surgery, maxillofacial trauma, cysts and tumors of the jaw, and complex full-mouth rehabilitation procedures.",
+  "medicalProblems": [
+    { "title": "Impacted Wisdom Teeth", "description": "Surgical removal of complex or infected wisdom teeth." },
+    { "title": "Jaw & Facial Bone Injuries", "description": "Management of fractures, trauma and reconstruction." },
+    { "title": "Temporomandibular Joint Disorders", "description": "Evaluation and surgical treatment for TMJ pain and dysfunction." },
+    { "title": "Jaw Cysts & Tumors", "description": "Diagnosis and surgical management of benign oral/maxillofacial cysts and tumors." }
+  ],
+  "procedures": [
+    { "title": "Dental & Maxillofacial Implants", "description": "Single, multiple and full-mouth implant rehabilitation." },
+    { "title": "Zygomatic Implants", "description": "Specialized implants for patients with severe bone loss." },
+    { "title": "Orthognathic (Jaw Repositioning) Surgery", "description": "Corrective surgery for jaw alignment and facial symmetry." },
+    { "title": "TMJ Surgery & Joint Replacement", "description": "Advanced TMJ arthroscopy and joint reconstruction procedures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Anurag Singh perform dental implants?", "answer": "Yes, he specializes in implants including advanced zygomatic implants." },
+    { "question": "Does he treat jaw fractures?", "answer": "Yes, he has extensive experience in managing maxillofacial trauma." },
+    { "question": "Does he perform TMJ surgery?", "answer": "Yes, he provides surgical and reconstructive solutions for TMJ disorders." }
+  ]
+},
+{
+  "slug": "ritika-samaddar",
+  "name": "Ritika Samaddar",
+  "specialty": "Dietetics, Nutrition & Clinical Dietetics",
+  "hospital": "Max Hospital – Saket West",
+  "experience": "29+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Regional Head – Department of Clinical Nutrition & Dietetics (South Zone)",
+  "degree": "M.Sc. Therapeutic Nutrition | UGC-NET | Registered Dietician (IDA)",
+  "about": "Ritika Samaddar is one of India’s leading clinical nutritionists with nearly three decades of experience in therapeutic nutrition, bariatric nutrition, metabolic disorders and clinical diet planning. She has been heading the Clinical Nutrition & Dietetics department at Max Healthcare since 2005 and has contributed significantly to nationwide nutrition awareness, research and training programs.",
+  "medicalProblems": [
+    { "title": "Obesity & Weight Disorders", "description": "Nutritional management of obesity, metabolic syndrome and bariatric patients." },
+    { "title": "Diabetes & Metabolic Diseases", "description": "Diet plans for diabetes, pre-diabetes and metabolic dysfunction." },
+    { "title": "Gut & Digestive Disorders", "description": "Therapeutic diets for IBS, acidity, liver issues and digestive complications." },
+    { "title": "Cardiac & Lifestyle Disorders", "description": "Nutritional therapy for hypertension, cholesterol and cardiovascular risk." }
+  ],
+  "procedures": [
+    { "title": "Therapeutic Diet Planning", "description": "Customized diets for chronic diseases and metabolic conditions." },
+    { "title": "Bariatric Nutrition Programs", "description": "Pre- and post-operative diet management for bariatric surgery patients." },
+    { "title": "Clinical Nutrition Counseling", "description": "Diet plans for children, adults, elderly and special medical needs." },
+    { "title": "Lifestyle & Preventive Nutrition", "description": "Weight management, fitness diets and long-term preventive nutrition." }
+  ],
+  "faqs": [
+    { "question": "Does Ritika Samaddar specialize in bariatric nutrition?", "answer": "Yes, she is a trained bariatric nutritionist with international certification." },
+    { "question": "Does she provide therapeutic diet plans?", "answer": "Yes, she designs medical and therapeutic diets for various chronic conditions." },
+    { "question": "Does she help with weight-loss diets?", "answer": "Yes, she offers structured weight-loss, metabolic correction and lifestyle nutrition programs." }
+  ]
+},
+{
+  "slug": "dr-ritu-ahluwalia",
+  "name": "Dr. Ritu Ahluwalia",
+  "specialty": "Dental Care",
+  "hospital": "Max Hospital – Saket East | Max Hospital – Panchsheel Park",
+  "experience": "26+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Dental",
+  "degree": "BDS | Certified in Cosmetic Dentistry & Dental Implants",
+  "about": "Dr. Ritu Ahluwalia is a senior Dental Surgeon with over 26 years of clinical experience. She has been part of the core team that helped Max Hospital, Saket achieve JCI accreditation for its dental services. Her expertise includes cosmetic dentistry, full-mouth rehabilitation, root canal therapy, crowns and bridges, dentures and smile enhancement procedures.",
+  "medicalProblems": [
+    { "title": "Tooth Decay & Cavities", "description": "Diagnosis and treatment of decayed or damaged teeth." },
+    { "title": "Missing Teeth", "description": "Restoration using dentures, crowns, bridges and implant-supported solutions." },
+    { "title": "Cosmetic Dental Concerns", "description": "Smile correction, tooth discoloration and aesthetic enhancements." },
+    { "title": "Gum & Oral Issues", "description": "Management of gum disease, oral infections and dental pain." }
+  ],
+  "procedures": [
+    { "title": "Cosmetic Dentistry", "description": "Smile designing, veneers, bonding and aesthetic restorations." },
+    { "title": "Root Canal Treatment (RCT)", "description": "Advanced rotary RCT for infected or painful teeth." },
+    { "title": "Full Mouth Rehabilitation", "description": "Comprehensive restorative and functional rebuilding of teeth." },
+    { "title": "Crowns, Bridges & Dentures", "description": "All-ceramic crowns, fixed bridges and complete/partial dentures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Ritu Ahluwalia perform cosmetic dentistry?", "answer": "Yes, she specializes in smile enhancement, veneers and cosmetic restorations." },
+    { "question": "Does she perform root canal treatments?", "answer": "Yes, she has extensive experience in advanced and painless RCT procedures." },
+    { "question": "Does she offer full mouth rehabilitation?", "answer": "Yes, she performs complete restorative treatments including crowns, bridges and dentures." }
+  ]
+},
+{
+  "slug": "dr-himanshu-agarwal",
+  "name": "Dr. Himanshu Agarwal",
+  "specialty": "Interventional Neurology",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Saket East",
+  "experience": "10+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Associate Director – Interventional Neurology",
+  "degree": "MBBS | MD | DM (Interventional Neuroradiology & Neuroimaging, AIIMS)",
+  "about": "Dr. Himanshu Agarwal is a highly skilled Interventional Neurologist with over 10 years of experience in advanced neuro-interventional procedures. He has previously served at AIIMS, Manipal Hospital and Max Healthcare. He specializes in minimally invasive treatments for stroke, aneurysms, AVMs, DAVFs and complex neurovascular conditions. He is the recipient of a Gold Medal from the President of India and has numerous national and international publications.",
+  "medicalProblems": [
+    { "title": "Stroke & Paralysis", "description": "Emergency and advanced management of ischemic and hemorrhagic stroke." },
+    { "title": "Brain Aneurysms", "description": "Diagnosis and minimally invasive treatment of intracranial aneurysms." },
+    { "title": "Arteriovenous Malformations (AVMs)", "description": "Endovascular treatment of cranial and spinal AVMs and DAVFs." },
+    { "title": "Vascular Brain Disorders", "description": "Management of thrombosis, fistulas and complex neurovascular diseases." }
+  ],
+  "procedures": [
+    { "title": "Mechanical Thrombectomy", "description": "Life-saving endovascular treatment for acute ischemic stroke." },
+    { "title": "Aneurysm Coiling & Flow Diversion", "description": "Minimally invasive repair of brain aneurysms." },
+    { "title": "Cerebral & Spinal Angiography", "description": "Advanced diagnostic imaging for brain and spine vascular structures." },
+    { "title": "Carotid Stenting & Tumor Embolization", "description": "Endovascular intervention for carotid disease and tumor-related vascular control." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Himanshu treat stroke cases?", "answer": "Yes, he specializes in emergency stroke care including mechanical thrombectomy." },
+    { "question": "Does he treat brain aneurysms?", "answer": "Yes, he performs coiling, flow diversion and other minimally invasive procedures." },
+    { "question": "Is he trained at AIIMS?", "answer": "Yes, he completed his DM in Interventional Neuroradiology & Neuroimaging from AIIMS, New Delhi." }
+  ]
+},
+{
+  "slug": "dr-danish-ahmed",
+  "name": "Dr. Danish Ahmed",
+  "specialty": "Mental Health & Behavioural Sciences, Psychiatry",
+  "hospital": "Max Hospital – Saket East | Max Hospital – Saket West",
+  "experience": "12+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Senior Consultant – Psychiatry",
+  "degree": "MBBS | DPM (Psychiatry)",
+  "about": "Dr. Danish Ahmed is a skilled psychiatrist with over 12 years of experience in mental health, behavioural sciences and clinical psychiatry. He has trained at the Central Institute of Psychiatry (CIP), Ranchi—one of India's premier mental health institutions. He specializes in mood disorders, anxiety, addiction, personality disorders, child psychiatry and neurodevelopmental issues.",
+  "medicalProblems": [
+    { "title": "Anxiety Disorders", "description": "Treatment for generalized anxiety, panic disorder and phobias." },
+    { "title": "Depression & Mood Disorders", "description": "Management of major depression, bipolar disorder and chronic mood instability." },
+    { "title": "Addiction Disorders", "description": "Deaddiction therapy for alcohol, nicotine and substance-use disorders." },
+    { "title": "Child & Adolescent Psychiatry", "description": "Treatment for ADHD, autism, behavioural and learning difficulties." }
+  ],
+  "procedures": [
+    { "title": "Psychiatric Evaluation & Diagnosis", "description": "Comprehensive assessment for mental health disorders." },
+    { "title": "Medication Management", "description": "Evidence-based treatment plans for psychiatric conditions." },
+    { "title": "Psychotherapy & Counselling", "description": "Therapeutic support for emotional and behavioural issues." },
+    { "title": "Addiction Treatment Programs", "description": "Structured deaddiction and relapse prevention therapies." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Danish Ahmed treat anxiety and depression?", "answer": "Yes, he specializes in both anxiety disorders and mood disorders." },
+    { "question": "Does he provide treatment for addiction?", "answer": "Yes, he offers clinical management and therapy for alcohol and substance addictions." },
+    { "question": "Does he treat children?", "answer": "Yes, he manages childhood behavioural issues, ADHD, autism and learning difficulties." }
+  ]
+},
+{
+  "slug": "dr-pragnesh-desai",
+  "name": "Dr. Pragnesh Desai",
+  "specialty": "Urology, Kidney Transplant & Robotic Surgery",
+  "hospital": "Max Hospital – Panchsheel Park | Max Hospital – Saket East",
+  "experience": "16+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Urology, Robotics & Renal Transplant",
+  "degree": "MBBS | DNB (General Surgery) | M.Ch (Urology, AIIMS New Delhi)",
+  "about": "Dr. Pragnesh Desai is an experienced urologist and renal transplant specialist with over 16 years in advanced urological care. He has extensive expertise in robotic and laparoscopic urology, kidney and prostate cancer, vascular urology, and complex renal transplant surgeries. He has worked across leading institutions including AIIMS, PSRI Hospital and Max Healthcare, contributing to high-volume transplant and minimally invasive urology programs.",
+  "medicalProblems": [
+    { "title": "Kidney & Prostate Cancer", "description": "Comprehensive evaluation and minimally invasive surgical management." },
+    { "title": "Kidney Failure & Transplant Care", "description": "Renal transplant assessment and post-transplant management." },
+    { "title": "Urological Disorders", "description": "Management of urinary tract obstruction, stones and prostate enlargement." },
+    { "title": "Vascular & Robotic Urologic Conditions", "description": "Advanced robotic and vascular urological surgeries." }
+  ],
+  "procedures": [
+    { "title": "Robotic & Laparoscopic Urological Surgery", "description": "Minimally invasive surgery for prostate, kidney and bladder conditions." },
+    { "title": "Kidney Transplantation", "description": "Comprehensive transplant procedures including post-operative care." },
+    { "title": "Onco-Urology Procedures", "description": "Surgery for kidney, bladder and prostate cancers." },
+    { "title": "Endourological Procedures", "description": "Stone removal, ureteroscopy and laser surgeries." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Pragnesh Desai perform robotic surgeries?", "answer": "Yes, he specializes in robotic and laparoscopic minimally invasive urological surgeries." },
+    { "question": "Does he handle kidney transplant cases?", "answer": "Yes, he has extensive experience in renal transplant surgeries and post-transplant care." },
+    { "question": "Does he treat prostate and kidney cancer?", "answer": "Yes, he is highly experienced in onco-urology including prostate, bladder and kidney cancers." }
+  ]
+},
+{
+  "slug": "dr-aditya-dutta",
+  "name": "Dr. Aditya Dutta",
+  "specialty": "Endocrinology & Diabetes",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "5+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Endocrinology & Diabetes",
+  "degree": "MBBS | MD (Medicine) | DM (Endocrinology, PGIMER Chandigarh)",
+  "about": "Dr. Aditya Dutta is a young and dynamic endocrinologist trained at premier institutes including PGIMER Chandigarh and VMMC-Safdarjung Hospital, New Delhi. He has special interest in diabetes, growth disorders, thyroid diseases, metabolic bone disorders and complex hormonal conditions. He has published multiple papers in peer-reviewed national and international journals.",
+  "medicalProblems": [
+    { "title": "Diabetes (Type 1 & Type 2)", "description": "Comprehensive glucose control, insulin therapy and complication management." },
+    { "title": "Thyroid Disorders", "description": "Hypothyroidism, hyperthyroidism, thyroid nodules and autoimmune thyroid diseases." },
+    { "title": "Hormonal & Growth Disorders", "description": "PCOS, pituitary disorders, adrenal tumors and growth abnormalities." },
+    { "title": "Metabolic Bone & Calcium Disorders", "description": "Osteoporosis, parathyroid disorders and vitamin D-related issues." }
+  ],
+  "procedures": [
+    { "title": "Diabetes Management Plans", "description": "Personalized medical therapy, insulin protocols and lifestyle planning." },
+    { "title": "Thyroid & Hormonal Evaluation", "description": "Advanced diagnostics for endocrine disorders." },
+    { "title": "Metabolic Bone Disorder Treatment", "description": "Osteoporosis management and calcium metabolism therapy." },
+    { "title": "PCOS & Reproductive Endocrinology Care", "description": "Hormonal assessment and long-term management plans." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Aditya Dutta treat diabetes?", "answer": "Yes, he specializes in Type 1, Type 2 and complex diabetes management." },
+    { "question": "Does he treat thyroid disorders?", "answer": "Yes, he manages all thyroid-related conditions including autoimmune disorders." },
+    { "question": "Does he handle hormonal and growth issues?", "answer": "Yes, he treats PCOS, pituitary, adrenal and growth hormone-related disorders." }
+  ]
+},
+{
+  "slug": "dr-shahnawaz-b-kaloo",
+  "name": "Dr. Shahnawaz B. Kaloo",
+  "specialty": "Radiology, Interventional Radiology",
+  "hospital": "Max Hospital – Saket West",
+  "experience": "14+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Interventional Radiology",
+  "degree": "MBBS | MD (Radiology) | PDCC (Interventional Radiology) | International Fellowship (Seoul National University Hospital)",
+  "about": "Dr. Shahnawaz B. Kaloo is a highly skilled Interventional Radiologist with over 14 years of expertise in minimally invasive procedures for liver, oncology, vascular, nephrology and men's and women's health interventions. He has trained internationally in South Korea, Singapore, Austria, Japan and Taiwan, and is a senior faculty member for DrNB and Fellowship training programs.",
+  "medicalProblems": [
+    { "title": "Liver & Biliary Disorders", "description": "HCC, liver metastasis, biliary obstruction, portal hypertension." },
+    { "title": "Oncology Interventions", "description": "Tumor biopsy, thyroid & parathyroid ablation, PICC and chemo-port placement." },
+    { "title": "Renal & Dialysis Disorders", "description": "Dialysis access issues, kidney tumors, renal biopsies." },
+    { "title": "Varicose Veins & Men's/Women's Health", "description": "Varicocele, fibroids, AVMs, BPH, and venous insufficiency." }
+  ],
+  "procedures": [
+    { "title": "Liver Interventions (RFA, Microwave, TACE, TARE)", "description": "Advanced minimally invasive treatment for liver cancers." },
+    { "title": "TIPS & BRTO", "description": "Portal hypertension and variceal bleeding management." },
+    { "title": "PTBD & Liver Transplant Interventions", "description": "Biliary drainage and transplant-related procedures." },
+    { "title": "Uterine & Prostate Artery Embolisation", "description": "Minimally invasive treatment for fibroids and BPH." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Kaloo perform liver cancer procedures like TACE or TARE?", "answer": "Yes, he specializes in advanced liver and biliary interventions including TACE, TARE and ablation." },
+    { "question": "Does he treat varicocele and fibroids?", "answer": "Yes, he performs embolisation procedures for varicocele, fibroids and AVMs." },
+    { "question": "Does he perform dialysis access and kidney interventions?", "answer": "Yes, he performs dialysis catheter placement, fistula salvage and kidney tumor cryoablation." }
+  ]
+},
+{
+  "slug": "dr-rashmi-malik",
+  "name": "Dr. Rashmi Malik",
+  "specialty": "Dermatology",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Panchsheel Park | Max Hospital – Gurugram",
+  "experience": "26+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Dermatology",
+  "degree": "MBBS | MD (Dermatology) | Diploma in Dermatology (Royal College of Physicians & Surgeons, Glasgow)",
+  "about": "Dr. Rashmi Malik is an experienced dermatologist with over 26 years in clinical dermatology and pediatric dermatology. She has worked extensively in the UK at London and Glasgow University Hospitals before joining Max Healthcare in 2006. She specializes in skin disorders across all age groups, with a special interest in paediatric dermatology and chronic dermatological conditions.",
+  "medicalProblems": [
+    { "title": "Paediatric Skin Conditions", "description": "Eczema, infections, birthmarks and childhood skin allergies." },
+    { "title": "Chronic Skin Disorders", "description": "Psoriasis, dermatitis, vitiligo and urticaria management." },
+    { "title": "Hair & Scalp Issues", "description": "Hair fall, dandruff, alopecia and fungal scalp infections." },
+    { "title": "Acne & Pigmentation", "description": "Acne, melasma, post-inflammatory pigmentation and scars." }
+  ],
+  "procedures": [
+    { "title": "Skin Allergy Testing", "description": "Patch testing and evaluation for allergic skin reactions." },
+    { "title": "Pediatric Dermatology Treatments", "description": "Specialized care for childhood skin disorders." },
+    { "title": "Laser & Aesthetic Dermatology", "description": "Laser treatments, pigmentation therapy and rejuvenation." },
+    { "title": "Cryotherapy & Minor Procedures", "description": "Wart removal, mole removal and other dermatologic procedures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Rashmi Malik treat paediatric skin problems?", "answer": "Yes, paediatric dermatology is one of her primary specialties." },
+    { "question": "Does she offer laser dermatology treatments?", "answer": "Yes, she provides laser and aesthetic dermatology services." },
+    { "question": "Does she handle chronic skin conditions?", "answer": "Yes, she has extensive experience in treating psoriasis, vitiligo, eczema and other long-term conditions." }
+  ]
+},
+{
+  "slug": "dr-vikram-kumar",
+  "name": "Dr. Vikram Kumar",
+  "specialty": "Paediatric Gastroenterology, Hepatology & Liver Transplant",
+  "hospital": "Max Hospital – Vaishali | Max Hospital – Saket Smart | Max Hospital – Patparganj | Max Hospital – Saket West | Max Hospital – Saket East",
+  "experience": "19+ years",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Principal Consultant – Paediatric Liver Transplantation, Gastroenterology & Hepatology",
+  "degree": "MBBS | MD (Paediatrics, AIIMS New Delhi)",
+  "about": "Dr. Vikram Kumar is a leading Paediatric Gastroenterologist and Liver Transplant specialist with 19+ years of diverse clinical experience at top institutions like AIIMS, Medanta and Fortis. He has worked in international vaccine trials, contributed to major paediatric liver research, and has published extensively in national and international journals. He is known for his expertise in paediatric liver diseases, GI disorders, liver transplantation and advanced paediatric endoscopic procedures.",
+  "medicalProblems": [
+    { "title": "Paediatric Liver Diseases", "description": "Hepatitis, biliary atresia, metabolic liver disorders and acute liver failure." },
+    { "title": "Paediatric Gastrointestinal Disorders", "description": "Celiac disease, chronic diarrhoea, abdominal pain and nutritional disorders." },
+    { "title": "Paediatric Hepatology", "description": "Management of chronic liver disease, jaundice and portal hypertension in children." },
+    { "title": "Pre & Post Liver Transplant Care", "description": "Comprehensive evaluation, transplant planning and follow-up." }
+  ],
+  "procedures": [
+    { "title": "Paediatric Endoscopy & Colonoscopy", "description": "Advanced diagnostic and therapeutic GI endoscopic procedures for children." },
+    { "title": "Paediatric Liver Transplant Evaluation", "description": "Assessment and preparation for liver transplant in children." },
+    { "title": "Liver Biopsy & Hepatology Procedures", "description": "Specialized procedures for accurate liver disease diagnosis." },
+    { "title": "GI Therapeutic Procedures", "description": "Treatment for GI bleeds, foreign body removal and polyp removal." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Vikram Kumar treat paediatric liver diseases?", "answer": "Yes, he specializes in managing complex liver disorders in children including biliary atresia and hepatitis." },
+    { "question": "Does he perform paediatric endoscopy?", "answer": "Yes, he is highly trained in paediatric endoscopic and colonoscopic procedures." },
+    { "question": "Is he involved in paediatric liver transplant care?", "answer": "Yes, he has extensive experience in paediatric liver transplant evaluation and management." }
+  ]
+},
+{
+  "slug": "dr-akshat-malik",
+  "name": "Dr. Akshat Malik",
+  "specialty": "Surgical Oncology, Head & Neck Oncology, Robotic Surgery",
+  "hospital": "Max Hospital – Panchsheel Park | Max Hospital – Saket Smart | Max Hospital – Saket East",
+  "experience": "7+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Head & Neck Surgical Oncology & Robotic Surgery",
+  "degree": "MBBS | MS (General Surgery) | DNB | M.Ch (Head & Neck Surgery)",
+  "about": "Dr. Akshat Malik is a highly specialized Head & Neck Oncosurgeon with advanced training from Tata Memorial Centre (Mumbai), Imperial College NHS Trust (London), Royal Marsden Hospital (London) and international fellowships in Australia and the UK. He is skilled in robotic and minimally-invasive head & neck cancer surgeries, thyroid cancer, oral cancer, skull base procedures and complex neck tumor surgeries.",
+  "medicalProblems": [
+    { "title": "Head & Neck Cancers", "description": "Oral, throat, larynx, hypopharynx, oropharyngeal and advanced neck cancers." },
+    { "title": "Thyroid & Parathyroid Tumors", "description": "Evaluation and surgical management of thyroid cancers and neck masses." },
+    { "title": "Skull Base & Paranasal Tumors", "description": "Comprehensive care for deep-seated and rare head & neck tumors." },
+    { "title": "Airway & Vocal Cord Disorders", "description": "Surgical intervention for airway obstruction, laryngeal tumors and voice-related disorders." }
+  ],
+  "procedures": [
+    { "title": "Trans-Oral Robotic Surgery (TORS)", "description": "Minimally invasive robotic surgery for throat and oropharyngeal cancers." },
+    { "title": "Trans-Oral Laser Surgery", "description": "Laser-assisted precision surgery for selected head & neck lesions." },
+    { "title": "Thyroid & Parathyroid Surgery", "description": "Advanced cancer and minimally-invasive thyroid surgeries." },
+    { "title": "Skull Base & Neck Tumor Surgery", "description": "Complex tumor resections with reconstruction." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Akshat Malik perform robotic surgeries?", "answer": "Yes, he is a certified robotic surgeon specializing in TORS and robotic thyroid/head & neck cancer surgery." },
+    { "question": "Does he treat thyroid cancer?", "answer": "Yes, he performs advanced thyroid cancer surgeries including minimally invasive approaches." },
+    { "question": "Does he manage oral cancer patients?", "answer": "Yes, he has extensive training in oral and oropharyngeal cancer treatment from Tata Memorial Centre." }
+  ]
+},
+{
+  "slug": "dr-deepali-garg-mathur",
+  "name": "Dr. Deepali Garg Mathur",
+  "specialty": "Ophthalmology",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Panchsheel Park | Max Hospital – Saket East",
+  "experience": "17+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Ophthalmology",
+  "degree": "MBBS | MS (Ophthalmology) | DNB | MNAMS",
+  "about": "Dr. Deepali Garg Mathur is an experienced ophthalmologist with over 17 years of expertise in cataract surgery, LASIK, squint and paediatric ophthalmology. She has trained at premier institutions including Maulana Azad Medical College (MAMC) and has served as Senior Resident with specialized focus on paediatric eye disorders and squint correction. She has been associated with leading eye institutes in Delhi and has multiple research contributions.",
+  "medicalProblems": [
+    { "title": "Squint & Paediatric Eye Disorders", "description": "Comprehensive treatment for strabismus and childhood vision problems." },
+    { "title": "Cataract", "description": "Diagnosis and management of cataracts in adults and children." },
+    { "title": "Refractive Errors", "description": "Myopia, hyperopia and astigmatism requiring medical or surgical correction." },
+    { "title": "Dry Eye & Ocular Surface Issues", "description": "Management of dry eye, allergies and surface inflammation." }
+  ],
+  "procedures": [
+    { "title": "Paediatric Ophthalmology & Squint Surgery", "description": "Specialized evaluation and surgical correction of squint and childhood visual problems." },
+    { "title": "Cataract Surgery", "description": "Phacoemulsification and premium lens implantation." },
+    { "title": "LASIK & Refractive Procedures", "description": "Laser vision correction for refractive errors." },
+    { "title": "Ocular Surface Procedures", "description": "Management of pterygium, chalazion and minor lid surgeries." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Deepali Garg Mathur perform squint surgery?", "answer": "Yes, she is highly experienced in paediatric ophthalmology and squint correction." },
+    { "question": "Does she perform cataract surgery?", "answer": "Yes, she is trained in modern cataract surgery with advanced IOL options." },
+    { "question": "Does she handle paediatric eye cases?", "answer": "Yes, she specializes in childhood eye diseases, squint and refractive issues." }
+  ]
+},
+{
+  "slug": "dr-pankaj-panwar",
+  "name": "Dr. Pankaj Panwar",
+  "specialty": "Uro-Oncology, Robotic Surgery, Surgical Oncology",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "—",
+  "image": "",
+  "isTopDoctor": true,
+  "position": "Principal Consultant – Uro-Oncology & Robotic Surgery",
+  "degree": "MBBS | MS (General Surgery) | MRCS (Edinburgh) | MCh (Urology, PGIMER Chandigarh) | FRCS (Urology, UK)",
+  "about": "Dr. Pankaj Panwar is an internationally trained Uro-Oncologist and Robotic Surgeon with extensive experience in advanced urological cancers, minimally invasive surgeries, robotic procedures and kidney transplant-related surgeries. He has worked at leading centers in the UK including University Hospitals of North Midlands and Guy’s Hospital, London. He has also completed prestigious fellowships in robotic uro-oncology across Europe. He has multiple publications in international journals and is a recipient of numerous global awards and surgical fellowships.",
+  "medicalProblems": [
+    { "title": "Bladder Cancer", "description": "Diagnosis and surgical management including robotic radical cystectomy." },
+    { "title": "Prostate Cancer", "description": "Evaluation, biopsy, staging and robotic radical prostatectomy." },
+    { "title": "Kidney Cancer", "description": "Management of renal masses with robotic partial or radical nephrectomy." },
+    { "title": "Testicular & Penile Cancer", "description": "Comprehensive surgical care for rare and complex urological cancers." }
+  ],
+  "procedures": [
+    { "title": "Robotic Radical Prostatectomy", "description": "Minimally invasive robotic surgery for prostate cancer." },
+    { "title": "Robotic Partial Nephrectomy", "description": "Kidney tumor removal with nephron-sparing techniques." },
+    { "title": "Robotic Radical Cystectomy", "description": "Bladder cancer surgery with ileal conduit or neobladder reconstruction." },
+    { "title": "Adrenal & Complex Reconstructive Procedures", "description": "Robotic adrenalectomy, ureteric reimplantation and advanced uro-oncology surgeries." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Pankaj Panwar specialize in robotic cancer surgery?", "answer": "Yes, he is extensively trained in robotic uro-oncology procedures including prostate, kidney and bladder cancers." },
+    { "question": "Does he treat prostate and bladder cancer?", "answer": "Yes, he offers advanced management and robotic surgical treatment for prostate and bladder cancers." },
+    { "question": "Does he perform minimally invasive kidney tumor surgery?", "answer": "Yes, he performs robotic partial and radical nephrectomy for kidney cancer." }
+  ]
+},
+{
+  "slug": "dr-aman-popli",
+  "name": "Dr. Aman Popli",
+  "specialty": "Cosmetic Dentistry, Prosthodontics & Implantology",
+  "hospital": "Max Hospital – Dwarka | Max Hospital – Panchsheel Park | Max Hospital – Gurugram | Max Hospital – Saket East",
+  "experience": "28+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Principal Consultant – Cosmetic Dentistry, Prosthodontics & Implantology",
+  "degree": "BDS | MDS (Prosthodontics) | Diplomate, World Congress of Oral Implantology (Japan)",
+  "about": "Dr. Aman Popli is a senior Prosthodontist, Cosmetic Dentist and Implantologist with over 28 years of clinical experience. He has been associated with Max Healthcare for over 20 years and has extensive expertise in full mouth rehabilitation, crowns, dentures, implants, aesthetic dentistry and TMJ-related issues. He is a key opinion leader in oral rehabilitation, has trained nationally and internationally, and has held editorial and leadership roles in dental organizations.",
+  "medicalProblems": [
+    { "title": "Missing Teeth & Tooth Loss", "description": "Implants, dentures and prosthetic rehabilitation for partial or complete tooth loss." },
+    { "title": "Cosmetic Dental Issues", "description": "Smile design, veneers, aesthetic restorations and ceramic crowns." },
+    { "title": "TMJ Disorders", "description": "Diagnosis and treatment for jaw joint pain, clicking and dysfunction." },
+    { "title": "Tooth Decay & Structural Damage", "description": "Restorative treatments for damaged, worn-out or decayed teeth." }
+  ],
+  "procedures": [
+    { "title": "Full Mouth Rehabilitation", "description": "Comprehensive aesthetic and functional reconstruction of the entire dentition." },
+    { "title": "Dental Implants & Implant Suprastructures", "description": "Advanced implant placement and prosthetic restorations including overdentures." },
+    { "title": "Crown & Bridge Work", "description": "All-ceramic, zirconia and cosmetic crown & bridge restorations." },
+    { "title": "Aesthetic Dentistry & Smile Design", "description": "Veneers, laminates and cosmetic enhancements for smile correction." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Aman Popli perform full mouth rehabilitation?", "answer": "Yes, he has vast experience in comprehensive dental rehabilitation including implants and prosthetics." },
+    { "question": "Does he offer cosmetic dentistry services?", "answer": "Yes, he specializes in veneers, smile design and aesthetic restorations." },
+    { "question": "Does he treat TMJ-related issues?", "answer": "Yes, he manages jaw joint problems including pain, misalignment and dysfunction." }
+  ]
+},
+{
+  "slug": "dr-deepali-bhardwaj",
+  "name": "Dr. Deepali Bhardwaj",
+  "specialty": "Dermatology",
+  "hospital": "Max Hospital – Saket West",
+  "experience": "15+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Senior Consultant – Dermatology",
+  "degree": "MBBS | DVDL | MD (IM) | FEADV (Germany) | FAAD (Iran)",
+  "about": "Dr. Deepali Bhardwaj is an award-winning dermatologist with extensive experience in clinical dermatology, cosmetic dermatology, lasers, allergy management, anti-ageing treatments and hair restoration. She has served as Honorary Dermatologist at the President Estate Clinic (Rashtrapati Bhawan) and as Visiting Faculty at AIIMS Rishikesh. She is known for her expertise in advanced dermatological procedures, innovative allergy treatments, vitiligo grafting, scar revision, and hair transplantation.",
+  "medicalProblems": [
+    { "title": "Skin Allergies", "description": "Comprehensive allergy testing and treatment for chronic skin reactions." },
+    { "title": "Acne & Acne Scars", "description": "Advanced medical therapy and scar revision using lasers and chemical peels." },
+    { "title": "Pigmentation Disorders", "description": "Melasma, freckles and uneven skin tone correction." },
+    { "title": "Hair Loss & Scalp Disorders", "description": "FUE hair transplantation and medical hair restoration." }
+  ],
+  "procedures": [
+    { "title": "Laser Treatments", "description": "Laser resurfacing, scar revision, pigmentation and anti-ageing laser procedures." },
+    { "title": "Injectables (Botox, Fillers, Threads)", "description": "Non-surgical facial rejuvenation and anti-ageing solutions." },
+    { "title": "Vitiligo Surgery (SSTG & Grafting)", "description": "Skin grafting and innovative vitiligo surgical techniques." },
+    { "title": "Hair Transplantation", "description": "FUE and strip method hair restoration." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Deepali treat acne scars?", "answer": "Yes, she specializes in laser resurfacing and scar revision for acne scars." },
+    { "question": "Does she perform hair transplantation?", "answer": "Yes, she performs FUE and strip method hair transplant procedures." },
+    { "question": "Does she provide anti-ageing treatments?", "answer": "Yes, she offers Botox, fillers, thread lifts and advanced laser anti-ageing treatments." }
+  ]
+},
+{
+  "slug": "dr-muzaffer-rashid-shawl",
+  "name": "Dr. Muzaffer Rashid Shawl",
+  "specialty": "Gastroenterology, Hepatology & Endoscopy",
+  "hospital": "Max Hospital – Saket Smart | Max Hospital – Saket East | Max Hospital – Saket West",
+  "experience": "7+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Senior Consultant – Gastroenterology, Hepatology & Endoscopy",
+  "degree": "MBBS | MD (Medicine) | DNB (Gastroenterology)",
+  "about": "Dr. Muzaffer Rashid Shawl is a Gastroenterologist and Hepatologist with expertise in endoscopy, gastrointestinal tumors, liver diseases and pancreatic disorders. He has previously served as Assistant Professor at HAHC Hospital and has worked across multiple reputed institutes. He has been recognized for academic excellence and has presented award-winning research on chronic kidney disease and liver donor assessments.",
+  "medicalProblems": [
+    { "title": "Liver Diseases", "description": "Management of fatty liver, hepatitis, liver inflammation and liver-related complications." },
+    { "title": "Pancreatic Disorders", "description": "Evaluation and treatment of acute and chronic pancreatitis." },
+    { "title": "Gastrointestinal Tumors", "description": "Diagnosis and treatment of cancers of the digestive tract." },
+    { "title": "Acid Reflux & Digestive Disorders", "description": "GERD, bloating, indigestion and functional bowel issues." }
+  ],
+  "procedures": [
+    { "title": "Diagnostic & Therapeutic Endoscopy", "description": "Upper GI endoscopy, biopsies and therapeutic interventions." },
+    { "title": "Colonoscopy", "description": "Screening and diagnosis for colon diseases and polyps." },
+    { "title": "Liver & Pancreas Evaluation", "description": "Advanced liver function assessment and pancreas-related interventions." },
+    { "title": "Tumor Evaluation & Biopsy", "description": "Endoscopic diagnosis and guided biopsy for GI tumors." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Muzaffer treat liver disease?", "answer": "Yes, he treats fatty liver, hepatitis and complex liver conditions." },
+    { "question": "Does he perform endoscopy?", "answer": "Yes, he performs diagnostic and therapeutic endoscopy routinely." },
+    { "question": "Does he manage pancreatic disorders?", "answer": "Yes, he evaluates and treats both acute and chronic pancreatitis." }
+  ]
+},
+{
+  "slug": "dr-upasana-singh",
+  "name": "Dr. Upasana Singh",
+  "specialty": "Dental Care",
+  "hospital": "Max Hospital – Dwarka | Max Hospital – Gurugram | Max Hospital – Saket East",
+  "experience": "20+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Senior Consultant – Dental",
+  "degree": "BDS | Certification in Cosmetic Dentistry (New York)",
+  "about": "Dr. Upasana Singh is a highly experienced dental surgeon with over 20 years in clinical dentistry. She has been associated with Max Healthcare since 2009 and previously worked at Air Force Station, New Delhi. She specializes in cosmetic dentistry, smile enhancement, teeth whitening and full mouth rehabilitation. Her expertise also includes preventive dental care and restorative procedures.",
+  "medicalProblems": [
+    { "title": "Cosmetic Dental Issues", "description": "Smile enhancement, discoloration, chipped teeth and aesthetic concerns." },
+    { "title": "Tooth Decay & Cavities", "description": "Diagnosis and treatment of dental caries and damaged teeth." },
+    { "title": "Missing Teeth", "description": "Rehabilitation with crowns, bridges and dentures." },
+    { "title": "Gum & Oral Health Problems", "description": "Management of gingivitis, sensitivity and oral hygiene issues." }
+  ],
+  "procedures": [
+    { "title": "Cosmetic Dentistry", "description": "Smile makeover, veneers and aesthetic restorations." },
+    { "title": "Teeth Whitening", "description": "Professional whitening treatments for enhanced smile brightness." },
+    { "title": "Full Mouth Rehabilitation", "description": "Restoring function and aesthetics using crowns, bridges and dentures." },
+    { "title": "Routine Dental Procedures", "description": "Fillings, scaling, polishing and preventive dental care." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Upasana Singh specialize in cosmetic dentistry?", "answer": "Yes, she is certified in cosmetic dentistry from New York and performs a wide range of aesthetic dental procedures." },
+    { "question": "Does she perform teeth whitening?", "answer": "Yes, she offers professional whitening treatments for brighter smiles." },
+    { "question": "Does she offer full mouth rehabilitation?", "answer": "Yes, she provides comprehensive restorative treatments including crowns, bridges and dentures." }
+  ]
+},
+{
+  "slug": "dr-swetal-chouhan",
+  "name": "Dr. Swetal Chouhan",
+  "specialty": "Rheumatology",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Gurugram | Max Hospital – Saket Smart | Max Hospital – Saket East",
+  "experience": "11+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Consultant – Rheumatology",
+  "degree": "MBBS | DNB (Internal Medicine) | Fellowship in Rheumatology (Max Institute of Medical Sciences) | EULAR Rheumatology Certification",
+  "about": "Dr. Swetal Chouhan is a Consultant Rheumatologist with over 11 years of experience in diagnosing and treating autoimmune and inflammatory rheumatic diseases. She has completed two years of fellowship in Rheumatology, received EULAR-accredited training, and has expertise in arthritis, autoimmune disorders, musculoskeletal ultrasound, vasculitis and systemic autoimmune diseases.",
+  "medicalProblems": [
+    { "title": "Rheumatoid Arthritis", "description": "Diagnosis and long-term management of inflammatory joint disease." },
+    { "title": "Spondyloarthritis", "description": "Treatment for ankylosing spondylitis and related inflammatory spine conditions." },
+    { "title": "Systemic Lupus Erythematosus (SLE)", "description": "Evaluation and management of autoimmune lupus disorders." },
+    { "title": "Vasculitis & Autoimmune Disorders", "description": "Care for complex immune-mediated conditions affecting multiple organs." }
+  ],
+  "procedures": [
+    { "title": "Musculoskeletal Ultrasound", "description": "Ultrasound-based assessment of joints, tendons and inflammatory activity." },
+    { "title": "Arthritis Management Plans", "description": "Medical therapy and long-term disease control for arthritis patients." },
+    { "title": "Autoimmune Disease Treatment", "description": "Advanced immunotherapy-based treatment for systemic autoimmune conditions." },
+    { "title": "Biologic Therapy Initiation", "description": "Evaluation and initiation of biologics for severe rheumatic diseases." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Swetal treat rheumatoid arthritis?", "answer": "Yes, she specializes in the diagnosis and treatment of rheumatoid arthritis." },
+    { "question": "Does she perform musculoskeletal ultrasound?", "answer": "Yes, she is trained in musculoskeletal ultrasound for joint evaluation." },
+    { "question": "Does she treat autoimmune and vasculitis disorders?", "answer": "Yes, she manages a wide range of autoimmune diseases including vasculitis and lupus." }
+  ]
+},
+{
+  "slug": "dr-karandeep-guleria",
+  "name": "Dr. Karandeep Guleria",
+  "specialty": "Urology, Kidney Transplant, Uro-Oncology, Robotic Surgery",
+  "hospital": "Max Hospital – Saket East",
   "experience": "10+ years",
   "image": "",
   "isTopDoctor": false,
-  "position": "Consultant – Dental Care & Implantology",
-  "degree": "BDS | Clinical Associate (MAIDS)",
-  "about": "Dr. Vijay Lakshmi Thakur is an experienced dental surgeon specializing in preventive dentistry, restorative procedures, prosthodontics and oral pathology. She has worked with MAIDS and has over 8 years of experience at Max Healthcare.",
+  "position": "Consultant – Urology, Kidney Transplant, Robotics & Uro-Oncology",
+  "degree": "MBBS | MS (General Surgery) | MCh (Urology & Renal Transplant, ABVIMS & RML) | Fellowship in Uro-Oncology & Robotic Surgery (Vattikuti Foundation, USA)",
+  "about": "Dr. Karandeep Guleria is a Urologist and Robotic Surgeon with advanced training in Uro-Oncology, Renal Transplant, Endourology and reconstructive urology. He has trained at leading national and international institutions including the Vattikuti Foundation in the USA. He has received multiple international awards for surgical excellence and research, and has presented his work globally.",
   "medicalProblems": [
-    { "title": "Dental Infections", "description": "Tooth decay, cavities and gum infections." },
-    { "title": "Aesthetic Dental Issues", "description": "Smile correction and cosmetic dentistry." },
-    { "title": "Periodontal Disease", "description": "Gum disease and bone loss management." },
-    { "title": "Oral Pathologies", "description": "Diagnosis of oral lesions and diseases." }
+    { "title": "Kidney Stones & Urinary Obstruction", "description": "Evaluation and management of stones, obstruction and urinary tract diseases." },
+    { "title": "Prostate Disorders", "description": "Diagnosis and treatment of prostate enlargement and prostate cancer." },
+    { "title": "Urological Cancers", "description": "Management of kidney, bladder, prostate and testicular cancers." },
+    { "title": "Male Fertility & Andrology", "description": "Treatment of men's health issues including infertility and sexual dysfunction." }
   ],
   "procedures": [
-    { "title": "Cosmetic Dentistry", "description": "Smile design, veneers and whitening." },
-    { "title": "Restorative Dentistry", "description": "Fillings, crowns and bridges." },
-    { "title": "Periodontal Treatment", "description": "Scaling, root planing and gum treatment." },
-    { "title": "Pain Management", "description": "Diagnosis and treatment of dental pain." }
+    { "title": "Robotic & Laparoscopic Urological Surgeries", "description": "Minimally invasive robotic procedures for prostate, kidney and bladder conditions." },
+    { "title": "Renal Transplant Surgery", "description": "Kidney transplant procedures and postoperative care." },
+    { "title": "Endourology", "description": "Laser procedures for stones, strictures and urinary tract disorders." },
+    { "title": "Reconstructive Urology", "description": "Urethroplasty and complex reconstructive surgeries of the urinary tract." }
   ],
   "faqs": [
-    { "question": "Does Dr. Vijay Lakshmi handle cosmetic dentistry?", "answer": "Yes, she specializes in cosmetic and aesthetic procedures." },
-    { "question": "Does she manage gum diseases?", "answer": "Yes, she provides periodontal and preventive treatments." },
-    { "question": "Does she treat oral pathologies?", "answer": "Yes, including screening and diagnosis of oral diseases." }
+    { "question": "Does Dr. Karandeep perform robotic urological surgeries?", "answer": "Yes, he has advanced robotic training and performs minimally invasive urological procedures." },
+    { "question": "Does he treat kidney and bladder cancers?", "answer": "Yes, he specializes in uro-oncology and manages all major urological cancers." },
+    { "question": "Does he perform kidney transplants?", "answer": "Yes, he is trained in renal transplant surgery and related procedures." }
   ]
 },
 {
-  "slug": "dr-priyamvada-tyagi",
-  "name": "Dr. Priyamvada Tyagi",
-  "specialty": "Endocrinology & Diabetes",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "12+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Consultant – Endocrinology",
-  "degree": "DM (Endocrinology – SGPGIMS) | MD (Paediatrics) | MBBS",
-  "about": "Dr. Priyamvada Tyagi is an experienced endocrinologist trained at SGPGIMS. She specializes in diabetes, thyroid disorders, pediatric endocrinology and metabolic diseases.",
-  "medicalProblems": [
-    { "title": "Diabetes Mellitus", "description": "Type 1, Type 2 and gestational diabetes." },
-    { "title": "Thyroid Disorders", "description": "Hypothyroidism, hyperthyroidism and thyroiditis." },
-    { "title": "Hormonal Imbalances", "description": "PCOS, menstrual irregularities and metabolic issues." },
-    { "title": "Paediatric Endocrine Disorders", "description": "Growth, puberty and congenital hormone issues." }
-  ],
-  "procedures": [
-    { "title": "Diabetes Management", "description": "Glucose control, insulin therapy and monitoring." },
-    { "title": "Thyroid Evaluation", "description": "Hormonal testing and ultrasound-based assessment." },
-    { "title": "Hormonal Therapy", "description": "Treatment for endocrine imbalances." },
-    { "title": "Endocrine Testing", "description": "Comprehensive hormone panel evaluations." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Priyamvada treat thyroid disorders?", "answer": "Yes, she specializes in all thyroid-related conditions." },
-    { "question": "Does she treat pediatric endocrine issues?", "answer": "Yes, including growth and puberty disorders." },
-    { "question": "Does she manage PCOS?", "answer": "Yes, she provides hormonal and metabolic treatment for PCOS." }
-  ]
-},
-{
-  "slug": "dr-swati-upadhyay",
-  "name": "Dr. Swati Upadhyay",
-  "specialty": "Neonatology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "12+ years",
-  "image": "",
-  "isTopDoctor": true,
-  "position": "Consultant – Neonatology | Head of Department",
-  "degree": "DNB (Neonatology) | MD (Pediatrics) – Gold Medalist | MBBS",
-  "about": "Dr. Swati Upadhyay is a leading neonatologist with extensive expertise in managing premature babies, high-risk newborns, neonatal intensive care, and advanced ventilation techniques. She heads the Neonatology Department at Max Patparganj.",
-  "medicalProblems": [
-    { "title": "Premature Babies", "description": "Care for extremely low birth weight and preterm newborns." },
-    { "title": "Neonatal Respiratory Issues", "description": "Ventilation, HFOV and respiratory support." },
-    { "title": "High-Risk Newborns", "description": "Management of critical newborn conditions." },
-    { "title": "Neonatal Infections", "description": "Sepsis, jaundice and metabolic disorders." }
-  ],
-  "procedures": [
-    { "title": "Neonatal Resuscitation", "description": "Advanced resuscitation and antenatal counselling." },
-    { "title": "Ventilation Support", "description": "Conventional and advanced HFOV ventilation." },
-    { "title": "Therapeutic Hypothermia", "description": "Cooling therapy for birth asphyxia." },
-    { "title": "NICU Procedures", "description": "Central lines, dialysis and exchange transfusion." }
-  ],
-  "faqs": [
-    { "question": "Does Dr. Swati treat premature babies?", "answer": "Yes, she specializes in extremely low birth weight infants." },
-    { "question": "Does she manage neonatal ventilation?", "answer": "Yes, including HFOV and advanced respiratory support." },
-    { "question": "Does she manage high-risk newborns?", "answer": "Yes, she leads NICU care for critical newborns." }
-  ]
-},
-{
-  "slug": "dr-avesh",
-  "name": "Dr. Avesh",
-  "specialty": "Gastroenterology, Hepatology & Endoscopy",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "—",
+  "slug": "dr-lipy-gupta",
+  "name": "Dr. Lipy Gupta",
+  "specialty": "Dermatology",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Panchsheel Park",
+  "experience": "15+ years",
   "image": "",
   "isTopDoctor": false,
-  "position": "Associate Consultant – Gastroenterology",
-  "degree": "DrNB (Gastroenterology) | DNB (General Medicine) | MBBS",
-  "about": "Dr. Avesh is a gastroenterologist with advanced training in digestive diseases, liver disorders and therapeutic endoscopy. He has worked across multiple leading medical institutions and specializes in hepatobiliary and pancreatic diseases.",
+  "position": "Consultant – Dermatology, Cosmetology & Laser Medicine",
+  "degree": "MBBS | MD (Dermatology, UCMS Delhi)",
+  "about": "Dr. Lipy Gupta is an experienced dermatologist and cosmetologist with over 15 years of expertise in treating skin, hair and aesthetic concerns. She has served as Assistant Professor at Dr. RML Hospital & PGIMER and has been associated with Max Healthcare since 2013. Her clinical interest includes acne management, pigmentation correction, hair restoration and advanced anti-ageing treatments.",
   "medicalProblems": [
-    { "title": "Liver Disorders", "description": "Hepatitis, fatty liver and cirrhosis." },
-    { "title": "Pancreatic Diseases", "description": "Acute and chronic pancreatitis." },
-    { "title": "GI Diseases", "description": "Acidity, ulcers, IBS and IBD." },
-    { "title": "Biliary Disorders", "description": "Gallbladder and bile duct conditions." }
+    { "title": "Acne & Pigmentation", "description": "Treatment for acne, post-acne pigmentation and acne scars." },
+    { "title": "Hair Loss Disorders", "description": "Evaluation and procedures for hair fall, alopecia and scalp issues." },
+    { "title": "Skin Allergies & Dermatitis", "description": "Management of allergic reactions, eczema and chronic skin irritation." },
+    { "title": "Ageing & Skin Rejuvenation", "description": "Non-surgical anti-ageing treatments for fine lines and dull skin." }
   ],
   "procedures": [
-    { "title": "Endoscopy", "description": "Diagnostic and therapeutic upper GI endoscopy." },
-    { "title": "Colonoscopy", "description": "Evaluation of colon and rectum." },
-    { "title": "ERCP", "description": "Advanced procedure for bile duct and pancreatic issues." },
-    { "title": "Liver Evaluation", "description": "Diagnosis and management of liver disease." }
+    { "title": "Laser Treatments", "description": "Laser therapy for pigmentation, skin rejuvenation and scar reduction." },
+    { "title": "Botox & Fillers", "description": "Aesthetic procedures for wrinkle reduction and facial contouring." },
+    { "title": "Thread Lift", "description": "Non-surgical facial lifting and tightening procedures." },
+    { "title": "Chemical Peels", "description": "Peels for acne, glow enhancement and pigmentation control." }
   ],
   "faqs": [
-    { "question": "Does Dr. Avesh treat liver disease?", "answer": "Yes, he specializes in hepatology and liver disorders." },
-    { "question": "Does he perform ERCP?", "answer": "Yes, he performs diagnostic and therapeutic ERCP." },
-    { "question": "Does he treat pancreatic issues?", "answer": "Yes, including pancreatitis and ductal diseases." }
+    { "question": "Does Dr. Lipy Gupta treat acne and acne scars?", "answer": "Yes, she specializes in acne management, pigmentation and scar correction." },
+    { "question": "Does she perform laser and anti-ageing procedures?", "answer": "Yes, she offers lasers, Botox, fillers and advanced rejuvenation treatments." },
+    { "question": "Does she treat hair fall?", "answer": "Yes, she manages hair loss disorders and provides hair restoration therapies." }
   ]
 },
 {
-  "slug": "dr-aamir-iqbal",
-  "name": "Dr. Aamir Iqbal",
-  "specialty": "Minimal Access, Bariatric & Robotic Surgery",
-  "hospital": "Max Medcentre – Meerut | Max Hospital – Patparganj",
-  "experience": "—",
+  "slug": "dr-mukesh-kumar",
+  "name": "Dr. Mukesh Kumar",
+  "specialty": "Liver Transplant & Biliary Sciences",
+  "hospital": "Max Hospital – Saket West",
+  "experience": "11+ years",
   "image": "",
   "isTopDoctor": false,
-  "position": "Associate Consultant – Minimal Access, Bariatric & Robotic Surgery",
-  "degree": "FNB (Minimal Access Surgery) | MS (General Surgery) | MBBS",
-  "about": "Dr. Aamir Iqbal is a minimally invasive, bariatric and robotic surgeon with experience across leading national and international centers. He specializes in hernia surgeries, bariatric procedures and advanced robotic techniques.",
+  "position": "Consultant – Centre for Liver & Biliary Sciences",
+  "degree": "MBBS | MS (General Surgery) | DrNB (Surgical Gastroenterology) | Fellowships in HPB & Liver Transplant Surgery (Max Healthcare & Seoul National University, South Korea)",
+  "about": "Dr. Mukesh Kumar is a skilled Liver Transplant and HPB (Hepato-Pancreato-Biliary) surgeon with advanced training from Seoul National University Hospital, South Korea, and Max Hospital, Delhi. He has extensive experience in living and deceased donor liver transplantation, complex HPB surgeries, robotic and laparoscopic procedures, and pediatric liver transplant surgeries. He has been part of major national and international conferences and has multiple scientific publications.",
   "medicalProblems": [
-    { "title": "Hernias", "description": "Inguinal, ventral, umbilical and recurrent hernias." },
-    { "title": "Gallbladder Disease", "description": "Gallstones and gallbladder inflammation." },
-    { "title": "Obesity", "description": "Management through bariatric surgical options." },
-    { "title": "Anorectal Disorders", "description": "Fistula, fissure and hemorrhoids." }
+    { "title": "Liver Failure", "description": "Evaluation and management of acute and chronic liver failure requiring transplant." },
+    { "title": "Liver Cirrhosis & Portal Hypertension", "description": "Comprehensive care for cirrhosis, complications and portal pressure disorders." },
+    { "title": "HPB Cancers", "description": "Management of liver, pancreas and biliary tract cancers." },
+    { "title": "Gallbladder & Biliary Disorders", "description": "Treatment for gallstones, biliary obstruction and congenital biliary conditions." }
   ],
   "procedures": [
-    { "title": "Robotic Surgery", "description": "Advanced robotic-assisted surgeries." },
-    { "title": "Laparoscopic Hernia Repair", "description": "Minimally invasive hernia treatment." },
-    { "title": "Bariatric Surgery", "description": "Weight-loss surgeries for obesity management." },
-    { "title": "Gallbladder Removal", "description": "Laparoscopic cholecystectomy." }
+    { "title": "Living & Deceased Donor Liver Transplantation", "description": "Complete transplant evaluation, surgery and postoperative care." },
+    { "title": "Robotic & Laparoscopic HPB Surgeries", "description": "Minimally invasive surgeries for hepatobiliary and pancreatic diseases." },
+    { "title": "Whipple Surgery", "description": "Advanced pancreatic surgery for cancer and complex lesions." },
+    { "title": "Pediatric Liver Transplant", "description": "Specialized transplant and biliary atresia surgeries for children." }
   ],
   "faqs": [
-    { "question": "Does Dr. Aamir perform robotic surgery?", "answer": "Yes, he is trained in advanced robotic and laparoscopic surgery." },
-    { "question": "Does he operate on hernias?", "answer": "Yes, including all types of abdominal hernias." },
-    { "question": "Does he perform bariatric surgery?", "answer": "Yes, he treats obesity through modern bariatric techniques." }
+    { "question": "Does Dr. Mukesh Kumar perform liver transplants?", "answer": "Yes, he specializes in living and deceased donor liver transplantation." },
+    { "question": "Does he perform robotic liver surgery?", "answer": "Yes, he is trained in robotic and laparoscopic HPB & donor surgeries." },
+    { "question": "Does he treat liver and pancreatic cancers?", "answer": "Yes, he manages a wide range of HPB cancers with advanced surgical care." }
   ]
 },
 {
-  "slug": "dr-apurva-tomar",
-  "name": "Dr. Apurva Tomar",
-  "specialty": "Paediatric Neurology",
-  "hospital": "Max Hospital – Patparganj | Max Hospital – Vaishali",
-  "experience": "—",
+  "slug": "dr-shakuntala-naglot",
+  "name": "Dr. Shakuntala Naglot",
+  "specialty": "ENT (Ear, Nose & Throat)",
+  "hospital": "Max Hospital – Dwarka | Max Hospital – Saket East",
+  "experience": "16+ years",
   "image": "",
-  "isTopDoctor": true,
-  "position": "Associate Consultant – Paediatric Neurology",
-  "degree": "DM (Paediatric Neurology – AIIMS) | MD (Paediatrics) | MBBS",
-  "about": "Dr. Apurva Tomar is a paediatric neurologist trained at AIIMS with expertise in epilepsy, developmental disorders, neurometabolic diseases, paediatric stroke and neuromuscular disorders. She is known for managing complex neurological conditions in children.",
+  "isTopDoctor": false,
+  "position": "Consultant – ENT",
+  "degree": "MBBS | MS (ENT, Lady Hardinge Medical College)",
+  "about": "Dr. Shakuntala Naglot is an experienced ENT specialist with over 16 years of clinical experience. She completed her MBBS and MS in ENT from Lady Hardinge Medical College, New Delhi, followed by senior residency training. She has expertise in managing ear diseases, pediatric ENT conditions and routine ENT surgeries with a patient-focused approach.",
   "medicalProblems": [
-    { "title": "Paediatric Epilepsy", "description": "Seizures, recurrent seizures and treatment-resistant epilepsy." },
-    { "title": "Developmental Disorders", "description": "Autism, ADHD, language and developmental delays." },
-    { "title": "Neurometabolic Disorders", "description": "Genetic and metabolic neurological diseases." },
-    { "title": "Paediatric Stroke", "description": "Diagnosis and management of childhood stroke." }
+    { "title": "Ear Infections & Hearing Issues", "description": "Management of chronic ear infections, hearing loss and ear discharge." },
+    { "title": "Throat & Voice Disorders", "description": "Treatment for tonsillitis, hoarseness, sore throat and swallowing issues." },
+    { "title": "Nasal & Sinus Problems", "description": "Deviated septum, sinusitis, nasal blockage and allergy-related issues." },
+    { "title": "Pediatric ENT Conditions", "description": "Specialised care for ENT issues in children including adenoids and tonsils." }
   ],
   "procedures": [
-    { "title": "Neurological Evaluation", "description": "Comprehensive assessment of the nervous system." },
-    { "title": "EEG & Neurodiagnostics", "description": "Brain-wave monitoring for seizure disorders." },
-    { "title": "Developmental Assessment", "description": "Evaluation of cognitive, speech and behavioral development." },
-    { "title": "Neuromuscular Testing", "description": "Investigation for neuromuscular and degenerative diseases." }
+    { "title": "Ear Surgeries", "description": "Ear drum repair, middle ear procedures and microsurgery for hearing improvement." },
+    { "title": "Pediatric ENT Procedures", "description": "Tonsillectomy, adenoidectomy and management of childhood ENT disorders." },
+    { "title": "Endoscopic Sinus Surgery", "description": "Minimally invasive surgery for sinusitis and nasal obstruction." },
+    { "title": "Microlaryngeal Surgery", "description": "Surgery for voice disorders and vocal cord abnormalities." }
   ],
   "faqs": [
-    { "question": "Does Dr. Apurva treat epilepsy in children?", "answer": "Yes, she specializes in paediatric epilepsy management." },
-    { "question": "Does she treat developmental disorders?", "answer": "Yes, including autism, ADHD and developmental delays." },
-    { "question": "Does she treat paediatric stroke?", "answer": "Yes, she manages acute and chronic stroke conditions in children." }
+    { "question": "Does Dr. Shakuntala treat children's ENT problems?", "answer": "Yes, she has expertise in pediatric ENT issues including tonsils and adenoids." },
+    { "question": "Does she perform ear surgeries?", "answer": "Yes, she performs a variety of ear-related surgical procedures." },
+    { "question": "Does she treat sinus and nasal problems?", "answer": "Yes, she manages sinusitis, allergies and nasal blockages including endoscopic procedures." }
   ]
 },
 {
-  "slug": "dr-anamika-chaudhary",
-  "name": "Dr. Anamika Chaudhary",
+  "slug": "dr-vaishali-paliwal",
+  "name": "Dr. Vaishali Paliwal",
+  "specialty": "Gynaecologic Oncology",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "10+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Consultant – Gynaecologic Oncology",
+  "degree": "MBBS | MS (Obstetrics & Gynaecology, MAMC Delhi) | MCh (Gynaecologic Oncology, Tata Memorial Centre) | MRCOG (UK) | ESGO Certification | Fellowships in Minimal Access & Robotic Surgery",
+  "about": "Dr. Vaishali Paliwal is a dedicated Gynaecologic Oncologist trained at India’s top cancer institute, Tata Memorial Centre, Mumbai. She specializes in advanced cancer surgeries, minimally invasive (laparoscopic & robotic) gynecologic oncology, HIPEC, and PIPAC procedures. She has contributed to surgical innovations including the Bakri Balloon technique in pelvic exenteration and has been part of major oncology trials at TMC. With extensive national and international training, she brings expertise in comprehensive women’s cancer care.",
+  "medicalProblems": [
+    { "title": "Cervical Cancer", "description": "Evaluation and surgical management of early and advanced cervical cancers." },
+    { "title": "Ovarian Cancer", "description": "Diagnosis, staging and treatment of ovarian malignancies." },
+    { "title": "Endometrial & Uterine Cancers", "description": "Comprehensive care for endometrial cancer with minimally invasive approaches." },
+    { "title": "Gynecologic Pre-cancer Lesions", "description": "Management of CIN, complex ovarian masses and high-risk lesions." }
+  ],
+  "procedures": [
+    { "title": "Gynaecologic Cancer Surgeries", "description": "Radical hysterectomy, staging procedures and tumor debulking surgeries." },
+    { "title": "Minimal Access Surgery (Laparoscopic & Robotic)", "description": "Advanced minimally invasive surgery for gynecologic cancers." },
+    { "title": "HIPEC", "description": "Hyperthermic Intraperitoneal Chemotherapy for advanced ovarian cancer." },
+    { "title": "PIPAC Procedure", "description": "Pressurised Intra-Peritoneal Aerosolised Chemotherapy for recurrent peritoneal cancers." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Vaishali Paliwal perform robotic gynecologic cancer surgeries?", "answer": "Yes, she is trained in robotic and laparoscopic oncology procedures." },
+    { "question": "Does she treat ovarian and cervical cancers?", "answer": "Yes, she specializes in the complete surgical management of women’s cancers." },
+    { "question": "Does she perform HIPEC and PIPAC procedures?", "answer": "Yes, she is trained in HIPEC and PIPAC for advanced and recurrent cancers." }
+  ]
+},
+{
+  "slug": "somya-shrivastava",
+  "name": "Somya Shrivastava",
+  "specialty": "Dietetics, Nutrition & Dietetics",
+  "hospital": "Max Hospital – Saket East | Max Hospital – Saket West",
+  "experience": "19+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Consultant – Dietetics & Clinical Nutrition",
+  "degree": "B.Sc (Home Science, Lady Irwin College) | M.Sc (Food & Nutrition, M.H. College of Science & Home Science) | Certifications in Critical Care Nutrition, Sports Nutrition, Diabetes Education & Pediatric Nutrition | Trained Bariatric Nutritionist",
+  "about": "Somya Shrivastava is a senior clinical nutritionist with over 19 years of experience in therapeutic nutrition, bariatric nutrition, sports nutrition, and critical care dietary management. She has been associated with Max Healthcare for more than 12 years and has contributed extensively to clinical research, national and international presentations, bariatric programs, and public health nutrition initiatives. She is known for creating customized diet plans for chronic diseases, weight management and metabolic disorders.",
+  "medicalProblems": [
+    { "title": "Obesity & Weight Management", "description": "Bariatric nutrition, weight loss planning and metabolic health improvement." },
+    { "title": "Diabetes & Metabolic Disorders", "description": "Diet plans tailored for blood sugar control and insulin resistance." },
+    { "title": "Pediatric Nutrition", "description": "Nutritional care for children including deficiencies and special needs diets." },
+    { "title": "Critical Care Nutrition", "description": "Therapeutic diets for ICU patients and chronic illness recovery." }
+  ],
+  "procedures": [
+    { "title": "Personalized Diet Plans", "description": "Condition-specific nutrition plans for lifestyle diseases and long-term health." },
+    { "title": "Bariatric Nutrition Support", "description": "Pre- and post-bariatric surgery nutrition guidance." },
+    { "title": "Sports Nutrition Planning", "description": "Nutrition strategies for athletes and fitness-focused individuals." },
+    { "title": "Clinical Nutrition Counseling", "description": "Therapeutic nutrition for cardiac, renal, hepatic and metabolic conditions." }
+  ],
+  "faqs": [
+    { "question": "Does Somya Shrivastava specialize in bariatric nutrition?", "answer": "Yes, she is a trained bariatric nutritionist with expertise in pre- and post-surgery dietary care." },
+    { "question": "Does she provide diet plans for diabetes?", "answer": "Yes, she offers customized nutrition programs for diabetes and metabolic syndrome." },
+    { "question": "Does she offer pediatric nutrition guidance?", "answer": "Yes, she is certified in pediatric nutrition and provides child-specific diet plans." }
+  ]
+},
+{
+  "slug": "dr-vivek-vasudeo",
+  "name": "Dr. Vivek Vasudeo",
+  "specialty": "Urology & Robotic Surgery",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "5+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Consultant – Urology & Robotic Surgery",
+  "degree": "MBBS | MS (General Surgery) | MCh (Urology) | Fellowship in Uro-Oncology & Robotic Surgery",
+  "about": "Dr. Vivek Vasudeo is a skilled urologist and robotic surgeon with extensive experience in uro-oncology and minimally invasive procedures. He has trained and worked at leading institutes including Rajiv Gandhi Cancer Institute & Research Centre and Sardar Patel Medical College. His expertise includes robotic prostate, kidney, and bladder cancer surgeries, advanced endourology, reconstructive urology, and complex oncological procedures.",
+  "medicalProblems": [
+    { "title": "Prostate Disorders", "description": "Management of prostate cancer, BPH and prostate-related conditions." },
+    { "title": "Kidney & Bladder Tumors", "description": "Evaluation and treatment of urological cancers through minimally invasive surgery." },
+    { "title": "Ureteric & Urinary Tract Issues", "description": "Treatment for strictures, stones and reconstructive urinary conditions." },
+    { "title": "Male Reproductive & Sexual Health", "description": "Andrology-related disorders, infertility and men’s urological health." }
+  ],
+  "procedures": [
+    { "title": "Robotic Prostatectomy", "description": "Robot-assisted radical prostate removal including Retzius-sparing technique." },
+    { "title": "Robotic Kidney Surgeries", "description": "Partial and radical nephrectomy for kidney tumors." },
+    { "title": "Robotic Cystectomy", "description": "Bladder cancer surgery with ileal conduit or neobladder reconstruction." },
+    { "title": "Advanced Endourology", "description": "Fusion prostate biopsy, ureteroscopy, laser stone removal and other minimally invasive procedures." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Vivek Vasudeo perform robotic prostate cancer surgery?", "answer": "Yes, he specializes in robot-assisted radical prostatectomy, including advanced techniques." },
+    { "question": "Does he perform surgery for kidney and bladder cancers?", "answer": "Yes, he is trained in robotic and minimally invasive surgeries for urological cancers." },
+    { "question": "Does he offer advanced endourological procedures?", "answer": "Yes, he performs fusion biopsies, stone surgeries and reconstructive procedures." }
+  ]
+},
+{
+  "slug": "dr-shefali-yadav",
+  "name": "Dr. Shefali Yadav",
+  "specialty": "Paediatric Cardiology",
+  "hospital": "Max Hospital – Saket East",
+  "experience": "5+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Associate Consultant – Paediatric Cardiology",
+  "degree": "MBBS | MD (Paediatrics, MAMC Delhi) | DNB (Paediatrics) | DrNB (Paediatric Cardiology, Medanta)",
+  "about": "Dr. Shefali Yadav is a dedicated Paediatric Cardiologist trained at leading institutes including Medanta – The Medicity and Maulana Azad Medical College. She has extensive experience in diagnosing and managing congenital and acquired heart diseases in infants, children and adolescents. She has presented clinical research at major international paediatric cardiology conferences and has special expertise in fetal echocardiography, paediatric heart failure, and cardiac catheterisation.",
+  "medicalProblems": [
+    { "title": "Congenital Heart Defects", "description": "Evaluation and management of structural heart diseases in newborns and children." },
+    { "title": "Paediatric Cardiomyopathies", "description": "Diagnosis and treatment of dilated, hypertrophic and restrictive cardiomyopathies." },
+    { "title": "Paediatric Pulmonary Hypertension", "description": "Comprehensive management of high blood pressure in the lungs of children." },
+    { "title": "Paediatric Heart Failure", "description": "Advanced care for heart weakness and functional issues in young patients." }
+  ],
+  "procedures": [
+    { "title": "Cardiac Catheterisation", "description": "Diagnostic and therapeutic catheter-based procedures in paediatric patients." },
+    { "title": "Fetal Echocardiography", "description": "Heart evaluation of unborn babies for early detection of congenital anomalies." },
+    { "title": "Echocardiographic Evaluation", "description": "Advanced echo imaging for newborns, infants and children." },
+    { "title": "Interventional Paediatric Cardiology Support", "description": "Assistance and planning for device closures, angioplasty and stenting." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Shefali Yadav treat congenital heart defects?", "answer": "Yes, she specializes in diagnosing and managing congenital heart diseases in children." },
+    { "question": "Does she perform fetal echocardiography?", "answer": "Yes, she is trained in fetal echo for early detection of structural heart issues." },
+    { "question": "Does she manage paediatric heart failure and cardiomyopathies?", "answer": "Yes, she has expertise in handling complex paediatric cardiac conditions." }
+  ]
+},
+{
+  "slug": "dr-pradeep-atter",
+  "name": "Dr. Pradeep Atter",
+  "specialty": "Interventional Pain Management",
+  "hospital": "Max Hospital – Saket West",
+  "experience": "8+ years",
+  "image": "",
+  "isTopDoctor": false,
+  "position": "Associate Consultant – Interventional Pain Management",
+  "degree": "MBBS | MD (Anaesthesiology) | DM (Pain Medicine, AIIMS Rishikesh)",
+  "about": "Dr. Pradeep Atter is a highly trained interventional pain specialist with advanced expertise in minimally invasive spine interventions, cancer pain management, neuromodulation, regenerative therapies, and chronic pain disorders. Trained at AIIMS Rishikesh, he has presented his research internationally and has been part of major national pain conferences. He is skilled in cutting-edge procedures including radiofrequency ablation, vertebroplasty/kyphoplasty, sympathetic neurolysis, and intrathecal pump therapies.",
+  "medicalProblems": [
+    { "title": "Chronic Spine Pain", "description": "Back pain, disc problems, sciatica, facet joint pain and spinal degeneration." },
+    { "title": "Neuropathic Pain", "description": "Nerve pain including CRPS, trigeminal neuralgia and neuropathies." },
+    { "title": "Cancer Pain", "description": "Advanced pain-relief interventions for oncology patients." },
+    { "title": "Headache & Migraine", "description": "Interventional treatments for severe and chronic migraine conditions." }
+  ],
+  "procedures": [
+    { "title": "Minimally Invasive Spine Procedures", "description": "DiscFX, biaculoplasty, vertebroplasty, kyphoplasty and radiofrequency rhizotomy." },
+    { "title": "Neuromodulation & Nerve Procedures", "description": "Peripheral neuromodulation, trigeminal RFA, sympathetic blocks and stellate ganglion procedures." },
+    { "title": "Cancer Pain Interventions", "description": "Celiac plexus neurolysis, intrathecal drug delivery systems, and neuroablative therapies." },
+    { "title": "Regenerative Therapies", "description": "Adipose stem cell, bone marrow aspirate concentrate and growth factor treatments." }
+  ],
+  "faqs": [
+    { "question": "Does Dr. Pradeep Atter treat chronic back and spine pain?", "answer": "Yes, he specializes in minimally invasive procedures for chronic spine and nerve pain." },
+    { "question": "Does he manage cancer-related pain?", "answer": "Yes, he performs advanced neurolytic and intrathecal therapies for cancer pain." },
+    { "question": "Does he offer migraine and headache treatments?", "answer": "Yes, he provides interventional options including BOTOX and nerve ablation techniques." }
+  ]
+},
+{
+  "slug": "dr-shiveta-mattoo",
+  "name": "Dr. Shiveta Mattoo",
   "specialty": "Internal Medicine",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "—",
+  "hospital": "Max Hospital – Saket West | Max Hospital – Saket East",
+  "experience": "14+ years",
   "image": "",
   "isTopDoctor": false,
   "position": "Attending Consultant – Internal Medicine",
-  "degree": "MBBS | MD (Internal Medicine) | Fellowship in Nephrology (Max Saket)",
-  "about": "Dr. Anamika Chaudhary is an internal medicine specialist with expertise in diabetes, hypertension, thyroid disorders, infectious diseases and nephrology. She is known for her comprehensive diagnostic approach and evidence-based treatment.",
+  "degree": "MBBS | DNB (Internal Medicine) | PGDMCH (IGNOU) | PGDHA (YMCA)",
+  "about": "Dr. Shiveta Mattoo is an experienced Internal Medicine specialist with over 14 years of clinical expertise. She has worked extensively across multiple specialties including Endocrinology, Gastroenterology, Emergency Medicine, and General Internal Medicine at Max Healthcare. Her approach integrates evidence-based medicine with preventive care, focusing on diabetes, thyroid disorders, infectious diseases, and chronic medical conditions.",
   "medicalProblems": [
-    { "title": "Diabetes Mellitus", "description": "Management of Type 1, Type 2 and uncontrolled diabetes." },
-    { "title": "Hypertension", "description": "Evaluation and treatment of high blood pressure." },
-    { "title": "Thyroid Abnormalities", "description": "Hypothyroidism, hyperthyroidism and thyroiditis." },
-    { "title": "Infectious Diseases", "description": "Acute and chronic infections including viral, bacterial and parasitic." }
+    { "title": "Diabetes & Metabolic Disorders", "description": "Comprehensive evaluation and long-term management of Type 1 & Type 2 diabetes." },
+    { "title": "Thyroid Disorders", "description": "Management of hypothyroidism, hyperthyroidism and autoimmune thyroid conditions." },
+    { "title": "Infectious Diseases", "description": "Diagnosis and treatment of viral, bacterial and seasonal infections." },
+    { "title": "Gastrointestinal Conditions", "description": "Management of gastritis, liver disorders and digestive health issues." }
   ],
   "procedures": [
-    { "title": "Comprehensive Medical Evaluation", "description": "Diagnosis and long-term management of chronic conditions." },
-    { "title": "Diabetes & Thyroid Profiling", "description": "Blood tests and hormonal assessments." },
-    { "title": "Renal Assessment", "description": "Evaluation for kidney issues and nephrology support." },
-    { "title": "Infection Management", "description": "Treatment plans for common and complex infections." }
+    { "title": "Chronic Disease Management", "description": "Long-term care plans for diabetes, thyroid diseases, hypertension and metabolic disorders." },
+    { "title": "Emergency & Acute Care", "description": "Stabilisation and treatment of acute medical emergencies." },
+    { "title": "Preventive Health Care", "description": "Screening, vaccinations and lifestyle-based preventive interventions." },
+    { "title": "Infectious Disease Treatment", "description": "Care for fever, respiratory infections and viral illnesses." }
   ],
   "faqs": [
-    { "question": "Does Dr. Anamika treat diabetes?", "answer": "Yes, she specializes in diabetes and metabolic disorders." },
-    { "question": "Does she treat thyroid diseases?", "answer": "Yes, she manages both hypo and hyperthyroidism." },
-    { "question": "Does she treat infectious diseases?", "answer": "Yes, including acute and chronic infections." }
+    { "question": "Does Dr. Shiveta Mattoo treat diabetes?", "answer": "Yes, she provides comprehensive diabetes management and follow-up care." },
+    { "question": "Does she manage thyroid problems?", "answer": "Yes, she has expertise in the diagnosis and treatment of all thyroid disorders." },
+    { "question": "Does she provide preventive health consultations?", "answer": "Yes, she offers preventive screenings, vaccinations and wellness plans." }
   ]
 },
 {
-  "slug": "dr-puja-prasad",
-  "name": "Dr. Puja Prasad",
-  "specialty": "Obstetrics & Gynaecology",
-  "hospital": "Max Hospital – Patparganj",
-  "experience": "9+ years",
+  "slug": "ms-rashi-sahai",
+  "name": "Ms. Rashi Sahai",
+  "specialty": "Clinical Psychology",
+  "hospital": "Max Hospital – Saket West | Max Medcentre – Lajpat Nagar | Max Hospital – Panchsheel Park | Max Hospital – Saket East",
+  "experience": "8+ years",
   "image": "",
   "isTopDoctor": false,
-  "position": "Visiting Consultant – Obstetrics & Gynaecology",
-  "degree": "MS (Obs & Gynae) | MBBS | PG Diploma (Mother & Child Health) | FMAS | DMAS | Fellowship in IVF & Infertility",
-  "about": "Dr. Puja Prasad is an obstetrician and gynaecologist with experience in high-risk pregnancies, infertility, IVF, laparoscopic surgery and preventive women’s health. She also runs her own clinic and has worked with leading IVF centres.",
+  "position": "Clinical Psychologist",
+  "degree": "BA (Hons) Applied Psychology | MA Clinical Psychology | M.Phil Clinical Psychology",
+  "about": "Ms. Rashi Sahai is an experienced clinical psychologist with expertise in psychological assessments, psychotherapy, counselling, and mental health intervention across all age groups. She has worked with leading national mental health institutions including NIMHANS, Sir Ganga Ram Hospital and various multi-speciality hospitals. Her approach integrates evidence-based therapies with compassionate, patient-centered care, addressing emotional, behavioral, developmental and clinical conditions.",
   "medicalProblems": [
-    { "title": "High-Risk Pregnancy", "description": "Comprehensive care for complicated pregnancies." },
-    { "title": "Infertility", "description": "Evaluation and treatment including IVF." },
-    { "title": "Gynaecological Disorders", "description": "Fibroids, ovarian cysts, PCOS and menstrual issues." },
-    { "title": "Recurrent Miscarriages", "description": "Workup and treatment for repeated pregnancy loss." }
+    { "title": "Anxiety & Stress Disorders", "description": "Assessment and therapy for generalized anxiety, panic attacks and stress-related issues." },
+    { "title": "Depression & Mood Disorders", "description": "Psychological evaluation and treatment of depression and mood disturbances." },
+    { "title": "Child & Adolescent Behavioural Issues", "description": "Management of ADHD, learning difficulties, behavioral and developmental concerns." },
+    { "title": "Relationship & Adjustment Problems", "description": "Counselling for interpersonal conflicts, adjustment issues and emotional wellbeing." }
   ],
   "procedures": [
-    { "title": "Normal & Cesarean Delivery", "description": "Full-spectrum obstetric care." },
-    { "title": "Hysteroscopy & Laparoscopy", "description": "Minimally invasive women’s surgery." },
-    { "title": "IVF & Fertility Treatments", "description": "Complete fertility evaluation and assisted conception." },
-    { "title": "Preventive Gynaecology", "description": "Cancer screening, colposcopy and cryocautery." }
+    { "title": "Psychological Assessments", "description": "Cognitive, developmental, behavioral and personality testing." },
+    { "title": "Psychotherapy & Counselling", "description": "Evidence-based therapies including CBT, mindfulness-based therapy and supportive counselling." },
+    { "title": "Child & Adolescent Therapy", "description": "Behaviour modification, developmental assessments and family counselling." },
+    { "title": "Stress & Emotional Health Management", "description": "Therapeutic programmes for stress, anxiety and emotional resilience." }
   ],
   "faqs": [
-    { "question": "Does Dr. Puja treat high-risk pregnancies?", "answer": "Yes, she specializes in managing complicated pregnancies." },
-    { "question": "Does she provide IVF treatment?", "answer": "Yes, she has formal training and experience in IVF & infertility." },
-    { "question": "Does she perform laparoscopic surgeries?", "answer": "Yes, including hysteroscopy and minimally invasive procedures." }
+    { "question": "Does Ms. Rashi Sahai treat anxiety and depression?", "answer": "Yes, she provides evidence-based psychotherapy for anxiety, depression and related conditions." },
+    { "question": "Does she offer psychological assessments?", "answer": "Yes, she conducts comprehensive assessments for cognitive, emotional and behavioral concerns." },
+    { "question": "Does she work with children and adolescents?", "answer": "Yes, she has experience in managing childhood behavioural problems, ADHD and learning difficulties." }
   ]
 }
-];  
+];
   try {
     for (const doc of doctors) {
       await Doctor.updateOne(
