@@ -195,7 +195,7 @@ app.get('/api/doctors/:slug', async (req, res) => {
 
 
 app.get("/admin/seed-doctor", async (req, res) => {
-  const doctors =[[
+  const doctors =[
 {
     "slug": "dr-ashwani-kumar-sharma",
     "name": "Dr. Ashwani Kumar Sharma",
@@ -1573,7 +1573,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
       { "question": "Is she experienced in critical care nutrition?", "answer": "Yes, she is certified in enteral and parenteral nutrition." }
     ]
   }
-]];
+];
   try {
     for (const doc of doctors) {
       await Doctor.updateOne(
