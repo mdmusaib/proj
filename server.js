@@ -182,8 +182,8 @@ app.get('/api/doctors/:slug', async (req, res) => {
 });
 
 
-app.get('/admin/seed-doctor', async (req, res) => {
- const doctors =[{
+app.get("/admin/seed-doctor", async (req, res) => {
+  const doctors = [{
   "slug": "dr-anil-arora",
   "name": "Dr. (Prof.) Anil Arora",
   "specialty": "Orthopaedics & Joint Replacement",
@@ -211,15 +211,22 @@ app.get('/admin/seed-doctor', async (req, res) => {
     { "question": "Does he handle revision and complex joint replacement cases?", "answer": "Yes, he is an expert in complex and revision hip and knee replacement surgeries." },
     { "question": "Is he internationally trained?", "answer": "Yes, he has received fellowships and training in the UK, USA, Germany, Japan, Korea and Australia." }
   ]
-}];
-
-
+}];  
   try {
-    // await Doctor.deleteMany({});
-    await Doctor.insertMany(doctors);
-    res.json({ message: "doctor data  seeded successfully!" });
+    for (const doc of doctors) {
+      await Doctor.updateOne(
+        { slug: doc.slug },   // find by slug
+        { $set: doc },        // update everything
+        { upsert: true }      // insert if not exists
+      );
+    }
+
+    res.json({
+      message: `${doctors.length} doctors seeded successfully!`
+    });
   } catch (err) {
-    res.status(500).json({ error: "Seeder error" });
+    console.log("Seed Error:", err);
+    res.status(500).json({ error: "Seeder Error", details: err.message });
   }
 });
 
