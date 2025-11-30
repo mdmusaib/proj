@@ -3368,12 +3368,12 @@ app.get("/admin/seed-doctor", async (req, res) => {
 
 app.get('/admin/seed-login', (req, res) => {
     try {
-        // Check if admin already exists
-        const exists =  AdminUser.findOne({ username: "admin" });
-        if (exists) {
-            console.log("Admin already exists. No action taken.");
-            return process.exit(0);
-        }
+        // // Check if admin already exists
+        // const exists =  AdminUser.findOne({ username: "admin" });
+        // if (exists) {
+        //     console.log("Admin already exists. No action taken.");
+        //     return process.exit(0);
+        // }
 
         // Insert default admin
         const admin = new AdminUser({
