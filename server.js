@@ -3366,12 +3366,9 @@ app.get("/admin/seed-doctor", async (req, res) => {
   }
 });
 
-app.get('/admin/seed-login', (req, res) => {
+app.get('/admin/seed-login', async (req, res) => {
    try {
-    await mongoose.connect(MONGO, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+   
 
     console.log("🔥 MongoDB Connected");
 
@@ -3379,7 +3376,7 @@ app.get('/admin/seed-login', (req, res) => {
     const password = "admin123"; // You can change this
 
     // Check if admin already exists
-    const existing = await AdminUser.findOne({ username });
+    const existing =  AdminUser.findOne({ username });
 
     if (existing) {
       console.log("✔ Admin already exists. Skipping.");
