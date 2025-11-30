@@ -3535,44 +3535,79 @@ app.get('/admin/seed-treatments', async (req, res) => {
   }
 });
 
-app.patch("/update-image", async (req, res) => {
-  try {
-    const { name, image } = req.body;
+import express from "express";
+import Doctor from "./models/Doctor.js";
 
-    if (!name || !image) {
+const router = express.Router();
+
+/**
+ * @route GET /api/doctors/update-images
+ * @desc Bulk update doctor images
+ * @query data=[{ "name": "...", "image": "..." }, ...]
+ */
+app.get("/update-images", async (req, res) => {
+  try {
+    const { data } = req.query;
+
+    if (!data) {
       return res.status(400).json({
         success: false,
-        message: "Name and image fields are required",
+        message: "Query parameter 'data' is required. Pass an array of objects."
       });
     }
 
-    // Find doctor by name and update
-    const updatedDoctor = await Doctor.findOneAndUpdate(
-      { name: name.trim() },
-      { image },
-      { new: true } // return updated document
-    );
-
-    if (!updatedDoctor) {
-      return res.status(404).json({
+    // Parse JSON array coming from query string
+    let doctorsToUpdate;
+    try {
+      doctorsToUpdate = JSON.parse(data);
+    } catch (e) {
+      return res.status(400).json({
         success: false,
-        message: "Doctor not found",
+        message: "Invalid JSON format in 'data' query parameter"
       });
+    }
+
+    const results = [];
+    const errors = [];
+
+    for (const doc of doctorsToUpdate) {
+      const { name, image } = doc;
+
+      if (!name || !image) {
+        errors.push({ name, message: "Missing name or image" });
+        continue;
+      }
+
+      const updated = await Doctor.findOneAndUpdate(
+        { name: name.trim() },
+        { image },
+        { new: true }
+      );
+
+      if (!updated) {
+        errors.push({ name, message: "Doctor not found" });
+      } else {
+        results.push(updated);
+      }
     }
 
     res.json({
       success: true,
-      message: "Image updated successfully",
-      data: updatedDoctor,
+      message: "Bulk update completed",
+      updated: results,
+      errors
     });
+
   } catch (error) {
-    console.error("Error updating image:", error);
+    console.error("Bulk update error:", error);
     res.status(500).json({
       success: false,
-      message: "Server error",
+      message: "Server error"
     });
   }
 });
+
+
 
 
 
