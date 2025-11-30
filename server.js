@@ -3535,6 +3535,46 @@ app.get('/admin/seed-treatments', async (req, res) => {
   }
 });
 
+app.patch("/update-image", async (req, res) => {
+  try {
+    const { name, image } = req.body;
+
+    if (!name || !image) {
+      return res.status(400).json({
+        success: false,
+        message: "Name and image fields are required",
+      });
+    }
+
+    // Find doctor by name and update
+    const updatedDoctor = await Doctor.findOneAndUpdate(
+      { name: name.trim() },
+      { image },
+      { new: true } // return updated document
+    );
+
+    if (!updatedDoctor) {
+      return res.status(404).json({
+        success: false,
+        message: "Doctor not found",
+      });
+    }
+
+    res.json({
+      success: true,
+      message: "Image updated successfully",
+      data: updatedDoctor,
+    });
+  } catch (error) {
+    console.error("Error updating image:", error);
+    res.status(500).json({
+      success: false,
+      message: "Server error",
+    });
+  }
+});
+
+
 
 app.post("/api/send-mail", async (req, res) => {
   try {
