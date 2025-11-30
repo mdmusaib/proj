@@ -3366,6 +3366,40 @@ app.get("/admin/seed-doctor", async (req, res) => {
   }
 });
 
+app.get('/admin/seed-login', (req, res) => {
+  res.send('Hospital and Doctor API is running');
+    try {
+        // Check if admin already exists
+        const exists =  AdminUser.findOne({ username: "admin" });
+        if (exists) {
+            console.log("Admin already exists. No action taken.");
+            return process.exit(0);
+        }
+
+        // Insert default admin
+        const admin = new AdminUser({
+            username: "admin",
+            password: "password123", // ⭐ In real app use bcrypt.hash(...)
+            role: "superadmin"
+        });
+
+         admin.save();
+
+        console.log("Admin user created successfully!");
+        console.log({
+            username: "admin",
+            password: "password123",
+            role: "superadmin"
+        });
+
+        process.exit(0);
+    } catch (err) {
+        console.error(err);
+        process.exit(1);
+    }
+});
+
+
 // DELETE doctors by hospital name
 app.delete("/api/delete-manipal-doctors", async (req, res) => {
   try {
