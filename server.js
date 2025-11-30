@@ -3367,35 +3367,41 @@ app.get("/admin/seed-doctor", async (req, res) => {
 });
 
 app.get('/admin/seed-login', (req, res) => {
-    try {
-        // // Check if admin already exists
-        // const exists =  AdminUser.findOne({ username: "admin" });
-        // if (exists) {
-        //     console.log("Admin already exists. No action taken.");
-        //     return process.exit(0);
-        // }
+   try {
+    await mongoose.connect(MONGO, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
-        // Insert default admin
-        const admin = new AdminUser({
-            username: "admin",
-            password: "password123", // ⭐ In real app use bcrypt.hash(...)
-            role: "superadmin"
-        });
+    console.log("🔥 MongoDB Connected");
 
-         admin.save();
+    const username = "admin";
+    const password = "admin123"; // You can change this
 
-        console.log("Admin user created successfully!");
-        console.log({
-            username: "admin",
-            password: "password123",
-            role: "superadmin"
-        });
+    // Check if admin already exists
+    const existing = await AdminUser.findOne({ username });
 
-        process.exit(0);
-    } catch (err) {
-        console.error(err);
-        process.exit(1);
+    if (existing) {
+      console.log("✔ Admin already exists. Skipping.");
+      console.log(existing);
+      process.exit(0);
     }
+
+    // Create admin
+    const admin = await AdminUser.create({
+      username,
+      password,
+      role: "admin",
+    });
+
+    console.log("🎉 Admin User Created Successfully:");
+    console.log(admin);
+
+    process.exit(0);
+  } catch (err) {
+    console.error("❌ Error:", err);
+    process.exit(1);
+  }
 });
 
 
