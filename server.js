@@ -3367,7 +3367,6 @@ app.get("/admin/seed-doctor", async (req, res) => {
 });
 
 app.get('/admin/seed-login', (req, res) => {
-  res.send('Hospital and Doctor API is running');
     try {
         // Check if admin already exists
         const exists =  AdminUser.findOne({ username: "admin" });
