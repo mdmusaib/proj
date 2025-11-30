@@ -137,6 +137,94 @@ const Hospital = mongoose.model(
   "hospitals",
   HospitalSchema
 );
+
+
+const ReviewSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  phone: { type: String, required: true },
+  country: { type: String },
+  rating: { type: Number, min: 1, max: 5, required: true },
+  story: { type: String, required: true },
+  treatment: { type: String },
+  image: { type: String }, // optional profile image
+  createdAt: { type: Date, default: Date.now }
+});
+
+const Review= mongoose.model("Review", ReviewSchema);
+
+const VideoTestimonialSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  country: { type: String, required: true },
+  title: { type: String, required: true },
+  videoUrl: { type: String, required: true }, // YouTube URL or Cloud storage URL
+  createdAt: { type: Date, default: Date.now }
+});
+
+const VideoReview= mongoose.model("VideoTestimonial", VideoTestimonialSchema);
+
+
+app.post("/add-review", async (req, res) => {
+  try {
+    const review = await Review.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Review added successfully",
+      data: review,
+    });
+  } catch (err) {
+    res.status(400).json({ success: false, error: err.message });
+  }
+});
+
+/*
+|--------------------------------------------------------------------------
+| POST VIDEO TESTIMONIAL
+|--------------------------------------------------------------------------
+*/
+app.post("/add-video", async (req, res) => {
+  try {
+    const video = await VideoReview.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Video testimonial added successfully",
+      data: video,
+    });
+  } catch (err) {
+    res.status(400).json({ success: false, error: err.message });
+  }
+});
+
+/*
+|--------------------------------------------------------------------------
+| GET ALL REVIEWS
+|--------------------------------------------------------------------------
+*/
+app.get("/reviews", async (req, res) => {
+  try {
+    const reviews = await Review.find().sort({ createdAt: -1 });
+    res.json({ success: true, data: reviews });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+/*
+|--------------------------------------------------------------------------
+| GET ALL VIDEO TESTIMONIALS
+|--------------------------------------------------------------------------
+*/
+app.get("/videos", async (req, res) => {
+  try {
+    const videos = await VideoReview.find().sort({ createdAt: -1 });
+    res.json({ success: true, data: videos });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+
+
 // ----------------------
 //  GET HOSPITALS
 // ----------------------
@@ -3535,10 +3623,7 @@ app.get('/admin/seed-treatments', async (req, res) => {
   }
 });
 
-import express from "express";
-import Doctor from "./models/Doctor.js";
 
-const router = express.Router();
 
 /**
  * @route GET /api/doctors/update-images
