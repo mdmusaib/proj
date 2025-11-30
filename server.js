@@ -30,6 +30,19 @@ mongoose
 // ----------------------
 //  MONGOOSE MODEL
 // ----------------------
+
+
+// 🔥 NEW: AdminUser Schema for basic authentication
+const AdminUserSchema = new mongoose.Schema({
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String, default: 'admin' }
+});
+
+const AdminUser = mongoose.model('AdminUser', AdminUserSchema); 
+
+
+
 const TreatmentCategorySchema = new mongoose.Schema({
   slug: { type: String, required: true, unique: true },
   icon: { type: String }, 
@@ -175,6 +188,28 @@ app.post("/add-review", async (req, res) => {
   } catch (err) {
     res.status(400).json({ success: false, error: err.message });
   }
+});
+
+// --- 🔥 NEW: Admin Login Endpoint ---
+app.post('/admin/login', async (req, res) => {
+    const { username, password } = req.body;
+    
+    // Find user
+    const user = await AdminUser.findOne({ username });
+
+    if (!user) {
+        return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    // Check password (In production, use bcrypt.compare)
+    if (user.password !== password) {
+        return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    // Success: Return a simple token (in a real app, this would be a JWT)
+    // We will use a simple, consistent token here for frontend validation
+    const token = 'MOCK_ADMIN_TOKEN_12345'; 
+    res.json({ success: true, token, user: { username: user.username, role: user.role } });
 });
 
 /*
