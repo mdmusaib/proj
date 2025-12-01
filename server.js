@@ -320,280 +320,6 @@ app.get('/api/doctors/:slug', async (req, res) => {
 app.get("/admin/seed-doctor", async (req, res) => {
   const doctors =[
   {
-    "slug": "dr-naresh-trehan",
-    "name": "Dr. Naresh Trehan",
-    "specialty": "Cardiac Care",
-    "hospital": "Medanta - The Medicity",
-    "experience": "56+ years",
-    "image": "assets/uploads/dr-naresh-trehan.png",
-    "isTopDoctor": true,
-    "position": "Chairman & Managing Director",
-    "degree": "Diplomate American Board - Cardio Thoracic Surgery | MBBS",
-    "about": "Dr. Naresh Trehan, Chairman and Managing Director of Medanta - The Medicity, is a world-renowned cardiovascular and cardiothoracic surgeon with over five decades of experience. He has performed over 48,000 successful open-heart surgeries and has received the Padma Shri and Padma Bhushan awards.",
-    "medicalProblems": [
-      {
-        "title": "Coronary Artery Disease",
-        "description": "Blockages in heart arteries causing chest pain, shortness of breath, and risk of heart attack."
-      },
-      {
-        "title": "Heart Valve Disease",
-        "description": "Malfunctioning of heart valves leading to improper blood flow."
-      },
-      {
-        "title": "Aortic Aneurysm",
-        "description": "Enlargement or bulging of the aorta which can be life-threatening if ruptured."
-      },
-      {
-        "title": "Heart Failure",
-        "description": "A chronic condition where the heart cannot pump blood efficiently."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Open Heart Surgery",
-        "description": "Surgical correction of heart defects using advanced techniques."
-      },
-      {
-        "title": "Coronary Artery Bypass Grafting (CABG)",
-        "description": "Bypass surgery to restore blood flow to the heart."
-      },
-      {
-        "title": "Valve Repair and Replacement",
-        "description": "Treatment for stenotic or leaking valves using surgical repair or artificial valves."
-      },
-      {
-        "title": "Minimally Invasive Cardiac Surgery",
-        "description": "Small-incision heart surgery with quicker recovery."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What conditions does Dr. Trehan specialize in?",
-        "answer": "He specializes in bypass surgery, valve surgery, aortic surgery, and minimally invasive cardiac procedures."
-      },
-      {
-        "question": "How many surgeries has Dr. Trehan performed?",
-        "answer": "He has performed over 48,000 successful open-heart surgeries."
-      },
-      {
-        "question": "Is minimally invasive heart surgery available?",
-        "answer": "Yes, Dr. Trehan is known for advanced minimally invasive cardiac procedures."
-      }
-    ]
-  },
-  {
-    "slug": "dr-adarsh-chaudhary",
-    "name": "Dr. Adarsh Chaudhary",
-    "specialty": "Gastrosciences",
-    "hospital": "Medanta - The Medicity",
-    "experience": "48+ years",
-    "image": "assets/uploads/dr-adarsh-chaudhary.png",
-    "isTopDoctor": true,
-    "position": "Chairman - GI Surgery, GI Oncology & Bariatric Surgery",
-    "degree": "MBBS | MS - General Surgery | FRCS - General Surgery",
-    "about": "Dr. Adarsh Chaudhary is renowned for performing the highest number of Whipple's surgeries in India and for starting one of India's first departments of surgical gastroenterology. Trained in the UK and USA, he specializes in hepatobiliary, pancreatic, bariatric, and GI cancer surgeries.",
-    "medicalProblems": [
-      {
-        "title": "Pancreatic Cancer",
-        "description": "A malignant tumour of the pancreas requiring advanced surgery like Whipple procedure."
-      },
-      {
-        "title": "Liver Tumors & Biliary Strictures",
-        "description": "Obstructions or cancers of the liver and bile ducts."
-      },
-      {
-        "title": "Obesity & Metabolic Disorders",
-        "description": "Conditions treatable with bariatric surgery."
-      },
-      {
-        "title": "Gastrointestinal Cancers",
-        "description": "Cancer affecting stomach, intestines, liver, or pancreas."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Whipple Surgery (Pancreaticoduodenectomy)",
-        "description": "Complex surgery for pancreatic and periampullary cancers."
-      },
-      {
-        "title": "Hepatobiliary Surgery",
-        "description": "Surgery for liver, gallbladder, and bile duct diseases."
-      },
-      {
-        "title": "Bariatric Surgery",
-        "description": "Weight-loss surgical procedures such as sleeve gastrectomy or bypass."
-      },
-      {
-        "title": "GI Oncosurgery",
-        "description": "Advanced cancer surgery for stomach, intestine, and pancreas."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What is Dr. Chaudhary best known for?",
-        "answer": "He is known for performing the highest number of Whipple surgeries in India."
-      },
-      {
-        "question": "Does he perform bariatric surgery?",
-        "answer": "Yes, he specializes in minimally invasive and bariatric surgeries."
-      },
-      {
-        "question": "What cancers does he treat?",
-        "answer": "Pancreatic, hepatobiliary, stomach, and colorectal cancers."
-      }
-    ]
-  },
-  {
-    "slug": "dr-anil-bhan",
-    "name": "Dr. Anil Bhan",
-    "specialty": "Cardiac Care",
-    "hospital": "Medanta - The Medicity",
-    "experience": "44+ years",
-    "image": "assets/uploads/dr-anil-bhan.png",
-    "isTopDoctor": true,
-    "position": "Chairman - Cardiac Surgery",
-    "degree": "MCh - Cardiothoracic & Vascular Surgery | MBBS | MS - General Surgery",
-    "about": "Dr. Anil Bhan is an outstanding cardiovascular surgeon known for performing over 15,000 cardiac and vascular procedures. He has designed over 50 surgical instruments and was part of the first successful heart transplant in India.",
-    "medicalProblems": [
-      {
-        "title": "Aortic Aneurysm",
-        "description": "Life-threatening enlargement of the aorta requiring expert surgical intervention."
-      },
-      {
-        "title": "Congenital Heart Defects",
-        "description": "Heart issues present from birth requiring pediatric cardiac surgery."
-      },
-      {
-        "title": "Valve Disorders",
-        "description": "Diseases affecting heart valves including stenosis or regurgitation."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Aortic Aneurysm Surgery",
-        "description": "Surgical repair of enlarged or ruptured aorta."
-      },
-      {
-        "title": "Pediatric Cardiac Surgery",
-        "description": "Heart surgery for infants and children with congenital defects."
-      },
-      {
-        "title": "Valve Repair & Replacement",
-        "description": "Specialized valve correction procedures."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Anil Bhan perform pediatric surgeries?",
-        "answer": "Yes, he is highly experienced in pediatric cardiac surgery."
-      },
-      {
-        "question": "What is his aortic surgery expertise?",
-        "answer": "He has one of the largest experiences in aortic surgeries in India."
-      }
-    ]
-  },
-  {
-    "slug": "dr-arun-garg",
-    "name": "Dr. Arun Garg",
-    "specialty": "Neurosciences",
-    "hospital": "Medanta - The Medicity",
-    "experience": "40+ years",
-    "image": "assets/uploads/dr-arun-garg.png",
-    "isTopDoctor": true,
-    "position": "Chairman - Neurology (Stroke)",
-    "degree": "DM - Neurology | MBBS | MD - General Medicine",
-    "about": "Dr. Arun Garg is a senior neurologist specializing in Stroke, Neuro-rehabilitation, Occupational therapy, and Stroke prevention. He pioneered thrombolysis in Acute Stroke and collaborates with UMASS, USA.",
-    "medicalProblems": [
-      {
-        "title": "Stroke",
-        "description": "Interruption of blood supply to the brain causing neurological deficits."
-      },
-      {
-        "title": "Cerebral Ischemia",
-        "description": "Reduced blood flow leading to risk of stroke."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Stroke Thrombolysis",
-        "description": "Emergency clot-busting treatment for acute ischemic stroke."
-      },
-      {
-        "title": "Rehabilitation Therapy",
-        "description": "Occupational and neuro-rehabilitation for recovery."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Garg treat paralysis due to stroke?",
-        "answer": "Yes, he specializes in stroke management and rehabilitation."
-      },
-      {
-        "question": "Is emergency stroke treatment available?",
-        "answer": "Yes, thrombolysis and advanced stroke care are available."
-      }
-    ]
-  },
-  {
-    "slug": "dr-arvind-kumar",
-    "name": "Dr. Arvind Kumar",
-    "specialty": "Lung Transplant",
-    "hospital": "Medanta - The Medicity",
-    "experience": "43+ years",
-    "image": "assets/uploads/dr-arvind-kumar.png",
-    "isTopDoctor": true,
-    "position": "Chairman - Institute of Chest Surgery, Chest Onco-Surgery & Lung Transplant",
-    "degree": "MBBS | MS | FACS | FAMASI | FIAGES | FICS | FUICC | MNAMS | FRCS",
-    "about": "Dr. Arvind Kumar is India\u2019s leading thoracic surgeon with over 15,000 chest surgeries, including 8,000+ minimally invasive and robotic procedures. He leads India\u2019s largest chest surgery program and is one of Asia's most experienced Robotic Thymectomy surgeons.",
-    "medicalProblems": [
-      {
-        "title": "Lung Cancer",
-        "description": "Malignancy of the lungs requiring surgical removal."
-      },
-      {
-        "title": "Thymoma & Myasthenia Gravis",
-        "description": "Tumors of the thymus gland causing autoimmune muscle weakness."
-      },
-      {
-        "title": "Tracheal Tumors",
-        "description": "Tumors blocking the airway requiring surgical resection."
-      },
-      {
-        "title": "Chest Trauma",
-        "description": "Injuries to ribs, lungs, or thoracic cavity."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Robotic Thymectomy",
-        "description": "Robotic removal of thymus gland for thymoma and myasthenia gravis."
-      },
-      {
-        "title": "VATS Lung Surgery",
-        "description": "Minimally invasive video-assisted thoracoscopic surgery."
-      },
-      {
-        "title": "Lung Cancer Surgery",
-        "description": "Keyhole or robotic removal of lung tumors."
-      },
-      {
-        "title": "Tracheal Resection",
-        "description": "Surgery to remove narrowed or tumor-affected sections of the windpipe."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Arvind Kumar perform robotic surgeries?",
-        "answer": "Yes, he is one of Asia's most experienced robotic thoracic surgeons."
-      },
-      {
-        "question": "Is lung cancer treatable with minimally invasive surgery?",
-        "answer": "Yes, VATS and robotic techniques offer quicker recovery and excellent outcomes."
-      }
-    ]
-  },
-  {
     "name": "Dr. A. S. Soin",
     "designation": "Chairman - Liver Transplant Surgery",
     "department": "Liver Transplant",
@@ -616,34 +342,73 @@ app.get("/admin/seed-doctor", async (req, res) => {
       "Swastha Bharat Samman (2011)"
     ],
     "medicalProblems": [
-      "Liver Cirrhosis",
-      "Liver Failure",
-      "Liver Cancer (Hepatocellular Carcinoma)",
-      "Bile Duct Cancer",
-      "Portal Hypertension",
-      "Gallbladder Diseases",
-      "Congenital Liver Diseases"
+      {
+        "title": "Liver Cirrhosis",
+        "description": ""
+      },
+      {
+        "title": "Liver Failure",
+        "description": ""
+      },
+      {
+        "title": "Liver Cancer (Hepatocellular Carcinoma)",
+        "description": ""
+      },
+      {
+        "title": "Bile Duct Cancer",
+        "description": ""
+      },
+      {
+        "title": "Portal Hypertension",
+        "description": ""
+      },
+      {
+        "title": "Gallbladder Diseases",
+        "description": ""
+      },
+      {
+        "title": "Congenital Liver Diseases",
+        "description": ""
+      }
     ],
     "procedures": [
-      "Liver Transplant (Living & Cadaveric)",
-      "Complex Liver Resection",
-      "Bile Duct Reconstruction",
-      "Portal Hypertension Surgery",
-      "Choledochal Cyst Surgery",
-      "Gallbladder and Hepatobiliary Surgeries"
+      {
+        "title": "Liver Transplant (Living & Cadaveric)",
+        "description": ""
+      },
+      {
+        "title": "Complex Liver Resection",
+        "description": ""
+      },
+      {
+        "title": "Bile Duct Reconstruction",
+        "description": ""
+      },
+      {
+        "title": "Portal Hypertension Surgery",
+        "description": ""
+      },
+      {
+        "title": "Choledochal Cyst Surgery",
+        "description": ""
+      },
+      {
+        "title": "Gallbladder and Hepatobiliary Surgeries",
+        "description": ""
+      }
     ],
     "faqs": [
       {
-        "q": "What is the success rate of liver transplants by Dr. Soin?",
-        "a": "He maintains one of the highest success rates in India at around 95%."
+        "question": "What is the success rate of liver transplants by Dr. Soin?",
+        "answer": "He maintains one of the highest success rates in India at around 95%."
       },
       {
-        "q": "How long is the liver transplant recovery?",
-        "a": "Most patients recover within 6\u201312 weeks depending on overall health."
+        "question": "How long is the liver transplant recovery?",
+        "answer": "Most patients recover within 6\u201312 weeks depending on overall health."
       },
       {
-        "q": "When is liver transplant recommended?",
-        "a": "When liver fails to perform essential functions despite medications."
+        "question": "When is liver transplant recommended?",
+        "answer": "When liver fails to perform essential functions despite medications."
       }
     ]
   },
@@ -666,33 +431,69 @@ app.get("/admin/seed-doctor", async (req, res) => {
       "Chikitsa Shiromani Award (2007)"
     ],
     "medicalProblems": [
-      "Blood Cancers (Leukemias, Lymphomas)",
-      "Breast Cancer",
-      "Lung Cancer",
-      "Gastrointestinal Cancers",
-      "Genetic Cancers",
-      "Immune System Cancers"
+      {
+        "title": "Blood Cancers (Leukemias, Lymphomas)",
+        "description": ""
+      },
+      {
+        "title": "Breast Cancer",
+        "description": ""
+      },
+      {
+        "title": "Lung Cancer",
+        "description": ""
+      },
+      {
+        "title": "Gastrointestinal Cancers",
+        "description": ""
+      },
+      {
+        "title": "Genetic Cancers",
+        "description": ""
+      },
+      {
+        "title": "Immune System Cancers",
+        "description": ""
+      }
     ],
     "procedures": [
-      "Chemotherapy",
-      "Immunotherapy",
-      "Stem Cell (Bone Marrow) Transplant",
-      "Targeted Therapy",
-      "Precision Oncology",
-      "Dendritic Cell Therapy"
+      {
+        "title": "Chemotherapy",
+        "description": ""
+      },
+      {
+        "title": "Immunotherapy",
+        "description": ""
+      },
+      {
+        "title": "Stem Cell (Bone Marrow) Transplant",
+        "description": ""
+      },
+      {
+        "title": "Targeted Therapy",
+        "description": ""
+      },
+      {
+        "title": "Precision Oncology",
+        "description": ""
+      },
+      {
+        "title": "Dendritic Cell Therapy",
+        "description": ""
+      }
     ],
     "faqs": [
       {
-        "q": "Does chemotherapy always cause hair loss?",
-        "a": "Not always. It depends on the type of chemotherapy drugs used."
+        "question": "Does chemotherapy always cause hair loss?",
+        "answer": "Not always. It depends on the type of chemotherapy drugs used."
       },
       {
-        "q": "What is targeted therapy?",
-        "a": "A treatment that focuses on specific cancer genes or proteins."
+        "question": "What is targeted therapy?",
+        "answer": "A treatment that focuses on specific cancer genes or proteins."
       },
       {
-        "q": "What is the success rate of stem cell transplant?",
-        "a": "Varies by disease type but Dr. Vaid\u2019s program is among India\u2019s most successful."
+        "question": "What is the success rate of stem cell transplant?",
+        "answer": "Varies by disease type but Dr. Vaid\u2019s program is among India\u2019s most successful."
       }
     ]
   },
@@ -716,32 +517,65 @@ app.get("/admin/seed-doctor", async (req, res) => {
       "Lifetime Achievement Awards (2016)"
     ],
     "medicalProblems": [
-      "Osteoarthritis",
-      "Rheumatoid Arthritis",
-      "Knee Joint Damage",
-      "Hip Joint Degeneration",
-      "Sports Injuries",
-      "Ligament Tears"
+      {
+        "title": "Osteoarthritis",
+        "description": ""
+      },
+      {
+        "title": "Rheumatoid Arthritis",
+        "description": ""
+      },
+      {
+        "title": "Knee Joint Damage",
+        "description": ""
+      },
+      {
+        "title": "Hip Joint Degeneration",
+        "description": ""
+      },
+      {
+        "title": "Sports Injuries",
+        "description": ""
+      },
+      {
+        "title": "Ligament Tears",
+        "description": ""
+      }
     ],
     "procedures": [
-      "Total Knee Replacement",
-      "Minimally Invasive Knee Replacement",
-      "Hip Replacement",
-      "Arthroscopic ACL/PCL Reconstruction",
-      "Robotic Knee Surgery"
+      {
+        "title": "Total Knee Replacement",
+        "description": ""
+      },
+      {
+        "title": "Minimally Invasive Knee Replacement",
+        "description": ""
+      },
+      {
+        "title": "Hip Replacement",
+        "description": ""
+      },
+      {
+        "title": "Arthroscopic ACL/PCL Reconstruction",
+        "description": ""
+      },
+      {
+        "title": "Robotic Knee Surgery",
+        "description": ""
+      }
     ],
     "faqs": [
       {
-        "q": "How long does knee replacement last?",
-        "a": "Modern implants last 20\u201325 years with proper care."
+        "question": "How long does knee replacement last?",
+        "answer": "Modern implants last 20\u201325 years with proper care."
       },
       {
-        "q": "Is robotic knee surgery better?",
-        "a": "It improves precision, reduces pain, and speeds recovery."
+        "question": "Is robotic knee surgery better?",
+        "answer": "It improves precision, reduces pain, and speeds recovery."
       },
       {
-        "q": "How soon can one walk after knee surgery?",
-        "a": "Most patients walk within 24\u201348 hours."
+        "question": "How soon can one walk after knee surgery?",
+        "answer": "Most patients walk within 24\u201348 hours."
       }
     ]
   },
@@ -763,33 +597,69 @@ app.get("/admin/seed-doctor", async (req, res) => {
       "Mukut Sahariya Award"
     ],
     "medicalProblems": [
-      "Oral Cancer",
-      "Thyroid Cancer",
-      "Throat Cancer",
-      "Salivary Gland Tumors",
-      "Parathyroid Disorders",
-      "Head & Neck Masses"
+      {
+        "title": "Oral Cancer",
+        "description": ""
+      },
+      {
+        "title": "Thyroid Cancer",
+        "description": ""
+      },
+      {
+        "title": "Throat Cancer",
+        "description": ""
+      },
+      {
+        "title": "Salivary Gland Tumors",
+        "description": ""
+      },
+      {
+        "title": "Parathyroid Disorders",
+        "description": ""
+      },
+      {
+        "title": "Head & Neck Masses",
+        "description": ""
+      }
     ],
     "procedures": [
-      "Oral Cancer Resection",
-      "Thyroidectomy",
-      "Parathyroid Surgery",
-      "Laser Tumor Removal",
-      "Robotic Head & Neck Surgery",
-      "Complex Reconstruction"
+      {
+        "title": "Oral Cancer Resection",
+        "description": ""
+      },
+      {
+        "title": "Thyroidectomy",
+        "description": ""
+      },
+      {
+        "title": "Parathyroid Surgery",
+        "description": ""
+      },
+      {
+        "title": "Laser Tumor Removal",
+        "description": ""
+      },
+      {
+        "title": "Robotic Head & Neck Surgery",
+        "description": ""
+      },
+      {
+        "title": "Complex Reconstruction",
+        "description": ""
+      }
     ],
     "faqs": [
       {
-        "q": "Is thyroid surgery safe?",
-        "a": "With modern techniques and an expert surgeon, it is very safe with minimal complications."
+        "question": "Is thyroid surgery safe?",
+        "answer": "With modern techniques and an expert surgeon, it is very safe with minimal complications."
       },
       {
-        "q": "Can oral cancer be treated?",
-        "a": "Yes\u2014early-stage oral cancer has high cure rates."
+        "question": "Can oral cancer be treated?",
+        "answer": "Yes\u2014early-stage oral cancer has high cure rates."
       },
       {
-        "q": "Is robotic surgery better for head & neck cancers?",
-        "a": "Yes, it gives better precision, less pain, and faster recovery."
+        "question": "Is robotic surgery better for head & neck cancers?",
+        "answer": "Yes, it gives better precision, less pain, and faster recovery."
       }
     ]
   },
@@ -814,33 +684,69 @@ app.get("/admin/seed-doctor", async (req, res) => {
       "Urology Gold Medal (AIIMS)"
     ],
     "medicalProblems": [
-      "Prostate Enlargement & Cancer",
-      "Kidney Tumors",
-      "Urinary Bladder Cancer",
-      "Testicular Swelling/Cancer",
-      "Penile Tumors",
-      "Urinary Tract Obstruction"
+      {
+        "title": "Prostate Enlargement & Cancer",
+        "description": ""
+      },
+      {
+        "title": "Kidney Tumors",
+        "description": ""
+      },
+      {
+        "title": "Urinary Bladder Cancer",
+        "description": ""
+      },
+      {
+        "title": "Testicular Swelling/Cancer",
+        "description": ""
+      },
+      {
+        "title": "Penile Tumors",
+        "description": ""
+      },
+      {
+        "title": "Urinary Tract Obstruction",
+        "description": ""
+      }
     ],
     "procedures": [
-      "Robotic Prostatectomy",
-      "Robotic Partial Nephrectomy",
-      "Robotic Cystectomy",
-      "Urological Cancer Surgery",
-      "Endoscopic Tumor Removal",
-      "Minimally Invasive Uro Surgery"
+      {
+        "title": "Robotic Prostatectomy",
+        "description": ""
+      },
+      {
+        "title": "Robotic Partial Nephrectomy",
+        "description": ""
+      },
+      {
+        "title": "Robotic Cystectomy",
+        "description": ""
+      },
+      {
+        "title": "Urological Cancer Surgery",
+        "description": ""
+      },
+      {
+        "title": "Endoscopic Tumor Removal",
+        "description": ""
+      },
+      {
+        "title": "Minimally Invasive Uro Surgery",
+        "description": ""
+      }
     ],
     "faqs": [
       {
-        "q": "Is robotic surgery safe for prostate cancer?",
-        "a": "Yes, it offers excellent precision with less bleeding and faster recovery."
+        "question": "Is robotic surgery safe for prostate cancer?",
+        "answer": "Yes, it offers excellent precision with less bleeding and faster recovery."
       },
       {
-        "q": "How long is hospitalization after robotic kidney surgery?",
-        "a": "Usually 2\u20133 days."
+        "question": "How long is hospitalization after robotic kidney surgery?",
+        "answer": "Usually 2\u20133 days."
       },
       {
-        "q": "Can bladder cancer be cured?",
-        "a": "Early detection has high success rates; advanced cases may need robotic cystectomy."
+        "question": "Can bladder cancer be cured?",
+        "answer": "Early detection has high success rates; advanced cases may need robotic cystectomy."
       }
     ]
   },
