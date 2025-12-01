@@ -320,2606 +320,2738 @@ app.get('/api/doctors/:slug', async (req, res) => {
 app.get("/admin/seed-doctor", async (req, res) => {
   const doctors =[
   {
-    "slug": "dr-purshotam-lal",
-    "name": "Dr. Purshotam Lal",
-    "specialty": "Cardiology & CTVS",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "slug": "dr-alka-kriplani",
+    "name": "Dr. Alka Kriplani",
+    "specialty": "Obstetrics & Gynecology",
+    "hospital": "Paras Health – Gurugram",
     "experience": "40+ years",
-    "image": "assets/uploads/Dr. Purshotam Lal.webp",
+    "image": "assets/uploads/Dr. Alka Kriplani.jpg",
     "isTopDoctor": true,
-    "position": "Chairman \u2013 Metro Group of Hospitals & Director \u2013 Interventional Cardiology",
-    "degree": "MD | AB (USA) | FRCP (C) | FACM | FICC | FACC | FSCAI (USA)",
-    "about": "Dr. Purshotam Lal is a globally renowned interventional cardiologist credited with introducing the highest number of cardiac procedures in India. He has performed several world-firsts, including the first Heart Hole (ASD) closure and the first nonsurgical aortic valve replacement using a core valve. With over 20 groundbreaking interventional procedures introduced in India, he is recognised as a pioneer in angioplasty, stenting, valvuloplasty, and coronary atherectomy. Dr. Lal's work in Metro Coronary Screening is the largest such series globally with more than 11,000 successful cases.",
+    "position": "Chairperson \u2013 Obstetrics & Gynecology",
+    "degree": "MD | FRCOG | FAMS | FICOG | FICMCH | FIMSA | FCLS",
+    "about": "Dr. Alka Kriplani is an eminent and highly respected gynecologist with over four decades of experience. Formerly a senior leader at AIIMS, New Delhi, she is known for her unparalleled expertise in high-risk pregnancy, reproductive endocrinology, gynecological endoscopy, and women\u2019s healthcare. She is a celebrated academician and researcher, widely recognized for her contributions to women's health, medical education, and clinical advancements.",
     "medicalProblems": [
       {
-        "title": "Coronary Artery Disease",
-        "description": "Blockages, heart attack prevention and advanced interventions."
+        "title": "High-Risk Pregnancy",
+        "description": "Comprehensive care for complicated and high-risk pregnancies."
       },
       {
-        "title": "Valve Disorders",
-        "description": "Expert in nonsurgical valve procedures and complex valvuloplasty."
+        "title": "Reproductive Endocrine Disorders",
+        "description": "Management of hormonal disorders affecting women\u2019s reproductive health."
       },
       {
-        "title": "Congenital Heart Defects",
-        "description": "Specialist in ASD, VSD and PDA closure without surgery."
-      },
-      {
-        "title": "Complex Cardiac Conditions",
-        "description": "High-risk cardiac cases requiring advanced interventional techniques."
+        "title": "Gynecological Disorders",
+        "description": "Treatment of menstrual, uterine, hormonal, and menopause-related issues."
       }
     ],
     "procedures": [
       {
-        "title": "Angioplasty & Stenting",
-        "description": "Largest number of angioplasties performed by a single operator in India."
+        "title": "Gynecological Endoscopy",
+        "description": "Advanced laparoscopic and hysteroscopic procedures."
       },
       {
-        "title": "ASD / VSD / PDA Closure",
-        "description": "World-first Heart Hole Closure performed in 1992."
+        "title": "High-Risk Pregnancy Care",
+        "description": "Specialized monitoring and management for complex pregnancies."
       },
       {
-        "title": "Aortic Valve Replacement",
-        "description": "First in the world to perform Core Valve replacement without surgery."
-      },
-      {
-        "title": "Rotablation & Atherectomy",
-        "description": "Introduced multiple atherectomy techniques in India."
+        "title": "Reproductive Health Procedures",
+        "description": "Hormonal therapies and reproductive system interventions."
       }
     ],
     "faqs": [
       {
-        "question": "Is Dr. Purshotam Lal a pioneer in interventional cardiology?",
-        "answer": "Yes, he has introduced more than 20 cardiac procedures in India and performed several world-first interventions."
+        "question": "Is Dr. Alka Kriplani experienced in high-risk pregnancies?",
+        "answer": "Yes, she is one of India's most trusted specialists for high-risk and complicated pregnancies."
       },
       {
-        "question": "Does he perform nonsurgical valve procedures?",
-        "answer": "Yes, he performed the world\u2019s first nonsurgical aortic valve replacement with a core valve."
+        "question": "Does she perform gynecological endoscopic procedures?",
+        "answer": "Yes, she is highly skilled in laparoscopic and hysteroscopic surgery."
       },
       {
-        "question": "What is Metro Coronary Screening?",
-        "answer": "A unique 5-minute coronary screening method introduced by Dr. Lal, performed on over 11,000 patients."
+        "question": "Has she received national recognition?",
+        "answer": "Yes, she has received multiple awards including the Padma Shri and Dr. B.C. Roy Award."
       }
     ]
   },
   {
-    "slug": "dr-neeraj-jain",
-    "name": "Dr. Neeraj Jain",
-    "specialty": "Interventional Cardiology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "23+ years",
-    "image": "assets/uploads/Dr.-Neeraj-Jain.png",
+    "slug": "dr-mv-padma-srivastava",
+    "name": "Dr. M. V. Padma Srivastava",
+    "specialty": "Neurology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "40+ years",
+    "image": "assets/uploads/Dr. M V PADMA SRIVASTAVA.jpg",
     "isTopDoctor": true,
-    "position": "Medical Director & Director \u2013 Interventional Cardiology",
-    "degree": "MBBS | MD (Medicine) | DM (Cardiology) | FACC",
-    "about": "Dr. Neeraj Jain is one of the most respected interventional cardiologists in Faridabad with over 23 years of experience. He has managed more than 50,000 heart patients, performed thousands of angiographies, and over 15,000 cardiac procedures including 10,000+ angioplasties with stenting. He also has extensive expertise in treating international patients with complex heart diseases.",
+    "position": "Chairperson \u2013 Neurology",
+    "degree": "MBBS | MD (AIIMS) | DM (AIIMS) | MAMS | FAMS | FRCP | FNA",
+    "about": "Padma Shri Dr. (Prof.) M.V. Padma Srivastava is a globally acclaimed neurologist and a pioneer in stroke medicine, Alzheimer\u2019s disease, and cerebrovascular sciences. She established one of India\u2019s first hyperacute stroke thrombolysis programs and has shaped national stroke guidelines. With a distinguished career as former HOD Neurology at AIIMS, New Delhi, she continues to advance neuroscience care across India.",
     "medicalProblems": [
       {
-        "title": "Coronary Artery Disease",
-        "description": "Blockages, heart attack, angioplasty and stenting."
+        "title": "Stroke (Acute & Chronic)",
+        "description": "Management of ischemic stroke, thrombolysis, and stroke prevention."
       },
       {
-        "title": "Heart Rhythm Disorders",
-        "description": "Pacemakers, ICD, CRT and electrophysiology-related treatments."
+        "title": "Alzheimer\u2019s Disease",
+        "description": "Diagnosis and treatment of memory loss and neurodegenerative disorders."
       },
       {
-        "title": "Structural Heart Disease",
-        "description": "ASD, VSD, PDA closure without surgery."
-      },
-      {
-        "title": "Heart Failure",
-        "description": "Advanced cardiac support and device therapy."
+        "title": "Cerebrovascular Disorders",
+        "description": "Treatment of blood vessel disorders affecting the brain."
       }
     ],
     "procedures": [
       {
-        "title": "Angioplasty & Stenting",
-        "description": "Performed over 10,000 angioplasties successfully."
+        "title": "Stroke Thrombolysis",
+        "description": "Hyperacute management for ischemic stroke."
       },
       {
-        "title": "Coronary Angiography",
-        "description": "Thousands of radial and femoral angiographies performed."
+        "title": "Neurological Evaluation",
+        "description": "Comprehensive assessment for brain and nerve disorders."
       },
       {
-        "title": "Device Implantation",
-        "description": "Pacemakers, ICD, CRT, BIVI implantation."
-      },
-      {
-        "title": "ASD / VSD / PDA Closure",
-        "description": "Expert in non-surgical closure of structural heart defects."
+        "title": "Cognitive Disorders Management",
+        "description": "Treatment for dementia, Alzheimer\u2019s and memory loss."
       }
     ],
     "faqs": [
       {
-        "question": "How many heart patients has Dr. Neeraj treated?",
-        "answer": "He has treated over 50,000 heart patients."
+        "question": "Does Dr. Padma specialize in stroke treatment?",
+        "answer": "Yes, she is a national pioneer in stroke thrombolysis and vascular neurology."
       },
       {
-        "question": "Is he experienced in angioplasty?",
-        "answer": "Yes, he has performed more than 10,000 angioplasties."
+        "question": "Does she treat Alzheimer\u2019s disease?",
+        "answer": "Yes, she is a leading expert in Alzheimer's and cognitive disorders."
       },
       {
-        "question": "Does he treat international patients?",
-        "answer": "Yes, he has treated over 1,000 international patients."
+        "question": "Has she worked at AIIMS?",
+        "answer": "Yes, she served as HOD of Neurology and Chief of Neurosciences at AIIMS."
       }
     ]
   },
   {
-    "slug": "dr-praveen-bansal",
-    "name": "Dr. Praveen Kumar Bansal",
+    "slug": "dr-r-ranga-rao",
+    "name": "Dr. (Col) R. Ranga Rao",
     "specialty": "Medical Oncology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "25+ years",
-    "image": "assets/uploads/Dr.-Praveen-Kumar-Bansal.png",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "30+ years",
+    "image": "assets/uploads/Dr. R RANGA RAO.jpg",
     "isTopDoctor": true,
-    "position": "Director \u2013 Oncology Services",
-    "degree": "MBBS | MD (Gold Medalist) | DM (Medical Oncology)",
-    "about": "Dr. Praveen Bansal is a senior medical oncologist with more than 25 years of experience in treating hematological and solid organ cancers in both adults and children. Before joining Metro Group, he served as Director of Medical Oncology at Asian Institute of Medical Sciences and has worked with top cancer centers including Dharamshilla Cancer Hospital and Medanta Hospital. He is known for his expertise in chemotherapy, immunotherapy, targeted therapy, and bone marrow transplant.",
+    "position": "Chairman \u2013 Oncology",
+    "degree": "DM (Oncology) | MD (Internal Medicine) | MBBS",
+    "about": "Dr. (Col.) R. Ranga Rao is a highly respected senior oncologist with over 30 years of experience treating solid cancers. Trained at Cancer Institute Adyar and international centers such as MD Anderson Cancer Center (USA), he is known for his work in chemotherapy, targeted therapy, palliative oncology, and establishing cancer centers across India.",
     "medicalProblems": [
-      {
-        "title": "Hematological Malignancies",
-        "description": "Leukemia, lymphoma, and myeloma."
-      },
       {
         "title": "Solid Tumors",
-        "description": "Breast, lung, liver, colon, and gynecological cancers."
+        "description": "Diagnosis and treatment of breast, lung, colon and other solid organ cancers."
       },
       {
-        "title": "Pediatric Cancers",
-        "description": "All childhood cancers including leukemia and lymphomas."
+        "title": "Advanced Cancers",
+        "description": "Management of metastatic and recurrent cancers."
       },
       {
-        "title": "Advanced Cancer Management",
-        "description": "Immunotherapy, targeted therapy and palliative oncology."
+        "title": "Palliative Oncology",
+        "description": "Symptom relief and quality-of-life focused cancer care."
       }
     ],
     "procedures": [
       {
-        "title": "Bone Marrow Transplant",
-        "description": "Expert in autologous and allogeneic transplants."
-      },
-      {
         "title": "Chemotherapy",
-        "description": "Standard and high-dose chemotherapy protocols."
+        "description": "Advanced and personalized cancer chemotherapy regimens."
       },
       {
         "title": "Targeted Therapy",
-        "description": "Advanced molecular targeted treatments."
+        "description": "Precision medicine for specific tumor genetics."
       },
       {
-        "title": "Immunotherapy",
-        "description": "Checkpoint inhibitors and novel immuno-oncology treatments."
+        "title": "Palliative Care Interventions",
+        "description": "Pain management and supportive therapies."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Bansal treat pediatric cancers?",
-        "answer": "Yes, he has extensive experience in treating both pediatric and adult cancers."
-      },
-      {
-        "question": "Is he experienced in bone marrow transplant?",
-        "answer": "Yes, he specializes in BMT for hematological malignancies."
-      },
-      {
-        "question": "Does he offer immunotherapy?",
-        "answer": "Yes, he provides advanced immunotherapy and targeted cancer treatments."
-      }
-    ]
-  },
-  {
-    "slug": "dr-sumant-gupta",
-    "name": "Dr. Sumant Gupta",
-    "specialty": "Medical Oncology, Hematology & Bone Marrow Transplant",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "18+ years",
-    "image": "assets/uploads/Dr.-Sumant-Gupta.png",
-    "isTopDoctor": true,
-    "position": "Additional Medical Director & Director \u2013 Metro Cancer Institute",
-    "degree": "MBBS | MD (Medicine) | DM (Medical Oncology)",
-    "about": "Dr. Sumant Gupta is an accomplished oncologist with specialized training from the renowned Cancer Institute (WIA), Chennai, and AIIMS Delhi. He has expertise in hematological cancers, bone marrow transplant, and solid tumor management. He is credited with performing the first-ever bone marrow transplant in Faridabad and has authored over 20 international and national research papers. Dr. Gupta has received awards including the TYSA Young Scholar Award (2015).",
-    "medicalProblems": [
-      {
-        "title": "Blood Cancers",
-        "description": "Leukemia, lymphoma, myeloma."
-      },
-      {
-        "title": "Solid Organ Tumors",
-        "description": "Breast, lung, GI, liver and gynecological malignancies."
-      },
-      {
-        "title": "Pediatric Oncology",
-        "description": "Cancer care for children and adolescents."
-      },
-      {
-        "title": "Bone Marrow Failure Disorders",
-        "description": "Aplastic anemia and related conditions."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Bone Marrow Transplant",
-        "description": "Performed the first BMT in Faridabad."
-      },
-      {
-        "title": "Chemotherapy",
-        "description": "Standard, adjuvant and neoadjuvant chemotherapy."
-      },
-      {
-        "title": "Immunotherapy",
-        "description": "Checkpoint inhibitors, cellular therapies."
-      },
-      {
-        "title": "Targeted Therapy",
-        "description": "Precision oncological treatment."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Sumant perform Bone Marrow Transplants?",
-        "answer": "Yes, he is the first to perform BMT in Faridabad."
-      },
-      {
-        "question": "What cancers does he treat?",
-        "answer": "He treats all major hematological and solid tumors in adults and children."
-      },
-      {
-        "question": "Is he an award-winning oncologist?",
-        "answer": "Yes, he received the TYSA Young Scholar Award for Best DM Oncology Fellow."
-      }
-    ]
-  },
-  {
-    "slug": "dr-vikash-kumar",
-    "name": "Dr. Vikash Kumar",
-    "specialty": "Radiation Oncology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "20+ years",
-    "image": "assets/uploads/Dr.-Vikash-Kumar.png",
-    "isTopDoctor": true,
-    "position": "Director & Head \u2013 Radiation Oncology",
-    "degree": "MBBS | MD (Radiotherapy) | Fellowships in Precision Radiotherapy",
-    "about": "Dr. Vikash Kumar is an eminent Radiation Oncologist with extensive experience in advanced radiotherapy technologies. Having served at top institutes like Asian Institute of Medical Sciences, BLK Cancer Centre, Jaypee Hospital and Medanta, he is known for precision radiotherapy, IMRT, IGRT, SBRT and stereotactic treatments. His dedication to cancer care is reflected through numerous fellowships, research contributions and leadership roles in radiation oncology.",
-    "medicalProblems": [
-      {
-        "title": "Head & Neck Cancers",
-        "description": "Comprehensive radiotherapy-based treatment."
-      },
-      {
-        "title": "Brain Tumors",
-        "description": "Advanced stereotactic radiosurgery and radiotherapy."
-      },
-      {
-        "title": "Breast Cancer",
-        "description": "Precision radiotherapy, organ-sparing techniques."
-      },
-      {
-        "title": "Thoracic & Abdominal Tumors",
-        "description": "Radiation treatment for lung, liver, pancreas and GI cancers."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "IMRT / IGRT",
-        "description": "Highly accurate, image-guided radiotherapy."
-      },
-      {
-        "title": "SBRT / SRS",
-        "description": "Stereotactic treatments for tumors requiring high precision."
-      },
-      {
-        "title": "Brachytherapy",
-        "description": "Internal radiation for gynecologic and prostate cancers."
-      },
-      {
-        "title": "Precision Radiotherapy",
-        "description": "Fellowship-trained advanced cancer radiotherapy."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Vikash specialize in precision radiotherapy?",
-        "answer": "Yes, he has specialized fellowships and expertise in precision radiotherapy techniques."
-      },
-      {
-        "question": "Does he treat brain tumors?",
-        "answer": "Yes, he is skilled in stereotactic radiosurgery and advanced CNS radiotherapy."
-      },
-      {
-        "question": "Is he experienced across multiple cancer centers?",
-        "answer": "Yes, he has served in leading cancer institutes across India."
-      }
-    ]
-  },
-  {
-    "slug": "dr-ritesh-mongha",
-    "name": "Dr. Ritesh Mongha",
-    "specialty": "Urology, Kidney Transplant & Robotic Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "19+ years",
-    "image": "assets/uploads/Dr.-Ritesh-Mongha.png",
-    "isTopDoctor": true,
-    "position": "Director & Senior Consultant \u2013 Urology, Kidney Transplant & Robotic Surgery",
-    "degree": "MBBS | MS (Surgery) | DNB (General Surgery) | MCh (Urology)",
-    "about": "Dr. Ritesh Mongha is a leading urologist and renal transplant surgeon with nearly two decades of experience across prestigious institutions including Apollo Hospital (Delhi), Fortis Hospital and SSKM Hospital (Kolkata). He has performed more than 10,000 endourological and laparoscopic urological procedures, including over 1000 prostate surgeries and 2000+ RIRS procedures. His expertise spans robotic surgery, laparoscopic oncology, urethral reconstruction and complex renal transplants.",
-    "medicalProblems": [
-      {
-        "title": "Kidney Stones",
-        "description": "Laser RIRS, PCNL, URS for all types of stones."
-      },
-      {
-        "title": "Prostate Enlargement",
-        "description": "Laser prostatectomy and minimally invasive surgeries."
-      },
-      {
-        "title": "Urethral Strictures",
-        "description": "Buccal mucosa grafting and complex reconstruction."
-      },
-      {
-        "title": "Uro-Oncology",
-        "description": "Cancers of kidney, adrenal, prostate, bladder and ureter."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Laser Prostate Surgery",
-        "description": "Over 1000+ laser prostate procedures performed."
-      },
-      {
-        "title": "RIRS & Endourology",
-        "description": "More than 2000 RIRS procedures for kidney stones."
-      },
-      {
-        "title": "Robotic Urology",
-        "description": "Robotic nephrectomy, prostatectomy and complex reconstruction."
-      },
-      {
-        "title": "Renal Transplant",
-        "description": "Experienced in 700+ renal transplants."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Mongha perform laser prostate surgery?",
-        "answer": "Yes, he leads one of India's busiest laser urology units."
-      },
-      {
-        "question": "Is he experienced in robotic surgeries?",
-        "answer": "Yes, he is skilled in robotic urological oncology and reconstruction."
-      },
-      {
-        "question": "Does he perform kidney transplants?",
-        "answer": "Yes, with experience in over 700 transplants."
-      }
-    ]
-  },
-  {
-    "slug": "dr-shailendra-lalwani",
-    "name": "Dr. Shailendra Lalwani",
-    "specialty": "Liver Transplant, HPB & GI Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "25+ years",
-    "image": "assets/uploads/Dr. Shailendra Lalwani.png",
-    "isTopDoctor": true,
-    "position": "Director & HOD \u2013 Liver Transplant, HPB & GI Surgery",
-    "degree": "MBBS | MS (General Surgery) | DNB (Surgical Gastroenterology) | Training \u2013 King's College Hospital, London (HPB & Liver Transplant)",
-    "about": "Dr. Shailendra Lalwani is a renowned liver transplant and HPB surgeon with 25+ years of experience and over 2500 successful liver transplant surgeries. He has performed more than 15,000 complex GI and HPB surgeries, including adult and pediatric liver transplants, combined liver-kidney transplants, and advanced hepatobiliary cancer surgeries. Trained at King's College Hospital, London, he is known for his precision, surgical innovation, and leadership in liver transplant programs across major hospitals.",
-    "medicalProblems": [
-      {
-        "title": "Liver Failure",
-        "description": "Management and surgical treatment for acute and chronic liver disease."
-      },
-      {
-        "title": "Liver & Biliary Cancers",
-        "description": "Surgical treatment for hepatocellular carcinoma and cholangiocarcinoma."
-      },
-      {
-        "title": "Gastrointestinal Cancers",
-        "description": "Treatment for colorectal, stomach, and pancreatic cancers."
-      },
-      {
-        "title": "Portal Hypertension",
-        "description": "Advanced shunt and transplant-based treatments."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Liver Transplant",
-        "description": "Living and deceased donor transplants; pediatric and adult."
-      },
-      {
-        "title": "HPB Surgery",
-        "description": "Pancreatic, liver, gallbladder, and bile duct surgeries."
-      },
-      {
-        "title": "Robotic Gastrointestinal Surgery",
-        "description": "Minimally invasive robotic and laparoscopic GI procedures."
-      },
-      {
-        "title": "GI Oncology Surgery",
-        "description": "Advanced cancer surgeries for GI and hepatobiliary tumors."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Has Dr. Lalwani performed liver transplants internationally?",
-        "answer": "Yes, he performed the first liver transplant of Sudan and East Africa."
-      },
-      {
-        "question": "Does he treat pediatric liver conditions?",
-        "answer": "Yes, he specializes in pediatric liver transplants."
-      },
-      {
-        "question": "Is he trained internationally?",
-        "answer": "Yes, he received advanced liver transplant training at King\u2019s College Hospital, London."
-      }
-    ]
-  },
-  {
-    "slug": "dr-lalit-sehgal",
-    "name": "Dr. Lalit Sehgal",
-    "specialty": "Liver Transplant Anaesthesia & Critical Care",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "24+ years",
-    "image": "assets/uploads/Dr. Alka Goyal.png",
-    "isTopDoctor": true,
-    "position": "Director & HOD \u2013 General & Liver Transplant Anaesthesia, Liver & Oncology ICU",
-    "degree": "MBBS | MD (Anesthesiology) | DNB (Anesthesiology) | PG Certification in Hospital Management | MBA (Healthcare Services)",
-    "about": "Dr. Lalit Sehgal is a senior anesthesiologist and critical care expert with over 24 years of experience. He specializes in liver transplant anesthesia, oncology critical care, and surgical intensive care. He has played a key role in establishing liver transplant programs at major hospitals including ILBS Delhi, Fortis Noida, Manipal Dwarka, Rajiv Gandhi Cancer Institute, and hospitals in Sudan. Known for his leadership and excellence in perioperative management, he has been honoured for contributions in teaching and training.",
-    "medicalProblems": [
-      {
-        "title": "Liver Transplant Critical Care",
-        "description": "Expert care for pre and post-liver transplant patients."
-      },
-      {
-        "title": "Oncology ICU Care",
-        "description": "Critical care for cancer surgeries and complications."
-      },
-      {
-        "title": "High-Risk Surgical Anaesthesia",
-        "description": "Safe anesthesia for complex and high-risk patients."
-      },
-      {
-        "title": "Multi-Organ Failure",
-        "description": "Advanced ICU management and life-support systems."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Liver Transplant Anaesthesia",
-        "description": "Advanced anesthesia for adult and pediatric liver transplants."
-      },
-      {
-        "title": "Critical Care Management",
-        "description": "Ventilation, organ support and emergency ICU procedures."
-      },
-      {
-        "title": "Onco-Surgical Anaesthesia",
-        "description": "Anaesthesia for complex cancer surgeries."
-      },
-      {
-        "title": "Advanced Monitoring",
-        "description": "Hemodynamic & neurological monitoring in critical patients."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Sehgal specialize in liver transplant anesthesia?",
-        "answer": "Yes, he is one of India\u2019s top experts in liver transplant anaesthesia and SICU."
-      },
-      {
-        "question": "Has he set up liver transplant programs?",
-        "answer": "Yes, he has established multiple successful programs in India and abroad."
-      },
-      {
-        "question": "Does he handle oncology critical care?",
-        "answer": "Yes, he heads liver and oncology ICU services."
-      }
-    ]
-  },
-  {
-    "slug": "dr-vishal-khurana",
-    "name": "Dr. Vishal Khurana",
-    "specialty": "Gastroenterology & Hepatobiliary Sciences",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "13+ years",
-    "image": "assets/uploads/Dr.-Vishal-Khurana.png",
-    "isTopDoctor": true,
-    "position": "Director \u2013 Gastroenterology & Hepatobiliary Sciences",
-    "degree": "MBBS | MD (Medicine) | DM (Gastroenterology) | MNAMS",
-    "about": "Dr. Vishal Khurana is a highly skilled gastroenterologist trained at prestigious institutes including BHU and IPGMER. With over 13 years of experience, he specializes in advanced endoscopy, hepatobiliary disorders, pancreatic diseases, and gastrointestinal oncology. He has multiple international publications, including in The Lancet and Journal of Pancreas, and has won several awards for academic excellence.",
-    "medicalProblems": [
-      {
-        "title": "Liver Diseases",
-        "description": "Fatty liver, hepatitis, cirrhosis and liver failure."
-      },
-      {
-        "title": "Pancreatic Disorders",
-        "description": "Pancreatitis, pancreatic tumors and chronic pancreatic disease."
-      },
-      {
-        "title": "GI Cancers",
-        "description": "Esophageal, stomach, colorectal and pancreatic cancers."
-      },
-      {
-        "title": "IBD & Functional Disorders",
-        "description": "Ulcerative colitis, Crohn\u2019s disease, IBS and motility disorders."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Upper GI Endoscopy",
-        "description": "Diagnostic and therapeutic endoscopy."
-      },
-      {
-        "title": "ERCP & EUS",
-        "description": "Advanced bile duct and pancreatic interventions."
-      },
-      {
-        "title": "Colonoscopy",
-        "description": "Cancer screening, polyp removal and GI bleeding management."
-      },
-      {
-        "title": "Advanced Endoscopic Procedures",
-        "description": "EMR, hemostasis, stricture dilation, hemoclip and APC."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Dr. Khurana experienced in ERCP & EUS?",
-        "answer": "Yes, he is highly skilled in advanced endoscopic procedures."
-      },
-      {
-        "question": "Does he treat liver and pancreatic diseases?",
-        "answer": "Yes, he specializes in hepatobiliary and pancreatic disorders."
-      },
-      {
-        "question": "Has he published scientific research?",
-        "answer": "Yes, he has numerous publications in major international journals."
-      }
-    ]
-  },
-  {
-    "slug": "dr-himanshu-arora",
-    "name": "Dr. Himanshu Arora",
-    "specialty": "Neuro Surgery & Spine",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Himanshu-Arora.png",
-    "isTopDoctor": true,
-    "position": "Director \u2013 Neuro Surgery & Spine (Unit-I)",
-    "degree": "MBBS | DNB (General Surgery) | DNB (Neurosurgery) | Fellowship in Spine Surgery (London, UK)",
-    "about": "Dr. Himanshu Arora is a distinguished neurosurgeon with over 5,000 successful neuro and spine surgeries. With training and a spine fellowship from London, he specializes in minimally invasive brain and spine surgery, endoscopic spine procedures, complex neurotrauma, neuro-oncology, and stereotactic surgery. He actively participates in national and international conferences and is known for his precision, ethical practice, and clinical excellence.",
-    "medicalProblems": [
-      {
-        "title": "Brain Tumors",
-        "description": "Surgical management of benign and malignant brain tumors."
-      },
-      {
-        "title": "Spine Disorders",
-        "description": "Slip disc, spinal stenosis, deformities and instability."
-      },
-      {
-        "title": "Head Injury & Trauma",
-        "description": "Comprehensive neurosurgical and critical care management."
-      },
-      {
-        "title": "Movement Disorders",
-        "description": "DBS for Parkinson\u2019s disease and other disorders."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Minimally Invasive Spine Surgery",
-        "description": "Endoscopic and keyhole spine procedures."
-      },
-      {
-        "title": "Brain Tumor Surgery",
-        "description": "Microscopic and stereotactic tumor excision."
-      },
-      {
-        "title": "Endoscopic Neurosurgery",
-        "description": "Endonasal and cranial base endoscopic procedures."
-      },
-      {
-        "title": "Endovascular Neurointervention",
-        "description": "Stroke and aneurysm-based endovascular treatments."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "How many surgeries has Dr. Arora performed?",
-        "answer": "He has successfully performed over 5,000 neuro and spine surgeries."
-      },
-      {
-        "question": "Does he specialize in minimally invasive spine surgery?",
-        "answer": "Yes, he is trained in advanced endoscopic and keyhole spine surgeries."
+        "question": "Does Dr. Rao treat all major solid cancers?",
+        "answer": "Yes, he specializes in a wide range of solid organ cancers."
       },
       {
         "question": "Has he trained internationally?",
-        "answer": "Yes, he completed a prestigious Spine Surgery Fellowship in London, UK."
+        "answer": "Yes, including at MD Anderson Cancer Center, USA."
+      },
+      {
+        "question": "Has he received awards?",
+        "answer": "Yes, multiple lifetime achievement awards in oncology."
       }
     ]
   },
   {
-    "slug": "dr-arun-kumar-singh",
-    "name": "Dr. Arun Kumar C. Singh",
-    "specialty": "Endocrinology & Diabetology",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "slug": "dr-rajnish-monga",
+    "name": "Dr. Rajnish Monga",
+    "specialty": "Gastroenterology",
+    "hospital": "Paras Health – Gurugram",
     "experience": "20+ years",
-    "image": "assets/uploads/Dr.-Arun-C.-Singh.png",
+    "image": "assets/uploads/Dr. RAJNISH MONGA.jpg",
     "isTopDoctor": true,
-    "position": "Director \u2013 Endocrinology & Diabetology",
-    "degree": "MBBS | MD (Internal Medicine) | DM (Endocrinology)",
-    "about": "Dr. Arun Kumar C. Singh is a highly accomplished endocrinologist and diabetologist with training from premier institutes including Grant Medical College Mumbai, Maulana Azad Medical College, and AIIMS New Delhi. He specializes in treating complex hormonal and metabolic disorders including diabetes, thyroid diseases, adrenal and pituitary disorders. With experience across top hospitals in India and Singapore, he is known for his analytical approach and excellence in endocrine care.",
+    "position": "Chairman \u2013 Gastroenterology",
+    "degree": "MBBS | MD | DM",
+    "about": "Dr. Rajnish Monga is an accomplished gastroenterologist with over 20 years of extensive experience in treating complex gastrointestinal, pancreatic, and colonic diseases. Known for his clinical excellence and research contributions, he serves as Chairman of Gastro Sciences at Paras Health.",
     "medicalProblems": [
       {
-        "title": "Diabetes Mellitus",
-        "description": "Type 1, Type 2 and advanced diabetes management."
+        "title": "Acute Pancreatitis",
+        "description": "Treatment of severe and recurrent pancreatitis."
       },
       {
-        "title": "Thyroid Disorders",
-        "description": "Hypothyroidism, hyperthyroidism, thyroiditis and nodules."
+        "title": "Pancreatic Disorders",
+        "description": "Management of pancreatic cysts, tumors, and chronic disease."
       },
       {
-        "title": "Hormonal Imbalances",
-        "description": "Adrenal, pituitary, reproductive and metabolic disorders."
-      },
-      {
-        "title": "Obesity & Metabolic Syndrome",
-        "description": "Weight management and metabolic correction therapies."
+        "title": "Colonic Diseases",
+        "description": "Treatment of colitis, IBS, polyps, and other colon conditions."
       }
     ],
     "procedures": [
       {
-        "title": "Diabetes Management",
-        "description": "Insulin therapy, CGM, advanced care."
+        "title": "Endoscopic Procedures",
+        "description": "Diagnostic and therapeutic endoscopy for GI conditions."
       },
       {
-        "title": "Endocrine Diagnostics",
-        "description": "Hormone profiling and metabolic evaluations."
+        "title": "ERCP",
+        "description": "Biliary and pancreatic duct evaluation and treatment."
       },
       {
-        "title": "Thyroid Disorder Treatment",
-        "description": "Medical management and long-term care."
-      },
-      {
-        "title": "Metabolic Therapy",
-        "description": "Lifestyle and pharmacological management."
+        "title": "EUS",
+        "description": "Endoscopic ultrasound for detailed GI imaging."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Singh treat complex diabetes cases?",
-        "answer": "Yes, he specializes in advanced and uncontrolled diabetes management."
+        "question": "Does Dr. Monga treat pancreatitis?",
+        "answer": "Yes, he specializes in advanced management of pancreatic diseases."
       },
       {
-        "question": "Is he trained from AIIMS?",
-        "answer": "Yes, he completed DM Endocrinology from AIIMS New Delhi."
+        "question": "Does he perform ERCP?",
+        "answer": "Yes, he is skilled in ERCP and other advanced endoscopic procedures."
       },
       {
-        "question": "Does he manage thyroid disorders?",
-        "answer": "Yes, he is an expert in all types of thyroid diseases."
+        "question": "Is he experienced in colon disorders?",
+        "answer": "Yes, he manages a wide spectrum of colonic diseases."
       }
     ]
   },
   {
-    "slug": "dr-midur-kumar-sharma",
-    "name": "Dr. Midur Kumar Sharma",
-    "specialty": "Laparoscopic, Bariatric & Robotic Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Midur-Kumar-Sharma.png",
-    "isTopDoctor": false,
-    "position": "Associate Director \u2013 Laparoscopic, Bariatric, Metabolic & Robotic Surgery (Unit-I)",
-    "degree": "MBBS | MS (General Surgery) | MCLS",
-    "about": "Dr. Midur Kumar Sharma is a skilled laparoscopic and bariatric surgeon with extensive experience in advanced minimally invasive surgeries, single-incision laparoscopy, robotic surgery, laser-assisted treatments and metabolic surgery. He has served at several reputed institutions including MMIMSR Ambala, Alchemist Hospital Gurugram, Sarvodaya Hospital and Asian Hospital.",
-    "medicalProblems": [
-      {
-        "title": "Obesity & Metabolic Disorders",
-        "description": "Bariatric and metabolic surgery solutions."
-      },
-      {
-        "title": "Hernias",
-        "description": "Laparoscopic repair of all types of hernias."
-      },
-      {
-        "title": "Anorectal Diseases",
-        "description": "Laser treatment for fissures, fistulas and piles."
-      },
-      {
-        "title": "Gallbladder & Appendix Issues",
-        "description": "Advanced laparoscopic removal procedures."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Laparoscopic Bariatric Surgery",
-        "description": "Weight-loss surgeries including sleeve gastrectomy and bypass."
-      },
-      {
-        "title": "Single Incision Laparoscopic Surgery (SILS)",
-        "description": "Minimally invasive single-port procedures."
-      },
-      {
-        "title": "Laser Anorectal Surgery",
-        "description": "Laser treatment for hemorrhoids, fistulas and pilonidal sinus."
-      },
-      {
-        "title": "Robotic Surgery",
-        "description": "Advanced robotic GI and metabolic procedures."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Sharma perform bariatric surgery?",
-        "answer": "Yes, he specializes in bariatric and metabolic surgeries."
-      },
-      {
-        "question": "What anorectal surgeries does he perform?",
-        "answer": "Laser fistula, fissure and piles surgeries."
-      },
-      {
-        "question": "Is he experienced in robotic surgery?",
-        "answer": "Yes, he is trained in advanced robotic procedures."
-      }
-    ]
-  },
-  {
-    "slug": "dr-ashok-dhar",
-    "name": "Dr. Ashok Kr. Dhar",
-    "specialty": "Orthopaedics & Joint Replacement",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "slug": "dr-sushant-srivastava",
+    "name": "Dr. Sushant Srivastava",
+    "specialty": "Cardiothoracic & Vascular Surgery (CTVS)",
+    "hospital": "Paras Health – Gurugram",
     "experience": "30+ years",
-    "image": "assets/uploads/Dr.-Ashok-Dhar",
+    "image": "assets/uploads/Dr. SUSHANT SRIVASTAVA.jpg",
     "isTopDoctor": true,
-    "position": "Director \u2013 Orthopaedics & Joint Replacement (Unit-I)",
-    "degree": "MBBS | MS (Orthopaedics)",
-    "about": "Dr. Ashok Kr. Dhar is a veteran orthopaedic surgeon with over 30,000 successful surgeries. He specializes in complex trauma, hip, knee, and shoulder replacement surgeries, minimally invasive orthopaedic procedures, and revision joint replacement. His experience includes leadership roles in Fortis Escorts Hospital, Sarvodaya Hospital, and international work under the Ministry of Health (Saudi Arabia).",
+    "position": "Chairperson \u2013 CTVS",
+    "degree": "MS (General Surgery) | M.Ch (CTVS, AIIMS)",
+    "about": "Dr. Sushant Srivastava is a nationally renowned cardiothoracic, vascular and heart-lung transplant surgeon with more than 30 years of experience and over 15,000 complex surgeries. A pioneer in cardiac innovations, he was part of India\u2019s first heart transplant team at AIIMS and introduced breakthrough procedures such as India\u2019s first stitch-less valve implantation and North India's first awake CABG. His expertise spans heart transplants, LVAD implantation, valve repairs, aortic reconstruction, congenital heart surgeries, and minimally invasive cardiac procedures.",
     "medicalProblems": [
       {
-        "title": "Joint Arthritis",
-        "description": "Knee, hip and shoulder degeneration."
+        "title": "Valvular Heart Disease",
+        "description": "Treatment of stenosis, regurgitation and complex valve disorders."
       },
       {
-        "title": "Complex Trauma",
-        "description": "Acetabular and periarticular fractures."
+        "title": "Coronary Artery Disease",
+        "description": "Surgical treatment of severe blockages requiring bypass surgery."
       },
       {
-        "title": "Sports Injuries",
-        "description": "Ligament, tendon and cartilage injuries."
+        "title": "Aortic Aneurysms",
+        "description": "Management of thoracic and abdominal aortic aneurysms."
       },
       {
-        "title": "Spine & Orthopaedic Disorders",
-        "description": "Chronic pain, fractures and deformities."
+        "title": "Heart Failure",
+        "description": "Advanced surgical support including LVAD and transplant."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Heart Transplant Surgery",
+        "description": "Transplantation for end-stage heart failure patients."
+      },
+      {
+        "title": "Beating Heart CABG",
+        "description": "Coronary bypass without stopping the heart."
+      },
+      {
+        "title": "Valve Repairs & Replacements",
+        "description": "Including pioneering stitch-less valve implantation."
+      },
+      {
+        "title": "Aortic Aneurysm Repair",
+        "description": "Hybrid, open, and endovascular aortic surgery."
+      },
+      {
+        "title": "Minimally Invasive Cardiac Surgery",
+        "description": "Small-incision cardiac procedures including awake surgeries."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Sushant a heart transplant surgeon?",
+        "answer": "Yes, he has extensive experience and was part of India\u2019s first heart transplant team."
+      },
+      {
+        "question": "Does he perform minimally invasive CABG?",
+        "answer": "Yes, he pioneered North India's first awake CABG surgery."
+      },
+      {
+        "question": "Does he treat aortic aneurysms?",
+        "answer": "Yes, he specializes in hybrid and endovascular aortic surgeries."
+      }
+    ]
+  },
+  {
+    "slug": "dr-vs-mehta",
+    "name": "Dr. V. S. Mehta",
+    "specialty": "Neurosurgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "40+ years",
+    "image": "assets/uploads/Dr. V S MEHTA.jpg",
+    "isTopDoctor": true,
+    "position": "Chairman \u2013 Neurosurgery",
+    "degree": "MBBS | MS (General Surgery) | M.Ch (Neurosurgery, AIIMS)",
+    "about": "Dr. V.S. Mehta is one of India\u2019s most distinguished neurosurgeons, a Padma Shri awardee, and former Chief of Neurosciences at AIIMS, New Delhi. With decades of surgical leadership, he is renowned for pioneering neurosurgical advancements and managing highly complex brain and spine disorders. His expertise includes brain stem surgeries, brachial plexus surgery, and brain tumor management. He is widely respected for his contributions to India\u2019s neurosurgical excellence.",
+    "medicalProblems": [
+      {
+        "title": "Brain Tumors",
+        "description": "Treatment of benign and malignant tumors of the brain."
+      },
+      {
+        "title": "Brachial Plexus Injury",
+        "description": "Reconstruction and nerve repair for severe nerve injuries."
+      },
+      {
+        "title": "Brain Stem Disorders",
+        "description": "Management of complex and delicate brain stem pathologies."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Brain Tumor Surgery",
+        "description": "Micro-neurosurgery and minimally invasive tumor removal."
+      },
+      {
+        "title": "Brachial Plexus Surgery",
+        "description": "Advanced nerve reconstruction surgeries."
+      },
+      {
+        "title": "Complex Skull Base Surgery",
+        "description": "Surgery for deep-seated tumors and brain stem lesions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Mehta a Padma Shri awardee?",
+        "answer": "Yes, he has been awarded the Padma Shri for contribution to neurosurgery."
+      },
+      {
+        "question": "Does he treat brain tumors?",
+        "answer": "Yes, he is among India\u2019s top specialists for brain tumor surgery."
+      },
+      {
+        "question": "Has he worked at AIIMS?",
+        "answer": "Yes, he served as Head of Neurosurgery at AIIMS, New Delhi."
+      }
+    ]
+  },
+  {
+    "slug": "dr-abhay-kapoor",
+    "name": "Dr. Abhay Kapoor",
+    "specialty": "Interventional Radiology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "19+ years",
+    "image": "assets/uploads/Dr. ABHAY KAPOOR.jpg",
+    "isTopDoctor": true,
+    "position": "Director \u2013 Interventional Radiology",
+    "degree": "FVIR (Medanta) | MD (INHS Asvini) | MBBS (KEM Hospital)",
+    "about": "Dr. Abhay Kapoor is a leading interventional radiology specialist with nearly two decades of experience. He has served at premier institutions including KEM Hospital Mumbai, Bombay Hospital, INHS Asvini, GB Pant Hospital Delhi, and Medanta Gurugram. He is credited with performing India\u2019s first same-day TARE procedure and the country's first cryoablation for malignant breast lesions. His expertise includes minimally invasive cancer treatments and liver tumor interventions.",
+    "medicalProblems": [
+      {
+        "title": "Liver Cancer",
+        "description": "Management of primary and metastatic liver tumors."
+      },
+      {
+        "title": "Vascular Disorders",
+        "description": "Minimally invasive treatment of blocked or abnormal vessels."
+      },
+      {
+        "title": "Tumor Ablation Needs",
+        "description": "Thermal ablation for tumors in various organs."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "TACE & TARE",
+        "description": "Trans-arterial chemoembolization and radioembolization for liver cancer."
+      },
+      {
+        "title": "RFA & MWA",
+        "description": "Radiofrequency and microwave ablation for tumors."
+      },
+      {
+        "title": "Cryoablation",
+        "description": "Minimally invasive freezing technique for tumor destruction."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Abhay Kapoor treat liver cancer?",
+        "answer": "Yes, he specializes in TACE, TARE, and tumor ablation techniques."
+      },
+      {
+        "question": "Has he performed breakthrough procedures?",
+        "answer": "Yes, including India's first same-day TARE and first cryoablation for breast malignancy."
+      },
+      {
+        "question": "Is he an expert in tumor ablation?",
+        "answer": "Yes, he is highly experienced in RFA, MWA, and cryoablation."
+      }
+    ]
+  },
+  {
+    "slug": "dr-manmohan-singh",
+    "name": "Dr. (Prof.) Manmohan Singh",
+    "specialty": "Neurosurgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "25+ years",
+    "image": "assets/uploads/Dr. MANMOHAN SINGH.jpg",
+    "isTopDoctor": true,
+    "position": "Vice Chairperson \u2013 Neurosurgery",
+    "degree": "MBBS | MS (Surgery) | M.Ch (Neurosurgery)",
+    "about": "Dr. (Prof.) Manmohan Singh is a distinguished neurosurgeon with over 25 years of experience. Former Professor of Neurosurgery and Head of the Gamma Knife Centre at AIIMS, he is widely recognized as a leading expert in neurovascular surgery, skull base surgery, and cavernous sinus tumor management. He is also experienced in advanced radiosurgery and deep brain stimulation for movement disorders.",
+    "medicalProblems": [
+      {
+        "title": "Skull Base Tumors",
+        "description": "Diagnosis and treatment of complex skull base pathologies."
+      },
+      {
+        "title": "Brain Stem Disorders",
+        "description": "Advanced surgical management for delicate brain stem lesions."
+      },
+      {
+        "title": "Cavernous Sinus Tumors",
+        "description": "Expert evaluation and surgical treatment of cavernous sinus masses."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Skull Base Surgery",
+        "description": "Complex surgical procedures for deep-seated brain tumors."
+      },
+      {
+        "title": "Gamma Knife Radiosurgery",
+        "description": "Precision radiation treatment for brain disorders."
+      },
+      {
+        "title": "Deep Brain Stimulation",
+        "description": "Surgical treatment for Parkinson\u2019s and movement disorders."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Manmohan Singh specialize in skull base surgery?",
+        "answer": "Yes, he is one of India\u2019s top experts in skull base and cavernous sinus surgeries."
+      },
+      {
+        "question": "Did he work at AIIMS?",
+        "answer": "Yes, he served as Professor of Neurosurgery and Head of the Gamma Knife Centre."
+      },
+      {
+        "question": "Does he offer radiosurgery?",
+        "answer": "Yes, he is highly skilled in Gamma Knife radiosurgery."
+      }
+    ]
+  },
+  {
+    "slug": "dr-amit-bhushan-sharma",
+    "name": "Dr. Amit Bhushan Sharma",
+    "specialty": "Interventional Cardiology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. AMIT BHUSHAN SHARMA.png",
+    "isTopDoctor": true,
+    "position": "Director & Unit Head \u2013 Cardiology",
+    "degree": "DM Cardiology | Fellowships in Interventional Cardiology, Electrophysiology & Pediatric Device Procedures",
+    "about": "Dr. Amit Bhushan Sharma is an accomplished interventional cardiologist known for pioneering multiple structural heart procedures in India. With fellowships from Mount Sinai School of Medicine (New York) and Michigan State University, he has expertise in TAVR, ASD closure, pacemaker implantation, and complex structural interventions. He was the first in India to perform valve replacement without surgery and the first to implant the largest ASD device in the country.",
+    "medicalProblems": [
+      {
+        "title": "Valve Disorders",
+        "description": "Aortic and mitral valve disease requiring minimally invasive interventions."
+      },
+      {
+        "title": "Cardiac Rhythm Disorders",
+        "description": "Management of arrhythmias requiring pacemakers or EP evaluation."
+      },
+      {
+        "title": "Congenital Heart Defects",
+        "description": "ASD, VSD and structural heart abnormalities."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "TAVR/TAVI",
+        "description": "Minimally invasive aortic valve replacement."
+      },
+      {
+        "title": "ASD Device Closure",
+        "description": "Structural intervention to correct atrial septal defects."
+      },
+      {
+        "title": "Leadless Pacemaker Implantation",
+        "description": "Advanced pacemaker procedures requiring no leads."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Amit specialize in TAVR?",
+        "answer": "Yes, he is one of India\u2019s pioneers in TAVR procedures."
+      },
+      {
+        "question": "Is he trained in the US?",
+        "answer": "Yes, he trained at Mount Sinai, New York and Michigan State University."
+      },
+      {
+        "question": "Does he treat congenital heart problems?",
+        "answer": "Yes, including ASD closures and pediatric device procedures."
+      }
+    ]
+  },
+  {
+    "slug": "dr-amitava-sengupta",
+    "name": "Dr. Amitava Sengupta",
+    "specialty": "Paediatrics & Neonatology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "40+ years",
+    "image": "assets/uploads/Dr. AMITAVA SENGUPTA.jpg",
+    "isTopDoctor": true,
+    "position": "Director \u2013 Paediatrics & Neonatology",
+    "degree": "Fellowship Neonatology (Netherlands) | FNNF | MICP | DCH | MBBS",
+    "about": "Dr. Amitava Sengupta is a veteran neonatologist with over four decades of experience in neonatal intensive care and pediatric medicine. He has pioneered NICU development across top hospitals in Delhi-NCR and has trained numerous pediatricians as national faculty. His leadership in national conferences, workshops and NNF programs has helped elevate newborn care standards in India.",
+    "medicalProblems": [
+      {
+        "title": "High-Risk Newborn Care",
+        "description": "Management of premature, critically ill and extremely low birth weight babies."
+      },
+      {
+        "title": "Neonatal Respiratory Disorders",
+        "description": "Advanced NICU treatment for respiratory distress and lung immaturity."
+      },
+      {
+        "title": "Pediatric Growth & Development Disorders",
+        "description": "Evaluation and management of developmental issues in children."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "NICU Care",
+        "description": "Comprehensive neonatal intensive care for critically ill newborns."
+      },
+      {
+        "title": "Ventilation & Life Support",
+        "description": "Advanced respiratory support for premature infants."
+      },
+      {
+        "title": "Neonatal Screening",
+        "description": "Early detection of metabolic and congenital disorders."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Sengupta specialized in neonatology?",
+        "answer": "Yes, he has over 40 years of experience in newborn and NICU care."
+      },
+      {
+        "question": "Does he treat premature babies?",
+        "answer": "Yes, he is highly skilled in managing extremely premature and critical newborns."
+      },
+      {
+        "question": "Is he active in academic teaching?",
+        "answer": "Yes, he regularly leads national programs, workshops and CMEs."
+      }
+    ]
+  },
+  {
+    "slug": "dr-ankur-garg",
+    "name": "Dr. Ankur Garg",
+    "specialty": "Liver Transplant, HPB & GI Surgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "25+ years",
+    "image": "assets/uploads/Dr. ANKUR GARG.jpg",
+    "isTopDoctor": true,
+    "position": "Group Director & HOD \u2013 Liver Transplant",
+    "degree": "MBBS | MS (General Surgery) | MCh (HPB Surgery & Liver Transplant) | Fellow \u2013 European Board of Surgery (FEBS)",
+    "about": "Dr. Ankur Garg is a globally acclaimed liver transplant and HPB surgeon with over 25 years of experience. With more than 2,500 liver transplants and 1,500+ complex HPB and GI surgeries, he is recognized as one of India\u2019s top experts in liver transplantation and hepatobiliary cancer care. Currently serving as Group Director of Liver Transplant and GI Surgery at Paras Health, Dr. Garg is known for his precision, compassionate approach, and expertise in advanced liver transplant techniques.",
+    "medicalProblems": [
+      {
+        "title": "End-Stage Liver Disease",
+        "description": "Evaluation and management of advanced liver failure requiring transplant."
+      },
+      {
+        "title": "Liver & GI Cancers",
+        "description": "Treatment of liver cancer, pancreatic cancer, bile duct cancer and GI tumors."
+      },
+      {
+        "title": "Acute Liver Failure",
+        "description": "Emergency treatment and transplant evaluation for sudden liver failure."
+      },
+      {
+        "title": "Bile Duct Injuries",
+        "description": "Advanced surgical repair for bile duct strictures and injuries."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Living Donor Liver Transplant (LDLT)",
+        "description": "Transplant procedures using a healthy living donor."
+      },
+      {
+        "title": "ABO-Incompatible Liver Transplant",
+        "description": "Specialized liver transplant across blood group mismatch."
+      },
+      {
+        "title": "Pediatric & Dual Lobe Liver Transplant",
+        "description": "Transplants for infants and complex dual-lobe donor procedures."
+      },
+      {
+        "title": "Cadaveric Liver Transplant",
+        "description": "Transplantation using deceased donor organs."
+      },
+      {
+        "title": "Complex Liver Resections",
+        "description": "Advanced surgery for liver tumors, cysts, and abnormalities."
+      },
+      {
+        "title": "HPB Cancer Surgery",
+        "description": "Surgery for cancers of the liver, pancreas, and biliary tract."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many liver transplants has Dr. Ankur Garg performed?",
+        "answer": "He has performed over 2,500 liver transplants and 1,500+ HPB surgeries."
+      },
+      {
+        "question": "Does Dr. Garg perform pediatric liver transplants?",
+        "answer": "Yes, he specializes in pediatric and dual-lobe liver transplants."
+      },
+      {
+        "question": "Is he trained in complex liver cancer surgery?",
+        "answer": "Yes, he is an expert in advanced HPB and GI cancer surgeries."
+      }
+    ]
+  },
+  {
+    "slug": "dr-arunesh-kumar",
+    "name": "Dr. Arunesh Kumar",
+    "specialty": "Pulmonology & Respiratory Medicine",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "23+ years",
+    "image": "assets/uploads/Dr. ARUNESH KUMAR.jpg",
+    "isTopDoctor": true,
+    "position": "Director & HOD \u2013 Pulmonology",
+    "degree": "MBBS (Hons.) | DNB | MRCP (UK) | MRCP Respiratory Medicine (UK) | CCST (UK) | FRCP (London)",
+    "about": "Dr. Arunesh Kumar is an internationally trained pulmonologist with over 23 years of experience in India and the UK. Trained at one of Europe\u2019s largest respiratory centers in Leeds, he has deep expertise in lung cancer, advanced respiratory diagnostics, interventional bronchoscopy, thoracoscopy, EBUS TBNA, and severe asthma treatment. As a UK-trained NHS consultant, he brings global clinical excellence combined with compassionate patient care.",
+    "medicalProblems": [
+      {
+        "title": "Lung Cancer",
+        "description": "Diagnosis, staging and advanced treatment for primary and metastatic lung cancer."
+      },
+      {
+        "title": "Severe Asthma",
+        "description": "Management of steroid-resistant and biologic therapy\u2013eligible asthma."
+      },
+      {
+        "title": "Interstitial Lung Disease (ILD)",
+        "description": "Evaluation and treatment of fibrosis and chronic lung diseases."
+      },
+      {
+        "title": "Sleep Apnea & Sleep Disorders",
+        "description": "Diagnosis and management of sleep-related breathing issues."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Interventional Bronchoscopy",
+        "description": "Advanced bronchoscopy for diagnosis and therapeutic interventions."
+      },
+      {
+        "title": "EBUS TBNA",
+        "description": "Minimally invasive biopsy for lung cancer staging."
+      },
+      {
+        "title": "Thoracoscopy",
+        "description": "Procedure for pleural diseases and fluid drainage."
+      },
+      {
+        "title": "Pulmonary Function Testing",
+        "description": "Comprehensive assessment of lung capacity and function."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Arunesh trained in the UK?",
+        "answer": "Yes, he has spent years working as a consultant in leading NHS hospitals."
+      },
+      {
+        "question": "Does he treat lung cancer?",
+        "answer": "Yes, he specializes in lung cancer diagnosis and advanced interventions."
+      },
+      {
+        "question": "Does he perform EBUS TBNA?",
+        "answer": "Yes, he has performed over 3,000 EBUS TBNA procedures."
+      }
+    ]
+  },
+  {
+    "slug": "dr-arvind-mehra",
+    "name": "Dr. Arvind Mehra",
+    "specialty": "Orthopaedics & Trauma Surgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. ARVIND MEHRA.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Director & HOD \u2013 Orthopaedics",
+    "degree": "MCh | ALSSE | MS | MBBS",
+    "about": "Dr. Arvind Mehra is a highly respected orthopedic surgeon with 20+ years of experience in complex trauma, joint disorders, spine surgery, fractures, and pediatric orthopedics. He has performed over 20,000 successful surgeries, specializing in minimally invasive and stitch-less corrective techniques for deformity correction and limb-length discrepancies.",
+    "medicalProblems": [
+      {
+        "title": "Complex Fractures",
+        "description": "Comprehensive management of traumatic bone injuries."
+      },
+      {
+        "title": "Joint Disorders",
+        "description": "Treatment of knee, hip, and shoulder joint diseases."
+      },
+      {
+        "title": "Pediatric Orthopedic Conditions",
+        "description": "Management of deformities and developmental bone issues."
       }
     ],
     "procedures": [
       {
         "title": "Joint Replacement Surgery",
-        "description": "Knee, hip and shoulder replacements."
+        "description": "Knee, hip, and shoulder replacement procedures."
       },
       {
-        "title": "Revision Arthroplasty",
-        "description": "Correction of failed or damaged joint implants."
+        "title": "Spine Surgery",
+        "description": "Minimally invasive spine procedures for disc and nerve problems."
       },
       {
-        "title": "Minimally Invasive Ortho Surgery",
-        "description": "Advanced small-incision surgeries."
-      },
-      {
-        "title": "Trauma Surgery",
-        "description": "Fixation of fractures and complex injuries."
+        "title": "Deformity Correction",
+        "description": "Stitch-less correction for limb length and bone deformities."
       }
     ],
     "faqs": [
       {
-        "question": "Has Dr. Dhar performed many surgeries?",
-        "answer": "Yes, he has performed over 30,000 orthopaedic surgeries."
+        "question": "Does Dr. Mehra perform joint replacements?",
+        "answer": "Yes, he specializes in knee, hip, and shoulder replacements."
       },
       {
-        "question": "Does he specialize in joint replacements?",
-        "answer": "Yes, he is an expert in hip, knee and shoulder replacement."
+        "question": "Does he treat pediatric orthopedic problems?",
+        "answer": "Yes, he is experienced in deformity correction and limb-length treatments."
       },
       {
-        "question": "Does he handle complex trauma cases?",
-        "answer": "Yes, including acetabular and periarticular fractures."
+        "question": "Is he experienced in trauma surgery?",
+        "answer": "Yes, he has performed over 20,000 trauma and orthopedic surgeries."
       }
     ]
   },
   {
-    "slug": "dr-puneet-nagpal",
-    "name": "Dr. Puneet Nagpal",
+    "slug": "dr-bharat-kukreti",
+    "name": "Dr. Bharat B. Kukreti",
+    "specialty": "Cardiology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. BHARAT B KUKRETI.png",
+    "isTopDoctor": true,
+    "position": "Director & Unit Head \u2013 Cardiology",
+    "degree": "DM Cardiology (AIIMS) | MD Medicine | MBBS",
+    "about": "Dr. Bharat B. Kukreti is a highly accomplished cardiologist known for his expertise in advanced coronary interventions, device closures for congenital heart defects, and electrophysiology procedures. With training from AIIMS and over two decades of clinical experience, he is respected for his precision, patient-centered approach, and contributions to interventional cardiology research.",
+    "medicalProblems": [
+      {
+        "title": "Coronary Artery Disease",
+        "description": "Diagnosis and treatment of blockages and heart attack management."
+      },
+      {
+        "title": "Congenital Heart Defects",
+        "description": "ASD, VSD and structural heart abnormalities."
+      },
+      {
+        "title": "Arrhythmias & Rhythm Disorders",
+        "description": "Evaluation of abnormal heart rhythms requiring EPS and RF ablation."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Coronary Angiography & Angioplasty",
+        "description": "PTCA with stent placement for blocked arteries."
+      },
+      {
+        "title": "ASD & VSD Device Closure",
+        "description": "Minimally invasive structural heart procedures."
+      },
+      {
+        "title": "AICD & Aortic Stent Grafting",
+        "description": "Advanced device implantation for heart rhythm and aortic diseases."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Kukreti specialize in angioplasty?",
+        "answer": "Yes, he is highly experienced in PTCA and coronary interventions."
+      },
+      {
+        "question": "Does he treat congenital heart defects?",
+        "answer": "Yes, he performs device closures for ASD and VSD."
+      },
+      {
+        "question": "Has he received national awards?",
+        "answer": "Yes, he has won notable awards including the Dr. Naveen C Nanda Young Investigator Award."
+      }
+    ]
+  },
+  {
+    "slug": "dr-indu-bansal-aggarwal",
+    "name": "Dr. Indu Bansal Aggarwal",
     "specialty": "Radiation Oncology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Puneet-Nagpal.png",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "25+ years",
+    "image": "assets/uploads/Dr. INDU BANSAL AGGARWAL.jpg",
     "isTopDoctor": true,
-    "position": "Director & Head \u2013 Radiation Oncology (Unit-II)",
-    "degree": "MBBS | MD (Radiation Oncology) | PGDCR",
-    "about": "Dr. Puneet Nagpal is an experienced Radiation Oncologist with expertise in advanced radiotherapy modalities, precision radiation techniques and comprehensive cancer management. He has served at leading institutions including Action Cancer Hospital, PGIMER Chandigarh and Max Hospital Shalimar Bagh. His clinical expertise includes IMRT, IGRT, SBRT and image-guided cancer treatments.",
+    "position": "Group Director & HOD \u2013 Radiation Oncology",
+    "degree": "MD (Radiation Oncology) | Diploma in Hospital Management | MBBS",
+    "about": "Dr. Indu Bansal Aggarwal is a senior radiation oncologist with over 25 years of experience and international training from MD Anderson Cancer Center, Houston. She specializes in pediatric tumors, head and neck cancers, and radiation oncology in young adults. A compassionate clinician, she is also a strong advocate for cancer awareness and patient support.",
     "medicalProblems": [
       {
-        "title": "Head & Neck Cancers",
-        "description": "Comprehensive radiation treatment for ENT cancers."
+        "title": "Pediatric Cancers",
+        "description": "Radiation treatment for tumors in children and young adults."
       },
       {
-        "title": "Breast Cancer",
-        "description": "Advanced radiotherapy for early and advanced breast cancer."
+        "title": "Head & Neck Cancer",
+        "description": "Advanced radiation therapy for complex tumors."
       },
       {
-        "title": "Gynecological Cancers",
-        "description": "Brachytherapy and external radiation treatment."
-      },
-      {
-        "title": "Thoracic & Abdominal Tumors",
-        "description": "Radiation care for lung, pancreas and GI malignancies."
+        "title": "Solid Tumors",
+        "description": "Radiation treatment for breast, lung, brain, and GI cancers."
       }
     ],
     "procedures": [
       {
-        "title": "IMRT / IGRT / VMAT",
-        "description": "State-of-the-art precision radiation treatments."
+        "title": "Advanced Radiation Therapy",
+        "description": "Precision radiation using state-of-the-art technology."
       },
       {
-        "title": "SBRT",
-        "description": "High-precision stereotactic body radiation therapy."
+        "title": "Intensity-Modulated Radiotherapy (IMRT)",
+        "description": "Targeted radiation minimizing damage to healthy tissue."
       },
       {
-        "title": "Brachytherapy",
-        "description": "Internal radiation treatment for selected cancers."
-      },
-      {
-        "title": "Stereotactic Radiosurgery",
-        "description": "Focused radiation for brain and spine tumors."
+        "title": "Image-Guided Radiotherapy (IGRT)",
+        "description": "High accuracy radiation for difficult tumor locations."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Nagpal specialize in IMRT/IGRT?",
-        "answer": "Yes, he is extensively trained in precision radiotherapy."
+        "question": "Does Dr. Indu treat pediatric cancers?",
+        "answer": "Yes, she specializes in radiation therapy for pediatric tumors."
       },
       {
-        "question": "Does he perform brachytherapy?",
-        "answer": "Yes, especially for gynecological and prostate cancers."
+        "question": "Has she trained internationally?",
+        "answer": "Yes, including training at MD Anderson Cancer Center, USA."
       },
       {
-        "question": "Which hospitals has he worked at?",
-        "answer": "Action Cancer Hospital, PGIMER Chandigarh and Max Hospital Shalimar Bagh."
+        "question": "Does she perform advanced radiation techniques?",
+        "answer": "Yes, she is proficient in IMRT, IGRT and other modern techniques."
       }
     ]
   },
   {
-    "slug": "dr-meenu-pujani",
-    "name": "Dr. Meenu Pujani",
-    "specialty": "Hematology, Histopathology & Cytopathology",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "slug": "dr-mandeep-singh",
+    "name": "Dr. Mandeep Singh",
+    "specialty": "Plastic, Cosmetic & Reconstructive Surgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. PARMINDER BIR SINGH.png",
+    "isTopDoctor": true,
+    "position": "Director & HOD \u2013 Plastic Surgery",
+    "degree": "MBBS | MS | DNB (Plastic Surgery)",
+    "about": "Dr. Mandeep Singh is a board-certified plastic surgeon with more than 20 years of experience in cosmetic, reconstructive, and aesthetic surgery. Having trained across India and the USA, he is skilled in a full spectrum of cosmetic procedures, trauma reconstruction, burn management, and advanced aesthetic enhancements. He is known for delivering natural, safe, and aesthetic results with high patient satisfaction.",
+    "medicalProblems": [
+      {
+        "title": "Cosmetic Concerns",
+        "description": "Aesthetic correction for face, body, and skin concerns."
+      },
+      {
+        "title": "Reconstructive Needs",
+        "description": "Treatment of trauma, burns, scars, and congenital abnormalities."
+      },
+      {
+        "title": "Breast & Body Contouring Issues",
+        "description": "Management of body shape concerns requiring cosmetic surgery."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Cosmetic Surgery",
+        "description": "Rhinoplasty, liposuction, facelift, tummy tuck, breast enhancement."
+      },
+      {
+        "title": "Reconstructive Surgery",
+        "description": "Post-trauma reconstruction, burn surgery, and congenital corrections."
+      },
+      {
+        "title": "Aesthetic Procedures",
+        "description": "Laser treatments, Botox, fillers, scar revision, and anti-aging therapies."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Mandeep perform cosmetic surgery?",
+        "answer": "Yes, he specializes in a wide range of cosmetic and aesthetic procedures."
+      },
+      {
+        "question": "Is he trained internationally?",
+        "answer": "Yes, he has received advanced training in India and the USA."
+      },
+      {
+        "question": "Does he treat reconstructive cases?",
+        "answer": "Yes, including trauma, burns, and congenital deformities."
+      }
+    ]
+  },
+  {
+    "slug": "dr-nitin-jain",
+    "name": "Dr. Nitin Jain",
+    "specialty": "Critical Care & Intensive Care Medicine",
+    "hospital": "Paras Health – Gurugram",
     "experience": "18+ years",
-    "image": "assets/uploads/Dr.-Meenu-Pujani.png",
+    "image": "assets/uploads/Dr. NITIN JAIN.jpg",
+    "isTopDoctor": true,
+    "position": "Director & HOD \u2013 Critical Care",
+    "degree": "EDIC | MD | MBBS",
+    "about": "Dr. Nitin Jain is a highly experienced critical care specialist with over 18 years in intensive care medicine. Trained in ECMO and lung transplantation at Toronto General Hospital, he has served as faculty at premier institutes like UCMS, ILBS, and Manipal, and worked as Senior Consultant at Fortis Gurgaon. He is known for managing complex ICU cases, multi-organ failure, sepsis, trauma, and advanced ventilatory support.",
+    "medicalProblems": [
+      {
+        "title": "Sepsis & Multi-Organ Failure",
+        "description": "Advanced ICU management for critically ill patients."
+      },
+      {
+        "title": "Respiratory Failure",
+        "description": "Management requiring ventilatory and ECMO support."
+      },
+      {
+        "title": "Post-Surgical & Trauma Care",
+        "description": "Critical care for polytrauma and major surgeries."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "ECMO",
+        "description": "Life-saving extracorporeal membrane oxygenation support."
+      },
+      {
+        "title": "Advanced Ventilation",
+        "description": "Mechanical ventilation for respiratory and neurological failure."
+      },
+      {
+        "title": "Critical Care Ultrasound",
+        "description": "Point-of-care diagnosis in ICU patients."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Jain trained in ECMO?",
+        "answer": "Yes, he received ECMO and lung transplant training in Toronto, Canada."
+      },
+      {
+        "question": "Does he treat multi-organ failure?",
+        "answer": "Yes, he is highly experienced in complex ICU management."
+      },
+      {
+        "question": "Is he an academic teacher?",
+        "answer": "Yes, he teaches DNB and IDCCM students."
+      }
+    ]
+  },
+  {
+    "slug": "dr-pn-gupta",
+    "name": "Dr. P. N. Gupta",
+    "specialty": "Nephrology & Kidney Transplant",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "15+ years",
+    "image": "assets/uploads/Dr. P N GUPTA.jpg",
+    "isTopDoctor": true,
+    "position": "Director & HOD \u2013 Nephrology",
+    "degree": "DNB (Nephrology) | MD | MBBS | Fellowship in Kidney Transplantation",
+    "about": "Dr. P. N. Gupta is a leading nephrologist with over 15 years of experience and more than 800 kidney transplants supervised. He has extensive expertise in chronic kidney disease, dialysis care, renal failure management, and transplant medicine. As a visiting fellow at Johns Hopkins Hospital, USA, he brings global expertise to advanced renal care.",
+    "medicalProblems": [
+      {
+        "title": "Chronic Kidney Disease (CKD)",
+        "description": "Comprehensive management of early to advanced CKD."
+      },
+      {
+        "title": "Kidney Failure",
+        "description": "Treatment of end-stage renal disease requiring dialysis or transplant."
+      },
+      {
+        "title": "Transplant Care",
+        "description": "Pre- and post-kidney transplant evaluation and management."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Kidney Transplantation",
+        "description": "Expert management of donor and recipient transplant procedures."
+      },
+      {
+        "title": "Hemodialysis & Peritoneal Dialysis",
+        "description": "Renal replacement therapy for kidney failure."
+      },
+      {
+        "title": "Renal Biopsy",
+        "description": "Diagnostic biopsy to identify underlying kidney diseases."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many kidney transplants has Dr. Gupta managed?",
+        "answer": "He has supervised over 800 kidney transplants."
+      },
+      {
+        "question": "Is he trained internationally?",
+        "answer": "Yes, he was a visiting fellow at Johns Hopkins Hospital, USA."
+      },
+      {
+        "question": "Does he manage CKD patients?",
+        "answer": "Yes, he specializes in all stages of CKD and renal failure."
+      }
+    ]
+  },
+  {
+    "slug": "dr-rajesh-kumar",
+    "name": "Dr. Rajesh Kumar",
+    "specialty": "Internal Medicine",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "15+ years",
+    "image": "assets/uploads/Dr. RAJESH KUMAR.jpg",
     "isTopDoctor": false,
-    "position": "Director \u2013 Lab Services & Blood Bank Incharge",
-    "degree": "MBBS | MD (Pathology)",
-    "about": "Dr. Meenu Pujani is an expert in hematology, histopathology and cytopathology, serving as Director of Lab Services and Blood Bank Incharge at Metro Hospital. With an MBBS from PGIMS Rohtak and an MD from S.N. Medical College Agra, she has extensive diagnostic experience and has completed senior residency at Lady Hardinge Medical College. She has over 35 publications and is a trained internal auditor for ISO 15189.",
+    "position": "Director \u2013 Internal Medicine",
+    "degree": "MD (Medicine) | MBBS",
+    "about": "Dr. Rajesh Kumar is a highly skilled internal medicine specialist with over 15 years of clinical experience. He excels in managing infectious diseases, vector-borne illnesses, chronic medical conditions, and emergency care. As a certified ACLS trainer, he is also committed to preventive healthcare and lifestyle medicine for long-term well-being.",
     "medicalProblems": [
       {
-        "title": "Hematological Disorders",
-        "description": "Blood cancers, anemia, clotting disorders and immunological conditions."
+        "title": "Infectious Diseases",
+        "description": "Management of dengue, malaria, typhoid, and viral illnesses."
       },
       {
-        "title": "Tissue Pathology",
-        "description": "Cancer diagnosis through histopathology."
+        "title": "Chronic Medical Conditions",
+        "description": "Treatment of diabetes, hypertension, thyroid disorders, and metabolic diseases."
       },
       {
-        "title": "Cytology",
-        "description": "FNAC, fluid cytology and cancer screening."
-      },
-      {
-        "title": "Blood Banking",
-        "description": "Blood component management and transfusion safety."
+        "title": "General Medical Care",
+        "description": "Routine health evaluation and preventive medicine."
       }
     ],
     "procedures": [
       {
-        "title": "Bone Marrow Examination",
-        "description": "Diagnostic evaluation for blood cancers and disorders."
+        "title": "Emergency Procedures",
+        "description": "Lumbar puncture, ventilatory support, IV therapy, catheter management."
       },
       {
-        "title": "Histopathology Reporting",
-        "description": "Biopsy examination for cancer diagnosis."
+        "title": "Preventive Health Checkups",
+        "description": "Lifestyle, metabolic and risk evaluation screenings."
       },
       {
-        "title": "Cytopathology",
-        "description": "FNAC, PAP smear and cytology diagnostics."
-      },
-      {
-        "title": "Blood Bank Management",
-        "description": "Quality-controlled transfusion medicine services."
+        "title": "Infection Control Treatments",
+        "description": "Advanced management for severe infections and sepsis."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Pujani handle blood bank services?",
-        "answer": "Yes, she is the Blood Bank Incharge at Metro Hospital."
+        "question": "Does Dr. Rajesh treat dengue and malaria?",
+        "answer": "Yes, he specializes in infectious and vector-borne diseases."
       },
       {
-        "question": "Does she perform pathology reporting?",
-        "answer": "Yes, she leads histopathology, cytology and hematology services."
+        "question": "Is he an ACLS trainer?",
+        "answer": "Yes, he trains healthcare providers in emergency cardiac care."
       },
       {
-        "question": "Does she have research publications?",
-        "answer": "Yes, she has 35+ national and international publications."
+        "question": "Does he focus on preventive health?",
+        "answer": "Yes, he strongly advocates preventive medicine and long-term wellness."
       }
     ]
   },
   {
-    "slug": "dr-arun-pandey",
-    "name": "Dr. Arun Pandey",
-    "specialty": "Surgical Oncology & Robotic Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "9+ years",
-    "image": "assets/uploads/Dr.-Arun-Pandey.png",
+    "slug": "dr-sumit-bhatia",
+    "name": "Dr. Sumit Bhatia",
+    "specialty": "Gastroenterology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. SUMIT BHATIA.jpg",
     "isTopDoctor": true,
-    "position": "Director & HOD \u2013 Surgical Oncology & Robotic Surgery (Unit-I)",
-    "degree": "MBBS | MS (General Surgery) | M.Ch (Surgical Oncology, Gold Medal) | UICC Fellowship \u2013 HPB Surgery (MSKCC, New York)",
-    "about": "Dr. Arun Pandey is a highly skilled surgical oncologist specializing in minimally invasive, robotic and advanced cancer surgeries. He has performed over 2,000 complex cancer surgeries and has expertise in HPB cancers, thoracic oncology, breast cancer, gynecologic cancer, and peritoneal surface malignancies. His international fellowship at Memorial Sloan Kettering Cancer Center, New York, further strengthens his specialization in HPB and advanced oncological procedures.",
+    "position": "Director \u2013 Gastroenterology",
+    "degree": "MD (Internal Medicine) | DM (Medical Gastroenterology) | Fellowships in Advanced Endoscopy & EUS",
+    "about": "Dr. Sumit Bhatia is a highly accomplished gastroenterologist with extensive national and international training. He specializes in inflammatory bowel disease, ERCP, EUS, and therapeutic endoscopy. With advanced fellowships from Berenson International, Beth Israel Hospital (Harvard Medical School, USA), Medanta Gurugram, and Asan Medical Center Korea, he is recognized for his precision and expertise in advanced endoscopic procedures.",
     "medicalProblems": [
       {
-        "title": "HPB Cancers",
-        "description": "Liver, pancreas and biliary tract tumors."
+        "title": "Inflammatory Bowel Disease",
+        "description": "Management of Crohn\u2019s disease and ulcerative colitis."
       },
       {
-        "title": "Breast & Gynecologic Cancers",
-        "description": "Surgical treatment for breast and female reproductive cancers."
+        "title": "Pancreatic & Biliary Disorders",
+        "description": "Treatment for pancreatitis, gallstones and bile duct diseases."
       },
       {
-        "title": "Thoracic Cancers",
-        "description": "Lung cancer, mediastinal masses and esophageal tumors."
-      },
-      {
-        "title": "GI & Colorectal Cancers",
-        "description": "Stomach, colon and rectal cancer surgeries."
+        "title": "Gastrointestinal Disorders",
+        "description": "Evaluation of acid reflux, IBS, bleeding, and digestive issues."
       }
     ],
     "procedures": [
       {
-        "title": "Robotic Cancer Surgery",
-        "description": "High-precision minimally invasive robotic operations."
+        "title": "ERCP",
+        "description": "Endoscopic procedure for pancreatic and biliary disorders."
       },
       {
-        "title": "HIPEC / PIPAC",
-        "description": "Peritoneal cancer treatments."
+        "title": "EUS",
+        "description": "Endoscopic ultrasound for advanced GI diagnostics."
       },
       {
-        "title": "Limb Salvage Surgery",
-        "description": "Bone and soft tissue tumor removal while preserving limbs."
-      },
-      {
-        "title": "Minimally Invasive Cancer Surgery",
-        "description": "Laparoscopic and thoracoscopic oncological procedures."
+        "title": "Therapeutic Endoscopy",
+        "description": "Polyps removal, bleeding control and interventional procedures."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Pandey perform robotic surgery?",
-        "answer": "Yes, he specializes in robotic cancer surgery."
+        "question": "Is Dr. Bhatia trained internationally?",
+        "answer": "Yes, including training at Harvard (Beth Israel), Korea and Medanta."
       },
       {
-        "question": "What cancers does he treat?",
-        "answer": "He treats HPB, thoracic, GI, gynecologic, breast and bone cancers."
+        "question": "Does he perform ERCP & EUS?",
+        "answer": "Yes, he is highly experienced in both advanced GI procedures."
       },
       {
-        "question": "Is he internationally trained?",
-        "answer": "Yes, he completed an HPB Fellowship at MSKCC, New York."
+        "question": "Does he treat IBD?",
+        "answer": "Yes, he specializes in Crohn's disease and ulcerative colitis."
       }
     ]
   },
   {
-    "slug": "dr-danish-jamal",
-    "name": "Dr. Danish Jamal",
-    "specialty": "Pulmonology, Interventional Pulmonology & Sleep Medicine",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "slug": "dr-vaibhaw-kumar",
+    "name": "Dr. Vaibhaw Kumar",
+    "specialty": "Liver Transplant & HPB Surgery",
+    "hospital": "Paras Health – Gurugram",
     "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Danish-Jamal",
+    "image": "assets/uploads/Dr. VAIBHAW KUMAR.jpg",
     "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD (Unit-I) \u2013 Pulmonology",
-    "degree": "MBBS | MD (Pulmonary Medicine) | FERS | FCCP",
-    "about": "Dr. Danish Jamal is a leading pulmonologist specializing in advanced respiratory diseases, interventional pulmonology and sleep medicine. With rich experience from Saudi Arabia, Sarvodaya Hospital, and King Fahad Hospital, he is extensively trained in EBUS, bronchoscopy, thoracoscopy and critical pulmonary care. He is known for treating severe asthma, ILD, COPD, TB and complex lung disorders.",
+    "position": "Director \u2013 Liver Transplant",
+    "degree": "MBBS | MS (Surgery) | MCh (HPB Surgery & Liver Transplant) | FALS",
+    "about": "Dr. Vaibhaw Kumar is a highly accomplished liver transplant and HPB surgeon with over 15 years of expertise. Trained at ILBS under leading national and international faculty, he has played a key role in establishing one of India\u2019s largest public-sector liver transplant units. With experience in more than 2,000 liver transplants and complex HPB surgeries, he is known for exceptional surgical precision, clinical excellence, and compassionate patient care.",
     "medicalProblems": [
       {
-        "title": "Asthma & COPD",
-        "description": "Comprehensive management including advanced therapy."
+        "title": "End-Stage Liver Disease",
+        "description": "Management of advanced liver failure requiring transplant."
       },
       {
-        "title": "Tuberculosis & MDR-TB",
-        "description": "Treatment for drug-sensitive and resistant TB."
+        "title": "Liver Cancer",
+        "description": "Treatment of hepatocellular carcinoma and metastatic liver tumors."
       },
       {
-        "title": "Interstitial Lung Disease (ILD)",
-        "description": "Diagnosis and long-term management of ILD."
-      },
-      {
-        "title": "Sleep Disorders",
-        "description": "Sleep apnea, snoring and sleep-related breathing disorders."
+        "title": "Pancreatic & Biliary Disorders",
+        "description": "Surgical management of pancreatic tumors, bile duct injuries, and gallbladder diseases."
       }
     ],
     "procedures": [
       {
-        "title": "Bronchoscopy",
-        "description": "Diagnostic and interventional bronchoscopy."
+        "title": "Living Donor Liver Transplant (LDLT)",
+        "description": "Advanced transplant procedures using partial liver grafts from living donors."
       },
       {
-        "title": "EBUS",
-        "description": "Endobronchial ultrasound for lymph node assessment."
+        "title": "Cadaveric Liver Transplant",
+        "description": "Transplantation using deceased donor organs for eligible patients."
       },
       {
-        "title": "Thoracoscopy",
-        "description": "Minimally invasive pleural procedures."
-      },
-      {
-        "title": "Lung Cancer Procedures",
-        "description": "Interventional pulmonology for airway tumors."
+        "title": "Complex HPB Surgeries",
+        "description": "Surgery for pancreatic, bile duct, liver tumors and GI cancers."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Danish perform EBUS?",
-        "answer": "Yes, he is skilled in advanced EBUS procedures."
+        "question": "How many liver transplants has Dr. Vaibhaw performed?",
+        "answer": "He has been part of more than 2,000 liver transplants and complex HPB surgeries."
       },
       {
-        "question": "Does he treat sleep apnea?",
-        "answer": "Yes, he specializes in sleep medicine and snoring disorders."
+        "question": "Where was he trained?",
+        "answer": "He received advanced HPB and liver transplant training at ILBS, Delhi."
       },
       {
-        "question": "Does he handle ILD cases?",
-        "answer": "Yes, he is experienced in diagnosing and treating ILD."
+        "question": "Does he operate on bile duct injuries?",
+        "answer": "Yes, he specializes in complex HPB surgeries including bile duct reconstruction."
       }
     ]
   },
   {
-    "slug": "dr-komal-meena",
-    "name": "Dr. Komal Meena",
-    "specialty": "Periodontics, Oral Implantology & Laser Dentistry",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "18+ years",
-    "image": "assets/uploads/Dr.-Komal-Meena.png",
+    "slug": "dr-vivek-logani",
+    "name": "Dr. Vivek Logani",
+    "specialty": "Orthopaedics \u2013 Joint Replacement & Robotics",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "23+ years",
+    "image": "assets/uploads/Dr. VIVEK LOGANI.jpg",
     "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD \u2013 Dentistry",
-    "degree": "BDS | MDS (Periodontics & Oral Implantology) | Fellowship in Medical Cosmetology | Associate Fellowship (Laser Dentistry \u2013 WCLI USA)",
-    "about": "Dr. Komal Meena is an accomplished dental specialist with 18+ years of experience in periodontics, implantology and advanced laser dentistry. She has led dental departments at multiple institutions and has expertise in cosmetic dentistry, implant surgery, periodontal regeneration and laser-assisted procedures. She is also trained in corticobasal implantology and has several research publications and academic contributions.",
+    "position": "Director \u2013 Orthopaedics",
+    "degree": "MBBS | MS (Orthopaedics) | DNB (Orthopaedics) | MNAMS",
+    "about": "Dr. Vivek Logani is a leading orthopedic surgeon with over 23 years of experience, specializing in joint replacement, revision arthroplasty, and robotic-assisted knee and hip procedures. With more than 8,000 joint replacements and over 400 revision surgeries, he is one of India\u2019s pioneers in computer navigation and robotics. He performs 100% of knee replacements with navigation and is deeply involved in research, implant design, and advanced arthroplasty technologies.",
     "medicalProblems": [
       {
-        "title": "Gum Diseases",
-        "description": "Periodontitis, gingivitis and gum infections."
+        "title": "Knee Arthritis",
+        "description": "Management of severe knee pain requiring partial or total knee replacement."
       },
+      {
+        "title": "Hip Joint Disorders",
+        "description": "Treatment for arthritis, AVN, fractures and hip degeneration."
+      },
+      {
+        "title": "Shoulder & Elbow Disorders",
+        "description": "Management of degeneration, trauma and joint dysfunction."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Robotic Knee Replacement",
+        "description": "Precision knee replacement using robotic and navigation systems."
+      },
+      {
+        "title": "Hip Replacement Surgery",
+        "description": "Total and partial hip arthroplasty with advanced techniques."
+      },
+      {
+        "title": "Revision Joint Replacement",
+        "description": "Complex re-operations for failed or problematic implants."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Logani use robotics for joint replacement?",
+        "answer": "Yes, he is among India\u2019s earliest adopters of robotic and computer-navigated joint replacement."
+      },
+      {
+        "question": "How many joint replacements has he performed?",
+        "answer": "He has performed over 8,000 joint replacements and 400 revision surgeries."
+      },
+      {
+        "question": "Does he perform partial knee replacements?",
+        "answer": "Yes, including unicondylar knee replacements with high precision."
+      }
+    ]
+  },
+  {
+    "slug": "dr-seema-sharma",
+    "name": "Dr. Seema Sharma",
+    "specialty": "Obstetrics & Gynecology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "22+ years",
+    "image": "assets/uploads/Dr. SEEMA SHARMA.jpg",
+    "isTopDoctor": true,
+    "position": "Associate Director \u2013 Obstetrics & Gynecology",
+    "degree": "MS (Obs & Gyne) | Fellowship in Minimal Access Surgery | MBBS",
+    "about": "Dr. Seema Sharma is a highly experienced obstetrician and gynecologist with more than 22 years of expertise in high-risk pregnancy care, infertility management, and advanced laparoscopic surgery. Known for her precise decision-making in critical situations, she is dedicated to providing safe, evidence-based women\u2019s healthcare with compassion and skill.",
+    "medicalProblems": [
+      {
+        "title": "High-Risk Pregnancy",
+        "description": "Specialized care for pregnancy complications and maternal risk factors."
+      },
+      {
+        "title": "Infertility Issues",
+        "description": "Evaluation and treatment for conception challenges and hormonal disorders."
+      },
+      {
+        "title": "Gynecological Conditions",
+        "description": "Management of uterine, ovarian, menstrual and reproductive issues."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Laparoscopic Gynecologic Surgery",
+        "description": "Minimally invasive surgeries for fibroids, cysts, endometriosis."
+      },
+      {
+        "title": "Infertility Treatments",
+        "description": "Ovulation induction, hormonal therapy and reproductive counseling."
+      },
+      {
+        "title": "Pregnancy Care",
+        "description": "Comprehensive antenatal, intranatal and postnatal care."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Seema handle high-risk pregnancies?",
+        "answer": "Yes, she specializes in managing complex pregnancy conditions."
+      },
+      {
+        "question": "Is she trained in minimally invasive surgery?",
+        "answer": "Yes, she holds a Fellowship in Minimal Access Surgery."
+      },
+      {
+        "question": "Does she treat infertility?",
+        "answer": "Yes, she offers comprehensive infertility evaluation and treatment."
+      }
+    ]
+  },
+  {
+    "slug": "dr-vikash-goyal",
+    "name": "Dr. Vikash Goyal",
+    "specialty": "Cardiology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "8+ years",
+    "image": "assets/uploads/Dr. VIKASH GOYAL.jpg",
+    "isTopDoctor": true,
+    "position": "Associate Director \u2013 Cardiology",
+    "degree": "DM Cardiology | MD (Medicine) \u2013 Gold Medalist | MBBS",
+    "about": "Dr. Vikash Goyal is an interventional and preventive cardiology expert with over 8 years of experience. Having performed more than 10,000 angiographies and 6,000 angioplasties, he specializes in complex coronary interventions, TAVI, valve treatments, and pediatric cardiology. A gold medalist and trained at premier institutes like Jayadeva Institute and Fortis Escorts, he is known for precision, patient education, and advanced cardiac care.",
+    "medicalProblems": [
+      {
+        "title": "Coronary Artery Disease",
+        "description": "Diagnosis and treatment of blockages and heart attack risk."
+      },
+      {
+        "title": "Heart Valve Disorders",
+        "description": "Advanced catheter-based treatments for valve diseases."
+      },
+      {
+        "title": "Pediatric Cardiac Conditions",
+        "description": "Management of congenital defects and pediatric interventions."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Angiography & Angioplasty (PTCA)",
+        "description": "Interventions for blocked coronary arteries."
+      },
+      {
+        "title": "TAVI",
+        "description": "Transcatheter Aortic Valve Implantation for valve replacement without open surgery."
+      },
+      {
+        "title": "Complex Coronary Interventions",
+        "description": "Specialized angioplasties for chronic total occlusions and bifurcation lesions."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many angioplasties has Dr. Goyal performed?",
+        "answer": "He has performed over 6,000 angioplasties and 10,000 angiographies."
+      },
+      {
+        "question": "Does he perform TAVI?",
+        "answer": "Yes, he is trained in advanced valve interventions like TAVI."
+      },
+      {
+        "question": "Does he treat pediatric heart issues?",
+        "answer": "Yes, he has expertise in pediatric cardiology."
+      }
+    ]
+  },
+  {
+    "slug": "dr-amitabh-malik",
+    "name": "Dr. Amitabh Malik",
+    "specialty": "ENT, Head & Neck Surgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "25+ years",
+    "image": "assets/uploads/Dr. AMITABH MALIK.jpg",
+    "isTopDoctor": true,
+    "position": "Chief & HOD \u2013 ENT",
+    "degree": "MBBS | MS (ENT) | F.A.G.E",
+    "about": "Dr. Amitabh Malik is a senior ENT and Head & Neck surgeon with over 25 years of expertise. He specializes in micro ear surgery, micro laryngeal procedures, endoscopic sinus surgery, pediatric ENT and black fungus treatment. Known for precision and excellence, he has performed thousands of successful ENT surgeries and has a strong interest in cochlear implants.",
+    "medicalProblems": [
+      {
+        "title": "Sinus & Nasal Disorders",
+        "description": "Treatment for sinusitis, nasal blockage and polyps."
+      },
+      {
+        "title": "Ear Conditions",
+        "description": "Management of hearing loss, ear discharge, perforation and infections."
+      },
+      {
+        "title": "Throat & Voice Problems",
+        "description": "Treatment for vocal cord disorders, hoarseness and airway obstruction."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Endoscopic Sinus Surgery",
+        "description": "Minimally invasive surgical treatment for sinus diseases."
+      },
+      {
+        "title": "Micro Ear Surgery",
+        "description": "Advanced procedures for ear repair and hearing improvement."
+      },
+      {
+        "title": "Micro Laryngeal Surgery",
+        "description": "Voice and vocal cord surgeries using micro techniques."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Malik perform sinus surgery?",
+        "answer": "Yes, he is an expert in advanced endoscopic sinus surgery."
+      },
+      {
+        "question": "Does he treat pediatric ENT cases?",
+        "answer": "Yes, he is highly experienced in pediatric ENT surgeries."
+      },
+      {
+        "question": "Does he perform cochlear implants?",
+        "answer": "Yes, he has a strong interest and expertise in cochlear implantation."
+      }
+    ]
+  },
+  {
+    "slug": "dr-anurag-khaitan",
+    "name": "Dr. Anurag Khaitan",
+    "specialty": "Urology & Renal Sciences",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "15+ years",
+    "image": "assets/uploads/Dr. ANURAG KHAITAN.jpg",
+    "isTopDoctor": true,
+    "position": "Chief & HOD \u2013 Urology",
+    "degree": "MBBS | MS (PGI Chandigarh) | DNB (Genitourinary Surgery) | MCh (Urology, AIIMS)",
+    "about": "Dr. Anurag Khaitan is a highly recognized urologist with deep expertise in robotic surgery, prostate cancer management, reconstructive urology, and complex genitourinary procedures. With prestigious training from AIIMS, PGI Chandigarh and PGI Rohtak, he leads Renal Sciences at Paras Health and is respected for his surgical precision, compassionate care, and excellence in minimally invasive urology.",
+    "medicalProblems": [
+      {
+        "title": "Prostate Cancer",
+        "description": "Evaluation and treatment of early and advanced prostate malignancies."
+      },
+      {
+        "title": "Kidney & Urinary Tract Disorders",
+        "description": "Management of stones, infections, urinary obstruction, and renal masses."
+      },
+      {
+        "title": "Reconstructive Urology Needs",
+        "description": "Treatment of urethral strictures, trauma reconstruction, and congenital abnormalities."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Robotic Urological Surgery",
+        "description": "Precision robotic procedures for prostate, kidney and urinary tract surgeries."
+      },
+      {
+        "title": "Laser Prostate Surgery",
+        "description": "Minimally invasive treatment for enlarged prostate and urinary obstruction."
+      },
+      {
+        "title": "Urological Cancer Surgery",
+        "description": "Advanced surgical management for prostate, bladder, and kidney cancers."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Khaitan perform robotic surgery?",
+        "answer": "Yes, he is highly experienced in robotic urological procedures."
+      },
+      {
+        "question": "Does he treat prostate cancer?",
+        "answer": "Yes, he is a specialist in prostate cancer surgeries including robotic prostatectomy."
+      },
+      {
+        "question": "Is he trained at AIIMS?",
+        "answer": "Yes, he completed his MCh in Urology at AIIMS New Delhi."
+      }
+    ]
+  },
+  {
+    "slug": "dr-manish-mannan",
+    "name": "Dr. Manish Mannan",
+    "specialty": "Paediatrics & Neonatology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. MANISH MANNAN.jpg",
+    "isTopDoctor": true,
+    "position": "Head of Department \u2013 Paediatrics & Neonatology",
+    "degree": "MBBS | DCH | Senior Research Fellowship (ICMR)",
+    "about": "Dr. (Maj) Manish Mannan is a leading pediatrician with over 20 years of experience. Trained at the Army Hospital (R&R), AIIMS New Delhi, and Sitaram Bhartia, he has served the Indian Army Medical Corps for 5 years. He has contributed to multiple national and international research projects with ICMR, WHO, USAID and INCLEN. He specializes in general pediatrics, newborn care, growth & development, and parenting counselling.",
+    "medicalProblems": [
+      {
+        "title": "General Pediatric Illnesses",
+        "description": "Management of infections, fever, allergies, and routine childhood disorders."
+      },
+      {
+        "title": "Newborn Care",
+        "description": "Specialized management for newborn health, growth, feeding, and screening."
+      },
+      {
+        "title": "Growth & Development Disorders",
+        "description": "Evaluation of developmental delays, nutrition and behavioral challenges."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Immunization & Vaccination",
+        "description": "Complete vaccination schedules as per international guidelines."
+      },
+      {
+        "title": "Developmental Assessments",
+        "description": "Screening for cognitive, motor, language and social milestones."
+      },
+      {
+        "title": "Newborn & Pediatric Evaluation",
+        "description": "Routine newborn checkups, feeding guidance, and pediatric care."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Has Dr. Mannan worked with the Indian Army?",
+        "answer": "Yes, he served 5 years in the Army Medical Corps."
+      },
+      {
+        "question": "Does he handle newborn care?",
+        "answer": "Yes, he is experienced in neonatal and pediatric care across all age groups."
+      },
+      {
+        "question": "Is he involved in research?",
+        "answer": "Yes, he has contributed to ICMR, WHO, USAID and national pediatric programs."
+      }
+    ]
+  },
+  {
+    "slug": "dr-meenakshi-sharma",
+    "name": "Dr. Meenakshi Sharma",
+    "specialty": "General, Minimal Access, GI & Bariatric Surgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "26+ years",
+    "image": "assets/uploads/Dr. MEENAKSHI SHARMA.jpg",
+    "isTopDoctor": true,
+    "position": "Chief & HOD \u2013 General, Minimal Access, GI & Bariatric Surgery",
+    "degree": "MBBS | MS | DNB (Surgery)",
+    "about": "Dr. Meenakshi Sharma is a renowned surgeon with over 26 years of expertise in hernia surgery, minimal access surgery, bariatric procedures, and trauma surgery. She is extensively trained with fellowships from the Cleveland Clinic (USA) and the University of Ulm (Germany). Known for her precision and advanced laparoscopic skills, she leads the Hernia & Minimal Access Surgery division at Paras Hospitals.",
+    "medicalProblems": [
+      {
+        "title": "Hernias",
+        "description": "Management of umbilical, inguinal, ventral and incisional hernias."
+      },
+      {
+        "title": "Gastrointestinal Disorders",
+        "description": "Treatment for gallbladder disease, reflux, GI pain and digestive problems."
+      },
+      {
+        "title": "Obesity & Metabolic Disorders",
+        "description": "Surgical options for extreme obesity and metabolic syndrome."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Laparoscopic Hernia Repair",
+        "description": "Minimally invasive surgeries for all types of hernias."
+      },
+      {
+        "title": "Bariatric Surgery",
+        "description": "Weight loss surgeries including sleeve gastrectomy and gastric bypass."
+      },
+      {
+        "title": "Advanced Laparoscopic Procedures",
+        "description": "Gallbladder, appendectomy, abdominal wall reconstruction and GI surgeries."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Meenakshi an expert in hernia surgery?",
+        "answer": "Yes, she specializes in all types of hernias with minimal access techniques."
+      },
+      {
+        "question": "Has she trained internationally?",
+        "answer": "Yes, she completed fellowships at Cleveland Clinic (USA) and Ulm University (Germany)."
+      },
+      {
+        "question": "Does she perform bariatric surgery?",
+        "answer": "Yes, she specializes in obesity and advanced GI surgeries."
+      }
+    ]
+  },
+  {
+    "slug": "dr-sageer-aazaz",
+    "name": "Dr. Sageer Aazaz",
+    "specialty": "Dental & Implantology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. SAGEER AAZAZ.jpg",
+    "isTopDoctor": true,
+    "position": "Head of Department \u2013 Dental Services",
+    "degree": "BDS (CCI Germany) | MDS (Implantology & Periodontics) | Nobel Fellow (Sweden)",
+    "about": "Dr. Sageer Aazaz is a highly respected dental implant specialist with over 20 years of experience. Trained extensively in Germany under world-renowned implantologist Dr. Thomas, he has performed more than 7,000 implant and full-mouth rehabilitation procedures. He also established Gurgaon's first multidisciplinary corporate dental department and is known for his precision, advanced implant techniques, and aesthetic dental restorations.",
+    "medicalProblems": [
       {
         "title": "Missing Teeth",
-        "description": "Dental implant-based restorations."
+        "description": "Complete solutions through implants and full mouth rehabilitation."
       },
       {
-        "title": "Oral Cosmetic Issues",
-        "description": "Gum contouring and smile enhancement."
+        "title": "Gum Disease",
+        "description": "Management of periodontal infections, bleeding gums and bone loss."
       },
       {
-        "title": "Oral Infections",
-        "description": "Comprehensive diagnosis and treatment of dental infections."
+        "title": "Dental Decay & Infection",
+        "description": "Treatment of tooth decay, cavities and root infections."
       }
     ],
     "procedures": [
       {
         "title": "Dental Implants",
-        "description": "Single, multiple and full-mouth implant systems."
+        "description": "Single, multiple and full-mouth implants using advanced systems."
       },
       {
-        "title": "Laser Dentistry",
-        "description": "Laser gum surgeries and soft tissue procedures."
+        "title": "Full Mouth Rehabilitation",
+        "description": "Restoration of function and aesthetics with prosthetics and implants."
       },
       {
         "title": "Periodontal Surgery",
-        "description": "Gum flap surgeries and regenerative procedures."
-      },
-      {
-        "title": "Cosmetic Dentistry",
-        "description": "Smile design, gum contouring and advanced esthetic procedures."
+        "description": "Advanced gum treatments, regenerative procedures and laser therapy."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Komal perform implant surgeries?",
-        "answer": "Yes, she is an expert in oral implantology."
+        "question": "How many implants has Dr. Sageer performed?",
+        "answer": "He has performed over 7,000 dental implant procedures."
       },
       {
-        "question": "Is she trained in laser dentistry?",
-        "answer": "Yes, she holds an Associate Fellowship in Laser Dentistry (WCLI, USA)."
+        "question": "Is he internationally trained?",
+        "answer": "Yes, he trained in Germany and is a Nobel Fellow from Sweden."
       },
       {
-        "question": "Does she provide cosmetic dental treatments?",
-        "answer": "Yes, including smile design and gum reshaping."
+        "question": "Does he perform full mouth rehabilitation?",
+        "answer": "Yes, he specializes in advanced full-mouth solutions."
       }
     ]
   },
   {
-    "slug": "dr-loveleen-mangla",
-    "name": "Dr. Loveleen Mangla",
-    "specialty": "Respiratory Diseases, Critical Care & Sleep Medicine",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "12+ years",
-    "image": "assets/uploads/Dr.-Loveleen-Mangla.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD (Unit-II) \u2013 Respiratory & Sleep Medicine",
-    "degree": "DNB (Respiratory Diseases) | PDCC (Interventional Pulmonology) | FSM (Sleep Medicine) | EDRM | FAPSR",
-    "about": "Dr. Loveleen Mangla is a distinguished pulmonologist specializing in interventional pulmonology, critical care, sleep disorders and advanced respiratory diagnostics. With experience from SGPGI Lucknow, Fortis Vasant Kunj and Delhi Heart & Lung Hospital, he is known for performing over 100 lung cryobiopsies\u2014an achievement attained by very few specialists globally. He has multiple research publications in national and international journals.",
-    "medicalProblems": [
-      {
-        "title": "Interstitial Lung Disease (ILD)",
-        "description": "Cryobiopsy-based diagnosis and management."
-      },
-      {
-        "title": "Severe Asthma & COPD",
-        "description": "Advanced inhalation, biologics and ventilation support."
-      },
-      {
-        "title": "Sleep Disorders",
-        "description": "Sleep apnea, snoring and sleep-related breathing disorders."
-      },
-      {
-        "title": "Lung Infections",
-        "description": "Pneumonia, TB, fungal and post-transplant infections."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Lung Cryobiopsy",
-        "description": "Performed over 100 advanced cryobiopsies."
-      },
-      {
-        "title": "Bronchoscopy",
-        "description": "Diagnostic and interventional bronchoscopy."
-      },
-      {
-        "title": "EBUS & Thoracoscopy",
-        "description": "Procedures for lymph node and pleural evaluation."
-      },
-      {
-        "title": "Sleep Studies",
-        "description": "Polysomnography and sleep disorder treatment."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is Dr. Mangla experienced in cryobiopsy?",
-        "answer": "Yes, he has performed over 100 lung cryobiopsies."
-      },
-      {
-        "question": "Does he treat sleep apnea?",
-        "answer": "Yes, he specializes in sleep medicine and respiratory sleep disorders."
-      },
-      {
-        "question": "Does he manage ILD?",
-        "answer": "Yes, he is an expert in diagnosing and treating ILD."
-      }
-    ]
-  },
-  {
-    "slug": "dr-lucky-kharbanda",
-    "name": "Dr. Lucky Kharbanda",
-    "specialty": "Ophthalmology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Pawan-Kharbanda.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD \u2013 Ophthalmology",
-    "degree": "MBBS | MS (Ophthalmology)",
-    "about": "Dr. Lucky Kharbanda is an accomplished ophthalmologist with extensive experience across leading hospitals including Centre for Sight, Sarvodaya Hospital and government medical institutions. She specializes in cataract surgeries, glaucoma, retinal disorders, ocular trauma, uveitis and anterior segment surgeries. Her expertise includes topical anesthesia cataract surgery (MICS), making the procedure pain-free and highly precise.",
-    "medicalProblems": [
-      {
-        "title": "Cataracts",
-        "description": "Age-related and secondary cataracts requiring surgical management."
-      },
-      {
-        "title": "Glaucoma",
-        "description": "Management of elevated eye pressure and optic nerve health."
-      },
-      {
-        "title": "Retinal Disorders",
-        "description": "Diabetic retinopathy, macular issues and retinal infections."
-      },
-      {
-        "title": "Ocular Trauma",
-        "description": "Injuries, foreign bodies and corneal trauma treatment."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Phacoemulsification / MICS Cataract Surgery",
-        "description": "Topical anesthesia cataract surgery with no injection."
-      },
-      {
-        "title": "Glaucoma Surgery",
-        "description": "Pressure-reducing surgical interventions."
-      },
-      {
-        "title": "Anterior Segment Surgery",
-        "description": "Corneal and lens-related surgical procedures."
-      },
-      {
-        "title": "Retinal Procedures",
-        "description": "Laser therapy, anti-VEGF injections and diabetic eye care."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Kharbanda perform micro-incision cataract surgery?",
-        "answer": "Yes, she specializes in MICS under topical anesthesia."
-      },
-      {
-        "question": "Does she treat glaucoma?",
-        "answer": "Yes, she offers both medical and surgical glaucoma care."
-      },
-      {
-        "question": "Does she manage retinal diseases?",
-        "answer": "Yes, including diabetic retinopathy and macular disorders."
-      }
-    ]
-  },
-  {
-    "slug": "dr-sanjay-kumar-agrawal",
-    "name": "Dr. Sanjay Kumar Agrawal",
-    "specialty": "Urology & Renal Transplant",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Sanjay.jpg",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD \u2013 Urology & Renal Transplant",
-    "degree": "MBBS | MS (General Surgery) | M.Ch (Urology)",
-    "about": "Dr. Sanjay Kumar Agrawal is a highly skilled urologist with expertise in endourology, reconstructive urology and andrology. Trained at SMS Medical College, he has worked in reputed centers including Kulkarni Endoscopic Surgical Centre and Medanta \u2013 The Medicity. He is known for managing complex urological disorders using advanced minimally invasive and reconstructive surgical techniques.",
-    "medicalProblems": [
-      {
-        "title": "Kidney Stones",
-        "description": "Laser treatment for stones including RIRS, PCNL and URS."
-      },
-      {
-        "title": "Prostate Enlargement",
-        "description": "Management of BPH and prostate-related disorders."
-      },
-      {
-        "title": "Urethral Stricture",
-        "description": "Reconstructive urology and urethroplasty."
-      },
-      {
-        "title": "Male Infertility & Andrology",
-        "description": "Evaluation and treatment of reproductive and sexual disorders."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Endourological Surgeries",
-        "description": "PCNL, RIRS, URS and laser stone removal."
-      },
-      {
-        "title": "Reconstructive Urology",
-        "description": "Urethroplasty and complex urethral repairs."
-      },
-      {
-        "title": "Prostate Surgeries",
-        "description": "TURP and laser prostatectomy."
-      },
-      {
-        "title": "Renal Transplant",
-        "description": "Kidney transplant surgical management and care."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Agrawal perform reconstructive urology?",
-        "answer": "Yes, he specializes in complex urethral reconstruction."
-      },
-      {
-        "question": "Is he trained in endourology?",
-        "answer": "Yes, with extensive experience at leading surgical centers."
-      },
-      {
-        "question": "Does he perform renal transplants?",
-        "answer": "Yes, he heads the Urology & Renal Transplant department."
-      }
-    ]
-  },
-  {
-    "slug": "dr-vineeta-kharb",
-    "name": "Dr. Vineeta Kharb",
-    "specialty": "Obstetrics, Gynaecology, IVF & Robotic Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "12+ years",
-    "image": "assets/uploads/Dr.-Veenita-Kharb.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD (Unit-I) \u2013 Obstetrics, Gynaecology, IVF & Robotic Surgery",
-    "degree": "MBBS | MS (OBG) | FICOLE | FMAS | FNB (Reproductive Medicine)",
-    "about": "Dr. Vineeta Kharb is an expert in infertility management, advanced ART techniques, minimally invasive gynecologic surgery and high-risk pregnancy care. With specialized fellowships from Ruby Hall Clinic Pune and World Laparoscopy Hospital, she has authored multiple publications and contributed to reputed medical textbooks. She is recognized for her expertise in IVF, reproductive endocrinology and complex gynecological surgeries.",
-    "medicalProblems": [
-      {
-        "title": "Infertility",
-        "description": "Male and female infertility evaluation and IVF/ICSI treatment."
-      },
-      {
-        "title": "High-Risk Pregnancy",
-        "description": "Maternal-fetal medicine and advanced obstetric care."
-      },
-      {
-        "title": "Gynecological Disorders",
-        "description": "Fibroids, ovarian cysts, endometriosis and PCOS."
-      },
-      {
-        "title": "Urogenital Problems",
-        "description": "Pelvic pain, menstrual disorders and reproductive issues."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "IVF / ICSI / IMSI",
-        "description": "Advanced ART techniques for infertility."
-      },
-      {
-        "title": "Laparoscopic Surgery",
-        "description": "Minimally invasive gynecologic procedures."
-      },
-      {
-        "title": "Robotic Surgery",
-        "description": "Precision robotic-assisted gynecologic surgeries."
-      },
-      {
-        "title": "Hysteroscopy",
-        "description": "Evaluation and treatment of intrauterine pathologies."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Vineeta specialize in IVF?",
-        "answer": "Yes, she is an expert in infertility and reproductive medicine."
-      },
-      {
-        "question": "Is she trained in laparoscopy and robotics?",
-        "answer": "Yes, she holds multiple advanced laparoscopic and robotic fellowships."
-      },
-      {
-        "question": "Does she manage high-risk pregnancies?",
-        "answer": "Yes, she specializes in maternal and fetal medicine."
-      }
-    ]
-  },
-  {
-    "slug": "dr-niti-chadha-negi",
-    "name": "Dr. Niti Chadha Negi",
-    "specialty": "Cardiac Electrophysiology & Cardiology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Niti-Chadha.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant \u2013 Cardiology & Head \u2013 Cardiac Electrophysiology Unit",
-    "degree": "MD | DM | CCDS | CEPS (Electrophysiology)",
-    "about": "Dr. Niti Chadha Negi is a leading cardiac electrophysiologist with over 15 years of experience in treating complex heart rhythm disorders. She specializes in EP studies, radiofrequency ablation, 3D mapping, atrial fibrillation ablation, and implantation of cardiac devices including pacemakers, ICDs and CRT. She is internationally certified and is an invited faculty at major cardiac electrophysiology conferences.",
-    "medicalProblems": [
-      {
-        "title": "Arrhythmias",
-        "description": "Atrial fibrillation, SVT, VT and conduction abnormalities."
-      },
-      {
-        "title": "Heart Rhythm Disorders",
-        "description": "Bradycardia, tachycardia and electrical issues in heart."
-      },
-      {
-        "title": "Heart Failure with Rhythm Issues",
-        "description": "Management with CRT and device-based therapy."
-      },
-      {
-        "title": "Syncope & Palpitations",
-        "description": "Evaluation through EP studies and monitoring."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Electrophysiology (EP) Study",
-        "description": "Diagnostic evaluation of heart\u2019s electrical pathways."
-      },
-      {
-        "title": "Radiofrequency Ablation",
-        "description": "Treatment for arrhythmias using thermal energy."
-      },
-      {
-        "title": "3D RFA & AF Ablation",
-        "description": "Advanced mapping for atrial fibrillation."
-      },
-      {
-        "title": "Pacemaker / ICD / CRT Implantation",
-        "description": "Device-based rhythm management."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Niti perform AF ablation?",
-        "answer": "Yes, she specializes in AF and complex arrhythmia ablations."
-      },
-      {
-        "question": "Is she certified in electrophysiology?",
-        "answer": "Yes, she holds CEPS and CCDS certifications."
-      },
-      {
-        "question": "Does she implant cardiac devices?",
-        "answer": "Yes, she performs pacemaker, ICD and CRT implantations."
-      }
-    ]
-  },
-  {
-    "slug": "dt-rashi-tantia",
-    "name": "Dt. Rashi Tantia",
-    "specialty": "Diet & Nutrition",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "13+ years",
-    "image": "assets/uploads/Dr.-Rashi-Tantia.png",
-    "isTopDoctor": false,
-    "position": "HOD \u2013 Dietetics",
-    "degree": "B.Sc (HSC) | PG Diploma in Dietetics & Public Health Nutrition | Certified Diabetes Educator",
-    "about": "Dt. Rashi Tantia is an experienced clinical nutritionist with expertise in therapeutic diet planning, weight management, clinical nutrition for IPD patients and dietary counseling. She has 13 years of experience and also manages Food & Beverage services at the hospital. She is known for individualized diet plans tailored to medical conditions.",
-    "medicalProblems": [
-      {
-        "title": "Diabetes & Metabolic Disorders",
-        "description": "Medical nutrition therapy for diabetes and obesity."
-      },
-      {
-        "title": "Heart Diseases",
-        "description": "Therapeutic diets for cardiac patients."
-      },
-      {
-        "title": "Kidney Disorders",
-        "description": "Renal diets for CKD, dialysis and electrolyte issues."
-      },
-      {
-        "title": "Weight Management",
-        "description": "Personalized weight loss and nutrition planning."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Therapeutic Diet Planning",
-        "description": "Condition-specific diet management for inpatients."
-      },
-      {
-        "title": "Nutrition Counseling",
-        "description": "One-on-one OPD consultations and diet guidance."
-      },
-      {
-        "title": "Diabetes Education",
-        "description": "Diet and lifestyle training for diabetic patients."
-      },
-      {
-        "title": "Hospital Nutrition Management",
-        "description": "F&B and dietary service supervision."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dt. Rashi plan diets for IPD patients?",
-        "answer": "Yes, she specializes in therapeutic diets for inpatients."
-      },
-      {
-        "question": "Does she offer weight loss programs?",
-        "answer": "Yes, she provides customized weight management plans."
-      },
-      {
-        "question": "Is she a certified diabetes educator?",
-        "answer": "Yes, she is certified in diabetes nutrition management."
-      }
-    ]
-  },
-  {
-    "slug": "dr-pavan-kharbanda",
-    "name": "Dr. Pavan Kharbanda",
+    "slug": "dr-rr-dutta",
+    "name": "Dr. R. R. Dutta",
     "specialty": "Internal Medicine",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "18+ years",
-    "image": "assets/uploads/Dr.-Pawan-Kharbanda.png",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "20+ years",
+    "image": "assets/uploads/Dr. R R DUTTA.jpg",
     "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD \u2013 Internal Medicine",
-    "degree": "MBBS | MD (Internal Medicine)",
-    "about": "Dr. Pavan Kharbanda is a senior physician with nearly two decades of clinical experience in internal medicine, diabetes management and critical care. He has worked at leading institutions including Fortis Escorts Hospital, Apollo Hospital and QRG Central Hospital. His expertise spans complex medical disorders, critical care, lifestyle diseases and emergency management.",
+    "position": "Head of Department \u2013 Internal Medicine",
+    "degree": "MBBS | MD (Medicine)",
+    "about": "Dr. R. R. Dutta is a senior internal medicine specialist with over two decades of experience. He is widely respected for his expertise in bone marrow and stem cell transplantation, along with his excellence in managing complex medical disorders. Known for his clinical precision, research contributions and compassionate patient care, he leads Internal Medicine at Paras Health with distinction.",
     "medicalProblems": [
       {
-        "title": "Diabetes & Hypertension",
-        "description": "Comprehensive management of metabolic and lifestyle disorders."
+        "title": "Chronic Medical Conditions",
+        "description": "Management of diabetes, hypertension, thyroid disorders and metabolic diseases."
       },
       {
         "title": "Infectious Diseases",
-        "description": "Fever, viral infections, respiratory and gastrointestinal illnesses."
+        "description": "Treatment for viral, bacterial and parasitic infections."
       },
       {
-        "title": "Cardio-Metabolic Disorders",
-        "description": "Management of heart-related risk factors and systemic diseases."
-      },
-      {
-        "title": "Critical Illness",
-        "description": "Emergency care and ICU management."
+        "title": "Bone Marrow & Stem Cell Disorders",
+        "description": "Evaluation and care for hematological and immunological diseases."
       }
     ],
     "procedures": [
       {
-        "title": "Critical Care Management",
-        "description": "ICU-based treatment and emergency medical care."
+        "title": "Bone Marrow Transplant Support",
+        "description": "Management and evaluation of patients undergoing transplant procedures."
       },
       {
-        "title": "Chronic Disease Management",
-        "description": "Long-term care for diabetes, thyroid, hypertension."
+        "title": "Internal Medicine Procedures",
+        "description": "IV therapy, ventilatory support, central line care and diagnostics."
       },
       {
-        "title": "Comprehensive Medical Evaluation",
-        "description": "Full medical checkups and diagnostic evaluations."
-      },
-      {
-        "title": "Cardiac Monitoring Support",
-        "description": "Management of patients with cardiac comorbidities."
+        "title": "Preventive Health Checkups",
+        "description": "Early detection and management of lifestyle and chronic diseases."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Pavan manage diabetes?",
-        "answer": "Yes, he is an expert in diabetes and chronic disease management."
+        "question": "Does Dr. Dutta handle bone marrow cases?",
+        "answer": "Yes, he specializes in bone marrow and stem cell\u2013related conditions."
       },
       {
-        "question": "Does he handle emergency cases?",
-        "answer": "Yes, he has extensive experience in ICU and emergency medicine."
+        "question": "Is he experienced in internal medicine?",
+        "answer": "Yes, he has over 20 years of extensive experience."
       },
       {
-        "question": "Is he experienced in cardiac care?",
-        "answer": "Yes, he has served as Senior Registrar in cardiology departments."
+        "question": "Does he perform preventive health evaluations?",
+        "answer": "Yes, he focuses strongly on preventive and lifestyle medicine."
+      }
+    ]
+  },
+  {
+    "slug": "dr-anu-daber",
+    "name": "Dr. Anu Daber",
+    "specialty": "Rheumatology & Clinical Immunology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "10,000+ patients treated",
+    "image": "assets/uploads/Dr. ANU DABER.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant \u2013 Rheumatology & Clinical Immunology",
+    "degree": "MBBS | MD | DNB | DM (Rheumatology & Clinical Immunology) | MRCP (Edinburgh)",
+    "about": "Dr. Anu Daber is one of the leading rheumatologists in North India, known for her gold-medalist academic excellence and extensive experience in treating over 10,000 patients with arthritis, autoimmune diseases, and complex rheumatologic conditions. Trained at prestigious institutes including AIIMS Delhi, JIPMER Puducherry, and KMC Manipal, she is among the few specialists in India with both DM Rheumatology and postdoctoral fellowship training. She is also certified by the Royal College of Physicians (UK), British Society of Rheumatology, and has completed the EULAR rheumatology course from Switzerland. Dr. Daber is highly skilled in adult and pediatric rheumatology and has expertise in minimally invasive procedures including joint injections, biopsies, and soft-tissue interventions.",
+    "medicalProblems": [
+      {
+        "title": "Arthritis (RA, OA, Spondyloarthritis)",
+        "description": "Comprehensive treatment for all forms of joint inflammation and degenerative arthritis."
+      },
+      {
+        "title": "Autoimmune Diseases",
+        "description": "Management of SLE, Sj\u00f6gren's syndrome, vasculitis, and connective tissue disorders."
+      },
+      {
+        "title": "Pediatric Rheumatology",
+        "description": "Evaluation and treatment of juvenile arthritis and primary immunodeficiency disorders."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Intra-Articular Injections",
+        "description": "Steroid, viscosupplementation, and biologic injections for joint relief."
+      },
+      {
+        "title": "Soft Tissue & Nerve Biopsies",
+        "description": "Muscle, skin, nerve, and lip biopsies for diagnostic evaluation."
+      },
+      {
+        "title": "Carpal Tunnel & Intralesional Injections",
+        "description": "Minimally invasive procedures for pain and inflammation management."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Anu treat autoimmune diseases?",
+        "answer": "Yes, she specializes in all autoimmune and connective tissue disorders."
+      },
+      {
+        "question": "Is she trained internationally?",
+        "answer": "Yes, she is MRCP-certified, trained through EULAR Switzerland, and certified by the British Society of Rheumatology."
+      },
+      {
+        "question": "Does she treat children with rheumatologic disorders?",
+        "answer": "Yes, she has extensive training in both adult and pediatric rheumatology."
+      }
+    ]
+  },
+  {
+    "slug": "dr-ashutosh-goyal",
+    "name": "Dr. Ashutosh Goyal",
+    "specialty": "Endocrinology & Diabetes",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "15+ years",
+    "image": "assets/uploads/Dr. ASHUTOSH GOYAL.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant \u2013 Endocrinology",
+    "degree": "MBBS | MD (Medicine) | DNB (Endocrinology) | MRCP (UK) | SCE (Endocrinology & Diabetes)",
+    "about": "Dr. Ashutosh Goyal is a leading endocrinologist with more than 15 years of expertise. He completed DNB Endocrinology from Sir Ganga Ram Hospital, New Delhi, and holds the prestigious MRCP (UK) and Specialty Certificate in Endocrinology & Diabetes. With numerous national and international publications, he is known for treating complex endocrine disorders with precision and evidence-based care.",
+    "medicalProblems": [
+      {
+        "title": "Diabetes Management",
+        "description": "Comprehensive care for Type 1, Type 2 and gestational diabetes."
+      },
+      {
+        "title": "Thyroid Disorders",
+        "description": "Management of hypothyroidism, hyperthyroidism, thyroid nodules and autoimmune thyroiditis."
+      },
+      {
+        "title": "Hormonal & Metabolic Disorders",
+        "description": "Treatment for PCOS, obesity, pituitary disorders, adrenal diseases and metabolic abnormalities."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Endocrine Evaluation",
+        "description": "Comprehensive hormonal assessment for endocrine disorders."
+      },
+      {
+        "title": "Diabetes Optimization",
+        "description": "Insulin therapy, CGM monitoring and advanced diabetes care."
+      },
+      {
+        "title": "Thyroid & Metabolic Screening",
+        "description": "Thyroid imaging, metabolic health checkups and risk profiling."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Goyal MRCP certified?",
+        "answer": "Yes, he holds MRCP (UK) and SCE in Endocrinology & Diabetes."
+      },
+      {
+        "question": "Does he treat PCOS?",
+        "answer": "Yes, he specializes in managing PCOS and hormonal disorders."
+      },
+      {
+        "question": "Does he manage complex endocrine cases?",
+        "answer": "Yes, he is highly experienced in advanced endocrine and metabolic diseases."
+      }
+    ]
+  },
+  {
+    "slug": "dr-ekta-nigam",
+    "name": "Dr. Ekta Nigam",
+    "specialty": "Dermatology & Cosmetology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "15+ years",
+    "image": "assets/uploads/Dr. EKTA NIGAM.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant \u2013 Dermatology & Cosmetology",
+    "degree": "MBBS | MD (Dermatology, Venereology & Leprosy)",
+    "about": "Dr. Ekta Nigam is a highly accomplished dermatologist and cosmetologist with extensive experience in aesthetic dermatology and clinical skin care. She has trained over 200 professionals in cosmetic dermatology and has been recognized for excellence in dermatology as well as for her contributions as a mentor and judge at high-profile events such as the Mr & Mrs New Delhi pageant.",
+    "medicalProblems": [
+      {
+        "title": "Skin Disorders",
+        "description": "Management of acne, pigmentation, eczema, psoriasis and chronic skin diseases."
+      },
+      {
+        "title": "Hair & Scalp Issues",
+        "description": "Treatment for hair fall, dandruff, alopecia and scalp infections."
+      },
+      {
+        "title": "Cosmetic Skin Concerns",
+        "description": "Anti-aging, scar treatment, aesthetic improvement and skin rejuvenation."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Laser Treatments",
+        "description": "Laser hair reduction, pigmentation treatment and skin resurfacing."
+      },
+      {
+        "title": "Aesthetic Dermatology Procedures",
+        "description": "Botox, fillers, chemical peels, PRP and non-surgical facial rejuvenation."
+      },
+      {
+        "title": "Dermatosurgery",
+        "description": "Mole removal, wart treatment and minor skin procedures."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Ekta specialize in cosmetic dermatology?",
+        "answer": "Yes, she has trained over 200 individuals in aesthetic dermatology."
+      },
+      {
+        "question": "Does she perform laser treatments?",
+        "answer": "Yes, she is skilled in advanced dermatological laser technology."
+      },
+      {
+        "question": "Does she treat psoriasis?",
+        "answer": "Yes, psoriasis management is one of her key specialties."
+      }
+    ]
+  },
+  {
+    "slug": "dr-madhuri-jaitley",
+    "name": "Dr. Madhuri Jaitley",
+    "specialty": "Nephrology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "10+ years",
+    "image": "assets/uploads/Dr. MADHURI JAITLEY.jpg",
+    "isTopDoctor": false,
+    "position": "Senior Consultant \u2013 Nephrology",
+    "degree": "MBBS | MD | DNB (Nephrology)",
+    "about": "Dr. Madhuri Jaitley is an enthusiastic and highly skilled nephrologist with expertise in renal sciences, hemodialysis, renal transplant, and electrolyte imbalance management. With a strong academic foundation (MBBS, MD and DNB Nephrology), she is committed to delivering high-quality kidney care through clinical excellence, interventional skills and compassionate patient handling.",
+    "medicalProblems": [
+      {
+        "title": "Chronic Kidney Disease",
+        "description": "Early and advanced-stage CKD diagnosis and management."
+      },
+      {
+        "title": "Acute Kidney Injury (AKI)",
+        "description": "Critical care management of sudden kidney failure."
+      },
+      {
+        "title": "Electrolyte Imbalances",
+        "description": "Treatment of sodium, potassium and acid-base disorders."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Hemodialysis",
+        "description": "Dialysis treatment for renal failure patients."
+      },
+      {
+        "title": "Renal Transplant Support",
+        "description": "Pre- and post-transplant evaluation and monitoring."
+      },
+      {
+        "title": "Interventional Nephrology",
+        "description": "Vascular access, kidney biopsy and related procedures."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Jaitley manage CKD?",
+        "answer": "Yes, she provides comprehensive CKD management."
+      },
+      {
+        "question": "Does she handle dialysis cases?",
+        "answer": "Yes, she is experienced in hemodialysis and renal replacement therapy."
+      },
+      {
+        "question": "Is she trained in interventional nephrology?",
+        "answer": "Yes, she performs vascular access and diagnostic renal procedures."
+      }
+    ]
+  },
+  {
+    "slug": "dr-manpreet-sodhi",
+    "name": "Dr. Manpreet Sodhi",
+    "specialty": "Obstetrics & Gynecology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "15+ years",
+    "image": "assets/uploads/Dr. MANPREET SODHI.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant \u2013 Obstetrics & Gynecology",
+    "degree": "Fellowship in ART & IVF | Ultrasound Training (WHO recognized) | Short-term Laparoscopy Training (AIIMS) | MBBS | MD (Obs & Gyne)",
+    "about": "Dr. Manpreet Sodhi is a highly skilled obstetrician and gynecologist known for her expertise in painless labor, infertility management, ART/IVF, and advanced gynecological interventions. She is trained at top institutes including Safdarjung Hospital, Batra Hospital, Southend IVF (ICOG/FOBSI), and Randhawa Ultrasonology Centre (affiliated with Jefferson University Hospital, USA). With advanced training in minimally invasive gynecology at AIIMS, she specializes in high-risk pregnancies, infertility, adolescent gynecology, and maternal medicine.",
+    "medicalProblems": [
+      {
+        "title": "Infertility & IVF Issues",
+        "description": "Comprehensive evaluation and treatment for infertility and ART/IVF procedures."
+      },
+      {
+        "title": "High-Risk Pregnancy",
+        "description": "Management of complex and medically challenging pregnancies."
+      },
+      {
+        "title": "Gynecological Disorders",
+        "description": "Treatment for PCOS, fibroids, endometriosis, hormonal issues and menstrual disorders."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "IVF & Assisted Reproduction",
+        "description": "Advanced ART procedures including IVF, IUI and ovulation induction."
+      },
+      {
+        "title": "Laparoscopic Surgery",
+        "description": "Minimally invasive gynecological procedures for cysts, fibroids and endometriosis."
+      },
+      {
+        "title": "Ultrasound-Guided Interventions",
+        "description": "Fetal and gynecological ultrasound for accurate diagnosis and treatment."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Manpreet specialize in IVF?",
+        "answer": "Yes, she has a fellowship in ART & IVF under ICOG/FOBSI."
+      },
+      {
+        "question": "Does she treat high-risk pregnancies?",
+        "answer": "Yes, she has extensive experience in high-risk obstetrics and maternal medicine."
+      },
+      {
+        "question": "Is she trained in laparoscopy?",
+        "answer": "Yes, she has specialized training in minimally invasive gynecology from AIIMS."
+      }
+    ]
+  },
+  {
+    "slug": "dr-naveen-satija",
+    "name": "Dr. Naveen Satija",
+    "specialty": "General, Minimal Access, GI & Bariatric Surgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "10+ years",
+    "image": "assets/uploads/Dr. NAVEEN SATIJA.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant \u2013 General & Laparoscopic Surgery",
+    "degree": "MBBS | MS | DNB (Surgery)",
+    "about": "Dr. Naveen Satija is a distinguished laparoscopic and GI surgeon with extensive experience in minimally invasive surgeries across Delhi-NCR. He specializes in laparoscopic hernia repair, hemorrhoids and fistula management, trauma surgery, and GI procedures. With FIAGES and FALS fellowships, Dr. Satija is known for precision-based surgical care and excellence in patient outcomes.",
+    "medicalProblems": [
+      {
+        "title": "Hernias",
+        "description": "Treatment of inguinal, umbilical, ventral and incisional hernias."
+      },
+      {
+        "title": "Gastrointestinal Disorders",
+        "description": "Management of gallstones, appendicitis, piles, fistula, fissures and reflux."
+      },
+      {
+        "title": "Trauma Surgery Needs",
+        "description": "Expert handling of trauma-related emergency and elective surgeries."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Laparoscopic Hernia Surgery",
+        "description": "Minimally invasive hernia repair for faster recovery."
+      },
+      {
+        "title": "GI & Colorectal Surgery",
+        "description": "Piles, fistula, fissure and gallbladder surgeries with minimally invasive techniques."
+      },
+      {
+        "title": "Bariatric Surgery Assistance",
+        "description": "Advanced surgical support for obesity-related weight-loss procedures."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Satija perform laparoscopic surgery?",
+        "answer": "Yes, he is extensively trained in minimal access surgery."
+      },
+      {
+        "question": "Does he treat piles and fistula?",
+        "answer": "Yes, he specializes in minimally invasive treatment for anorectal conditions."
+      },
+      {
+        "question": "Is he trained in advanced laparoscopy?",
+        "answer": "Yes, he holds FIAGES and FALS certifications."
+      }
+    ]
+  },
+  {
+    "slug": "dr-preeti-singh",
+    "name": "Dr. Preeti Singh",
+    "specialty": "Psychiatry & Clinical Psychology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "23+ years",
+    "image": "assets/uploads/Dr. PREETI SINGH.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant \u2013 Psychiatry & Clinical Psychology",
+    "degree": "Doctorate in Clinical Psychology | Masters & Bachelors in Psychology",
+    "about": "Dr. Preeti Singh is a renowned clinical psychologist and mental health expert, trained at NIMHANS, Bangalore\u2014India\u2019s premier neuro-psychiatric institute. With 23+ years of experience, she specializes in psychotherapy, psychometric testing, trauma therapy, and biofeedback. A pioneer in NCR, she introduced advanced Biofeedback Therapy at Paras Hospital and is certified in Cognitive Behavioral Therapy, Psychodynamic Therapy, Mindfulness, and Brainspotting for PTSD.",
+    "medicalProblems": [
+      {
+        "title": "Anxiety, Depression & Stress Disorders",
+        "description": "Comprehensive management of mood and stress-related conditions."
+      },
+      {
+        "title": "Child & Adolescent Mental Health",
+        "description": "Behavioral issues, ADHD, learning disabilities and emotional health."
+      },
+      {
+        "title": "Addiction & Substance Abuse",
+        "description": "Treatment for adult and adolescent addiction, screen addiction and alcohol dependence."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Psychotherapy",
+        "description": "CBT, psychodynamic therapy, mindfulness and trauma-focused therapy."
+      },
+      {
+        "title": "Biofeedback Therapy",
+        "description": "Advanced therapy for headaches, anxiety, psychosomatic disorders and stress."
+      },
+      {
+        "title": "Psychometric Testing",
+        "description": "IQ testing, personality profiling, neuropsychological assessment and diagnostic evaluation."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Preeti treat children?",
+        "answer": "Yes, she is experienced in pediatric and adolescent mental health."
+      },
+      {
+        "question": "Is she a certified CBT therapist?",
+        "answer": "Yes, she holds certification in CBT, psychodynamic therapy and mindfulness."
+      },
+      {
+        "question": "Does she treat PTSD?",
+        "answer": "Yes, she is certified in Brainspotting Therapy for PTSD and trauma."
       }
     ]
   },
   {
     "slug": "dr-rahul-kumar",
     "name": "Dr. Rahul Kumar",
-    "specialty": "Neuro & Spine Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "specialty": "Orthopaedics \u2013 Sports Injury & Arthroscopy",
+    "hospital": "Paras Health – Gurugram",
     "experience": "12+ years",
-    "image": "assets/uploads/Dr.-Rahul-Kumar",
+    "image": "assets/uploads/Dr. RAHUL KUMAR.jpg",
     "isTopDoctor": true,
-    "position": "Associate Director & Head \u2013 Neuro & Spine Surgery (Unit-II)",
-    "degree": "MBBS | MS (General Surgery) | M.Ch (Neurosurgery) | Fellowship in Minimally Invasive Spine Surgery",
-    "about": "Dr. Rahul Kumar is an accomplished neuro and spine surgeon known for his expertise in brain tumors, spine disorders, minimally invasive surgeries, and complex craniovertebral junction procedures. He is skilled in neuro-oncology, endoscopic spine surgery, scoliosis and deformity correction, functional neurosurgery and pediatric neurosurgery. With experience across Artemis, Max and Fortis hospitals, he is recognized for high precision neurosurgical outcomes.",
+    "position": "Senior Consultant \u2013 Orthopaedics",
+    "degree": "MBBS | MS (Orthopaedics)",
+    "about": "Dr. Rahul Kumar is a fellowship-trained sports injury and arthroscopy surgeon with over 12 years of experience. He specializes in knee, shoulder, and ankle arthroscopy, along with joint replacement surgeries. Having independently performed more than 2,500 knee and shoulder surgeries, Dr. Kumar has trained in Germany and London and previously worked at the Sports Injury Centre, Safdarjung Hospital. He brings advanced expertise in managing complex sports injuries, ligament tears, cartilage problems, and joint reconstruction.",
     "medicalProblems": [
       {
-        "title": "Brain Tumors",
-        "description": "Benign and malignant brain tumor management."
+        "title": "Sports Injuries",
+        "description": "ACL, PCL, meniscus tears, shoulder dislocation, and ankle injuries."
       },
       {
-        "title": "Spine Disorders",
-        "description": "Slip disc, sciatica, cervical and lumbar spondylosis."
+        "title": "Joint Degeneration",
+        "description": "Arthritis and cartilage damage affecting knee, shoulder, and hip joints."
       },
       {
-        "title": "Spinal Deformities",
-        "description": "Scoliosis, kyphosis and congenital deformities."
-      },
-      {
-        "title": "Movement Disorders",
-        "description": "Parkinson's disease, dystonia and spasticity."
+        "title": "Ligament & Tendon Disorders",
+        "description": "Management of ligament tears, tendonitis, and shoulder rotator cuff injuries."
       }
     ],
     "procedures": [
       {
-        "title": "Minimally Invasive Spine Surgery",
-        "description": "Endoscopic and micro-invasive spine procedures."
+        "title": "Knee Arthroscopy",
+        "description": "Minimally invasive surgery for ligament and meniscus injuries."
       },
       {
-        "title": "Brain Tumor Surgery",
-        "description": "Microscopic, endoscopic and stereotactic tumor removal."
+        "title": "Shoulder Arthroscopy",
+        "description": "Advanced repair for dislocations, labral tears, and rotator cuff issues."
       },
       {
-        "title": "Functional Neurosurgery",
-        "description": "DBS, Baclofen pump insertion and movement disorder surgeries."
-      },
-      {
-        "title": "Endovascular Procedures",
-        "description": "Aneurysm coiling, flow diverters and vascular interventions."
+        "title": "Joint Replacement Surgery",
+        "description": "Knee, hip, and shoulder replacement for advanced degeneration."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Rahul perform minimally invasive spine surgery?",
-        "answer": "Yes, he is fellowship-trained in minimally invasive spine procedures."
+        "question": "Does Dr. Rahul specialize in sports injuries?",
+        "answer": "Yes, he is fellowship-trained in sports injury and arthroscopy."
       },
       {
-        "question": "Does he treat brain tumors?",
-        "answer": "Yes, he specializes in neuro-oncology and tumor surgeries."
+        "question": "How many surgeries has he performed?",
+        "answer": "He has independently conducted over 2,500 knee and shoulder surgeries."
       },
       {
-        "question": "Does he handle spinal deformities?",
-        "answer": "Yes, including scoliosis and kyphosis correction."
+        "question": "Does he perform ligament reconstruction?",
+        "answer": "Yes, he specializes in ACL, PCL, and complex ligament reconstruction."
       }
     ]
   },
   {
-    "slug": "dr-sachin-arora",
-    "name": "Dr. Sachin Arora",
-    "specialty": "Nuclear Medicine",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "14+ years",
-    "image": "assets/uploads/Dr.-Sachin-Arora.png",
-    "isTopDoctor": true,
-    "position": "HOD & Sr. Consultant \u2013 Nuclear Medicine",
-    "degree": "MBBS | DRM | DNB | FEBNM | FANMB",
-    "about": "Dr. Sachin Arora is a leading nuclear medicine expert specializing in PET-CT imaging, molecular diagnostics and radionuclide therapies. With experience across Jaslok Hospital, BLK Hospital, Royal Hospital Muscat and multiple imaging centers, he is known for precision diagnostics and advanced nuclear imaging techniques. His expertise aids in accurate cancer staging and treatment planning.",
-    "medicalProblems": [
-      {
-        "title": "Cancer Diagnosis",
-        "description": "PET-CT imaging for accurate detection and staging."
-      },
-      {
-        "title": "Thyroid Disorders",
-        "description": "Evaluation and radioactive iodine therapies."
-      },
-      {
-        "title": "Bone & Infection Scans",
-        "description": "Functional imaging for bone and inflammatory disorders."
-      },
-      {
-        "title": "Neurological Conditions",
-        "description": "Brain imaging for dementia, epilepsy and movement disorders."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "PET-CT Scan",
-        "description": "Advanced molecular imaging for cancer and metabolic diseases."
-      },
-      {
-        "title": "Radionuclide Therapy",
-        "description": "Therapy for thyroid cancer and select tumors."
-      },
-      {
-        "title": "SPECT Imaging",
-        "description": "Functional organ imaging."
-      },
-      {
-        "title": "Thyroid Uptake Scan",
-        "description": "Diagnostic evaluation for thyroid diseases."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Arora specialize in PET-CT?",
-        "answer": "Yes, he is highly experienced in PET-CT and molecular imaging."
-      },
-      {
-        "question": "Does he provide radionuclide therapy?",
-        "answer": "Yes, for thyroid cancer and specific tumors."
-      },
-      {
-        "question": "Does he perform SPECT scans?",
-        "answer": "Yes, he is trained in all nuclear imaging modalities."
-      }
-    ]
-  },
-  {
-    "slug": "dr-vipasha-brajpuriya",
-    "name": "Dr. Vipasha Brajpuriya",
-    "specialty": "ENT (Ear, Nose & Throat)",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "16+ years",
-    "image": "assets/uploads/Dr.Vipasha-metro-2.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant & HOD \u2013 ENT",
-    "degree": "MBBS | MS (ENT)",
-    "about": "Dr. Vipasha Brajpuriya is an experienced ENT specialist with 16+ years of expertise in treating ear, nose, throat, thyroid and voice disorders. She has worked at Batra Hospital, BLK Hospital and Accord Hospital. Known for her compassionate care, she specializes in sinus diseases, hearing disorders, balance issues, allergies and throat conditions.",
-    "medicalProblems": [
-      {
-        "title": "Ear Disorders",
-        "description": "Hearing loss, discharge, ringing and congenital issues."
-      },
-      {
-        "title": "Nose & Sinus Issues",
-        "description": "Allergies, polyps, blockage and smell disorders."
-      },
-      {
-        "title": "Throat & Voice Problems",
-        "description": "Swallowing issues, thyroid problems, laryngeal diseases."
-      },
-      {
-        "title": "Head & Neck Concerns",
-        "description": "Infections, trauma and congenital ENT conditions."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Endoscopic Sinus Surgery",
-        "description": "Minimally invasive surgery for sinus diseases."
-      },
-      {
-        "title": "Ear Surgeries",
-        "description": "Tympanoplasty, mastoidectomy and ossicular reconstruction."
-      },
-      {
-        "title": "Thyroid & Head-Neck Surgery",
-        "description": "Thyroidectomy and neck mass removal."
-      },
-      {
-        "title": "Microlaryngeal Surgery",
-        "description": "Voice and vocal cord disorder surgeries."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Vipasha treat sinus diseases?",
-        "answer": "Yes, she specializes in allergies, sinusitis and nasal polyps."
-      },
-      {
-        "question": "Does she perform ear surgeries?",
-        "answer": "Yes, including tympanoplasty and mastoid surgery."
-      },
-      {
-        "question": "Does she treat thyroid disorders?",
-        "answer": "Yes, she handles thyroid-related ENT issues."
-      }
-    ]
-  },
-  {
-    "slug": "dr-arvind-singhal",
-    "name": "Dr. Arvind Singhal",
-    "specialty": "Interventional Cardiology",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "slug": "dr-rajsrinivas-parthasarathy",
+    "name": "Dr. Rajsrinivas Parthasarathy",
+    "specialty": "Neurointervention & Stroke Care",
+    "hospital": "Paras Health – Gurugram",
     "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Arvind-Singhal.png",
+    "image": "assets/uploads/Dr. RAJSRINIVAS PARTHASARTHY.jpg",
     "isTopDoctor": true,
-    "position": "Sr. Consultant \u2013 Cardiology",
-    "degree": "MBBS | MD (Medicine) | DNB (Cardiology) | FESC | FSCAI",
-    "about": "Dr. Arvind Singhal is a highly experienced interventional cardiologist specializing in complex coronary angioplasties. He has performed more than 8,000 coronary angiographies and 4,000 angioplasties. With expertise in both radial and femoral approaches, he delivers safe and advanced cardiac interventions. His academic leadership includes teaching roles at ESI Medical College.",
+    "position": "Senior Consultant \u2013 Neurointervention",
+    "degree": "MBBS | MRCP (UK)",
+    "about": "Dr. Rajsrinivas Parthasarathy is a highly accomplished neurointervention specialist with extensive international training in Canada, the UK, and India. He holds fellowships from Medanta, the University of Alberta Hospital, and is certified by the General Medical Council (UK). As an expert in stroke intervention, aneurysm management, and cerebrovascular diseases, he has contributed to leading books such as '100 Interesting Case Studies in Neurointervention' and has chaired multiple national and international conferences.",
+    "medicalProblems": [
+      {
+        "title": "Stroke & Cerebrovascular Diseases",
+        "description": "Management of ischemic stroke, intracranial blockages, and brain vessel disorders."
+      },
+      {
+        "title": "Aneurysms & Vascular Malformations",
+        "description": "Treatment for brain aneurysms, AVMs, and vascular abnormalities."
+      },
+      {
+        "title": "Carotid & Intracranial Disease",
+        "description": "Management of carotid stenosis and intracranial arterial disease."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Mechanical Thrombectomy",
+        "description": "Emergency clot removal in acute ischemic stroke."
+      },
+      {
+        "title": "Coiling & Stenting",
+        "description": "Endovascular treatment for aneurysms and arterial blockages."
+      },
+      {
+        "title": "Neuroangiography",
+        "description": "Advanced imaging of brain blood vessels for diagnosis and planning."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Rajsrinivas treat stroke?",
+        "answer": "Yes, he is highly experienced in hyperacute stroke intervention and thrombectomy."
+      },
+      {
+        "question": "Is he internationally trained?",
+        "answer": "Yes, with training in Canada, the UK, and top Indian centers."
+      },
+      {
+        "question": "Does he perform aneurysm coiling?",
+        "answer": "Yes, he specializes in coiling, stenting, and AVM treatment."
+      }
+    ]
+  },
+  {
+    "slug": "dr-rakesh-tiwari",
+    "name": "Dr. Rakesh Tiwari",
+    "specialty": "Paediatrics & Neonatology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "22+ years",
+    "image": "assets/uploads/Dr. RAKESH TIWARI.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant & Unit Head \u2013 Paediatrics & Neonatology",
+    "degree": "MBBS | MD (Pediatrics)",
+    "about": "Dr. Rakesh Tiwari is a senior pediatrician and neonatologist with over 22 years of experience. A national faculty member in Development Supportive Care, he has conducted multiple workshops across India. He handles complex newborn and pediatric cases, including critical care, growth monitoring, developmental issues, and vaccination for newborns to adolescents up to 18 years.",
+    "medicalProblems": [
+      {
+        "title": "Newborn & Infant Care",
+        "description": "Management of premature babies, jaundice, feeding issues, and critical neonatal conditions."
+      },
+      {
+        "title": "Pediatric Illnesses",
+        "description": "Treatment of infections, allergies, fevers, asthma, and digestive problems."
+      },
+      {
+        "title": "Growth & Development Disorders",
+        "description": "Monitoring milestones, nutrition, behavior, and developmental delays."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Neonatal Intensive Care",
+        "description": "Care for high-risk and critically ill newborns."
+      },
+      {
+        "title": "Vaccination Programs",
+        "description": "Complete immunization for children as per global standards."
+      },
+      {
+        "title": "Growth & Development Assessment",
+        "description": "Screening for physical, behavioral, and cognitive development."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Tiwari treat premature babies?",
+        "answer": "Yes, he specializes in neonatal intensive care and high-risk newborns."
+      },
+      {
+        "question": "Does he work with older children?",
+        "answer": "Yes, he treats children from birth to 18 years."
+      },
+      {
+        "question": "Is he involved in national pediatric programs?",
+        "answer": "Yes, he is a national faculty member in Development Supportive Care."
+      }
+    ]
+  },
+  {
+    "slug": "dr-ram-chander-jiloha",
+    "name": "Dr. Ram Chander Jiloha",
+    "specialty": "Psychiatry",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "50+ years",
+    "image": "assets/uploads/Dr. RAM CHANDER JILOHA.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant \u2013 Psychiatry",
+    "degree": "MBBS | MD (Psychiatry) | WHO Fellowships (USA & Canada)",
+    "about": "Dr. R. C. Jiloha is one of India\u2019s most senior and respected psychiatrists with over 50 years of clinical, academic, and research experience. He served as Director Professor & Head of Psychiatry at MAMC and GB Pant Hospital. A WHO fellow in Addiction Psychiatry (UCLA) and Child Psychiatry (UBC, Canada), he established the MD Psychiatry program at MAMC, started the MPhil Clinical Psychology program at IHBAS, trained more than 100 MD Psychiatry students, and authored 250+ research papers and 8 books.",
+    "medicalProblems": [
+      {
+        "title": "Schizophrenia & Bipolar Disorder",
+        "description": "Advanced psychiatric care for severe mental illnesses."
+      },
+      {
+        "title": "Child & Adolescent Psychiatry",
+        "description": "Management of ADHD, behavioral issues, emotional disorders and academic difficulties."
+      },
+      {
+        "title": "Addiction Disorders",
+        "description": "Treatment for alcohol dependence, drug addiction, and behavioral addictions."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Pharmacotherapy",
+        "description": "Medication-based treatment for psychiatric disorders."
+      },
+      {
+        "title": "Psychotherapy",
+        "description": "Counseling and therapy for emotional and behavioral issues."
+      },
+      {
+        "title": "Behavior Therapy",
+        "description": "Structured behavioral interventions for anxiety, phobias, and OCD."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Dr. Jiloha trained internationally?",
+        "answer": "Yes, with WHO fellowships in the USA and Canada."
+      },
+      {
+        "question": "Does he treat complex psychiatric cases?",
+        "answer": "Yes, he specializes in severe psychiatric, developmental and addiction disorders."
+      },
+      {
+        "question": "How many research works has he published?",
+        "answer": "He has 250+ papers and 8 books to his credit."
+      }
+    ]
+  },
+  {
+    "slug": "dr-nainika-goel",
+    "name": "Dr. Nainika Goel",
+    "specialty": "Dermatology & Cosmetology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "8+ years",
+    "image": "assets/uploads/Dr. NAINIKA GOEL.jpg",
+    "isTopDoctor": true,
+    "position": "Consultant \u2013 Dermatology & Cosmetology",
+    "degree": "MBBS | MD | DNB (Dermatology, Venereology & Leprosy)",
+    "about": "Dr. Nainika Goel is an experienced dermatologist specializing in dermatology, dermatosurgery, and aesthetic dermatology. With qualifications from premier institutes like MAMC, GMCH, and Medanta, she offers advanced, personalized skin, hair, and nail treatments. Her expertise spans clinical dermatology, anti-ageing therapies, laser procedures, and cosmetic enhancements. She is known for her empathetic, patient-centered approach and continuous pursuit of innovation through fellowships and advanced hands-on training.",
+    "medicalProblems": [
+      {
+        "title": "Clinical Dermatology",
+        "description": "Treatment for acne, eczema, psoriasis, fungal infections and STDs."
+      },
+      {
+        "title": "Hair & Scalp Disorders",
+        "description": "Management of hair fall, dandruff and scalp conditions."
+      },
+      {
+        "title": "Skin Ageing & Aesthetic Concerns",
+        "description": "Solutions for wrinkles, pigmentation, scars, and facial rejuvenation."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Laser Treatments",
+        "description": "Advanced laser therapies for pigmentation, scars, and rejuvenation."
+      },
+      {
+        "title": "Dermatosurgery",
+        "description": "Skin, hair and nail surgical procedures."
+      },
+      {
+        "title": "Aesthetic Treatments",
+        "description": "Anti-ageing procedures, injectables and cosmetic enhancements."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Goel perform laser treatments?",
+        "answer": "Yes, she is trained in advanced laser and aesthetic dermatology."
+      },
+      {
+        "question": "Does she handle hair and nail surgeries?",
+        "answer": "Yes, she specializes in dermatosurgery including hair and nail procedures."
+      },
+      {
+        "question": "Where did she complete her dermatology training?",
+        "answer": "She completed MD and DNB Dermatology from GMCH Chandigarh and holds fellowships from Medanta and Shivani Skin Clinic."
+      }
+    ]
+  },
+  {
+    "slug": "dr-nandini-baruah",
+    "name": "Dr. Nandini Baruah",
+    "specialty": "Dermatology & Cosmetology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "18+ years",
+    "image": "assets/uploads/Dr. NANDINI BARUAH.jpg",
+    "isTopDoctor": true,
+    "position": "Consultant \u2013 Dermatology & Cosmetology",
+    "degree": "DDVL | Fellowship in Cutaneous Surgery (AIIMS) | Fellowship in Cosmetic Surgery (Safdarjung Hospital)",
+    "about": "Dr. Nandini Baruah is a highly skilled dermatologist with over 18 years of experience managing a wide range of dermatological and cosmetic conditions. With fellowships from premier institutes like AIIMS and Safdarjung Hospital, she specializes in aesthetic medicine, facial rejuvenation, laser procedures, vitiligo treatment, hair restoration, and advanced cosmetic surgeries including Botox, fillers, and thread lifts.",
+    "medicalProblems": [
+      {
+        "title": "Dermatological Disorders",
+        "description": "Treatment for acne, eczema, psoriasis, vitiligo and pigmentation."
+      },
+      {
+        "title": "Hair & Scalp Conditions",
+        "description": "Management of hair fall, dandruff and hair restoration needs."
+      },
+      {
+        "title": "Cosmetic Skin Concerns",
+        "description": "Aesthetic corrections for scars, burns, aging and facial rejuvenation."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Laser Procedures",
+        "description": "Advanced laser treatments for pigmentation, acne scars and rejuvenation."
+      },
+      {
+        "title": "Cosmetic Surgery",
+        "description": "Botox, fillers, thread lifts and facial contouring procedures."
+      },
+      {
+        "title": "Hair Transplantation",
+        "description": "Surgical and minimally invasive hair restoration treatments."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Baruah perform cosmetic procedures?",
+        "answer": "Yes, including Botox, fillers, thread lifts and rejuvenation treatments."
+      },
+      {
+        "question": "Is she trained in cutaneous surgery?",
+        "answer": "Yes, she completed a fellowship at AIIMS, New Delhi."
+      },
+      {
+        "question": "Does she treat vitiligo?",
+        "answer": "Yes, she provides advanced clinical and procedural treatments for vitiligo."
+      }
+    ]
+  },
+  {
+    "slug": "dr-nadeem-u-rehman",
+    "name": "Dr. Nadeem U Rehman",
+    "specialty": "Cardiology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "12+ years",
+    "image": "assets/uploads/Dr. NADEEM U REHMAN.jpg",
+    "isTopDoctor": true,
+    "position": "Consultant \u2013 Cardiology",
+    "degree": "MBBS | MD (General Medicine) | DNB (Medicine) | DM (Cardiology) | DrNB (Cardiology)",
+    "about": "Dr. Nadeem U Rehman is a compassionate interventional cardiologist with extensive training from Sri Jayadeva Institute of Cardiovascular Sciences, one of India\u2019s highest-volume cardiac centers. He has performed thousands of angioplasties, complex interventions such as Rotablation, IVL, CHIP cases, structural heart procedures (TAVR, MitraClip), congenital heart defect closures, electrophysiology devices, and peripheral vascular interventions. He is also actively involved in research with multiple publications in top-tier journals.",
     "medicalProblems": [
       {
         "title": "Coronary Artery Disease",
-        "description": "Heart blockages, angina and heart attack prevention."
+        "description": "Management of blockages, angina, and heart attack prevention."
       },
       {
-        "title": "Heart Failure",
-        "description": "Management of reduced heart function and risk factors."
+        "title": "Structural Heart Disorders",
+        "description": "Valve diseases including aortic stenosis and mitral regurgitation."
       },
       {
-        "title": "Arrhythmias",
-        "description": "Diagnosis and management of irregular heartbeat."
-      },
-      {
-        "title": "Hypertension & Lipid Disorders",
-        "description": "Comprehensive cardiac risk management."
+        "title": "Heart Failure & Rhythm Disorders",
+        "description": "Treatment for heart failure, arrhythmias and device therapy needs."
       }
     ],
     "procedures": [
       {
-        "title": "Coronary Angiography",
-        "description": "Performed 8,000+ angiographies through radial and femoral routes."
+        "title": "Coronary Interventions",
+        "description": "Primary angioplasty, rotablation, IVL, CTO and complex PCI."
       },
       {
-        "title": "Coronary Angioplasty (PTCA)",
-        "description": "Performed 4,000+ angioplasties including complex cases."
+        "title": "Structural Heart Procedures",
+        "description": "TAVR, MitraClip, balloon valvuloplasty and congenital defect closures."
       },
       {
-        "title": "Primary Angioplasty",
-        "description": "Emergency angioplasty for heart attacks."
-      },
-      {
-        "title": "Cardiac Catheterization",
-        "description": "Advanced diagnostic cardiac catheter procedures."
+        "title": "Device Implantation",
+        "description": "Pacemakers, ICDs, CRT-P/CRT-D and electrophysiological procedures."
       }
     ],
     "faqs": [
       {
-        "question": "How many angioplasties has Dr. Singhal performed?",
-        "answer": "He has performed more than 4,000 angioplasties."
+        "question": "Does Dr. Rehman perform complex angioplasties?",
+        "answer": "Yes, he specializes in Rotablation, IVL, CTO and CHIP procedures."
       },
       {
-        "question": "Is he experienced in radial angiography?",
-        "answer": "Yes, he performs both radial and femoral route angiographies."
+        "question": "Is he trained in TAVR?",
+        "answer": "Yes, he has expertise in TAVR, MitraClip and structural heart interventions."
       },
       {
-        "question": "Does he manage complex coronary cases?",
-        "answer": "Yes, he specializes in complex and primary angioplasties."
+        "question": "Does he treat congenital heart conditions?",
+        "answer": "Yes, including ASD, VSD, PDA closures and coarctation stenting."
       }
     ]
   },
   {
-    "slug": "dr-asheesh-malhotra",
-    "name": "Dr. Asheesh Malhotra",
-    "specialty": "Nephrology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "8+ years",
-    "image": "assets/uploads/Dr.-Asheesh.jpg",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant \u2013 Nephrology",
-    "degree": "MBBS | MD (Medicine) | DM (Nephrology)",
-    "about": "Dr. Asheesh Malhotra is a highly skilled nephrologist specializing in kidney transplants, dialysis therapies, renal failure management and complex kidney disorders. With extensive training at CMC Ludhiana and Army Hospital (R&R), he has served as Senior Consultant at ESIC Medical College and other reputed institutions. His expertise includes hemodialysis, peritoneal dialysis, kidney biopsy and transplant care.",
-    "medicalProblems": [
-      {
-        "title": "Chronic Kidney Disease",
-        "description": "Long-term management of CKD and renal complications."
-      },
-      {
-        "title": "Acute Kidney Injury",
-        "description": "Emergency and critical renal care."
-      },
-      {
-        "title": "Kidney Stones & UTIs",
-        "description": "Diagnosis and medical management."
-      },
-      {
-        "title": "Glomerular Diseases",
-        "description": "Autoimmune and inflammatory kidney disorders."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Hemodialysis & CRRT",
-        "description": "Advanced dialysis modalities for acute and chronic cases."
-      },
-      {
-        "title": "Peritoneal Dialysis",
-        "description": "CAPD/APD treatments for home-based dialysis."
-      },
-      {
-        "title": "Kidney Transplant",
-        "description": "Evaluation, surgery assistance and post-transplant care."
-      },
-      {
-        "title": "Kidney Biopsy",
-        "description": "Native and graft kidney biopsy for diagnosis."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Malhotra handle kidney transplants?",
-        "answer": "Yes, he specializes in transplant management and post-care."
-      },
-      {
-        "question": "Does he perform biopsies?",
-        "answer": "Yes, he performs native and graft kidney biopsies."
-      },
-      {
-        "question": "Is he experienced in dialysis therapies?",
-        "answer": "Yes, he is an expert in hemodialysis, CRRT and peritoneal dialysis."
-      }
-    ]
-  },
-  {
-    "slug": "dr-kiranmayi-atla",
-    "name": "Dr. Kiranmayi Atla",
-    "specialty": "Plastic Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "17+ years",
-    "image": "assets/uploads/Dr.-Kiranmayi-Atla.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant \u2013 Plastic Surgery",
-    "degree": "MBBS | MS (General Surgery) | M.Ch (Plastic Surgery)",
-    "about": "Dr. Kiranmayi Atla is a distinguished plastic surgeon with 17 years of expertise in aesthetic and reconstructive surgery. She specializes in liposuction, body contouring, aesthetic breast surgeries, rhinoplasty, maxillofacial surgery, microsurgery and burn reconstruction. With extensive experience across PGIMER Chandigarh, QRG Hospital, Apollo Hospitals and Accord Hospital, she is known for precision-driven surgical outcomes and excellence in cosmetic and reconstructive procedures.",
-    "medicalProblems": [
-      {
-        "title": "Cosmetic Concerns",
-        "description": "Face, breast and body aesthetic issues."
-      },
-      {
-        "title": "Reconstructive Needs",
-        "description": "Post-trauma, post-surgical and cancer-related defects."
-      },
-      {
-        "title": "Burn Injuries",
-        "description": "Acute burn management and post-burn reconstruction."
-      },
-      {
-        "title": "Hand & Maxillofacial Problems",
-        "description": "Hand injuries, facial trauma and deformities."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Liposuction & Body Contouring",
-        "description": "Targeted fat removal and body reshaping."
-      },
-      {
-        "title": "Aesthetic Breast Surgery",
-        "description": "Breast lift, augmentation and reduction."
-      },
-      {
-        "title": "Rhinoplasty",
-        "description": "Nasal reshaping and functional correction."
-      },
-      {
-        "title": "Microsurgery & Reconstruction",
-        "description": "Flap surgeries, reimplantations and complex repairs."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Kiranmayi perform cosmetic surgeries?",
-        "answer": "Yes, including liposuction, rhinoplasty and breast surgeries."
-      },
-      {
-        "question": "Does she treat burn cases?",
-        "answer": "Yes, she is highly experienced in acute and post-burn reconstruction."
-      },
-      {
-        "question": "Does she perform hand and maxillofacial surgery?",
-        "answer": "Yes, she is trained in both hand and facial reconstructive procedures."
-      }
-    ]
-  },
-  {
-    "slug": "dr-ruchi-vohra",
-    "name": "Dr. Ruchi Vohra",
-    "specialty": "Obstetrics & Gynaecology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "29+ years",
-    "image": "assets/uploads/Dr.-Ruchi-Vohra.png",
-    "isTopDoctor": false,
-    "position": "Sr. Consultant \u2013 Obstetrics & Gynaecology",
-    "degree": "MBBS | MS (Obstetrics & Gynaecology)",
-    "about": "Dr. Ruchi Vohra is a senior obstetrician and gynecologist with nearly three decades of experience. Trained at MLN Medical College Allahabad, she specializes in pregnancy care, gynecological disorders, menopausal health and minimally invasive gynecologic procedures. She is known for her compassionate patient care and extensive experience in women\u2019s health.",
-    "medicalProblems": [
-      {
-        "title": "Pregnancy Care",
-        "description": "Normal and high-risk pregnancy management."
-      },
-      {
-        "title": "Menstrual Disorders",
-        "description": "PCOD, heavy bleeding, irregular cycles."
-      },
-      {
-        "title": "Gynecologic Infections",
-        "description": "Pelvic infections and reproductive health."
-      },
-      {
-        "title": "Menopause Issues",
-        "description": "Hormonal changes and post-menopausal care."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Normal & Cesarean Delivery",
-        "description": "Safe maternal and fetal management."
-      },
-      {
-        "title": "Hysterectomy",
-        "description": "Surgical management of uterine conditions."
-      },
-      {
-        "title": "Laparoscopic Surgery",
-        "description": "Minimally invasive gynecologic procedures."
-      },
-      {
-        "title": "Infertility Evaluation",
-        "description": "Hormonal testing and preliminary fertility care."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Ruchi handle high-risk pregnancies?",
-        "answer": "Yes, she has extensive experience in high-risk obstetrics."
-      },
-      {
-        "question": "Does she perform laparoscopic surgeries?",
-        "answer": "Yes, she performs minimally invasive gynecologic surgeries."
-      },
-      {
-        "question": "Does she treat PCOD and menstrual problems?",
-        "answer": "Yes, she is experienced in managing hormonal and menstrual disorders."
-      }
-    ]
-  },
-  {
-    "slug": "dr-shruti-khatana",
-    "name": "Dr. Shruti Khatana",
-    "specialty": "Oral & Maxillofacial Surgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "12+ years",
-    "image": "assets/uploads/Dr.-Shruti.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant \u2013 Dentistry",
-    "degree": "BDS | MDS (Oral & Maxillofacial Surgery)",
-    "about": "Dr. Shruti Khatana is a highly accomplished Oral & Maxillofacial Surgeon with advanced training from AIIMS Delhi, NHS UK and Kidwai Memorial Institute of Oncology. She specializes in maxillofacial trauma, oral cancer surgeries, head and neck oncology, facial reconstruction, dental implants and complex jaw surgeries. She has numerous national and international accolades for academic excellence and clinical expertise.",
-    "medicalProblems": [
-      {
-        "title": "Oral Cancer & Tumors",
-        "description": "Diagnosis and surgical management of oral malignancies."
-      },
-      {
-        "title": "Facial Trauma",
-        "description": "Management of fractures and facial injuries."
-      },
-      {
-        "title": "Jaw Disorders",
-        "description": "TMJ issues and corrective jaw surgeries."
-      },
-      {
-        "title": "Dental Infections",
-        "description": "Cysts, abscesses and wisdom tooth complications."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Maxillofacial Trauma Surgery",
-        "description": "Fracture fixation and facial reconstruction."
-      },
-      {
-        "title": "Oral Oncology Surgery",
-        "description": "Cancer excision and reconstruction."
-      },
-      {
-        "title": "Dental Implants",
-        "description": "Implant placement and full-mouth rehabilitation."
-      },
-      {
-        "title": "Orthognathic Surgery",
-        "description": "Corrective jaw surgery for alignment and function."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Khatana treat facial trauma?",
-        "answer": "Yes, she is trained in high-complexity trauma and reconstruction."
-      },
-      {
-        "question": "Does she perform oral cancer surgeries?",
-        "answer": "Yes, she has specialized fellowships in oral oncology."
-      },
-      {
-        "question": "Is she internationally trained?",
-        "answer": "Yes, at NHS UK and Kidwai Memorial Institute."
-      }
-    ]
-  },
-  {
-    "slug": "dr-shorav-bhatnagar",
-    "name": "Dr. Shorav Bhatnagar",
-    "specialty": "Radiology & Interventional Radiology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "15+ years",
-    "image": "assets/uploads/Dr.-Sourav-Bhatnagar.png",
-    "isTopDoctor": true,
-    "position": "Sr. Consultant \u2013 Radiology",
-    "degree": "MBBS | DNB (Radiodiagnosis) | PDCC (HPB Interventional Radiology)",
-    "about": "Dr. Shorav Bhatnagar is an expert radiologist specializing in diagnostic and interventional radiology with extensive experience across ILBS Delhi, QRG Hospital, Sarvodaya Hospital and ADViR Diagnostic Centre. He is known for advanced liver and biliary interventions, image-guided procedures and high-end radiological diagnostics. He has received multiple international awards and fellowships for research and innovations.",
-    "medicalProblems": [
-      {
-        "title": "Liver & Biliary Disorders",
-        "description": "Blocked ducts, strictures and liver disease imaging."
-      },
-      {
-        "title": "Vascular Disorders",
-        "description": "Aneurysms, thrombosis and vascular malformations."
-      },
-      {
-        "title": "Tumors & Cancers",
-        "description": "Precision imaging and image-guided interventions."
-      },
-      {
-        "title": "Abdominal & Thoracic Diseases",
-        "description": "Ultrasound, CT and MRI-based diagnosis."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Interventional Radiology",
-        "description": "Minimally invasive procedures for liver, kidney and vascular diseases."
-      },
-      {
-        "title": "Biopsy & Drainage",
-        "description": "Ultrasound and CT-guided procedures."
-      },
-      {
-        "title": "Advanced Imaging (CT/MRI)",
-        "description": "Comprehensive body imaging."
-      },
-      {
-        "title": "Endobiliary RF Ablation",
-        "description": "Restoring biliary stent patency using RF technology."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Shorav perform IR procedures?",
-        "answer": "Yes, he specializes in advanced interventional radiology."
-      },
-      {
-        "question": "Does he handle liver/biliary interventions?",
-        "answer": "Yes, he has PDCC training from ILBS Delhi."
-      },
-      {
-        "question": "Has he won international awards?",
-        "answer": "Yes, including awards from Korean Congress of Radiology."
-      }
-    ]
-  },
-  {
-    "slug": "dr-abhinav-debanath",
-    "name": "Dr. Abhinav Debanath",
-    "specialty": "Neurosurgery",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "10+ years",
-    "image": "assets/uploads/Dr. Abhinav Debanath.png",
-    "isTopDoctor": true,
-    "position": "Consultant \u2013 Neurosurgery",
-    "degree": "MBBS | MS (General Surgery) | M.Ch (Neurosurgery) | DrNB (Neurosurgery)",
-    "about": "Dr. Abhinav Debanath is a skilled neurosurgeon experienced in cranial and spinal surgeries, endoscopic skull base procedures, neurotrauma and endovascular interventions. He has worked at Max Hospital Saket, YCM Hospital Pune and other leading institutes, assisting in advanced neuronavigation, O-Arm\u2013guided spine surgeries and vascular neurosurgery. His expertise includes brain tumors, spinal disorders, skull base surgery and minimally invasive neurosurgical procedures.",
-    "medicalProblems": [
-      {
-        "title": "Brain Tumors",
-        "description": "Gliomas, meningiomas and skull base tumors."
-      },
-      {
-        "title": "Spinal Disorders",
-        "description": "Slip disc, cervical/lumbar spondylosis and spinal stenosis."
-      },
-      {
-        "title": "Neurovascular Conditions",
-        "description": "Aneurysms, AVMs and vascular malformations."
-      },
-      {
-        "title": "Neurotrauma",
-        "description": "Head injury, spine injury and emergency neurosurgery."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Minimally Invasive Spine Surgery",
-        "description": "Discectomy, fusion and decompression."
-      },
-      {
-        "title": "Endoscopic Skull Base Surgery",
-        "description": "Pituitary tumors and CSF leak repair."
-      },
-      {
-        "title": "Endovascular Procedures",
-        "description": "Aneurysm coiling and flow diverter placement."
-      },
-      {
-        "title": "Cranial Neurosurgery",
-        "description": "Tumors, hemorrhage evacuation and trauma surgery."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Debanath perform minimally invasive spine surgery?",
-        "answer": "Yes, he is trained in MIS and endoscopic spine techniques."
-      },
-      {
-        "question": "Does he treat brain tumors?",
-        "answer": "Yes, including skull base and complex cranial tumors."
-      },
-      {
-        "question": "Is he trained in endovascular neurosurgery?",
-        "answer": "Yes, he has assisted in aneurysm coiling and vascular procedures."
-      }
-    ]
-  },
-  {
-    "slug": "dr-khushboo-jha",
-    "name": "Dr. Khushboo Jha",
-    "specialty": "Dermatology, Laser & Aesthetic Medicine",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "8+ years",
-    "image": "assets/uploads/Dr.-Khushboo-Jha.png",
-    "isTopDoctor": true,
-    "position": "Consultant \u2013 Dermatology",
-    "degree": "MBBS | MD (Dermatology) | Fellowship in Aesthetic Medicine (USA)",
-    "about": "Dr. Khushboo Jha is a specialist dermatologist with advanced training in laser and aesthetic medicine from Los Angeles, New York and AAAM Texas. She is skilled in hair transplant (modified FUE), laser treatments, anti-aging procedures, pigmentation management, acne scar therapy, fillers, Botox and cosmetic dermatology. She combines global expertise with precise clinical care to deliver natural aesthetic results.",
-    "medicalProblems": [
-      {
-        "title": "Acne & Scars",
-        "description": "Advanced acne and post-acne scar management."
-      },
-      {
-        "title": "Pigmentation",
-        "description": "Melasma, freckles and uneven skin tone."
-      },
-      {
-        "title": "Hair Loss",
-        "description": "Medical treatment and hair transplant solutions."
-      },
-      {
-        "title": "Skin Allergies",
-        "description": "Dermatitis, eczema and allergic skin reactions."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Hair Transplant (FUE)",
-        "description": "Modified FUE hair transplant technique."
-      },
-      {
-        "title": "Laser Hair Reduction",
-        "description": "Advanced laser systems for painless hair removal."
-      },
-      {
-        "title": "CO2 Laser",
-        "description": "Skin resurfacing for scars and rejuvenation."
-      },
-      {
-        "title": "Botox & Fillers",
-        "description": "Anti-aging and facial contouring procedures."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Dr. Jha perform hair transplants?",
-        "answer": "Yes, she specializes in FUE hair transplantation."
-      },
-      {
-        "question": "Does she do laser resurfacing?",
-        "answer": "Yes, she performs CO2 laser and advanced laser procedures."
-      },
-      {
-        "question": "Does she offer anti-aging treatments?",
-        "answer": "Yes, including Botox, fillers and thread lifts."
-      }
-    ]
-  },
-  {
-    "slug": "dr-muzzafar-hakeem",
-    "name": "Dr. Muzzafar Mohi-Ud-Din Hakeem",
+    "slug": "dr-pooja-anand",
+    "name": "Dr. Pooja Anand",
     "specialty": "Neurology",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "hospital": "Paras Health – Gurugram",
     "experience": "10+ years",
-    "image": "assets/uploads/Dr.-Muzzafar.png",
-    "isTopDoctor": false,
+    "image": "assets/uploads/Dr. POOJA ANAND.jpg",
+    "isTopDoctor": true,
     "position": "Consultant \u2013 Neurology",
-    "degree": "MBBS | Post Graduate (Internal Medicine) | DrNB (Neurology)",
-    "about": "Dr. Muzzafar Mohi-Ud-Din Hakeem is a neurologist skilled in diagnosing and managing neurological emergencies and chronic disorders. With extensive training at Batra Hospital, GIPMER New Delhi and GMC Srinagar, he is experienced in stroke management, neuro-electrophysiology, headache medicine and movement disorder care. He provides comprehensive neurological evaluation and emergency neuro care.",
+    "degree": "MBBS (Gold Medallist) | MD Medicine | DM Neurology (AIIMS) | SCE Neurology (UK)",
+    "about": "Dr. Pooja Anand is a highly accomplished neurologist with exceptional academic achievements including DM Neurology from AIIMS, MD Medicine from MAMC, and Gold Medal in MBBS. She also holds an SCE in Neurology from the Royal College of Physicians, UK. Awarded the National Young Scholar Winner (2023\u201324), she has strong interests in neuroimmunology, epilepsy, movement disorders, and dementia.",
     "medicalProblems": [
       {
-        "title": "Stroke & Paralysis",
-        "description": "Emergency stroke care and thrombolysis."
-      },
-      {
-        "title": "Headache & Migraine",
-        "description": "Advanced management of chronic headaches."
+        "title": "Epilepsy & Seizure Disorders",
+        "description": "Diagnosis and management of epilepsy and recurrent seizures."
       },
       {
         "title": "Movement Disorders",
-        "description": "Parkinson\u2019s disease, tremors and dystonia."
+        "description": "Management of Parkinson\u2019s disease, tremors and dystonia."
       },
       {
-        "title": "Neuropathy & Seizures",
-        "description": "Evaluation and long-term management."
+        "title": "Neuroimmunology Disorders",
+        "description": "Care for multiple sclerosis, autoimmune encephalitis and related illnesses."
       }
     ],
     "procedures": [
       {
-        "title": "Lumbar Puncture",
-        "description": "Diagnostic CSF analysis."
+        "title": "EEG & Epilepsy Monitoring",
+        "description": "Advanced diagnostics for seizure disorders."
       },
       {
-        "title": "Botox for Neurological Disorders",
-        "description": "For blepharospasm and facial spasms."
+        "title": "Neurodiagnostic Evaluations",
+        "description": "NCV, EMG and nerve conduction studies."
       },
       {
-        "title": "Nerve Conduction Studies",
-        "description": "NCV, EMG and electrophysiological evaluation."
-      },
-      {
-        "title": "Neuroimaging Interpretation",
-        "description": "CT/MRI reading for accurate diagnosis."
+        "title": "Cognitive & Dementia Assessments",
+        "description": "Evaluation of memory loss and cognitive decline."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Hakeem treat stroke cases?",
-        "answer": "Yes, including acute thrombolysis."
+        "question": "Is Dr. Pooja trained at AIIMS?",
+        "answer": "Yes, she completed her DM Neurology from AIIMS, New Delhi."
       },
       {
-        "question": "Does he perform neurological Botox?",
-        "answer": "Yes, for movement disorders and spasms."
+        "question": "Does she treat epilepsy?",
+        "answer": "Yes, she specializes in epilepsy and seizure disorders."
       },
       {
-        "question": "Does he interpret EMG/NCV?",
-        "answer": "Yes, he is trained in electrophysiology interpretation."
+        "question": "Has she received national awards?",
+        "answer": "Yes, she was awarded as a National Young Scholar Winner in Neurology."
       }
     ]
   },
   {
-    "slug": "dr-sharad-kumar-anand",
-    "name": "Dr. Sharad Kumar Anand",
-    "specialty": "Cardiac Anaesthesia",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "20+ years",
-    "image": "assets/uploads/Dr.-Vishal-Khurana.png",
+    "slug": "dr-prachi-gupta",
+    "name": "Dr. Prachi Gupta",
+    "specialty": "Obstetrics & Gynecology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "13+ years",
+    "image": "assets/uploads/Dr. PRACHI GUPTA.jpg",
     "isTopDoctor": true,
-    "position": "Consultant \u2013 Cardiac Anaesthesia",
-    "degree": "MBBS | MD (Anaesthesia)",
-    "about": "Dr. Sharad Kumar Anand is a senior cardiac anesthesiologist with over two decades of experience in managing anesthesia for complex cardiac surgeries including CABG (on and off pump), valve repair, valve replacement and congenital heart surgeries. He has served as HOD of Cardiac Anaesthesia at Delhi Heart & Lung Institute and Yashoda Hospital. He is highly skilled in ventilation strategies, cath-lab anesthesia and perioperative cardiac care.",
+    "position": "Consultant \u2013 Obstetrics & Gynecology",
+    "degree": "MBBS | MS (Obs & Gyne) | ICOG Fellowship in Gynecological Endoscopy | MRCOG Part 1 | CIMP Certified | ISCCP Certified Colposcopy Training",
+    "about": "Dr. Prachi Gupta is a distinguished obstetrician and gynecologist with over 13 years of experience in managing high-risk pregnancies, infertility, gynecological surgeries, and women\u2019s health. Trained at SMS Medical College and mentored by Padmashri Dr. Alka Kriplani at Paras Hospitals, she has extensive expertise in laparoscopic surgery, colposcopy, cancer prevention, and reproductive health. She has worked with leading institutions like Safdarjung Hospital, VMMC, and W Pratiksha Hospital. Dr. Gupta is known for her expertise in painless deliveries, family planning, and minimally invasive gynecology.",
     "medicalProblems": [
       {
-        "title": "Cardiac Surgery Care",
-        "description": "Anaesthesia support for complex cardiac surgeries."
+        "title": "High-Risk Pregnancy",
+        "description": "Comprehensive care for complex and high-risk maternal cases."
       },
       {
-        "title": "Critical Care Needs",
-        "description": "Management of ventilator and hemodynamics in critical patients."
+        "title": "Infertility & Reproductive Disorders",
+        "description": "Evaluation and treatment including IUI, hormonal issues, and cycle management."
       },
       {
-        "title": "Congenital Heart Diseases",
-        "description": "Anaesthesia for pediatric and adult congenital heart repairs."
-      },
-      {
-        "title": "High-risk Surgeries",
-        "description": "Anaesthesia for high-risk and multi-organ compromised patients."
+        "title": "Gynecological Disorders",
+        "description": "Management of PCOS, fibroids, endometriosis, menstrual disorders, and infections."
       }
     ],
     "procedures": [
       {
-        "title": "Cardiac Anaesthesia",
-        "description": "CABG, valve surgeries and congenital heart procedures."
+        "title": "Laparoscopic Surgery",
+        "description": "Minimally invasive procedures including hysterectomy, cystectomy and myomectomy."
       },
       {
-        "title": "Cath-Lab Anaesthesia",
-        "description": "Support for angioplasty, TAVR and device closures."
+        "title": "Colposcopy",
+        "description": "Diagnosis and management of cervical abnormalities and pre-cancer lesions."
       },
       {
-        "title": "Ventilator Management",
-        "description": "Advanced respiratory and ICU management."
-      },
-      {
-        "title": "General Anaesthesia",
-        "description": "Anaesthesia for general and laparoscopic surgeries."
+        "title": "Painless Delivery",
+        "description": "Epidural-assisted normal delivery ensuring comfort and safety."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Anand handle CABG anesthesia?",
-        "answer": "Yes, he has years of expertise in CABG and valve surgeries."
+        "question": "Does Dr. Gupta specialize in infertility?",
+        "answer": "Yes, she is trained in infertility care and gynecologic endoscopy."
       },
       {
-        "question": "Does he manage pediatric cardiac anesthesia?",
-        "answer": "Yes, he handles congenital cardiac cases as well."
+        "question": "Does she perform laparoscopic surgeries?",
+        "answer": "Yes, she is extensively trained in minimally invasive gynecologic surgery."
       },
       {
-        "question": "Does he manage cath-lab procedures?",
-        "answer": "Yes, including angioplasty and TAVR."
+        "question": "Is she certified in colposcopy?",
+        "answer": "Yes, she completed ISCCP-certified colposcopy training at Safdarjung Hospital."
       }
     ]
   },
   {
-    "slug": "dr-shreya-garg",
-    "name": "Dr. Shreya Garg",
-    "specialty": "Facial Plastic Surgery & ENT",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "4+ years",
-    "image": "assets/uploads/Dr. Shreya Garg.png",
+    "slug": "dr-raghav-bansal",
+    "name": "Dr. Raghav Bansal",
+    "specialty": "Liver Transplant & GI Surgery",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "10+ years",
+    "image": "assets/uploads/Dr. RAGHAV BANSAL.jpg",
     "isTopDoctor": true,
-    "position": "Consultant \u2013 Facial Plastic & ENT Surgery",
-    "degree": "MBBS | MS (ENT) | Fellowships (UK & Brazil)",
-    "about": "Dr. Shreya Garg is a Facial Plastic and ENT surgeon with advanced training from the UK and Brazil. Her expertise includes rhinoplasty, facial rejuvenation, periorbital surgery, ENT surgery, cochlear implants and facial reconstruction. With training at AIIMS Delhi, MAMC and UMC/Otoface Brazil, she integrates global surgical techniques with a patient-first approach.",
+    "position": "Consultant \u2013 Liver Transplant",
+    "degree": "MBBS | MS (General Surgery) | DrNB Surgical Gastroenterology | Fellowship in Liver Transplant & HPB Surgery",
+    "about": "Dr. Raghav Bansal is an experienced surgical gastroenterologist and liver transplant surgeon with more than a decade of expertise. He has trained at several prestigious centers across India and has extensive experience managing complex liver, GI, and GI-oncology cases. His clinical interests include minimal access GI oncology, transplant oncology, and advanced HPB surgeries.",
     "medicalProblems": [
       {
-        "title": "Facial Cosmetic Concerns",
-        "description": "Nasal shape issues, aging face, eyelid concerns."
+        "title": "Liver Diseases",
+        "description": "Management of cirrhosis, liver failure, and chronic liver diseases."
       },
       {
-        "title": "ENT Disorders",
-        "description": "Sinusitis, throat disorders and hearing loss."
+        "title": "GI Cancers",
+        "description": "Treatment for stomach, liver, pancreas, and colorectal cancers."
       },
       {
-        "title": "Pediatric ENT",
-        "description": "Adenoid, tonsils and airway issues in children."
-      },
-      {
-        "title": "Facial Trauma",
-        "description": "Fractures, deformities and reconstructive needs."
+        "title": "HPB Disorders",
+        "description": "Management of hepatobiliary and pancreatic system diseases."
       }
     ],
     "procedures": [
       {
-        "title": "Rhinoplasty",
-        "description": "Cosmetic and functional nose surgery."
+        "title": "Liver Transplantation",
+        "description": "Adult, pediatric, cadaveric, and living donor transplants."
       },
       {
-        "title": "Facial Rejuvenation",
-        "description": "Anti-aging surgical and minimally invasive techniques."
+        "title": "GI Onco Surgery",
+        "description": "Advanced cancer surgeries with minimally invasive techniques."
       },
       {
-        "title": "Cochlear Implant Surgery",
-        "description": "Hearing restoration surgeries."
-      },
-      {
-        "title": "ENT Surgeries",
-        "description": "Sinus surgery, tonsillectomy and airway procedures."
+        "title": "HPB Surgery",
+        "description": "Complex surgeries of liver, pancreas, and biliary tract."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Shreya perform rhinoplasty?",
-        "answer": "Yes, she specializes in both cosmetic and functional rhinoplasty."
+        "question": "Does Dr. Bansal perform liver transplants?",
+        "answer": "Yes, he has extensive experience in adult and pediatric liver transplantation."
       },
       {
-        "question": "Does she perform facial rejuvenation?",
-        "answer": "Yes, including periorbital and facial cosmetic procedures."
+        "question": "Is he trained in GI oncology?",
+        "answer": "Yes, he specializes in minimal access and transplant oncology."
       },
       {
-        "question": "Does she manage ENT disorders?",
-        "answer": "Yes, she treats sinus, hearing and throat conditions."
+        "question": "Does he treat pancreatic cancers?",
+        "answer": "Yes, he is skilled in advanced HPB and pancreatic surgeries."
       }
     ]
   },
   {
-    "slug": "dr-shilakha-chaman",
-    "name": "Dr. Shilakha Chaman",
-    "specialty": "Paediatrics",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "9+ years",
-    "image": "assets/uploads/Dr.-Shilakha.jpg",
-    "isTopDoctor": false,
-    "position": "Consultant \u2013 Paediatrics",
-    "degree": "MBBS | MD (Paediatrics)",
-    "about": "Dr. Shilakha Chaman is an experienced pediatrician specializing in child growth, nutrition, vaccination, neonatology and management of common childhood diseases. With training from GMC Jammu and GMC Srinagar, she has worked at several reputed hospitals including Max Noida, Metro Hospital, SSB Hospital and Sharda University. She provides comprehensive care for infants, children and adolescents.",
+    "slug": "dr-devanshee-aakash-shah",
+    "name": "Dr. Devanshee Aakash Shah",
+    "specialty": "Medical Oncology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "8+ years",
+    "image": "assets/uploads/Dr. DEVANSHEE AAKASH SHAH.jpg",
+    "isTopDoctor": true,
+    "position": "Associate Consultant \u2013 Oncology",
+    "degree": "MBBS | MD (General Medicine) | DM (Medical Oncology) | eDiploma \u2013 Harvard Medical School",
+    "about": "Dr. Devanshee Aakash Shah is an accomplished medical oncologist trained at India\u2019s premier cancer center, Tata Memorial Hospital, where she also served as Assistant Professor. She has expertise in treating lung, breast, head & neck cancers, and hematological malignancies. With multiple international publications, ASH awards, and roles as invited faculty at major oncology conferences, she is committed to evidence-based, personalized cancer care.",
     "medicalProblems": [
       {
-        "title": "Growth & Development Issues",
-        "description": "Delayed milestones and developmental disorders."
+        "title": "Solid Tumors",
+        "description": "Treatment for breast, lung, head & neck and GI cancers."
       },
       {
-        "title": "General Infections",
-        "description": "Cough, cold, fever, flu and gastrointestinal infections."
+        "title": "Blood Cancers",
+        "description": "Management of leukemia, lymphoma, and myeloma."
       },
       {
-        "title": "Pediatric Asthma & Allergy",
-        "description": "Management of recurrent cough, wheezing and allergies."
-      },
-      {
-        "title": "Child Nutrition",
-        "description": "Diet planning and nutrition for children and teens."
+        "title": "Advanced & Refractory Cancers",
+        "description": "Specialized care using immunotherapy and targeted treatments."
       }
     ],
     "procedures": [
       {
-        "title": "Vaccinations",
-        "description": "Complete immunization for newborns to adolescents."
+        "title": "Chemotherapy",
+        "description": "Standard and advanced drug protocols customized to patient needs."
       },
       {
-        "title": "Neonatal Care",
-        "description": "Newborn examination and growth monitoring."
+        "title": "Immunotherapy",
+        "description": "Cutting-edge immune-based treatments for various cancers."
       },
       {
-        "title": "Asthma Management",
-        "description": "Nebulization and long-term asthma therapy."
-      },
-      {
-        "title": "Dehydration Treatment",
-        "description": "ORS, IV fluids and acute care."
+        "title": "Targeted Therapy",
+        "description": "Personalized cancer treatment based on molecular profiling."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Shilakha handle infant care?",
-        "answer": "Yes, she is experienced in neonatology and newborn care."
+        "question": "Is Dr. Devanshee trained at Tata Memorial?",
+        "answer": "Yes, she completed DM Oncology and served as Assistant Professor there."
       },
       {
-        "question": "Does she provide vaccinations?",
-        "answer": "Yes, complete vaccination services are available."
+        "question": "Does she treat blood cancers?",
+        "answer": "Yes, she manages leukemia, lymphoma and other hematological conditions."
       },
       {
-        "question": "Does she treat childhood asthma?",
-        "answer": "Yes, including allergies and recurrent cough."
+        "question": "Has she won international awards?",
+        "answer": "Yes, including the ASH Abstract Achievement Award 2023."
       }
     ]
   },
   {
-    "slug": "dr-alka-goyal",
-    "name": "Dr. Alka Goyal",
-    "specialty": "Anaesthesia & Critical Care",
-    "hospital": "Metro Heart Institute with Multispeciality",
+    "slug": "dr-shipra-gupta",
+    "name": "Dr. Shipra Gupta",
+    "specialty": "Medical Oncology",
+    "hospital": "Paras Health – Gurugram",
+    "experience": "10+ years",
+    "image": "assets/uploads/Dr. SHIPRA GUPTA.jpg",
+    "isTopDoctor": true,
+    "position": "Associate Consultant \u2013 Oncology",
+    "degree": "MBBS | MD Radiation Oncology | DNB Radiation Oncology | DrNB Medical Oncology",
+    "about": "Dr. Shipra Gupta is a compassionate medical oncologist with over a decade of experience treating breast, lung, GI, gynecological, and head & neck cancers. She strongly believes in personalized cancer care combining medical expertise with empathy. A Gold Medalist and multiple award winner, she is also trained in palliative care and involved in academic oncology through research publications and national/international conferences.",
+    "medicalProblems": [
+      {
+        "title": "Breast Cancer",
+        "description": "Comprehensive treatment for early and advanced breast cancer."
+      },
+      {
+        "title": "Gynecological & GI Cancers",
+        "description": "Management of ovarian, cervical, uterine, stomach, and colorectal cancers."
+      },
+      {
+        "title": "Lung & Head\u2013Neck Cancers",
+        "description": "Diagnosis and treatment of thoracic and upper aerodigestive cancers."
+      }
+    ],
+    "procedures": [
+      {
+        "title": "Chemotherapy & Targeted Therapy",
+        "description": "Cancer-specific drug treatments based on tumor biology."
+      },
+      {
+        "title": "Immunotherapy",
+        "description": "Latest immune-modulating treatments for select cancers."
+      },
+      {
+        "title": "Palliative & Supportive Care",
+        "description": "Pain management, symptom relief and quality-of-life improvement."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Dr. Shipra specialize in breast cancer?",
+        "answer": "Yes, she has a strong focus on breast and gynecological cancers."
+      },
+      {
+        "question": "Is she trained in both radiation and medical oncology?",
+        "answer": "Yes, she has MD, DNB Radiation Oncology and DrNB Medical Oncology."
+      },
+      {
+        "question": "Does she offer palliative care?",
+        "answer": "Yes, she is certified in palliative and terminal care from AIIMS."
+      }
+    ]
+  },
+  {
+    "slug": "dr-amit-jha",
+    "name": "Dr. Amit Jha",
+    "specialty": "Anesthesiology",
+    "hospital": "Paras Health – Gurugram",
     "experience": "15+ years",
-    "image": "assets/uploads/Dr. Alka Goyal.png",
-    "isTopDoctor": false,
-    "position": "Consultant \u2013 Anaesthesia",
-    "degree": "MBBS | Senior Residency \u2013 AIIMS Delhi & PGI Chandigarh",
-    "about": "Dr. Alka Goyal is an experienced consultant in anaesthesia with extensive exposure to critical care, ICU management and anesthesia for high-risk surgeries. She has worked at leading hospitals including AIIMS Delhi, PGI Chandigarh, QRG Health City and several medical colleges. She is proficient in anesthesia for general, laparoscopic, orthopedic and emergency procedures, along with ventilator and ICU management.",
+    "image": "assets/uploads/Dr. AMIT JHA.jpg",
+    "isTopDoctor": true,
+    "position": "Senior Consultant & Head \u2013 Anesthesiology",
+    "degree": "MBBS | MD (Anesthesiology)",
+    "about": "Dr. Amit Jha is a nationally recognized anesthesiologist with over 15 years of experience. He has contributed to more than 1,500 liver transplants and thousands of GI and HPB surgeries, playing a critical role in peri-operative care, critical care, and transplant anesthesia. Dr. Jha is known for his precision, clinical expertise, and excellence in managing complex surgical anesthesia.",
     "medicalProblems": [
       {
-        "title": "Preoperative Evaluation",
-        "description": "Assessment and optimization before surgery."
+        "title": "Pre-operative Assessment",
+        "description": "Comprehensive evaluation before major and high-risk surgeries."
       },
       {
-        "title": "Pain & Anaesthesia Needs",
-        "description": "Anesthesia administration for surgeries and procedures."
+        "title": "Critical Care Management",
+        "description": "Support for respiratory, cardiac, and hemodynamic stability."
       },
       {
-        "title": "Critical Care Conditions",
-        "description": "Ventilator support, shock and multi-organ care."
-      },
-      {
-        "title": "Emergency Surgical Cases",
-        "description": "Rapid and safe anesthesia support for emergencies."
+        "title": "Transplant Anesthesia",
+        "description": "Peri-operative care for liver transplant and major abdominal surgeries."
       }
     ],
     "procedures": [
       {
-        "title": "General Anaesthesia",
-        "description": "Anesthesia for major and minor surgeries."
+        "title": "General & Regional Anesthesia",
+        "description": "Safe and advanced anesthesia techniques for all surgeries."
       },
       {
-        "title": "Regional Anaesthesia",
-        "description": "Spinal, epidural and nerve blocks."
+        "title": "Transplant Anesthesia",
+        "description": "Specialized anesthesia for liver and GI transplants."
       },
       {
-        "title": "ICU & Ventilator Management",
-        "description": "Advanced respiratory and critical care support."
-      },
-      {
-        "title": "Perioperative Care",
-        "description": "Monitoring and stabilization during surgery."
+        "title": "Airway & Pain Management",
+        "description": "Advanced airway procedures and postoperative pain control."
       }
     ],
     "faqs": [
       {
-        "question": "Does Dr. Alka provide anesthesia for laparoscopic surgeries?",
-        "answer": "Yes, she has experience in anesthesia for laparoscopic and open procedures."
+        "question": "Has Dr. Jha worked on liver transplant cases?",
+        "answer": "Yes, he has contributed to more than 1,500 liver transplants."
       },
       {
-        "question": "Does she manage ICU patients?",
-        "answer": "Yes, she has extensive critical care experience at AIIMS & PGI."
+        "question": "Does he manage complex anesthesia cases?",
+        "answer": "Yes, he is experienced in high-risk and critical surgeries."
       },
       {
-        "question": "Does she perform regional anesthesia?",
-        "answer": "Yes, she is skilled in nerve blocks, spinal and epidural anesthesia."
-      }
-    ]
-  },
-  {
-    "slug": "chakshita-mangla",
-    "name": "Chakshita Mangla",
-    "specialty": "Clinical Psychology",
-    "hospital": "Metro Heart Institute with Multispeciality",
-    "experience": "5+ years",
-    "image": "assets/uploads/Chakshita Mangla.png",
-    "isTopDoctor": false,
-    "position": "Consultant \u2013 Clinical Psychologist",
-    "degree": "M.A (Clinical Psychology) | M.Phil (Clinical Psychology)",
-    "about": "Chakshita Mangla is a trained Clinical Psychologist specializing in emotional well-being, behavioral disorders, relationship issues, anxiety, stress and psychological assessments. With professional experience at Red Cross De-addiction Centre and Ahmedabad Mental Health Hospital, she brings an evidence-based and empathetic approach to mental health care. Her research focuses on mindfulness, interpersonal relationships and adolescent emotional competence.",
-    "medicalProblems": [
-      {
-        "title": "Anxiety & Stress",
-        "description": "Therapy for stress, worry, panic and emotional overwhelm."
-      },
-      {
-        "title": "Depression & Mood Issues",
-        "description": "Management through psychotherapy and behavioral techniques."
-      },
-      {
-        "title": "Relationship Issues",
-        "description": "Counseling for families, couples and individuals."
-      },
-      {
-        "title": "Adolescent Concerns",
-        "description": "Emotional development, behavioral issues and confidence-building."
-      }
-    ],
-    "procedures": [
-      {
-        "title": "Psychotherapy",
-        "description": "CBT, mindfulness-based therapy and talk therapy."
-      },
-      {
-        "title": "Psychological Assessments",
-        "description": "IQ tests, personality assessments and diagnostic evaluations."
-      },
-      {
-        "title": "Stress Management Therapy",
-        "description": "Relaxation training and coping strategies."
-      },
-      {
-        "title": "De-addiction Counseling",
-        "description": "Support for substance-use & behavioral addictions."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Does Chakshita Mangla provide therapy for anxiety?",
-        "answer": "Yes, she specializes in anxiety and stress management."
-      },
-      {
-        "question": "Does she conduct psychological assessments?",
-        "answer": "Yes, including IQ, personality and diagnostic evaluations."
-      },
-      {
-        "question": "Does she work with adolescents?",
-        "answer": "Yes, she has expertise in adolescent mental health and behavior."
+        "question": "Is he the head of anesthesiology?",
+        "answer": "Yes, he leads the Anesthesiology Department at Paras Health."
       }
     ]
   }
@@ -3011,7 +3143,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "medanta-the-medicity-gurgaon",
     "name": "Medanta - The Medicity",
     "normalizedName": "medanta medicity",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/medanta.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/medanta.jpg",
     "location": "Gurgaon",
     "normalizedLocation": "gurgaon",
     "rating": 4.8,
@@ -3037,7 +3169,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "fortis-memorial-research-institute-gurgaon",
     "name": "Fortis Memorial Research Institute, Gurgaon",
     "normalizedName": "fortis memorial research",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/fmri.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/fmri.jpg",
     "location": "Gurgaon",
     "normalizedLocation": "gurgaon",
     "rating": 4.9,
@@ -3060,7 +3192,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "artemis-hospital-gurgaon",
     "name": "Artemis Hospital, Gurgaon",
     "normalizedName": "artemis",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/artemis.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/artemis.jpg",
     "location": "Gurgaon",
     "normalizedLocation": "gurgaon",
     "rating": 4.6,
@@ -3082,7 +3214,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "max-super-speciality-hospital-saket",
     "name": "Max Hospital – Saket West | Panchsheel Park | Saket East",
     "normalizedName": "max saket",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/max-saket.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/max-saket.jpg",
     "location": "New Delhi",
     "normalizedLocation": "new delhi",
     "rating": 4.7,
@@ -3104,7 +3236,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "max-super-speciality-hospital-patparganj",
     "name": "Max Hospital – Patparganj",
     "normalizedName": "max patparganj",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/max-patparganj.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/max-patparganj.jpg",
     "location": "New Delhi",
     "normalizedLocation": "new delhi",
     "rating": 4.6,
@@ -3125,7 +3257,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "amrita-hospital-faridabad",
     "name": "Amrita Hospital – Faridabad",
     "normalizedName": "amrita faridabad",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/amrita.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/amrita.jpg",
     "location": "Faridabad",
     "normalizedLocation": "faridabad",
     "rating": 4.9,
@@ -3147,7 +3279,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "metro-hospital-faridabad",
     "name": "Metro Heart Institute with Multispeciality",
     "normalizedName": "metro faridabad",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/metro.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/metro.jpg",
     "location": "Faridabad",
     "normalizedLocation": "faridabad",
     "rating": 4.2,
@@ -3168,7 +3300,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "paras-health-gurgaon",
     "name": "Paras Health – Gurugram",
     "normalizedName": "paras health gurgaon",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/paras.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/paras.jpg",
     "location": "Gurgaon",
     "normalizedLocation": "gurgaon",
     "rating": 4.5,
@@ -3189,7 +3321,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "asian-hospital-faridabad",
     "name": "Asian Institute of Medical Sciences",
     "normalizedName": "asian faridabad",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/asian.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/asian.jpg",
     "location": "Faridabad",
     "normalizedLocation": "faridabad",
     "rating": 4.7,
@@ -3212,7 +3344,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "slug": "manipal-hospital-faridabad",
     "name": "Manipal Comprehensive Cancer Centre – North-West Cluster",
     "normalizedName": "manipal faridabad",
-    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/manipal.jpg",
+    "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/upload/assets/uploads/assets/uploads/manipal.jpg",
     "location": "Faridabad",
     "normalizedLocation": "faridabad",
     "rating": 4.8,
@@ -3275,7 +3407,7 @@ app.get('/admin/seed-treatments', async (req, res) => {
 /**
  * @route GET /api/doctors/update-images
  * @desc Bulk update doctor images
- * @query data=[{ "name": "...", "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/..." }, ...]
+ * @query data=[{ "name": "...", "image": "assets/uploads/assets/uploads/assets/uploads/assets/uploads/assets/uploads/..." }, ...]
  */
 app.get("/update-images", async (req, res) => {
   try {
