@@ -242,7 +242,7 @@ app.post("/add-video", async (req, res) => {
 app.get("/reviews", async (req, res) => {
   try {
     const reviews = await Review.find().sort({ createdAt: -1 });
-    res.json({ success: true, data: reviews });
+    res.json(reviews);
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
@@ -256,7 +256,7 @@ app.get("/reviews", async (req, res) => {
 app.get("/videos", async (req, res) => {
   try {
     const videos = await VideoReview.find().sort({ createdAt: -1 });
-    res.json({ success: true, data: videos });
+    res.json(videos);
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
