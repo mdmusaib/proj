@@ -14,6 +14,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const mime = require('mime-types');
+mime.types['webp'] = 'image/webp';
+
+
 // ----------------------
 //  MONGODB CONNECTION
 // ----------------------
