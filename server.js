@@ -45,7 +45,32 @@ const AdminUserSchema = new mongoose.Schema({
 
 const AdminUser = mongoose.model('AdminUser', AdminUserSchema); 
 
+const CommentSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  mobile: { type: String, required: true },
+  rating: { type: Number, min: 1, max: 5, required: true },
+  comment: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now }
+});
 
+const ArticleSchema = new mongoose.Schema({
+  slug: { type: String, required: true, unique: true },
+  name: { type: String, required: true },         // Article Title
+  description: { type: String, required: true },  // Full Content
+  category: { type: String, required: true },     // This maps to TreatmentCategory → treatments.name
+
+  // Optional: map to treatment category data
+  treatmentRef: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "TreatmentCategory",
+  },
+
+  comments: [CommentSchema], // embedded comments
+  createdAt: { type: Date, default: Date.now }
+});
+
+module.exports = mongoose.model("Article", ArticleSchema);
 
 const TreatmentCategorySchema = new mongoose.Schema({
   slug: { type: String, required: true, unique: true },
@@ -853,6 +878,56 @@ app.post("/api/send-mail", async (req, res) => {
     res.status(500).json({ error: "Failed to send email", details: err.message });
   }
 });
+
+app.post("/articles", async (req, res) => {
+  try {
+    const article = new Article(req.body);
+    await article.save();
+
+    res.json( article );
+  } catch (err) {
+    res.status(400).json({ success: false, message: err.message });
+  }
+});
+app.get("/articles", async (req, res) => {
+  try {
+    const articles = await Article.find();
+    res.json(articles);
+  } catch (err) {
+    res.status(500).json({ success: false });
+  }
+});
+
+app.get("/articles/:slug", async (req, res) => {
+  try {
+    const article = await Article.findOne({ slug: req.params.slug });
+
+    if (!article) return res.status(404).json({ message: "Not found" });
+
+    res.json(article);
+  } catch (err) {
+    res.status(500).json({ message: "Error" });
+  }
+});
+
+app.post("/articles/:slug/comments", async (req, res) => {
+  try {
+    const article = await Article.findOne({ slug: req.params.slug });
+
+    if (!article) return res.status(404).json({ message: "Article not found" });
+
+    article.comments.push(req.body);
+    await article.save();
+
+    res.json(
+       article.comments
+    );
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+
 
 // ----------------------
 //  START SERVER
