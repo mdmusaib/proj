@@ -341,7 +341,7 @@ app.get("/admin/seed-doctor", async (req, res) => {
   }
 });
 
-app.get('/admin/seed-login', async (req, res) => {
+app.get('/admin/seed-admin', async (req, res) => {
    try {
    
 
@@ -368,6 +368,7 @@ app.get('/admin/seed-login', async (req, res) => {
 
     console.log("🎉 Admin User Created Successfully:");
     console.log(admin);
+    return res.json({ message: "Admin user created successfully" });
 
     process.exit(0);
   } catch (err) {
