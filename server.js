@@ -783,6 +783,17 @@ app.get("/update-images", async (req, res) => {
 });
 
 
+// 👉 GET all contacts
+app.get("/contacts", async (req, res) => {
+  try {
+    const contacts = await Contact.find(); // latest first
+    res.json(contacts);
+  } catch (error) {
+    console.error("Error fetching contacts:", error);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+});
+
 
 
 
