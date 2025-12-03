@@ -158,7 +158,7 @@ const DoctorSchema = new mongoose.Schema({
 const Doctor = mongoose.model("doctors", DoctorSchema);
 
 const Contact = mongoose.model("contacts", ContactSchema);
-const Article = mongoose.model("doctors", ArticleSchema);
+const Article = mongoose.model("articles", ArticleSchema);
 
 
 // ----------------------
@@ -211,11 +211,11 @@ const VideoReview= mongoose.model("VideoTestimonial", VideoTestimonialSchema);
 
 app.post("/admin/article", async (req, res) => {
   try {
-    const review = await Article.create(req.body);
+    const articles = await Article.create(req.body);
     res.status(201).json({
       success: true,
-      message: "Review added successfully",
-      data: review,
+      message: "Article added successfully",
+      data: articles,
     });
   } catch (err) {
     res.status(400).json({ success: false, error: err.message });
@@ -906,9 +906,9 @@ app.get("/articles", async (req, res) => {
   }
 });
 
-app.get("/articles/:slug", async (req, res) => {
+app.get("/articles/:name", async (req, res) => {
   try {
-    const article = await Article.findOne({ slug: req.params.slug });
+    const article = await Article.findOne({ slug: req.params.name });
 
     if (!article) return res.status(404).json({ message: "Not found" });
 
