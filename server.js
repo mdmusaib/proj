@@ -13,6 +13,9 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
 
 const mime = require('mime-types');
 mime.types['webp'] = 'image/webp';
@@ -55,10 +58,9 @@ const CommentSchema = new mongoose.Schema({
 });
 
 const ArticleSchema = new mongoose.Schema({
-  slug: { type: String, required: true, unique: true },
-  name: { type: String, required: true },         // Article Title
-  description: { type: String, required: true },  // Full Content
-  category: { type: String, required: true },     // This maps to TreatmentCategory → treatments.name
+   name: { type: String, required: true },
+  description: { type: String, required: true },
+  category: { type: String, required: true }, // required! // This maps to TreatmentCategory → treatments.name
 
   // Optional: map to treatment category data
   treatmentRef: {
