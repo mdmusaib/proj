@@ -881,16 +881,24 @@ app.post("/api/send-mail", async (req, res) => {
   }
 });
 
-app.post("/articles", async (req, res) => {
+app.post("/admin/articles", async (req, res) => {
   try {
-    const article = new Article(req.body);
+    const article = new Article({
+      name: req.body.name,
+      description: req.body.description,
+      category: req.body.category,
+      treatmentRef: req.body.treatmentRef || null,
+    });
+
     await article.save();
 
-    res.json( article );
+    res.status(201).json({ success: true, article });
   } catch (err) {
+    console.log("Save Error:", err.message);
     res.status(400).json({ success: false, message: err.message });
   }
 });
+
 app.get("/articles", async (req, res) => {
   try {
     const articles = await Article.find();
