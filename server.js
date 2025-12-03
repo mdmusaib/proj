@@ -69,10 +69,9 @@ const ArticleSchema = new mongoose.Schema({
   },
 
   comments: [CommentSchema], // embedded comments
-  createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model("Article", ArticleSchema);
+// module.exports = mongoose.model("Article", ArticleSchema);
 
 const TreatmentCategorySchema = new mongoose.Schema({
   slug: { type: String, required: true, unique: true },
@@ -159,6 +158,8 @@ const DoctorSchema = new mongoose.Schema({
 const Doctor = mongoose.model("doctors", DoctorSchema);
 
 const Contact = mongoose.model("contacts", ContactSchema);
+const Article = mongoose.model("doctors", ArticleSchema);
+
 
 // ----------------------
 //  HOSPITAL MODEL
@@ -207,6 +208,19 @@ const VideoTestimonialSchema = new mongoose.Schema({
 
 const VideoReview= mongoose.model("VideoTestimonial", VideoTestimonialSchema);
 
+
+app.post("/admin/article", async (req, res) => {
+  try {
+    const review = await Article.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Review added successfully",
+      data: review,
+    });
+  } catch (err) {
+    res.status(400).json({ success: false, error: err.message });
+  }
+});
 
 app.post("/add-review", async (req, res) => {
   try {
@@ -881,32 +895,6 @@ app.post("/api/send-mail", async (req, res) => {
   }
 });
 
-app.post("/admin/articles", async (req, res) => {
-  try {
-    console.log("🔥 POST HIT:", req.body);
-
-    const article = new Article({
-      name: req.body.name,
-      description: req.body.description,
-      category: req.body.category,
-      treatmentRef: req.body.treatmentRef || null,
-    });
-
-    await article.save();
-
-    return res.status(201).json({
-      success: true,
-      message: "Article saved",
-      article,
-    });
-  } catch (err) {
-    console.log("❌ Save error:", err);
-    return res.status(500).json({
-      success: false,
-      message: err.message,
-    });
-  }
-});
 
 
 app.get("/articles", async (req, res) => {
