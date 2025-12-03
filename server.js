@@ -883,6 +883,8 @@ app.post("/api/send-mail", async (req, res) => {
 
 app.post("/admin/articles", async (req, res) => {
   try {
+    console.log("🔥 POST HIT:", req.body);
+
     const article = new Article({
       name: req.body.name,
       description: req.body.description,
@@ -892,12 +894,20 @@ app.post("/admin/articles", async (req, res) => {
 
     await article.save();
 
-    res.status(201).json({ success: true, article });
+    return res.status(201).json({
+      success: true,
+      message: "Article saved",
+      article,
+    });
   } catch (err) {
-    console.log("Save Error:", err.message);
-    res.status(400).json({ success: false, message: err.message });
+    console.log("❌ Save error:", err);
+    return res.status(500).json({
+      success: false,
+      message: err.message,
+    });
   }
 });
+
 
 app.get("/articles", async (req, res) => {
   try {
