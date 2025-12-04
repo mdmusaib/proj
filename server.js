@@ -495,7 +495,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "medanta-the-medicity-gurgaon",
     "name": "Medanta - The Medicity",
-    "image": "",
+    "image": "assets/uploads/medanta.jpg",
     "location": "CH Baktawar Singh Road, Islampur Colony, Sector 38, Medicity, Gurugram, Haryana 122001, Gurugram (Gurgaon), Haryana, India",
     "rating": 4.2,
     "beds": 1391,
@@ -528,7 +528,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "fortis-memorial-research-institute-gurgaon",
     "name": "Fortis Memorial Research Institute, Gurgaon",
-    "image": "",
+    "image": "assets/uploads/fmri.jpg",
     "location": "Sector 44, Opposite HUDA City Centre Metro Station, Gurugram, Haryana 122002, Gurugram, Haryana, India",
     "rating": 4.2,
     "beds": 299,
@@ -558,7 +558,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "artemis-hospital-gurgaon",
     "name": "Artemis Hospital, Gurgaon",
-    "image": "",
+    "image": "assets/uploads/artemis.jpg",
     "location": "Sector 51, Gurugram, Haryana 122001, Gurugram, Haryana, India",
     "rating": 4.1,
     "beds": 600,
@@ -600,7 +600,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "max-super-speciality-hospital-saket",
     "name": "Max Hospital – Saket West | Panchsheel Park | Saket East",
-    "image": "",
+    "image": "assets/uploads/max-saket.jpg",
     "location": "1 & 2, Press Enclave Road, Saket, New Delhi 110017, New Delhi, Delhi, India",
     "rating": 4.1,
     "beds": 539,
@@ -645,7 +645,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "max-super-speciality-hospital-patparganj",
     "name": "Max Hospital – Patparganj",
-    "image": "",
+    "image": "assets/uploads/max-patparganj.jpg",
     "location": "108A, I.P. Extension, Opp. Sanchar Apartments, Patparganj, New Delhi 110092, New Delhi, Delhi, India",
     "rating": 4.2,
     "beds": 402,
@@ -684,7 +684,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "amrita-hospital-faridabad",
     "name": "Amrita Hospital – Faridabad",
-    "image": "",
+    "image": "assets/uploads/amrita.jpg",
     "location": "Mata Amritanandamayi Marg, RPS City, Sector 88, Faridabad, Haryana 121002, Faridabad, Haryana, India",
     "rating": null,
     "beds": 2600,
@@ -724,7 +724,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "metro-hospital-faridabad",
     "name": "Metro Heart Institute with Multispeciality",
-    "image": "",
+    "image": "assets/uploads/metro.jpg",
     "location": "Sector 16A, Faridabad 121002, Haryana, India",
     "rating": null,
     "beds": 400,
@@ -764,7 +764,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "paras-hospital-gurgaon",
     "name": "Paras Health – Gurugram",
-    "image": "",
+    "image": "assets/uploads/paras.jpg",
     "location": "C-1, Sushant Lok Phase I, Sector 43, Gurugram, Haryana 122002, Gurugram, Haryana, India",
     "rating": null,
     "beds": 300,
@@ -805,7 +805,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "asian-institute-of-medical-sciences-faridabad",
     "name": "Asian Institute of Medical Sciences",
-    "image": "",
+    "image": "assets/uploads/asian.jpg",
     "location": "Sector 21A, Badkal Flyover Road, Faridabad 121001, Faridabad, Haryana, India",
     "rating": null,
     "beds": 425,
@@ -843,7 +843,7 @@ app.get('/admin/seed-hospital', async (req, res) => {
   {
     "slug": "manipal-hospital-dwarka-delhi",
     "name": "Manipal Comprehensive Cancer Centre – North-West Cluster",
-    "image": "",
+    "image": "assets/uploads/manipal.jpg",
     "location": "Palam Vihar, Sector 6, Dwarka, New Delhi 110075, New Delhi, Delhi, India",
     "rating": null,
     "beds": 380,
@@ -879,12 +879,9 @@ app.get('/admin/seed-hospital', async (req, res) => {
     "latitude": null,
     "longitude": null
   }
-]
+];
 
-
-
-;
-
+ 
   try {
     await Hospital.deleteMany({});
     await Hospital.insertMany(hospitalData);
