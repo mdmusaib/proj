@@ -171,7 +171,7 @@ const HospitalSchema = new mongoose.Schema({
   location: String,
   rating: Number,
   beds: Number,
-  specialties: String,
+  specialties: [String], 
   description: String,
   accreditations: [String],
   latitude: Number,
