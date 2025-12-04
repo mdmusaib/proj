@@ -1101,20 +1101,11 @@ app.post("/articles/:slug/comments", async (req, res) => {
 
 app.post("/add-entry", async (req, res) => {
   try {
-    const { story, videoUrl, videoTitle, ...rest } = req.body;
-
-    if (story) {
-      // User submitted a review
+    if (req.body.story) {
       const review = await Review.create(req.body);
       return res.status(201).json({ success: true, message: "Review added successfully 🎉", data: review });
-    } else if (videoUrl && videoTitle) {
-      // User submitted a video
-      const video = await VideoReview.create({
-        name: req.body.name,
-        country: req.body.country,
-        title: videoTitle,
-        videoUrl: videoUrl,
-      });
+    } else if (req.body.videoUrl && req.body.title) {
+      const video = await VideoReview.create(req.body);
       return res.status(201).json({ success: true, message: "Video testimonial added successfully 🎉", data: video });
     } else {
       return res.status(400).json({ success: false, error: "Please provide review or video details" });
@@ -1123,6 +1114,7 @@ app.post("/add-entry", async (req, res) => {
     res.status(400).json({ success: false, error: err.message });
   }
 });
+
 
 
 
