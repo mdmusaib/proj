@@ -920,7 +920,7 @@ app.get("/articles/:name", async (req, res) => {
 
 app.post("/articles/:slug/comments", async (req, res) => {
   try {
-    const article = await Article.findOne({ slug: req.params.slug });
+    const article = await Article.findOne({ name: req.params.slug });
 
     if (!article) return res.status(404).json({ message: "Article not found" });
 
