@@ -455,7 +455,9 @@ app.put("/admin/doctor/:id", async (req, res) => {
     const updatedDoctor = await Doctor.findByIdAndUpdate(
       req.params.id,
       { $set: req.body }, // Use $set to be explicit
-      { new: true, runValidators: true }
+      { new: true, 
+        runValidators: false, // Turn off validators temporarily to test
+        overwrite: false }
     );
 
     console.log("Document after update:", updatedDoctor);
