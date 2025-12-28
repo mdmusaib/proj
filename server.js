@@ -454,14 +454,19 @@ app.put("/admin/doctor/:id", async (req, res) => {
   try {
     const updatedDoctor = await Doctor.findByIdAndUpdate(
       req.params.id,
-      { $set: req.body }, // Use $set to be explicit
-      { new: true, 
-        runValidators: false, // Turn off validators temporarily to test
-        overwrite: false }
+      // Pass only the image from the body, ignore everything else
+      { $set: { image: req.body.image } }, 
+      { 
+        new: true,           // Return the document AFTER the update
+        runValidators: false // Skip validation (prevents the "unique slug" error)
+      }
     );
 
-    console.log("Document after update:", updatedDoctor);
+    if (!updatedDoctor) {
+      return res.status(404).json({ error: "Doctor not found" });
+    }
 
+    console.log("Image updated successfully:", updatedDoctor.image);
     res.json({ success: true, data: updatedDoctor });
   } catch (err) {
     console.error("Update Error:", err.message);
