@@ -58,18 +58,16 @@ const CommentSchema = new mongoose.Schema({
 });
 
 const ArticleSchema = new mongoose.Schema({
-   name: { type: String, required: true },
+  name: { type: String, required: true },
   description: { type: String, required: true },
-  category: { type: String, required: true }, // required! // This maps to TreatmentCategory → treatments.name
-
-  // Optional: map to treatment category data
+  category: { type: String, required: true },
+  image: { type: String }, // Add this line
   treatmentRef: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "TreatmentCategory",
   },
-
-  comments: [CommentSchema], // embedded comments
-});
+  comments: [CommentSchema],
+}, { timestamps: true });
 
 // module.exports = mongoose.model("Article", ArticleSchema);
 
@@ -335,6 +333,74 @@ app.get('/api/hospitals', async (req, res) => {
   }
 });
 
+// ----------------------
+//  ADMIN HOSPITAL ROUTES
+// ----------------------
+
+// 1. GET ALL HOSPITALS (For Admin Table)
+// app.get('/admin/hospital', async (req, res) => {
+//   try {
+//     const hospitals = await Hospital.find().sort({ _id: -1 });
+//     res.json(hospitals);
+//   } catch (err) {
+//     res.status(500).json({ error: "Failed to fetch hospitals" });
+//   }
+// });
+
+// 2. CREATE NEW HOSPITAL
+app.post("/admin/hospital", async (req, res) => {
+  try {
+    const newHospital = await Hospital.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Hospital added successfully",
+      data: newHospital,
+    });
+  } catch (err) {
+    // Catch duplicate slug error
+    if (err.code === 11000) {
+      return res.status(400).json({ error: "Slug must be unique" });
+    }
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// 3. UPDATE EXISTING HOSPITAL
+app.put("/admin/hospital/:id", async (req, res) => {
+  try {
+    const updatedHospital = await Hospital.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+    
+    if (!updatedHospital) {
+      return res.status(404).json({ error: "Hospital not found" });
+    }
+
+    res.json({
+      success: true,
+      message: "Hospital updated successfully",
+      data: updatedHospital,
+    });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// 4. DELETE HOSPITAL
+app.delete("/admin/hospital/:id", async (req, res) => {
+  try {
+    const deleted = await Hospital.findByIdAndDelete(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ error: "Hospital not found" });
+    }
+    res.json({ success: true, message: "Hospital deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to delete hospital" });
+  }
+});
+
 
 // GET all doctors
 app.get('/api/doctors', async (req, res) => {
@@ -358,6 +424,73 @@ app.get('/api/doctors/:slug', async (req, res) => {
     res.json(doctor);
   } catch (err) {
     res.status(500).json({ error: "Server error" });
+  }
+});
+
+// ----------------------
+//  ADMIN DOCTOR ROUTES
+// ----------------------
+
+// 1. CREATE NEW DOCTOR
+app.post("/admin/doctor", async (req, res) => {
+  try {
+    const newDoctor = await Doctor.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Doctor added successfully",
+      data: newDoctor,
+    });
+  } catch (err) {
+    if (err.code === 11000) {
+      return res.status(400).json({ error: "Slug must be unique" });
+    }
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// 2. UPDATE EXISTING DOCTOR
+app.put("/admin/doctor/:id", async (req, res) => {
+  try {
+    const updatedDoctor = await Doctor.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedDoctor) {
+      return res.status(404).json({ error: "Doctor not found" });
+    }
+
+    res.json({
+      success: true,
+      message: "Doctor updated successfully",
+      data: updatedDoctor,
+    });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// 3. DELETE DOCTOR
+app.delete("/admin/doctor/:id", async (req, res) => {
+  try {
+    const deleted = await Doctor.findByIdAndDelete(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ error: "Doctor not found" });
+    }
+    res.json({ success: true, message: "Doctor deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to delete doctor" });
+  }
+});
+
+// 4. GET ALL DOCTORS (Admin view - latest first)
+app.get('/admin/doctor', async (req, res) => {
+  try {
+    const doctors = await Doctor.find().sort({ _id: -1 });
+    res.json(doctors);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch doctors" });
   }
 });
 
@@ -904,6 +1037,40 @@ app.get('/api/treatments', async (req, res) => {
 });
 
 // ----------------------
+//  ADMIN TREATMENT ROUTES
+// ----------------------
+
+// Create Treatment Category
+app.post("/admin/treatments", async (req, res) => {
+  try {
+    const category = await TreatmentCategory.create(req.body);
+    res.status(201).json(category);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// Update Treatment Category
+app.put("/admin/treatments/:id", async (req, res) => {
+  try {
+    const updated = await TreatmentCategory.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(updated);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// Delete Treatment Category
+app.delete("/admin/treatments/:id", async (req, res) => {
+  try {
+    await TreatmentCategory.findByIdAndDelete(req.params.id);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: "Delete failed" });
+  }
+});
+
+// ----------------------
 //  SEEDER API (RUN ONCE)
 // ----------------------
 app.get('/admin/seed-treatments', async (req, res) => {
@@ -1096,6 +1263,72 @@ app.post("/articles/:slug/comments", async (req, res) => {
     );
   } catch (err) {
     res.status(400).json({ message: err.message });
+  }
+});
+
+// ----------------------
+//  ADMIN ARTICLE ROUTES
+// ----------------------
+
+// 1. GET ALL ARTICLES (For Admin Table)
+app.get("/admin/articles", async (req, res) => {
+  try {
+    const articles = await Article.find()
+      .populate("treatmentRef", "title") // Shows the treatment category name instead of just ID
+      .sort({ createdAt: -1 });
+    res.json(articles);
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 2. CREATE NEW ARTICLE (You already had a version, updated for consistency)
+app.post("/admin/article", async (req, res) => {
+  try {
+    const newArticle = await Article.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Article added successfully",
+      data: newArticle,
+    });
+  } catch (err) {
+    res.status(400).json({ success: false, error: err.message });
+  }
+});
+
+// 3. UPDATE EXISTING ARTICLE
+app.put("/admin/article/:id", async (req, res) => {
+  try {
+    const updatedArticle = await Article.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedArticle) {
+      return res.status(404).json({ success: false, error: "Article not found" });
+    }
+
+    res.json({
+      success: true,
+      message: "Article updated successfully",
+      data: updatedArticle,
+    });
+  } catch (err) {
+    res.status(400).json({ success: false, error: err.message });
+  }
+});
+
+// 4. DELETE ARTICLE
+app.delete("/admin/article/:id", async (req, res) => {
+  try {
+    const deleted = await Article.findByIdAndDelete(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ success: false, error: "Article not found" });
+    }
+    res.json({ success: true, message: "Article deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ success: false, error: "Failed to delete article" });
   }
 });
 
