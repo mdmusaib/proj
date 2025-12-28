@@ -61,7 +61,13 @@ const ArticleSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   category: { type: String, required: true },
-  image: { type: String }, // Add this line
+  image: { type: String },
+  // Add the slug field here
+  slug: { 
+    type: String, 
+    unique: true, 
+    sparse: true // This allows multiple documents to have no slug (null)
+  },
   treatmentRef: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "TreatmentCategory",
@@ -197,8 +203,8 @@ const ReviewSchema = new mongoose.Schema({
 const Review= mongoose.model("Review", ReviewSchema);
 
 const VideoTestimonialSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  country: { type: String, required: true },
+  name: { type: String,  },
+  country: { type: String,  },
   title: { type: String, required: true },
   videoUrl: { type: String, required: true }, // YouTube URL or Cloud storage URL
   createdAt: { type: Date, default: Date.now }
