@@ -454,20 +454,15 @@ app.put("/admin/doctor/:id", async (req, res) => {
   try {
     const updatedDoctor = await Doctor.findByIdAndUpdate(
       req.params.id,
-      req.body,
+      { $set: req.body }, // Use $set to be explicit
       { new: true, runValidators: true }
     );
 
-    if (!updatedDoctor) {
-      return res.status(404).json({ error: "Doctor not found" });
-    }
+    console.log("Document after update:", updatedDoctor);
 
-    res.json({
-      success: true,
-      message: "Doctor updated successfully",
-      data: updatedDoctor,
-    });
+    res.json({ success: true, data: updatedDoctor });
   } catch (err) {
+    console.error("Update Error:", err.message);
     res.status(400).json({ error: err.message });
   }
 });
