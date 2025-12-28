@@ -62,12 +62,6 @@ const ArticleSchema = new mongoose.Schema({
   description: { type: String, required: true },
   category: { type: String, required: true },
   image: { type: String },
-  // Add the slug field here
-  slug: { 
-    type: String, 
-    unique: true, 
-    sparse: true // This allows multiple documents to have no slug (null)
-  },
   treatmentRef: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "TreatmentCategory",
