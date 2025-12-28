@@ -61,14 +61,14 @@ const ArticleSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   category: { type: String, required: true },
-  image: { type: String },
-  treatmentRef: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "TreatmentCategory",
+  slug: { 
+    type: String, 
+    unique: true, 
+    sparse: true // <--- Add this! It ignores null values in the unique check
   },
   comments: [CommentSchema],
-}, { timestamps: true });
 
+}, { timestamps: true });
 // module.exports = mongoose.model("Article", ArticleSchema);
 
 const TreatmentCategorySchema = new mongoose.Schema({
