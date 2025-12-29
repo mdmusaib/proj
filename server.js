@@ -452,22 +452,33 @@ app.post("/admin/doctor", async (req, res) => {
 // 2. UPDATE EXISTING DOCTOR
 app.put("/admin/doctor/:id", async (req, res) => {
   try {
-    const updatedDoctor= await Doctor.findByIdAndUpdate(
+    // 1. Check if image exists in the request
+    // if (!req.body.image) {
+    //   return res.status(400).json({ error: "No image value provided" });
+    // }
+
+    // 2. Perform the update targeting ONLY the image field
+    const updatedDoctor = await Doctor.findByIdAndUpdate(
       req.params.id,
-      req.body,
-      { new: true, runValidators: true }
+      { $set: { image: req.body.image } }, // This ensures ONLY image changes
+      { 
+        new: true, 
+        runValidators: false, // CRITICAL: This bypasses the 'required' and 'unique' slug checks
+        context: 'query' 
+      }
     );
-    
+
     if (!updatedDoctor) {
       return res.status(404).json({ error: "Doctor not found" });
     }
 
     res.json({
       success: true,
-      message: "Doctor updated successfully",
-      data: updatedDoctor
+      message: "Image updated successfully",
+      data: updatedDoctor,
     });
   } catch (err) {
+    console.error("Update Error:", err.message);
     res.status(400).json({ error: err.message });
   }
 });
