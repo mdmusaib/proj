@@ -111,8 +111,8 @@ const TreatmentCategory = mongoose.model(
 
 
 const DoctorSchema = new mongoose.Schema({
-  slug: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
+  slug: { type: String, },
+  name: { type: String,  },
   specialty: { type: String },
   hospital: { type: String },
   experience: { type: String },
