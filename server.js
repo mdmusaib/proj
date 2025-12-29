@@ -113,8 +113,8 @@ const TreatmentCategory = mongoose.model(
 const DoctorSchema = new mongoose.Schema({
   slug: { type: String, required: true, unique: true },
   name: { type: String, required: true },
-  specialty: { type: String, required: true },
-  hospital: { type: String, required: true },
+  specialty: { type: String },
+  hospital: { type: String },
   experience: { type: String },
   image: { type: String },
   isTopDoctor: { type: Boolean, default: false },
@@ -452,24 +452,22 @@ app.post("/admin/doctor", async (req, res) => {
 // 2. UPDATE EXISTING DOCTOR
 app.put("/admin/doctor/:id", async (req, res) => {
   try {
-    const updatedDoctor = await Doctor.findByIdAndUpdate(
+    const updatedDoctor= await Doctor.findByIdAndUpdate(
       req.params.id,
-      // Pass only the image from the body, ignore everything else
-      { $set: { image: req.body.image } }, 
-      { 
-        new: true,           // Return the document AFTER the update
-        runValidators: false // Skip validation (prevents the "unique slug" error)
-      }
+      req.body,
+      { new: true, runValidators: true }
     );
-
+    
     if (!updatedDoctor) {
       return res.status(404).json({ error: "Doctor not found" });
     }
 
-    console.log("Image updated successfully:", updatedDoctor.image);
-    res.json({ success: true, data: updatedDoctor });
+    res.json({
+      success: true,
+      message: "Doctor updated successfully",
+      data: updatedDoctor
+    });
   } catch (err) {
-    console.error("Update Error:", err.message);
     res.status(400).json({ error: err.message });
   }
 });
