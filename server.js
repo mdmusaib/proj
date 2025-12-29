@@ -452,12 +452,23 @@ app.post("/admin/doctor", async (req, res) => {
 // 2. UPDATE EXISTING DOCTOR
 app.put("/admin/doctor/:id", async (req, res) => {
   try {
-    const updatedDoctor= await Doctor.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true, runValidators: true }
-    );
-    
+    const doctorId = req.params.id;
+    const updateData = req.body;
+
+    console.log("Updating Doctor ID:", doctorId);
+    console.log("Received Data:", updateData);
+
+    // 1. Perform the update with all fields in req.body
+    const updatedDoctor = await Doctor.findByIdAndUpdate(
+      doctorId,
+      { $set: updateData }, // This takes everything sent from frontend
+      { 
+        new: true,           // Returns the updated document
+        runValidators: false, // Prevents "unique slug" collision errors
+        context: 'query' 
+      }
+    ).populate('hospital treatments'); // Optional: populate to see names in response
+
     if (!updatedDoctor) {
       return res.status(404).json({ error: "Doctor not found" });
     }
@@ -465,9 +476,10 @@ app.put("/admin/doctor/:id", async (req, res) => {
     res.json({
       success: true,
       message: "Doctor updated successfully",
-      data: updatedDoctor
+      data: updatedDoctor,
     });
   } catch (err) {
+    console.error("Update Error:", err.message);
     res.status(400).json({ error: err.message });
   }
 });
