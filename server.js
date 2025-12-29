@@ -463,11 +463,10 @@ app.put("/admin/doctor/:id", async (req, res) => {
       doctorId,
       { $set: updateData }, // This takes everything sent from frontend
       { 
-        new: true,           // Returns the updated document
-        runValidators: false, // Prevents "unique slug" collision errors
-        context: 'query' 
+        new: true,           // Returns the updated data
+        runValidators: false // Bypasses the unique slug check
       }
-    ).populate('hospital treatments'); // Optional: populate to see names in response
+    ) // Optional: populate to see names in response
 
     if (!updatedDoctor) {
       return res.status(404).json({ error: "Doctor not found" });
