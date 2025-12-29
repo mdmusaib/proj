@@ -111,8 +111,8 @@ const TreatmentCategory = mongoose.model(
 
 
 const DoctorSchema = new mongoose.Schema({
-  slug: { type: String, },
-  name: { type: String,  },
+  slug: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
   specialty: { type: String },
   hospital: { type: String },
   experience: { type: String },
@@ -452,33 +452,22 @@ app.post("/admin/doctor", async (req, res) => {
 // 2. UPDATE EXISTING DOCTOR
 app.put("/admin/doctor/:id", async (req, res) => {
   try {
-    // 1. Check if image exists in the request
-    // if (!req.body.image) {
-    //   return res.status(400).json({ error: "No image value provided" });
-    // }
-
-    // 2. Perform the update targeting ONLY the image field
-    const updatedDoctor = await Doctor.findByIdAndUpdate(
+    const updatedDoctor= await Doctor.findByIdAndUpdate(
       req.params.id,
-      { $set: { image: req.body.image } }, // This ensures ONLY image changes
-      { 
-        new: true, 
-        runValidators: false, // CRITICAL: This bypasses the 'required' and 'unique' slug checks
-        context: 'query' 
-      }
+      req.body,
+      { new: true, runValidators: true }
     );
-
+    
     if (!updatedDoctor) {
       return res.status(404).json({ error: "Doctor not found" });
     }
 
     res.json({
       success: true,
-      message: "Image updated successfully",
-      data: updatedDoctor,
+      message: "Doctor updated successfully",
+      data: updatedDoctor
     });
   } catch (err) {
-    console.error("Update Error:", err.message);
     res.status(400).json({ error: err.message });
   }
 });
