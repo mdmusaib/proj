@@ -302,6 +302,128 @@ app.get("/videos", async (req, res) => {
   }
 });
 
+// ----------------------
+// ADMIN PATIENT STORIES
+// ----------------------
+
+// GET all stories (admin)
+app.get("/admin/reviews", async (req, res) => {
+  try {
+    const reviews = await Review.find().sort({ createdAt: -1 });
+    res.json(reviews);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch reviews" });
+  }
+});
+
+// ADD story
+app.post("/admin/reviews", async (req, res) => {
+  try {
+    const review = await Review.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Patient story added",
+      data: review,
+    });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// UPDATE story
+app.put("/admin/reviews/:id", async (req, res) => {
+  try {
+    const updated = await Review.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    if (!updated) {
+      return res.status(404).json({ error: "Story not found" });
+    }
+
+    res.json({ success: true, data: updated });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// DELETE story
+app.delete("/admin/reviews/:id", async (req, res) => {
+  try {
+    const deleted = await Review.findByIdAndDelete(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ error: "Story not found" });
+    }
+    res.json({ success: true, message: "Story deleted" });
+  } catch (err) {
+    res.status(500).json({ error: "Delete failed" });
+  }
+});
+
+
+// ----------------------
+// ADMIN VIDEO TESTIMONIALS
+// ----------------------
+
+// GET all videos
+app.get("/admin/videos", async (req, res) => {
+  try {
+    const videos = await VideoReview.find().sort({ createdAt: -1 });
+    res.json(videos);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch videos" });
+  }
+});
+
+// ADD video
+app.post("/admin/videos", async (req, res) => {
+  try {
+    const video = await VideoReview.create(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Video testimonial added",
+      data: video,
+    });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// UPDATE video
+app.put("/admin/videos/:id", async (req, res) => {
+  try {
+    const updated = await VideoReview.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    if (!updated) {
+      return res.status(404).json({ error: "Video not found" });
+    }
+
+    res.json({ success: true, data: updated });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// DELETE video
+app.delete("/admin/videos/:id", async (req, res) => {
+  try {
+    const deleted = await VideoReview.findByIdAndDelete(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ error: "Video not found" });
+    }
+    res.json({ success: true, message: "Video deleted" });
+  } catch (err) {
+    res.status(500).json({ error: "Delete failed" });
+  }
+});
+
+
 
 
 // ----------------------
@@ -1176,6 +1298,42 @@ app.get("/contacts", async (req, res) => {
   } catch (error) {
     console.error("Error fetching contacts:", error);
     res.status(500).json({ success: false, message: "Server error" });
+  }
+});
+
+// UPDATE contact
+app.put("/contacts/:id", async (req, res) => {
+  try {
+    const updated = await Contact.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    if (!updated) {
+      return res.status(404).json({ success: false, message: "Contact not found" });
+    }
+
+    res.json({ success: true, data: updated });
+  } catch (error) {
+    console.error("Update contact error:", error);
+    res.status(400).json({ success: false, message: "Update failed" });
+  }
+});
+
+// DELETE contact
+app.delete("/contacts/:id", async (req, res) => {
+  try {
+    const deleted = await Contact.findByIdAndDelete(req.params.id);
+
+    if (!deleted) {
+      return res.status(404).json({ success: false, message: "Contact not found" });
+    }
+
+    res.json({ success: true, message: "Contact deleted successfully" });
+  } catch (error) {
+    console.error("Delete contact error:", error);
+    res.status(500).json({ success: false, message: "Delete failed" });
   }
 });
 
