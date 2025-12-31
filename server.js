@@ -1359,34 +1359,7 @@ app.post("/api/send-mail", async (req, res) => {
       message,
     });
 
-    // EMAIL SETUP
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "musaibkm@gmail.com",
-        pass: "trdy frzd xxqk wulb", // Use app password
-      },
-    });
-
-    const mailOptions = {
-      from: `"Website Contact" <musaibkm@gmail.com>`,
-      replyTo: email,
-      to: "musaibkm@gmail.com",
-      subject: "New Contact Form Submission",
-      html: `
-        <h2>New Contact / Quote Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
-        <p><strong>Country:</strong> ${country || "N/A"}</p>
-        <p><strong>Treatment:</strong> ${treatment || "N/A"}</p>
-        <p><strong>Preferred Language:</strong> ${language || "N/A"}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-    };
-
-    await transporter.sendMail(mailOptions);
+  
 
     res.json({ success: true, message: "Email sent successfully" });
 
