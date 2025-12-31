@@ -1348,6 +1348,7 @@ app.post("/api/save-mail", async (req, res) => {
 
     // Save to DB
     await Contact.create({
+      name:"Newsletter",
       email,
     });
 
