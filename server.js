@@ -1338,7 +1338,27 @@ app.delete("/contacts/:id", async (req, res) => {
 });
 
 
+app.post("/api/save-mail", async (req, res) => {
+  try {
+    const { email } = req.body;
 
+    if (!email) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    // Save to DB
+    await Contact.create({
+      email,
+    });
+
+
+    res.json({ success: true, message: "Data sent  successfully" });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Failed to send email", details: err.message });
+  }
+});
 
 app.post("/api/send-mail", async (req, res) => {
   try {
