@@ -1338,6 +1338,64 @@ app.delete("/contacts/:id", async (req, res) => {
 });
 
 
+
+
+app.post("/api/send-mail", async (req, res) => {
+  try {
+    const { name, email, phone, message, treatment, country = "", language = "" } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    // Save to DB
+    await Contact.create({
+      name,
+      email,
+      phone,
+      country,
+      language,
+      treatment,
+      message,
+    });
+
+    // EMAIL SETUP
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
+    //   auth: {
+    //     user: "musaibkm@gmail.com",
+    //     pass: "trdy frzd xxqk wulb", // Use app password
+    //   },
+    // });
+
+    // const mailOptions = {
+    //   from: `"Website Contact" <musaibkm@gmail.com>`,
+    //   replyTo: email,
+    //   to: "musaibkm@gmail.com",
+    //   subject: "New Contact Form Submission",
+    //   html: `
+    //     <h2>New Contact / Quote Request</h2>
+    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Email:</strong> ${email}</p>
+    //     <p><strong>Phone:</strong> ${phone || "N/A"}</p>
+    //     <p><strong>Country:</strong> ${country || "N/A"}</p>
+    //     <p><strong>Treatment:</strong> ${treatment || "N/A"}</p>
+    //     <p><strong>Preferred Language:</strong> ${language || "N/A"}</p>
+    //     <p><strong>Message:</strong></p>
+    //     <p>${message}</p>
+    //   `,
+    // };
+
+    // await transporter.sendMail(mailOptions);
+
+    res.json({ success: true, message: "Data sent successfully" });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Failed to send email", details: err.message });
+  }
+});
+
 app.post("/api/save-mail", async (req, res) => {
   try {
     const { email } = req.body;
@@ -1361,35 +1419,6 @@ app.post("/api/save-mail", async (req, res) => {
   }
 });
 
-app.post("/api/send-mail", async (req, res) => {
-  try {
-    const { name, email, phone, message, treatment, country = "", language = "" } = req.body;
-
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: "Missing required fields" });
-    }
-
-    // Save to DB
-    await Contact.create({
-      name,
-      email,
-      phone,
-      country,
-      language,
-      treatment,
-      message,
-    });
-
-  
-
-    res.json({ success: true, message: "Email sent successfully" });
-
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ error: "Failed to send email", details: err.message });
-  }
-});
-
 
 
 app.get("/articles", async (req, res) => {
@@ -1403,15 +1432,20 @@ app.get("/articles", async (req, res) => {
 
 app.get("/articles/:name", async (req, res) => {
   try {
-    const article = await Article.findOne({ slug: req.params.name });
+    const slug = decodeURIComponent(req.params.name);
 
-    if (!article) return res.status(404).json({ message: "Not found" });
+    const article = await Article.findOne({ slug });
+
+    if (!article) {
+      return res.status(404).json({ message: "Not found" });
+    }
 
     res.json(article);
   } catch (err) {
     res.status(500).json({ message: "Error" });
   }
 });
+
 
 app.post("/articles/:slug/comments", async (req, res) => {
   try {
